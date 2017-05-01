@@ -15,17 +15,14 @@ namespace aplication
         [STAThread]
         static void Main()
         {
-            Thread t = new Thread(new ThreadStart(StartForm));
-            t.Start();
-            Thread.Sleep(5000);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            t.Abort();
+            Application.Run(new frmMain());
         }
 
         private static void StartForm()
         {
-            Application.Run(new SplashScreen());
+            Application.Run(new frmSplashScreen());
         }
     }
 }
