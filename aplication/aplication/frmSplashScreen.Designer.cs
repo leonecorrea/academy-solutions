@@ -33,13 +33,14 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.progressBar1.ForeColor = System.Drawing.Color.SteelBlue;
             this.progressBar1.Location = new System.Drawing.Point(42, 364);
-            this.progressBar1.MarqueeAnimationSpeed = 20;
+            this.progressBar1.MarqueeAnimationSpeed = 30;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(483, 10);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.progressBar1.TabIndex = 0;
+            this.progressBar1.TabIndex = 20;
+            this.progressBar1.Value = 100;
             // 
             // frmSplashScreen
             // 
