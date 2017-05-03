@@ -5,7 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace aplication
+namespace AcademySolution
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace aplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frmMain ());
         }
 
         private static void StartForm()

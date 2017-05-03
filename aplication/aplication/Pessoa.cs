@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace aplication
+namespace AcademySolution
 {
     public abstract class Pessoa
     {
