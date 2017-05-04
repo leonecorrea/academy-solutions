@@ -48,11 +48,11 @@
             // lblLoading
             // 
             this.lblLoading.AutoSize = true;
-            this.lblLoading.Location = new System.Drawing.Point(62, 511);
+            this.lblLoading.Location = new System.Drawing.Point(93, 511);
             this.lblLoading.Name = "lblLoading";
-            this.lblLoading.Size = new System.Drawing.Size(80, 19);
+            this.lblLoading.Size = new System.Drawing.Size(65, 19);
             this.lblLoading.TabIndex = 21;
-            this.lblLoading.Text = "% Loading...";
+            this.lblLoading.Text = "Loading...";
             // 
             // lblCountLoading
             // 

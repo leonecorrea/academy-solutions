@@ -12,7 +12,7 @@ namespace AcademySolution
     using System;
     using System.Collections.Generic;
     
-    public partial class Account
+    public partial class ClassAccount
     {
         public int Cod_Account { get; set; }
         public string UserName { get; set; }

@@ -29,50 +29,43 @@ namespace AcademySolution
             InitializeComponent();
         }
 
-        private void metroLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroButton2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        //BOTÕES
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            txbUser.Clear();
+            txbUsername.Clear();
             txbPassword.Clear();
-            txbUser.Focus();
+            txbUsername.Focus();
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
             _instance = this;
-            txbUser.Focus();
+            txbUsername.Focus();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            if (txbUser.Text == "")
+            Console.WriteLine(txbPassword.Text);
+            Console.WriteLine(txbUsername.Text);
+            if (txbUsername.Text == "" || txbPassword.Text == "")
             {
-                if (string.IsNullOrEmpty(txbUser.Text))
+                if (string.IsNullOrEmpty(txbUsername.Text) || string.IsNullOrEmpty(txbPassword.Text))
                 {
                     MetroFramework.MetroMessageBox.Show(this,"Por favor, preencha seus dados corretamente.","Mensagem",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    txbUser.Focus();
+                    txbUsername.Focus();
                     return;
                 }
-                try
+                /*try
                 {
                     using (AcademiaSolutionsEntities1 db = new AcademiaSolutionsEntities1())
                     {
                         var query = from a in db.Accounts
-                                    where a.UserName == txbUser.Text && a.Password == txbPassword.Text
+                                    where a.UserName == txbUsername.Text && a.Password == txbPassword.Text
                                     select a;
                         if (query.SingleOrDefault() != null)
                         {
@@ -87,7 +80,24 @@ namespace AcademySolution
                 catch (Exception ex)
                 {
                     MetroFramework.MetroMessageBox.Show(this, ex.Message, "Erro",MessageBoxButtons.RetryCancel);
-                }
+                }*/
+            }
+            //MINHA PARTE
+            String username = "admin";
+            String password = "admin";
+            if (txbUsername.Text == username || txbPassword.Text == password)
+            {
+                /*Account account = new Account();
+                account.Logar();
+                account.Username = username;
+                account.Passoword = password;
+
+                frmMain f = new frmMain();
+                f.Show();*/
+
+                this.Hide();
+                frmMain frm = new frmMain();
+                frm.ShowDialog();
             }
         }
     }

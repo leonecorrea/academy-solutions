@@ -25,6 +25,6 @@ namespace AcademySolution
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<ClassAccount> Accounts { get; set; }
     }
 }

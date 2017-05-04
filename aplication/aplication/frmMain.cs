@@ -21,9 +21,9 @@ namespace AcademySolution
             t.Start();//Inicializado
             InitializeComponent();
             int j = 0;
-            for (int i = 0; i <= 600; i++)
+            for (int i = 0; i <= 5; i++)
             {
-                Thread.Sleep(10);//Completo
+                Thread.Sleep(1000);//Completo
                 j++;
             }
             t.Abort();
@@ -64,13 +64,19 @@ namespace AcademySolution
         private void frmMain_Load(object sender, EventArgs e)
         {
             Thread l = new Thread(new ThreadStart(pedeLogin));
+
             l.Start();
-            this.Hide();
+            //this.Hide();
         }
 
         public void pedeLogin()
         {
-            Application.Run(new frmLogin());
+            Account account = new Account();
+            account.Status = false;
+            if (account.Status == false)
+                Application.Run(new frmLogin());
+            else if (account.Status == false)
+                Application.Run(new frmMain());
         }
     }
 }
