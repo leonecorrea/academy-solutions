@@ -17,30 +17,18 @@ namespace AcademySolution
 
         public frmMain()
         {
-            Thread t = new Thread(new ThreadStart(Loading));
-            t.Start();//Inicializado
             InitializeComponent();
-            int j = 0;
-            for (int i = 0; i <= 5; i++)
-            {
-                Thread.Sleep(1000);//Completo
-                j++;
-            }
-            t.Abort();
-            //this.Opacity = 100;
-            //this.pedeLogin();
-        }
-        
-        public void Loading()
-        {
-            frmSplashScreen frm = new frmSplashScreen();
-            Application.Run(frm);
         }
 
         private void lnkLogOut_Click(object sender, EventArgs e)
         {
             _logOut = true;
+
             this.Close();
+
+            frmLogin login = new frmLogin();
+            login.Show();
+
             frmLogin.Instance.Show();
         }
 
@@ -63,20 +51,13 @@ namespace AcademySolution
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            Thread l = new Thread(new ThreadStart(pedeLogin));
-
-            l.Start();
-            //this.Hide();
+            Account account = new Account();
+            //account.Codigo = ;
         }
 
         public void pedeLogin()
         {
-            Account account = new Account();
-            account.Status = false;
-            if (account.Status == false)
-                Application.Run(new frmLogin());
-            else if (account.Status == false)
-                Application.Run(new frmMain());
+            Application.Run(new frmLogin());
         }
     }
 }

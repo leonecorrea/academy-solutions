@@ -46,7 +46,7 @@
             // 
             // lblInformation
             // 
-            this.lblInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblInformation.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblInformation.AutoSize = true;
             this.lblInformation.Location = new System.Drawing.Point(744, 30);
             this.lblInformation.Name = "lblInformation";
@@ -62,6 +62,8 @@
             this.ClientSize = new System.Drawing.Size(928, 544);
             this.Controls.Add(this.lblInformation);
             this.Controls.Add(this.lnkLogOut);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmMain";
             this.Padding = new System.Windows.Forms.Padding(10, 60, 10, 10);
             this.Text = "         Dashboard";

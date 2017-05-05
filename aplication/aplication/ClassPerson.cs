@@ -18,14 +18,7 @@ namespace AcademySolution
 
         public DateTime DataNasc;
 
-        /*public Person(int codigo, String nome, String cpf, String email, DateTime dataNasc)
-        {
-            this.Codigo = codigo;
-            this.Nome = nome;
-            this.Cpf = cpf;
-            this.Email = email;
-            this.DataNasc = dataNasc;
-        }*/
+        public Person() { }
 
         public abstract void Show();
     }

@@ -15,12 +15,22 @@ namespace AcademySolution
     {
         public frmSplashScreen()
         {
+            Thread t = new Thread(new ThreadStart(Loading));
+            t.Start();//Inicializado
             InitializeComponent();
-            
-            for(int j = 0; j <= 100; j++)
+            int j = 0;
+            for (int i = 0; i <= 5; i++)
             {
-                lblCountLoading.Text = $"{lblCountLoading.Enabled}%";
+                Thread.Sleep(1000);//Completo
+                j++;
             }
+            t.Abort();
+        }
+
+        public void Loading()
+        {
+            frmSplashScreen frm = new frmSplashScreen();
+            Application.Run(frm);
         }
     }
 }

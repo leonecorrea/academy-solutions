@@ -47,10 +47,13 @@ namespace AcademySolution
         {
             Application.Exit();
         }
-
-        //VALIDAÇÃO DE LOGIN
+        
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            //VALIDAÇÃO DE LOGIN
+            String username = "admin";
+            String password = "admin";
+
             //Console.WriteLine(txbPassword.Text);
             //Console.WriteLine(txbUsername.Text);
             if (txbUsername.Text == "" || txbPassword.Text == "")
@@ -83,26 +86,20 @@ namespace AcademySolution
                     MetroFramework.MetroMessageBox.Show(this, ex.Message, "Erro",MessageBoxButtons.RetryCancel);
                 }*/
             }
-            else { 
-            //MINHA PARTE
-            String username = "admin";
-            String password = "admin";
-                if (txbUsername.Text == username || txbPassword.Text == password)
-                {
-                    /*Account account = new Account();
-                    account.Logar();
-                    account.Username = username;
-                    account.Passoword = password;
-
-                    frmMain f = new frmMain();
-                    f.Show();*/
-
-                    this.Hide();
-                    frmMain frm = new frmMain();
-                    frm.ShowDialog();
-                }
+            else if (txbUsername.Text == username && txbPassword.Text == password)//Se usuário e senha estiverem certos, criaremos nova classe
+            {
+                Account account = new Account();
+                bool status = true;
+                account.Logar(status,username,password);
+                
+                this.Hide();
+                frmMain main = new frmMain();
+                main.Show();
             }
-
+            else if (txbUsername.Text != username || txbPassword.Text != password)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Seus dados não estão cadastrados no sistema!","Mensagem",MessageBoxButtons.RetryCancel,MessageBoxIcon.Error);
+            }
         }
     }
 }

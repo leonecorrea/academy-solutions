@@ -12,15 +12,17 @@ namespace AcademySolution
         public String Username { get; set; }
         public String Passoword { get; set; }
         
-        public Account()//String username, String password
+        public Account(/*string username, string password*/)
         {
-            //this.Username = username;
-            //this.Passoword = password;
+            /*this.Username = username;
+            this.Passoword = password;*/
         }
 
-        public void Logar()
+        public void Logar(bool status, string username, string password)
         {
             this.Status = true;
+            this.Username = username;
+            this.Passoword = password;
         }
 
         public override void Show()
