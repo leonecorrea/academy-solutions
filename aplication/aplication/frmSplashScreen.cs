@@ -15,22 +15,7 @@ namespace AcademySolution
     {
         public frmSplashScreen()
         {
-            Thread t = new Thread(new ThreadStart(Loading));
-            t.Start();//Inicializado
             InitializeComponent();
-            int j = 0;
-            for (int i = 0; i <= 5; i++)
-            {
-                Thread.Sleep(1000);//Completo
-                j++;
-            }
-            t.Abort();
-        }
-
-        public void Loading()
-        {
-            frmSplashScreen frm = new frmSplashScreen();
-            Application.Run(frm);
         }
     }
 }

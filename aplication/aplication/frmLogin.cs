@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,6 +14,7 @@ namespace AcademySolution
     public partial class frmLogin : MetroFramework.Forms.MetroForm
     {
         static frmLogin _instance;
+        bool _logOut = false;
 
         public static frmLogin Instance
         {
@@ -26,7 +28,30 @@ namespace AcademySolution
 
         public frmLogin()
         {
-            InitializeComponent();
+            if (_logOut == false)
+            {
+                Thread t = new Thread(new ThreadStart(Loading));
+                t.Start();//Inicializado
+                InitializeComponent();
+                int j = 0;
+                for (int i = 0; i <= 5; i++)
+                {
+                    Thread.Sleep(1000);//Completo
+                    j++;
+                }
+                t.Abort();
+            }
+            else
+            {
+                _logOut = true;
+                InitializeComponent();
+            }
+        }
+
+        public void Loading()
+        {
+            frmSplashScreen frm = new frmSplashScreen();
+            Application.Run(frm);
         }
 
         //BOTÕES
