@@ -48,10 +48,11 @@ namespace AcademySolution
             Application.Exit();
         }
 
+        //VALIDAÇÃO DE LOGIN
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(txbPassword.Text);
-            Console.WriteLine(txbUsername.Text);
+            //Console.WriteLine(txbPassword.Text);
+            //Console.WriteLine(txbUsername.Text);
             if (txbUsername.Text == "" || txbPassword.Text == "")
             {
                 if (string.IsNullOrEmpty(txbUsername.Text) || string.IsNullOrEmpty(txbPassword.Text))
@@ -82,23 +83,26 @@ namespace AcademySolution
                     MetroFramework.MetroMessageBox.Show(this, ex.Message, "Erro",MessageBoxButtons.RetryCancel);
                 }*/
             }
+            else { 
             //MINHA PARTE
             String username = "admin";
             String password = "admin";
-            if (txbUsername.Text == username || txbPassword.Text == password)
-            {
-                /*Account account = new Account();
-                account.Logar();
-                account.Username = username;
-                account.Passoword = password;
+                if (txbUsername.Text == username || txbPassword.Text == password)
+                {
+                    /*Account account = new Account();
+                    account.Logar();
+                    account.Username = username;
+                    account.Passoword = password;
 
-                frmMain f = new frmMain();
-                f.Show();*/
+                    frmMain f = new frmMain();
+                    f.Show();*/
 
-                this.Hide();
-                frmMain frm = new frmMain();
-                frm.ShowDialog();
+                    this.Hide();
+                    frmMain frm = new frmMain();
+                    frm.ShowDialog();
+                }
             }
+
         }
     }
 }

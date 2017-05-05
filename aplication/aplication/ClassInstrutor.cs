@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AcademySolution
 {
-    class Instrutor
+    public class Instrutor
     {
     }
 }
