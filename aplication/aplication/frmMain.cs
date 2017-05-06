@@ -13,7 +13,7 @@ namespace AcademySolution
 {
     public partial class frmMain : MetroFramework.Forms.MetroForm
     {
-        bool _logOut;
+        public bool _logOut = false;
 
         public frmMain()
         {
@@ -22,12 +22,11 @@ namespace AcademySolution
 
         private void lnkLogOut_Click(object sender, EventArgs e)
         {
-            _logOut = true;
-
+            this._logOut = true;
+            
             this.Close();
 
-            frmLogin login = new frmLogin();
-            login.Show();
+            pedeLogin();
 
             frmLogin.Instance.Show();
         }
@@ -39,11 +38,6 @@ namespace AcademySolution
                 Application.Exit();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -51,13 +45,14 @@ namespace AcademySolution
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            Account account = new Account();
+            //Account account = new Account();
             //account.Codigo = ;
         }
 
         public void pedeLogin()
         {
-            Application.Run(new frmLogin());
+            frmLogin frm = new frmLogin(true);
+            frm.Show();
         }
     }
 }

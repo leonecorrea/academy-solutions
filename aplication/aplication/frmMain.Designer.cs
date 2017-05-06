@@ -62,12 +62,12 @@
             this.ClientSize = new System.Drawing.Size(928, 544);
             this.Controls.Add(this.lblInformation);
             this.Controls.Add(this.lnkLogOut);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMain";
             this.Padding = new System.Windows.Forms.Padding(10, 60, 10, 10);
             this.Text = "         Dashboard";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);

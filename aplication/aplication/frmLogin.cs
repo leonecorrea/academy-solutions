@@ -14,37 +14,40 @@ namespace AcademySolution
     public partial class frmLogin : MetroFramework.Forms.MetroForm
     {
         static frmLogin _instance;
-        bool _logOut = false;
 
         public static frmLogin Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new frmLogin();
+                    _instance = new frmLogin(false);
                 return _instance;
             }
         }
 
-        public frmLogin()
+        public frmLogin(bool _logOut)
         {
             if (_logOut == false)
             {
                 Thread t = new Thread(new ThreadStart(Loading));
-                t.Start();//Inicializado
-                InitializeComponent();
-                int j = 0;
+                //Inicializado
+                t.Start();
+                
                 for (int i = 0; i <= 5; i++)
                 {
-                    Thread.Sleep(1000);//Completo
-                    j++;
+                    //Completo
+                    Thread.Sleep(1000);
                 }
+
+                InitializeComponent();
+                this.Show();
+
                 t.Abort();
             }
-            else
+            else if(_logOut == true)
             {
-                _logOut = true;
                 InitializeComponent();
+                this.Show();
             }
         }
 
@@ -75,56 +78,47 @@ namespace AcademySolution
         
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            //VALIDAÇÃO DE LOGIN
-            String username = "admin";
-            String password = "admin";
+            //Validação de login
+            Login login = new Login();
+            login.ValidaLogin( txbUsername.Text, txbPassword.Text );
 
-            //Console.WriteLine(txbPassword.Text);
-            //Console.WriteLine(txbUsername.Text);
-            if (txbUsername.Text == "" || txbPassword.Text == "")
+            //Se logado
+            if(login.Status == true || login.Status != false)
             {
-                if (string.IsNullOrEmpty(txbUsername.Text) || string.IsNullOrEmpty(txbPassword.Text))
-                {
-                    MetroFramework.MetroMessageBox.Show(this,"Por favor, preencha seus dados corretamente.","Mensagem",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    txbUsername.Focus();
-                    return;
-                }
-                /*try
-                {
-                    using (AcademiaSolutionsEntities1 db = new AcademiaSolutionsEntities1())
-                    {
-                        var query = from a in db.Accounts
-                                    where a.UserName == txbUsername.Text && a.Password == txbPassword.Text
-                                    select a;
-                        if (query.SingleOrDefault() != null)
-                        {
-                            this.Hide();
-                            frmMain frm = new frmMain();
-                            frm.ShowDialog();
-                        }
-                        else
-                            MetroFramework.MetroMessageBox.Show(this, "Seu nome de usuário ou senha estão incorretos!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MetroFramework.MetroMessageBox.Show(this, ex.Message, "Erro",MessageBoxButtons.RetryCancel);
-                }*/
+                login.Logar();
+
+                this.Hide();
+                frmMain frm = new frmMain();
+                frm.Show();
             }
-            else if (txbUsername.Text == username && txbPassword.Text == password)//Se usuário e senha estiverem certos, criaremos nova classe
+            //Se não logado
+            else
             {
-                Account account = new Account();
+                MetroFramework.MetroMessageBox.Show(this, $"{login._error}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txbUsername.Focus();
+                return;
+            }
+            /*    Account account = new Account();
                 bool status = true;
-                account.Logar(status,username,password);
-                
+                account.Logar(status, username, password);
+
                 this.Hide();
                 frmMain main = new frmMain();
                 main.Show();
             }
+            else if (username == "" || password == "")
+            {
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Por favor, preencha seus dados corretamente.", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txbUsername.Focus();
+                    return;
+                }
+            }
             else if (txbUsername.Text != username || txbPassword.Text != password)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Seus dados não estão cadastrados no sistema!","Mensagem",MessageBoxButtons.RetryCancel,MessageBoxIcon.Error);
-            }
+                MetroFramework.MetroMessageBox.Show(this, "Seus dados não estão cadastrados no sistema!", "Mensagem", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+            }*/
         }
     }
 }
