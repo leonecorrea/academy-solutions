@@ -32,17 +32,15 @@ namespace AcademySolution
                 Thread t = new Thread(new ThreadStart(Loading));
                 //Inicializado
                 t.Start();
-                
                 for (int i = 0; i <= 5; i++)
                 {
-                    //Completo
+                //Completo
                     Thread.Sleep(1000);
                 }
-
+                t.Abort();
+                
                 InitializeComponent();
                 this.Show();
-
-                t.Abort();
             }
             else if(_logOut == true)
             {

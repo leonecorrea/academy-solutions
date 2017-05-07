@@ -28,7 +28,7 @@ namespace AcademySolution
 
             pedeLogin();
 
-            frmLogin.Instance.Show();
+            //frmLogin.Instance.Show();
         }
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -36,11 +36,6 @@ namespace AcademySolution
             //Main Form Close
             if (!_logOut)
                 Application.Exit();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -53,6 +48,12 @@ namespace AcademySolution
         {
             frmLogin frm = new frmLogin(true);
             frm.Show();
+        }
+
+        public void getUsernameAccount()
+        {
+            //Account a = new Account();
+            //a.Codigo = codigo;
         }
     }
 }
