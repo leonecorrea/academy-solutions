@@ -41,6 +41,7 @@ namespace AcademySolution
                 
                 InitializeComponent();
                 this.Show();
+
             }
             else if(_logOut == true)
             {
