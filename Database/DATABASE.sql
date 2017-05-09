@@ -1,0 +1,41 @@
+CREATE DATABASE ACADEMYSOLUTIONS;
+GO
+
+USE ACADEMYSOLUTIONS;
+
+CREATE TABLE TblAccount(
+	CodAccount INT IDENTITY(1,1000),
+	NameFull VARCHAR(25) NOT NULL,
+	DateBirth DATETIME,
+	DateRegister DATETIME,
+	CodCategory INT
+)
+
+CREATE TABLE TblLogin(
+	CodAccount INT,
+	Username VARCHAR(20),
+	Password VARCHAR (40)
+)
+
+CREATE TABLE TblCategory(
+	CodCategory INT NOT NULL,
+	Name VARCHAR(20),
+	Description TEXT
+)
+
+CREATE TABLE TblListAcademy(
+	CodStudent INT,
+	CodInstructor INT
+)
+
+ALTER TABLE TblAccount ADD
+	CONSTRAINT PK_ACCOUNT 
+		PRIMARY KEY (CodAccount);
+
+ALTER TABLE TblCategory ADD
+	CONSTRAINT PK_CATEGORY 
+		PRIMARY KEY (CodCategory);
+
+ALTER TABLE TblLogin ADD
+	CONSTRAINT FK_LOGIN_PK_ACCOUNT 
+		FOREIGN KEY (CodAccount) REFERENCES TblAccount (CodAccount);
