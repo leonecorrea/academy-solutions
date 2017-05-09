@@ -13,26 +13,27 @@ namespace AcademySolution
 {
     public partial class frmLogin : MetroFramework.Forms.MetroForm
     {
+        public Login login = new Login();
 
-        public frmLogin(bool _logOut)
+        public frmLogin()
         {
-            if (_logOut == false)
+            if (login._LogOut == false)
             {
                 Thread t = new Thread(new ThreadStart(Loading));
                 //Inicializado
                 t.Start();
                 for (int i = 0; i <= 5; i++)
                 {
-                //Completo
                     Thread.Sleep(1000);
                 }
+                //Completo
                 t.Abort();
                 
                 InitializeComponent();
                 this.Show();
 
             }
-            else if(_logOut == true)
+            else //if(login._LogOut == true)
             {
                 InitializeComponent();
                 this.Show();
@@ -60,17 +61,17 @@ namespace AcademySolution
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            login._LogOut = true;
             Application.Exit();
         }
         
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             //Validação de login
-            Login login = new Login();
             login.ValidaLogin( txbUsername.Text, txbPassword.Text );
 
             //Se logado
-            if(login.Status == true || login.Status != false)
+            if(login.Status == true)
             {
                 login.Logar();
 

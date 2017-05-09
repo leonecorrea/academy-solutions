@@ -13,6 +13,7 @@ namespace AcademySolution
         public String Password { get; set; }
         public String _error { get; set; }
         public int Codigo { get; set; }
+        public bool _LogOut { get; set; }
         
         public Login()
         {
@@ -21,6 +22,7 @@ namespace AcademySolution
             this.Username = "admin";
             this.Password = "admin";
             this._error = null;
+            this._LogOut = false;
         }
 
         //Método usado para trocar status para logado
@@ -33,7 +35,8 @@ namespace AcademySolution
 
         public void Deslogar()
         {
-
+            this.Status = false;
+            this._LogOut = true;
         }
 
         //Método usado para validar o login

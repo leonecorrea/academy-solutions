@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lnkLogOut = new MetroFramework.Controls.MetroLink();
             this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
+            this.lblInfoUser = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,10 +97,21 @@
             this.metroGrid2.UseCustomForeColor = true;
             this.metroGrid2.UseStyleColors = true;
             // 
+            // lblInfoUser
+            // 
+            this.lblInfoUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInfoUser.AutoSize = true;
+            this.lblInfoUser.Location = new System.Drawing.Point(920, 30);
+            this.lblInfoUser.Name = "lblInfoUser";
+            this.lblInfoUser.Size = new System.Drawing.Size(68, 19);
+            this.lblInfoUser.TabIndex = 4;
+            this.lblInfoUser.Text = "Username";
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(998, 558);
+            this.Controls.Add(this.lblInfoUser);
             this.Controls.Add(this.lnkLogOut);
             this.Controls.Add(this.metroGrid2);
             this.DisplayHeader = false;
@@ -116,6 +128,7 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -123,5 +136,6 @@
 
         private MetroFramework.Controls.MetroLink lnkLogOut;
         private MetroFramework.Controls.MetroGrid metroGrid2;
+        private MetroFramework.Controls.MetroLabel lblInfoUser;
     }
 }
