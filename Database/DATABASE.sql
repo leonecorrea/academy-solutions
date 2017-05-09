@@ -18,19 +18,23 @@ CREATE TABLE TblLogin(
 )
 
 CREATE TABLE TblCategory(
-	CodCategory INT,
+	CodCategory INT NOT NULL,
 	Name VARCHAR(20),
 	Description TEXT
 )
 
-CREATE TABLE TblList(
-	CodList INT,
-
+CREATE TABLE TblListAcademy(
+	CodStudent INT,
+	CodInstructor INT
 )
 
 ALTER TABLE TblAccount ADD
 	CONSTRAINT PK_ACCOUNT 
 		PRIMARY KEY (CodAccount);
+
+ALTER TABLE TblCategory ADD
+	CONSTRAINT PK_CATEGORY 
+		PRIMARY KEY (CodCategory);
 
 ALTER TABLE TblLogin ADD
 	CONSTRAINT FK_LOGIN_PK_ACCOUNT 
