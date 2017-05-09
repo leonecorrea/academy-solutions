@@ -4,29 +4,42 @@ GO
 USE ACADEMYSOLUTIONS;
 
 CREATE TABLE TblAccount(
-	CodAccount INT IDENTITY(1,1000),
+	CodAccount INT IDENTITY(1,1000),--PK
 	NameFull VARCHAR(25) NOT NULL,
 	DateBirth DATETIME,
 	DateRegister DATETIME,
-	CodCategory INT
+	Address VARCHAR (255),
+	CodCategory INT--FK
 )
 
 CREATE TABLE TblLogin(
-	CodAccount INT,
+	CodAccount INT, --FK
 	Username VARCHAR(20),
 	Password VARCHAR (40)
 )
 
 CREATE TABLE TblCategory(
-	CodCategory INT NOT NULL,
+	CodCategory INT IDENTITY(1,1),--PK
 	Name VARCHAR(20),
 	Description TEXT
 )
 
 CREATE TABLE TblListAcademy(
-	CodStudent INT,
-	CodInstructor INT
+	CodStudent INT,--FK
+	CodInstructor INT,--FK
+	DateBegin DATETIME,
+	DateExpiration DATETIME
 )
+
+CREATE TABLE TblExercises(
+	CodExercise INT IDENTITY(1,1000),--PK
+	Name VARCHAR (20),
+	Description TEXT
+)
+
+ALTER TABLE TblListAcademy ADD 
+	FOREIGN KEY FKLISTACADEMY_PKSTUDENT (CodStudent) 
+		REFERENCES (TblAccount);
 
 ALTER TABLE TblAccount ADD
 	CONSTRAINT PK_ACCOUNT 
@@ -38,4 +51,5 @@ ALTER TABLE TblCategory ADD
 
 ALTER TABLE TblLogin ADD
 	CONSTRAINT FK_LOGIN_PK_ACCOUNT 
-		FOREIGN KEY (CodAccount) REFERENCES TblAccount (CodAccount);
+		FOREIGN KEY (CodAccount) 
+			REFERENCES TblAccount (CodAccount);
