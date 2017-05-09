@@ -27,7 +27,7 @@ namespace AcademySolution
 
         public frmLogin(bool _logOut)
         {
-            if (_logOut == false)
+            if (_logOut == true)
             {
                 Thread t = new Thread(new ThreadStart(Loading));
                 //Inicializado
@@ -43,7 +43,7 @@ namespace AcademySolution
                 this.Show();
 
             }
-            else if(_logOut == true)
+            else if(_logOut == false)
             {
                 InitializeComponent();
                 this.Show();
@@ -97,14 +97,6 @@ namespace AcademySolution
                 txbUsername.Focus();
                 return;
             }
-            /*Account account = new Account(true);
-                bool status = true;
-                account.Logar(status, username, password);
-
-                this.Hide();
-                frmMain main = new frmMain();
-                main.Show();
-            }*/
         }
     }
 }

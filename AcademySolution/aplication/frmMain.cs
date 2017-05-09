@@ -45,7 +45,7 @@ namespace AcademySolution
 
         public void pedeLogin()
         {
-            frmLogin frm = new frmLogin(true);
+            frmLogin frm = new frmLogin(false);
             frm.Show();
         }
 
