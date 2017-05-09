@@ -40,8 +40,7 @@ namespace AcademySolution
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            //Account account = new Account();
-            //account.Codigo = ;
+            
         }
 
         public void pedeLogin()
@@ -52,8 +51,7 @@ namespace AcademySolution
 
         public void getUsernameAccount()
         {
-            //Account a = new Account();
-            //a.Codigo = codigo;
+            
         }
     }
 }

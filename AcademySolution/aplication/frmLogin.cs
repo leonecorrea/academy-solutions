@@ -97,26 +97,13 @@ namespace AcademySolution
                 txbUsername.Focus();
                 return;
             }
-            /*    Account account = new Account();
+            /*Account account = new Account(true);
                 bool status = true;
                 account.Logar(status, username, password);
 
                 this.Hide();
                 frmMain main = new frmMain();
                 main.Show();
-            }
-            else if (username == "" || password == "")
-            {
-                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-                {
-                    MetroFramework.MetroMessageBox.Show(this, "Por favor, preencha seus dados corretamente.", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txbUsername.Focus();
-                    return;
-                }
-            }
-            else if (txbUsername.Text != username || txbPassword.Text != password)
-            {
-                MetroFramework.MetroMessageBox.Show(this, "Seus dados não estão cadastrados no sistema!", "Mensagem", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
             }*/
         }
     }

@@ -6,23 +6,25 @@ using System.Threading.Tasks;
 
 namespace AcademySolution
 {
-    public class Account:Person
+    public class Account : Person
     {
         public Boolean Status { get; set; }
         public String Username { get; set; }
         public String Passoword { get; set; }
+        public int Nivel { get; set; }
+        public Login Login = new Login();
         
-        public Account(/*string username, string password*/)
+        public Account(int codigo, string nome, string idade, string cpf)
         {
-            /*this.Username = username;
-            this.Passoword = password;*/
+            this.Codigo = codigo;
+            this.Cpf = cpf;
+            this.Nome = nome;
         }
 
         public void Logar(bool status, string username, string password)
         {
-            this.Status = true;
-            this.Username = username;
-            this.Passoword = password;
+
+            this.Login.ValidaLogin(username, password);
         }
 
         public override void Show()

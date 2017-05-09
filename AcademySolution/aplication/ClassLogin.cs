@@ -12,7 +12,14 @@ namespace AcademySolution
         public String Username { get; set; }
         public String Password { get; set; }
         public String _error { get; set; }
-        private int Codigo { get; set; }
+        public int Codigo { get; set; }
+        
+        public Login()
+        {
+            this.Codigo = 1;
+            this.Username = "admin";
+            this.Password = "admin";
+        }
 
         //Método usado para trocar status para logado
         public void Logar()
@@ -81,14 +88,24 @@ namespace AcademySolution
 
         public void Deslogar()
         {
+            this.Codigo = 0;
+            this.Username = null;
+            this.Password = null;
+        }
+
+        public void AtualizaLogin()
+        {
 
         }
 
-        public Login()
+        public void RemoveLogin()
         {
-            this.Codigo = 1;
-            this.Username = "admin";
-            this.Password = "admin";
+
+        }
+
+        public void CadastraLogin()
+        {
+
         }
     }
 }
