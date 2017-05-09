@@ -16,9 +16,11 @@ namespace AcademySolution
         
         public Login()
         {
+            //this.Status = false;
             this.Codigo = 1;
             this.Username = "admin";
             this.Password = "admin";
+            this._error = null;
         }
 
         //Método usado para trocar status para logado
@@ -26,6 +28,12 @@ namespace AcademySolution
         {
             this.Status = true;
             return;
+        }
+
+
+        public void Deslogar()
+        {
+
         }
 
         //Método usado para validar o login
@@ -50,27 +58,6 @@ namespace AcademySolution
                     this._error = "Por favor, preencha sua senha!";
                     return;
                 }
-                /*try
-                {
-                    using (AcademiaSolutionsEntities1 db = new AcademiaSolutionsEntities1())
-                    {
-                        var query = from a in db.Accounts
-                                    where a.UserName == txbUsername.Text && a.Password == txbPassword.Text
-                                    select a;
-                        if (query.SingleOrDefault() != null)
-                        {
-                            this.Hide();
-                            frmMain frm = new frmMain();
-                            frm.ShowDialog();
-                        }
-                        else
-                            MetroFramework.MetroMessageBox.Show(this, "Seu nome de usuário ou senha estão incorretos!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MetroFramework.MetroMessageBox.Show(this, ex.Message, "Erro",MessageBoxButtons.RetryCancel);
-                }*/
             }
             //Mas se usuário ou senha forem diferentes dos definidos pela classe 
             else if ( username != this.Username || password != this.Password )
@@ -86,24 +73,26 @@ namespace AcademySolution
             }
         }
 
-        public void Deslogar()
-        {
-            this.Codigo = 0;
-            this.Username = null;
-            this.Password = null;
-        }
-
-        public void AtualizaLogin()
+        //Cadastra Logins
+        public void CreateLogin()
         {
 
         }
 
-        public void RemoveLogin()
+        //Lê Logins
+        public void ReadLogin()
         {
 
         }
 
-        public void CadastraLogin()
+        //Atualizar os Logins
+        public void UpdateLogin()
+        {
+
+        }
+
+        //Deleta Login
+        public void DeleteLogin()
         {
 
         }

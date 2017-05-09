@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace aplication
+namespace AcademySolution
 {
-    public class Categoria
+    public class Category
     {
         public int Codigo { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
         
-        public Categoria(int codigo, string nome, string descricao)
+        public Category(int codigo, string nome, string descricao)
         {
             this.Codigo = codigo;
             this.Nome = nome;

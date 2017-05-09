@@ -69,9 +69,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassAccount.cs" />
-    <Compile Include="ClassCategoria.cs" />
-    <Compile Include="ClassLogin.cs" />
+    <Compile Include="clssAccount.cs" />
+    <Compile Include="clssCategory.cs" />
+    <Compile Include="clssLogin.cs" />
+    <Compile Include="clssServer.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,7 +91,7 @@
     <Compile Include="frmSplashScreen.Designer.cs">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClassPerson.cs" />
+    <Compile Include="clssPerson.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">

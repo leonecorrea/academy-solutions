@@ -17,7 +17,7 @@ namespace AcademySolution
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin (true));
+            Application.Run(new frmLogin (false));
         }
 
         private static void StartForm()

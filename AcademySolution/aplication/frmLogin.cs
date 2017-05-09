@@ -13,21 +13,10 @@ namespace AcademySolution
 {
     public partial class frmLogin : MetroFramework.Forms.MetroForm
     {
-        static frmLogin _instance;
-
-        public static frmLogin Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new frmLogin(false);
-                return _instance;
-            }
-        }
 
         public frmLogin(bool _logOut)
         {
-            if (_logOut == true)
+            if (_logOut == false)
             {
                 Thread t = new Thread(new ThreadStart(Loading));
                 //Inicializado
@@ -43,7 +32,7 @@ namespace AcademySolution
                 this.Show();
 
             }
-            else if(_logOut == false)
+            else if(_logOut == true)
             {
                 InitializeComponent();
                 this.Show();
@@ -66,7 +55,6 @@ namespace AcademySolution
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-            _instance = this;
             txbUsername.Focus();
         }
 
