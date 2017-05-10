@@ -37,6 +37,12 @@
             this.cadastroDeFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.criarNovoCadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarCadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.criarNovoCadastroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarCadastroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.criarNovaFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,18 +81,27 @@
             // 
             // cadastroDeAlunosToolStripMenuItem
             // 
+            this.cadastroDeAlunosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.criarNovoCadastroToolStripMenuItem,
+            this.editarCadastroToolStripMenuItem});
             this.cadastroDeAlunosToolStripMenuItem.Name = "cadastroDeAlunosToolStripMenuItem";
             this.cadastroDeAlunosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.cadastroDeAlunosToolStripMenuItem.Text = "Cadastro de Alunos";
             // 
             // cadastroDeProfessorToolStripMenuItem
             // 
+            this.cadastroDeProfessorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.criarNovoCadastroToolStripMenuItem1,
+            this.editarCadastroToolStripMenuItem1});
             this.cadastroDeProfessorToolStripMenuItem.Name = "cadastroDeProfessorToolStripMenuItem";
             this.cadastroDeProfessorToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.cadastroDeProfessorToolStripMenuItem.Text = "Cadastro de Professor";
             // 
             // cadastroDeFichaToolStripMenuItem
             // 
+            this.cadastroDeFichaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.criarNovaFichaToolStripMenuItem,
+            this.editarFichaToolStripMenuItem});
             this.cadastroDeFichaToolStripMenuItem.Name = "cadastroDeFichaToolStripMenuItem";
             this.cadastroDeFichaToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.cadastroDeFichaToolStripMenuItem.Text = "Cadastro deFicha";
@@ -104,6 +119,42 @@
             this.consultarFichaToolStripMenuItem.Name = "consultarFichaToolStripMenuItem";
             this.consultarFichaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.consultarFichaToolStripMenuItem.Text = "Consultar Ficha";
+            // 
+            // criarNovoCadastroToolStripMenuItem
+            // 
+            this.criarNovoCadastroToolStripMenuItem.Name = "criarNovoCadastroToolStripMenuItem";
+            this.criarNovoCadastroToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.criarNovoCadastroToolStripMenuItem.Text = "Criar Novo Cadastro";
+            // 
+            // editarCadastroToolStripMenuItem
+            // 
+            this.editarCadastroToolStripMenuItem.Name = "editarCadastroToolStripMenuItem";
+            this.editarCadastroToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.editarCadastroToolStripMenuItem.Text = "Editar Cadastro";
+            // 
+            // criarNovoCadastroToolStripMenuItem1
+            // 
+            this.criarNovoCadastroToolStripMenuItem1.Name = "criarNovoCadastroToolStripMenuItem1";
+            this.criarNovoCadastroToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
+            this.criarNovoCadastroToolStripMenuItem1.Text = "Criar Novo Cadastro";
+            // 
+            // editarCadastroToolStripMenuItem1
+            // 
+            this.editarCadastroToolStripMenuItem1.Name = "editarCadastroToolStripMenuItem1";
+            this.editarCadastroToolStripMenuItem1.Size = new System.Drawing.Size(181, 22);
+            this.editarCadastroToolStripMenuItem1.Text = "Editar Cadastro";
+            // 
+            // criarNovaFichaToolStripMenuItem
+            // 
+            this.criarNovaFichaToolStripMenuItem.Name = "criarNovaFichaToolStripMenuItem";
+            this.criarNovaFichaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.criarNovaFichaToolStripMenuItem.Text = "Criar nova ficha";
+            // 
+            // editarFichaToolStripMenuItem
+            // 
+            this.editarFichaToolStripMenuItem.Name = "editarFichaToolStripMenuItem";
+            this.editarFichaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.editarFichaToolStripMenuItem.Text = "Editar Ficha";
             // 
             // frmMain
             // 
@@ -141,5 +192,11 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroDeFichaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarFichaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem criarNovoCadastroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarCadastroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem criarNovoCadastroToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem editarCadastroToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem criarNovaFichaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarFichaToolStripMenuItem;
     }
 }
