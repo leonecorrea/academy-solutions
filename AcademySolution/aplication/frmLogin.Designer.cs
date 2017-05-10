@@ -38,6 +38,7 @@
             this.pcbCadeado = new System.Windows.Forms.PictureBox();
             this.lblBoasVindas = new MetroFramework.Controls.MetroLabel();
             this.btnCancelar = new MetroFramework.Controls.MetroButton();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadeado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,12 +177,24 @@
             this.btnCancelar.UseSelectable = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroButton1.Location = new System.Drawing.Point(385, 302);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(123, 23);
+            this.metroButton1.TabIndex = 12;
+            this.metroButton1.Text = "&Cancelar";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroButton1.UseSelectable = true;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(712, 366);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblBoasVindas);
             this.Controls.Add(this.pcbCadeado);
@@ -215,5 +228,6 @@
         private System.Windows.Forms.PictureBox pcbCadeado;
         private MetroFramework.Controls.MetroLabel lblBoasVindas;
         private MetroFramework.Controls.MetroButton btnCancelar;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
