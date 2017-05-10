@@ -43,7 +43,8 @@
             this.editarFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Sair = new MetroFramework.Controls.MetroButton();
+            this.lblInfoUser = new MetroFramework.Controls.MetroLabel();
+            this.metroUserControl1 = new MetroFramework.Controls.MetroUserControl();
             this.Menus.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,20 +159,30 @@
             this.consultarFichaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.consultarFichaToolStripMenuItem.Text = "Consultar Fichas";
             // 
-            // Sair
+            // lblInfoUser
             // 
-            this.Sair.Location = new System.Drawing.Point(910, 31);
-            this.Sair.Name = "Sair";
-            this.Sair.Size = new System.Drawing.Size(75, 23);
-            this.Sair.TabIndex = 2;
-            this.Sair.Text = "Logoff";
-            this.Sair.UseSelectable = true;
+            this.lblInfoUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInfoUser.AutoSize = true;
+            this.lblInfoUser.Location = new System.Drawing.Point(894, 35);
+            this.lblInfoUser.Name = "lblInfoUser";
+            this.lblInfoUser.Size = new System.Drawing.Size(68, 19);
+            this.lblInfoUser.TabIndex = 3;
+            this.lblInfoUser.Text = "Username";
+            // 
+            // metroUserControl1
+            // 
+            this.metroUserControl1.Location = new System.Drawing.Point(556, 140);
+            this.metroUserControl1.Name = "metroUserControl1";
+            this.metroUserControl1.Size = new System.Drawing.Size(150, 150);
+            this.metroUserControl1.TabIndex = 4;
+            this.metroUserControl1.UseSelectable = true;
             // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(998, 558);
-            this.Controls.Add(this.Sair);
+            this.Controls.Add(this.metroUserControl1);
+            this.Controls.Add(this.lblInfoUser);
             this.Controls.Add(this.lnkLogOut);
             this.Controls.Add(this.Menus);
             this.DisplayHeader = false;
@@ -210,6 +221,7 @@
         private System.Windows.Forms.ToolStripMenuItem editarCadastroToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem criarNovaFichaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarFichaToolStripMenuItem;
-        private MetroFramework.Controls.MetroButton Sair;
+        private MetroFramework.Controls.MetroLabel lblInfoUser;
+        private MetroFramework.Controls.MetroUserControl metroUserControl1;
     }
 }
