@@ -5,11 +5,18 @@ USE ACADEMYSOLUTIONS;
 
 CREATE TABLE TblAccount(
 	CodAccount INT IDENTITY(1,1000),--PK
-	NameFull VARCHAR(25) NOT NULL,
+	FirstName VARCHAR(10),
+	LastName VARCHAR(10),
+	NameFull VARCHAR (50),
 	DateBirth DATETIME,
 	DateRegister DATETIME,
 	Address VARCHAR (255),
 	CodCategory INT--FK
+)
+
+CREATE TABLE TblAddress(
+	CodAddress INT IDENTITY(1,00001),
+	
 )
 
 CREATE TABLE TblLogin(
