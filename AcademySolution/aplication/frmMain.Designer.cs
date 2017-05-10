@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.lnkLogOut = new MetroFramework.Controls.MetroLink();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.Menus = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeProfessorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +43,8 @@
             this.editarCadastroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.criarNovaFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.Sair = new MetroFramework.Controls.MetroButton();
+            this.Menus.SuspendLayout();
             this.SuspendLayout();
             // 
             // lnkLogOut
@@ -58,16 +59,16 @@
             this.lnkLogOut.UseSelectable = true;
             this.lnkLogOut.Click += new System.EventHandler(this.lnkLogOut_Click);
             // 
-            // menuStrip1
+            // Menus
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Menus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
             this.consultaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(10, 30);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(978, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.Menus.Location = new System.Drawing.Point(10, 30);
+            this.Menus.Name = "Menus";
+            this.Menus.Size = new System.Drawing.Size(978, 24);
+            this.Menus.TabIndex = 1;
+            this.Menus.Text = "menuStrip1";
             // 
             // cadastrosToolStripMenuItem
             // 
@@ -156,16 +157,26 @@
             this.editarFichaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.editarFichaToolStripMenuItem.Text = "Editar Ficha";
             // 
+            // Sair
+            // 
+            this.Sair.Location = new System.Drawing.Point(910, 31);
+            this.Sair.Name = "Sair";
+            this.Sair.Size = new System.Drawing.Size(75, 23);
+            this.Sair.TabIndex = 2;
+            this.Sair.Text = "Logoff";
+            this.Sair.UseSelectable = true;
+            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(998, 558);
+            this.Controls.Add(this.Sair);
             this.Controls.Add(this.lnkLogOut);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.Menus);
             this.DisplayHeader = false;
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.Menus;
             this.Name = "frmMain";
             this.Padding = new System.Windows.Forms.Padding(10, 30, 10, 10);
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
@@ -175,8 +186,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Menus.ResumeLayout(false);
+            this.Menus.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,7 +196,7 @@
         #endregion
 
         private MetroFramework.Controls.MetroLink lnkLogOut;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip Menus;
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroDeAlunosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroDeProfessorToolStripMenuItem;
@@ -198,5 +209,6 @@
         private System.Windows.Forms.ToolStripMenuItem editarCadastroToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem criarNovaFichaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarFichaToolStripMenuItem;
+        private MetroFramework.Controls.MetroButton Sair;
     }
 }
