@@ -53,5 +53,15 @@ namespace AcademySolution
         {
             
         }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cadastroDeFichaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
