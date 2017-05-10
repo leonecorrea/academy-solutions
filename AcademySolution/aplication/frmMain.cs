@@ -58,5 +58,10 @@ namespace AcademySolution
         {
 
         }
+
+        private void cadastroDeFichaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
