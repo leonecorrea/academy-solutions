@@ -13,7 +13,7 @@ namespace AcademySolution
 {
     public partial class frmMain : MetroFramework.Forms.MetroForm
     {
-        public Login login = new Login();
+        public bool _logOut = false;
 
         public frmMain()
         {
@@ -22,29 +22,46 @@ namespace AcademySolution
 
         private void lnkLogOut_Click(object sender, EventArgs e)
         {
-            login.Deslogar();
-            login._LogOut = true;
+            this._logOut = true;
+            
             this.Close();
+
             pedeLogin();
 
+            //frmLogin.Instance.Show();
         }
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             //Main Form Close
-            if (!login._LogOut)
+            if (!_logOut)
                 Application.Exit();
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            this.lblInfoUser.Text = login.Username;
+            
         }
 
         public void pedeLogin()
         {
-            frmLogin frm = new frmLogin();
+            frmLogin frm = new frmLogin(true);
             frm.Show();
+        }
+
+        public void getUsernameAccount()
+        {
+            
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cadastroDeFichaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
