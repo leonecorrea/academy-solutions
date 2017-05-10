@@ -118,8 +118,8 @@
             // consultarFichaToolStripMenuItem
             // 
             this.consultarFichaToolStripMenuItem.Name = "consultarFichaToolStripMenuItem";
-            this.consultarFichaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.consultarFichaToolStripMenuItem.Text = "Consultar Ficha";
+            this.consultarFichaToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.consultarFichaToolStripMenuItem.Text = "Consultar Fichas";
             // 
             // criarNovoCadastroToolStripMenuItem
             // 
