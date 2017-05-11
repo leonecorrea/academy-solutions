@@ -44,7 +44,6 @@
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblInfoUser = new MetroFramework.Controls.MetroLabel();
-            this.metroUserControl1 = new MetroFramework.Controls.MetroUserControl();
             this.Menus.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -169,19 +168,10 @@
             this.lblInfoUser.TabIndex = 3;
             this.lblInfoUser.Text = "Username";
             // 
-            // metroUserControl1
-            // 
-            this.metroUserControl1.Location = new System.Drawing.Point(556, 140);
-            this.metroUserControl1.Name = "metroUserControl1";
-            this.metroUserControl1.Size = new System.Drawing.Size(150, 150);
-            this.metroUserControl1.TabIndex = 4;
-            this.metroUserControl1.UseSelectable = true;
-            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(998, 558);
-            this.Controls.Add(this.metroUserControl1);
             this.Controls.Add(this.lblInfoUser);
             this.Controls.Add(this.lnkLogOut);
             this.Controls.Add(this.Menus);
@@ -222,6 +212,5 @@
         private System.Windows.Forms.ToolStripMenuItem criarNovaFichaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarFichaToolStripMenuItem;
         private MetroFramework.Controls.MetroLabel lblInfoUser;
-        private MetroFramework.Controls.MetroUserControl metroUserControl1;
     }
 }
