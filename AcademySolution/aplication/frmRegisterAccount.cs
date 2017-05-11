@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace aplication
+namespace AcademySolution
 {
     public partial class frmRegisterAccount : MetroFramework.Forms.MetroForm
     {

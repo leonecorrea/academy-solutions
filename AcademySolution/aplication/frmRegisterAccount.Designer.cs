@@ -1,4 +1,4 @@
-﻿namespace aplication
+﻿namespace AcademySolution
 {
     partial class frmRegisterAccount
     {
@@ -35,11 +35,12 @@
             this.txbFirstName = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.cbbLevel = new MetroFramework.Controls.MetroComboBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(669, 197);
+            this.btnRegister.Location = new System.Drawing.Point(625, 197);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
             this.btnRegister.TabIndex = 0;
@@ -58,7 +59,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(429, 78);
+            this.metroLabel2.Location = new System.Drawing.Point(385, 78);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(78, 19);
             this.metroLabel2.TabIndex = 1;
@@ -109,7 +110,7 @@
             this.txbFirstName.CustomButton.UseSelectable = true;
             this.txbFirstName.CustomButton.Visible = false;
             this.txbFirstName.Lines = new string[0];
-            this.txbFirstName.Location = new System.Drawing.Point(513, 78);
+            this.txbFirstName.Location = new System.Drawing.Point(469, 78);
             this.txbFirstName.MaxLength = 32767;
             this.txbFirstName.Name = "txbFirstName";
             this.txbFirstName.PasswordChar = '\0';
@@ -128,11 +129,11 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(23, 161);
+            this.metroLabel3.Location = new System.Drawing.Point(58, 123);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(38, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(45, 19);
             this.metroLabel3.TabIndex = 3;
-            this.metroLabel3.Text = "Level";
+            this.metroLabel3.Text = "Level :";
             // 
             // cbbLevel
             // 
@@ -141,23 +142,33 @@
             this.cbbLevel.Items.AddRange(new object[] {
             "Student",
             "Instructor"});
-            this.cbbLevel.Location = new System.Drawing.Point(68, 158);
+            this.cbbLevel.Location = new System.Drawing.Point(109, 123);
             this.cbbLevel.Name = "cbbLevel";
             this.cbbLevel.Size = new System.Drawing.Size(92, 29);
             this.cbbLevel.TabIndex = 4;
             this.cbbLevel.UseSelectable = true;
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(544, 197);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 0;
+            this.metroButton1.Text = "Cancel";
+            this.metroButton1.UseSelectable = true;
+            // 
             // frmRegisterAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(767, 377);
+            this.ClientSize = new System.Drawing.Size(758, 264);
             this.Controls.Add(this.cbbLevel);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.txbFirstName);
             this.Controls.Add(this.txbLastName);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.btnRegister);
             this.Name = "frmRegisterAccount";
             this.Text = "Register Account";
@@ -175,5 +186,6 @@
         private MetroFramework.Controls.MetroTextBox txbFirstName;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroComboBox cbbLevel;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

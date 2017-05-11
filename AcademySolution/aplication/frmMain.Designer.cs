@@ -32,7 +32,7 @@
             this.lnkLogOut = new MetroFramework.Controls.MetroLink();
             this.Menus = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastroDeAlunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.smiRegisterStudent = new System.Windows.Forms.ToolStripMenuItem();
             this.criarNovoCadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarCadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeProfessorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,27 +73,28 @@
             // cadastrosToolStripMenuItem
             // 
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastroDeAlunosToolStripMenuItem,
+            this.smiRegisterStudent,
             this.cadastroDeProfessorToolStripMenuItem,
             this.cadastroDeFichaToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
-            // cadastroDeAlunosToolStripMenuItem
+            // smiRegisterStudent
             // 
-            this.cadastroDeAlunosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.smiRegisterStudent.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.criarNovoCadastroToolStripMenuItem,
             this.editarCadastroToolStripMenuItem});
-            this.cadastroDeAlunosToolStripMenuItem.Name = "cadastroDeAlunosToolStripMenuItem";
-            this.cadastroDeAlunosToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.cadastroDeAlunosToolStripMenuItem.Text = "Cadastro de Alunos";
+            this.smiRegisterStudent.Name = "smiRegisterStudent";
+            this.smiRegisterStudent.Size = new System.Drawing.Size(189, 22);
+            this.smiRegisterStudent.Text = "Cadastro de Alunos";
             // 
             // criarNovoCadastroToolStripMenuItem
             // 
             this.criarNovoCadastroToolStripMenuItem.Name = "criarNovoCadastroToolStripMenuItem";
             this.criarNovoCadastroToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.criarNovoCadastroToolStripMenuItem.Text = "Criar Novo Cadastro";
+            this.criarNovoCadastroToolStripMenuItem.Click += new System.EventHandler(this.criarNovoCadastroToolStripMenuItem_Click);
             // 
             // editarCadastroToolStripMenuItem
             // 
@@ -200,7 +201,7 @@
         private MetroFramework.Controls.MetroLink lnkLogOut;
         private System.Windows.Forms.MenuStrip Menus;
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastroDeAlunosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem smiRegisterStudent;
         private System.Windows.Forms.ToolStripMenuItem cadastroDeProfessorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroDeFichaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;

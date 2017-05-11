@@ -54,12 +54,25 @@ namespace AcademySolution
 
         private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
+            
+            
+        }
 
+        public void mostrarRegister()
+        {
+            frmRegisterAccount register = new frmRegisterAccount();
+            register.Show();
         }
 
         private void cadastroDeFichaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void criarNovoCadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread t = new Thread(new ThreadStart(mostrarRegister));
+            mostrarRegister();
         }
     }
 }
