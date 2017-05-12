@@ -75,11 +75,5 @@ namespace AcademySolution
             frmRegisterAccount register = new frmRegisterAccount();
             register.Show();
         }
-
-        public void abortRegister()
-        {
-            frmRegisterAccount register = new frmRegisterAccount();
-            register.Hide();
-        }
     }
 }
