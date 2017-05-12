@@ -33,7 +33,7 @@ namespace AcademySolution
                 this.Show();
 
             }
-            else //if(login._LogOut == true)
+            else if(login._LogOut == true)
             {
                 InitializeComponent();
                 this.Show();

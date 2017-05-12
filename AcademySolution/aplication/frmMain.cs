@@ -58,21 +58,28 @@ namespace AcademySolution
             
         }
 
-        public void mostrarRegister()
-        {
-            frmRegisterAccount register = new frmRegisterAccount();
-            register.Show();
-        }
-
         private void cadastroDeFichaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void criarNovoCadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mniRegisterStudent_Click(object sender, EventArgs e)
         {
-            Thread t = new Thread(new ThreadStart(mostrarRegister));
-            mostrarRegister();
+            Thread t = new Thread(new ThreadStart(showRegister));
+            showRegister();
+
+        }
+
+        public void showRegister()
+        {
+            frmRegisterAccount register = new frmRegisterAccount();
+            register.Show();
+        }
+
+        public void abortRegister()
+        {
+            frmRegisterAccount register = new frmRegisterAccount();
+            register.Hide();
         }
     }
 }

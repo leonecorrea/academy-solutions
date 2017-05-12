@@ -31,12 +31,17 @@ namespace AcademySolution
 
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
+        {
+            MetroFramework.MetroMessageBox.Show(this,"Os dados foram cadastrados com sucesso!");
+        }
+
+        private void btnClean_Click(object sender, EventArgs e)
         {
 
         }

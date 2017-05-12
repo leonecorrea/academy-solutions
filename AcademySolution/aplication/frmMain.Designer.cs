@@ -33,7 +33,7 @@
             this.Menus = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.smiRegisterStudent = new System.Windows.Forms.ToolStripMenuItem();
-            this.criarNovoCadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniRegisterStudent = new System.Windows.Forms.ToolStripMenuItem();
             this.editarCadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastroDeProfessorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.criarNovoCadastroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,18 +83,18 @@
             // smiRegisterStudent
             // 
             this.smiRegisterStudent.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.criarNovoCadastroToolStripMenuItem,
+            this.mniRegisterStudent,
             this.editarCadastroToolStripMenuItem});
             this.smiRegisterStudent.Name = "smiRegisterStudent";
             this.smiRegisterStudent.Size = new System.Drawing.Size(189, 22);
             this.smiRegisterStudent.Text = "Cadastro de Alunos";
             // 
-            // criarNovoCadastroToolStripMenuItem
+            // mniRegisterStudent
             // 
-            this.criarNovoCadastroToolStripMenuItem.Name = "criarNovoCadastroToolStripMenuItem";
-            this.criarNovoCadastroToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.criarNovoCadastroToolStripMenuItem.Text = "Criar Novo Cadastro";
-            this.criarNovoCadastroToolStripMenuItem.Click += new System.EventHandler(this.criarNovoCadastroToolStripMenuItem_Click);
+            this.mniRegisterStudent.Name = "mniRegisterStudent";
+            this.mniRegisterStudent.Size = new System.Drawing.Size(181, 22);
+            this.mniRegisterStudent.Text = "Criar Novo Cadastro";
+            this.mniRegisterStudent.Click += new System.EventHandler(this.mniRegisterStudent_Click);
             // 
             // editarCadastroToolStripMenuItem
             // 
@@ -206,7 +206,7 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroDeFichaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarFichaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem criarNovoCadastroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mniRegisterStudent;
         private System.Windows.Forms.ToolStripMenuItem editarCadastroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem criarNovoCadastroToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editarCadastroToolStripMenuItem1;
