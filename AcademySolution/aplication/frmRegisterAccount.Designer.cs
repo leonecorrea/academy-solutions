@@ -141,7 +141,7 @@
             this.metroButton1.Location = new System.Drawing.Point(436, 404);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(110, 23);
-            this.metroButton1.TabIndex = 0;
+            this.metroButton1.TabIndex = 9;
             this.metroButton1.Text = "Clean";
             this.metroButton1.UseSelectable = true;
             this.metroButton1.Click += new System.EventHandler(this.btnClean_Click);
@@ -151,7 +151,7 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.Location = new System.Drawing.Point(28, 150);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(74, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(75, 19);
             this.metroLabel4.TabIndex = 6;
             this.metroLabel4.Text = "Date Birth :";
             this.metroLabel4.Click += new System.EventHandler(this.metroLabel4_Click);
@@ -272,7 +272,7 @@
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.Location = new System.Drawing.Point(359, 289);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(62, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(63, 19);
             this.metroLabel7.TabIndex = 7;
             this.metroLabel7.Text = "Country :";
             // 
@@ -316,7 +316,7 @@
             this.btnCancel.Location = new System.Drawing.Point(283, 404);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(110, 23);
-            this.btnCancel.TabIndex = 0;
+            this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseSelectable = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -392,7 +392,7 @@
             this.metroTextBox1.SelectionStart = 0;
             this.metroTextBox1.ShortcutsEnabled = true;
             this.metroTextBox1.Size = new System.Drawing.Size(221, 23);
-            this.metroTextBox1.TabIndex = 10;
+            this.metroTextBox1.TabIndex = 0;
             this.metroTextBox1.UseSelectable = true;
             this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
@@ -440,6 +440,7 @@
             this.Name = "frmRegisterAccount";
             this.Resizable = false;
             this.ShowIcon = false;
+            this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Register Account";
             this.Load += new System.EventHandler(this.frmRegisterAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();

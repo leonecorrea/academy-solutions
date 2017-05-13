@@ -91,11 +91,11 @@
     <Compile Include="frmRegisterAccount.Designer.cs">
       <DependentUpon>frmRegisterAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegisterFicha.cs">
+    <Compile Include="frmRegisterRecord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegisterFicha.Designer.cs">
-      <DependentUpon>frmRegisterFicha.cs</DependentUpon>
+    <Compile Include="frmRegisterRecord.Designer.cs">
+      <DependentUpon>frmRegisterRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSplashScreen.cs">
       <SubType>Form</SubType>
@@ -115,8 +115,8 @@
     <EmbeddedResource Include="frmRegisterAccount.resx">
       <DependentUpon>frmRegisterAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegisterFicha.resx">
-      <DependentUpon>frmRegisterFicha.cs</DependentUpon>
+    <EmbeddedResource Include="frmRegisterRecord.resx">
+      <DependentUpon>frmRegisterRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>

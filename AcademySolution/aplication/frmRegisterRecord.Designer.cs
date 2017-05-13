@@ -1,6 +1,6 @@
 ﻿namespace AcademySolution
 {
-    partial class frmRegisterFicha
+    partial class frmRegisterRecord
     {
         /// <summary>
         /// Required designer variable.

@@ -84,7 +84,7 @@ namespace AcademySolution
 
         public void showRegisterFicha()
         {
-            frmRegisterFicha registerFicha = new frmRegisterFicha();
+            frmRegisterRecord registerFicha = new frmRegisterRecord();
             registerFicha.Show();
         }
     }
