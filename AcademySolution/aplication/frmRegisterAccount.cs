@@ -45,5 +45,10 @@ namespace AcademySolution
         {
 
         }
+
+        private void frmRegisterAccount_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

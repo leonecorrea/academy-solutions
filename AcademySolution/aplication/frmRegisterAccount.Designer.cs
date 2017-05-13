@@ -150,7 +150,7 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.Location = new System.Drawing.Point(28, 150);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(75, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(74, 19);
             this.metroLabel4.TabIndex = 6;
             this.metroLabel4.Text = "Date Birth :";
             this.metroLabel4.Click += new System.EventHandler(this.metroLabel4_Click);
@@ -271,7 +271,7 @@
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.Location = new System.Drawing.Point(359, 289);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(62, 19);
             this.metroLabel7.TabIndex = 7;
             this.metroLabel7.Text = "Country :";
             // 
@@ -428,6 +428,7 @@
             this.Resizable = false;
             this.ShowIcon = false;
             this.Text = "Register Account";
+            this.Load += new System.EventHandler(this.frmRegisterAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

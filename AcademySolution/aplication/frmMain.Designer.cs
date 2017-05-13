@@ -138,6 +138,7 @@
             this.criarNovaFichaToolStripMenuItem.Name = "criarNovaFichaToolStripMenuItem";
             this.criarNovaFichaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.criarNovaFichaToolStripMenuItem.Text = "Criar nova ficha";
+            this.criarNovaFichaToolStripMenuItem.Click += new System.EventHandler(this.criarNovaFichaToolStripMenuItem_Click);
             // 
             // editarFichaToolStripMenuItem
             // 

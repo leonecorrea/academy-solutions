@@ -75,5 +75,17 @@ namespace AcademySolution
             frmRegisterAccount register = new frmRegisterAccount();
             register.Show();
         }
+
+        private void criarNovaFichaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread t = new Thread(new ThreadStart(showRegisterFicha));
+            showRegisterFicha();
+        }
+
+        public void showRegisterFicha()
+        {
+            frmRegisterFicha registerFicha = new frmRegisterFicha();
+            registerFicha.Show();
+        }
     }
 }
