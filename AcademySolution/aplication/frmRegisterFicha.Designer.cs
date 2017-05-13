@@ -172,9 +172,9 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(23, 140);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(106, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(110, 19);
             this.metroLabel2.TabIndex = 2;
-            this.metroLabel2.Text = "Name Teacher : ";
+            this.metroLabel2.Text = "Name Teacher :  ";
             // 
             // tbxNameTeacher
             // 
