@@ -43,7 +43,17 @@ namespace AcademySolution
 
         private void btnClean_Click(object sender, EventArgs e)
         {
-
+            txbFirstName.Text = "";
+            txbLastName.Text = "";
+            txbDateBirth.Text = "";
+            cbbLevel.Text = "";
+            cbbCountry.Text = "";
+            cbbPlace.Text = "";
+            txbStreet.Text = "";
+            txbNumber.Text = "";
+            tbxCPF.Text = "";
+            tbxCellphone.Text = "";
+            
         }
 
         private void frmRegisterAccount_Load(object sender, EventArgs e)
@@ -52,6 +62,16 @@ namespace AcademySolution
         }
 
         private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cbbLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txbFirstName_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -87,5 +87,27 @@ namespace AcademySolution
             frmRegisterRecord registerFicha = new frmRegisterRecord();
             registerFicha.Show();
         }
+
+        private void lblInfoUser_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void mniInfoUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Thread t = new Thread(new ThreadStart(showInfoUser));
+            showInfoUser();
+        }
+
+        public void showInfoUser()
+        {
+            infoUser user = new infoUser();
+            user.Show();
+        }
     }
 }

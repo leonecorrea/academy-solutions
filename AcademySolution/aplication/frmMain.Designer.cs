@@ -57,6 +57,13 @@
             this.mnsInfoUser.SuspendLayout();
             this.SuspendLayout();
             // 
+            // mniInfoUser
+            // 
+            mniInfoUser.Name = "mniInfoUser";
+            mniInfoUser.Size = new System.Drawing.Size(66, 20);
+            mniInfoUser.Text = "Info User";
+            mniInfoUser.Click += new System.EventHandler(this.mniInfoUser_Click);
+            // 
             // Menus
             // 
             this.Menus.BackColor = System.Drawing.Color.White;
@@ -69,7 +76,7 @@
             this.Menus.Location = new System.Drawing.Point(1, 30);
             this.Menus.Name = "Menus";
             this.Menus.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.Menus.Size = new System.Drawing.Size(241, 24);
+            this.Menus.Size = new System.Drawing.Size(333, 24);
             this.Menus.TabIndex = 1;
             this.Menus.Text = "menuStrip1";
             // 
@@ -182,6 +189,7 @@
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.profileToolStripMenuItem.Text = "Profile";
+            this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -200,6 +208,7 @@
             this.lblInfoUser.Size = new System.Drawing.Size(68, 19);
             this.lblInfoUser.TabIndex = 3;
             this.lblInfoUser.Text = "Username";
+            this.lblInfoUser.Click += new System.EventHandler(this.lblInfoUser_Click);
             // 
             // toolStripContainer1
             // 
@@ -227,12 +236,6 @@
             this.mnsInfoUser.Size = new System.Drawing.Size(74, 24);
             this.mnsInfoUser.TabIndex = 4;
             this.mnsInfoUser.Text = "menuStrip1";
-            // 
-            // mniInfoUser
-            // 
-            mniInfoUser.Name = "mniInfoUser";
-            mniInfoUser.Size = new System.Drawing.Size(66, 20);
-            mniInfoUser.Text = "Info User";
             // 
             // frmMain
             // 
