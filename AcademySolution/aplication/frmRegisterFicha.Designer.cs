@@ -1901,7 +1901,7 @@
             // metroTile2
             // 
             this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(23, 58);
+            this.metroTile2.Location = new System.Drawing.Point(23, 57);
             this.metroTile2.Name = "metroTile2";
             this.metroTile2.Size = new System.Drawing.Size(708, 10);
             this.metroTile2.TabIndex = 97;
