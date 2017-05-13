@@ -31,19 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.Menus = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.smiRegisterStudent = new System.Windows.Forms.ToolStripMenuItem();
-            this.mniRegisterStudent = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarCadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastroDeProfessorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.criarNovoCadastroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarCadastroToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastroDeFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.criarNovaFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.smiAddNew = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.instructorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.recordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblInfoUser = new MetroFramework.Controls.MetroLabel();
@@ -72,106 +61,23 @@
             // cadastrosToolStripMenuItem
             // 
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.smiRegisterStudent,
-            this.cadastroDeProfessorToolStripMenuItem,
-            this.cadastroDeFichaToolStripMenuItem});
+            this.smiAddNew});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.cadastrosToolStripMenuItem.Text = "Registration";
             // 
-            // smiRegisterStudent
+            // smiAddNew
             // 
-            this.smiRegisterStudent.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mniRegisterStudent,
-            this.editarCadastroToolStripMenuItem});
-            this.smiRegisterStudent.Name = "smiRegisterStudent";
-            this.smiRegisterStudent.Size = new System.Drawing.Size(125, 22);
-            this.smiRegisterStudent.Text = "Students";
-            // 
-            // mniRegisterStudent
-            // 
-            this.mniRegisterStudent.Name = "mniRegisterStudent";
-            this.mniRegisterStudent.Size = new System.Drawing.Size(123, 22);
-            this.mniRegisterStudent.Text = "Add New";
-            this.mniRegisterStudent.Click += new System.EventHandler(this.mniRegisterStudent_Click);
-            // 
-            // editarCadastroToolStripMenuItem
-            // 
-            this.editarCadastroToolStripMenuItem.Name = "editarCadastroToolStripMenuItem";
-            this.editarCadastroToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.editarCadastroToolStripMenuItem.Text = "Edition";
-            // 
-            // cadastroDeProfessorToolStripMenuItem
-            // 
-            this.cadastroDeProfessorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.criarNovoCadastroToolStripMenuItem1,
-            this.editarCadastroToolStripMenuItem1});
-            this.cadastroDeProfessorToolStripMenuItem.Name = "cadastroDeProfessorToolStripMenuItem";
-            this.cadastroDeProfessorToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.cadastroDeProfessorToolStripMenuItem.Text = "Instructor";
-            // 
-            // criarNovoCadastroToolStripMenuItem1
-            // 
-            this.criarNovoCadastroToolStripMenuItem1.Name = "criarNovoCadastroToolStripMenuItem1";
-            this.criarNovoCadastroToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
-            this.criarNovoCadastroToolStripMenuItem1.Text = "Add New";
-            // 
-            // editarCadastroToolStripMenuItem1
-            // 
-            this.editarCadastroToolStripMenuItem1.Name = "editarCadastroToolStripMenuItem1";
-            this.editarCadastroToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
-            this.editarCadastroToolStripMenuItem1.Text = "Edition";
-            // 
-            // cadastroDeFichaToolStripMenuItem
-            // 
-            this.cadastroDeFichaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.criarNovaFichaToolStripMenuItem,
-            this.editarFichaToolStripMenuItem});
-            this.cadastroDeFichaToolStripMenuItem.Name = "cadastroDeFichaToolStripMenuItem";
-            this.cadastroDeFichaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.cadastroDeFichaToolStripMenuItem.Text = "Record";
-            this.cadastroDeFichaToolStripMenuItem.Click += new System.EventHandler(this.cadastroDeFichaToolStripMenuItem_Click);
-            // 
-            // criarNovaFichaToolStripMenuItem
-            // 
-            this.criarNovaFichaToolStripMenuItem.Name = "criarNovaFichaToolStripMenuItem";
-            this.criarNovaFichaToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.criarNovaFichaToolStripMenuItem.Text = "Add New";
-            this.criarNovaFichaToolStripMenuItem.Click += new System.EventHandler(this.criarNovaFichaToolStripMenuItem_Click);
-            // 
-            // editarFichaToolStripMenuItem
-            // 
-            this.editarFichaToolStripMenuItem.Name = "editarFichaToolStripMenuItem";
-            this.editarFichaToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.editarFichaToolStripMenuItem.Text = "Edition";
+            this.smiAddNew.Name = "smiAddNew";
+            this.smiAddNew.Size = new System.Drawing.Size(152, 22);
+            this.smiAddNew.Text = "Add New";
+            this.smiAddNew.Click += new System.EventHandler(this.smiAddNew_Click);
             // 
             // consultaToolStripMenuItem
             // 
-            this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultarFichaToolStripMenuItem,
-            this.instructorToolStripMenuItem,
-            this.recordToolStripMenuItem});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
             this.consultaToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.consultaToolStripMenuItem.Text = "Search";
-            // 
-            // consultarFichaToolStripMenuItem
-            // 
-            this.consultarFichaToolStripMenuItem.Name = "consultarFichaToolStripMenuItem";
-            this.consultarFichaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.consultarFichaToolStripMenuItem.Text = "Student";
-            // 
-            // instructorToolStripMenuItem
-            // 
-            this.instructorToolStripMenuItem.Name = "instructorToolStripMenuItem";
-            this.instructorToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.instructorToolStripMenuItem.Text = "Instructor";
-            // 
-            // recordToolStripMenuItem
-            // 
-            this.recordToolStripMenuItem.Name = "recordToolStripMenuItem";
-            this.recordToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
-            this.recordToolStripMenuItem.Text = "Record";
             // 
             // profileToolStripMenuItem
             // 
@@ -246,20 +152,9 @@
         #endregion
         private System.Windows.Forms.MenuStrip Menus;
         private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem smiRegisterStudent;
-        private System.Windows.Forms.ToolStripMenuItem cadastroDeProfessorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastroDeFichaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem smiAddNew;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarFichaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mniRegisterStudent;
-        private System.Windows.Forms.ToolStripMenuItem editarCadastroToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem criarNovoCadastroToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem editarCadastroToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem criarNovaFichaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarFichaToolStripMenuItem;
         private MetroFramework.Controls.MetroLabel lblInfoUser;
-        private System.Windows.Forms.ToolStripMenuItem instructorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem recordToolStripMenuItem;
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;

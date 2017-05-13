@@ -65,8 +65,7 @@ namespace AcademySolution
 
         private void mniRegisterStudent_Click(object sender, EventArgs e)
         {
-            Thread t = new Thread(new ThreadStart(showRegister));
-            showRegister();
+            
 
         }
 
@@ -91,6 +90,12 @@ namespace AcademySolution
         private void mniInfoUser_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void smiAddNew_Click(object sender, EventArgs e)
+        {
+            Thread t = new Thread(new ThreadStart(showRegister));
+            showRegister();
         }
     }
 }
