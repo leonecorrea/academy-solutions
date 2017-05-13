@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ToolStripMenuItem mniInfoUser;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.Menus = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,12 +48,9 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblInfoUser = new MetroFramework.Controls.MetroLabel();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.mnsInfoUser = new System.Windows.Forms.MenuStrip();
-            mniInfoUser = new System.Windows.Forms.ToolStripMenuItem();
             this.Menus.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
-            this.mnsInfoUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // Menus
@@ -195,7 +191,7 @@
             this.lblInfoUser.AutoSize = true;
             this.lblInfoUser.BackColor = System.Drawing.Color.Transparent;
             this.lblInfoUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblInfoUser.Location = new System.Drawing.Point(719, 5);
+            this.lblInfoUser.Location = new System.Drawing.Point(871, 0);
             this.lblInfoUser.Name = "lblInfoUser";
             this.lblInfoUser.Size = new System.Drawing.Size(68, 19);
             this.lblInfoUser.TabIndex = 3;
@@ -215,31 +211,11 @@
             this.toolStripContainer1.TabIndex = 4;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
-            // mnsInfoUser
-            // 
-            this.mnsInfoUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.mnsInfoUser.Dock = System.Windows.Forms.DockStyle.None;
-            this.mnsInfoUser.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            mniInfoUser});
-            this.mnsInfoUser.Location = new System.Drawing.Point(914, 30);
-            this.mnsInfoUser.Name = "mnsInfoUser";
-            this.mnsInfoUser.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.mnsInfoUser.Size = new System.Drawing.Size(74, 24);
-            this.mnsInfoUser.TabIndex = 4;
-            this.mnsInfoUser.Text = "menuStrip1";
-            // 
-            // mniInfoUser
-            // 
-            mniInfoUser.Name = "mniInfoUser";
-            mniInfoUser.Size = new System.Drawing.Size(66, 20);
-            mniInfoUser.Text = "Info User";
-            // 
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(998, 558);
             this.Controls.Add(this.Menus);
-            this.Controls.Add(this.mnsInfoUser);
             this.Controls.Add(this.toolStripContainer1);
             this.DisplayHeader = false;
             this.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -262,8 +238,6 @@
             this.toolStripContainer1.ContentPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
-            this.mnsInfoUser.ResumeLayout(false);
-            this.mnsInfoUser.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,6 +263,5 @@
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip mnsInfoUser;
     }
 }

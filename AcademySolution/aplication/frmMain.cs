@@ -87,5 +87,10 @@ namespace AcademySolution
             frmRegisterRecord registerFicha = new frmRegisterRecord();
             registerFicha.Show();
         }
+
+        private void mniInfoUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
