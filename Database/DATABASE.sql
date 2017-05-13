@@ -11,24 +11,27 @@ CREATE TABLE TblAccount(
 	DateBirth DATETIME,
 	DateRegister DATETIME,
 	Address VARCHAR (255),
-	CodCategory INT--FK
+	CodCategory INT,--FK
+	CONSTRAINT PK_ACCOUNT PRIMARY KEY (CodAccount)
 )
 
-CREATE TABLE TblAddress(
+/*CREATE TABLE TblAddress(
 	CodAddress INT IDENTITY(1,00001),
 	
-)
+)*/
 
 CREATE TABLE TblLogin(
 	CodAccount INT, --FK
 	Username VARCHAR(20),
-	Password VARCHAR (40)
+	Password VARCHAR (40),
+	CONSTRAINT FK_LOGIN_PK_ACCOUNT FOREIGN KEY (CodAccount) REFERENCES TblAccount (CodAccount)
 )
 
 CREATE TABLE TblCategory(
 	CodCategory INT IDENTITY(1,1),--PK
 	Name VARCHAR(20),
-	Description TEXT
+	Description TEXT,
+	CONSTRAINT PK_CATEGORY PRIMARY KEY (CodCategory)
 )
 
 CREATE TABLE TblListAcademy(
@@ -43,19 +46,6 @@ CREATE TABLE TblExercises(
 	Name VARCHAR (20),
 	Description TEXT
 )
-
-ALTER TABLE TblAccount ADD
-	CONSTRAINT PK_ACCOUNT 
-		PRIMARY KEY (CodAccount);
-
-ALTER TABLE TblCategory ADD
-	CONSTRAINT PK_CATEGORY 
-		PRIMARY KEY (CodCategory);
-
-ALTER TABLE TblLogin ADD
-	CONSTRAINT FK_LOGIN_PK_ACCOUNT 
-		FOREIGN KEY (CodAccount) 
-			REFERENCES TblAccount (CodAccount);
 
 ALTER TABLE TblListAcademy ADD 
 	FOREIGN KEY FKLISTACADEMY_PKSTUDENT (CodStudent) 
