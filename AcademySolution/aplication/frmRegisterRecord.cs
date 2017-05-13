@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AcademySolution
 {
-    public partial class frmRegisterFicha : MetroFramework.Forms.MetroForm
+    public partial class frmRegisterRecord : MetroFramework.Forms.MetroForm
     {
-        public frmRegisterFicha()
+        public frmRegisterRecord()
         {
             InitializeComponent();
         }
