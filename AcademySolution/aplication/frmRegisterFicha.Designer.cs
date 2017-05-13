@@ -108,7 +108,7 @@
             this.tbxSeries12 = new MetroFramework.Controls.MetroTextBox();
             this.tbxSeries13 = new MetroFramework.Controls.MetroTextBox();
             this.tbxSeries14 = new MetroFramework.Controls.MetroTextBox();
-            this.tbxRepetitions = new MetroFramework.Controls.MetroTextBox();
+            this.tbxRepetitions14 = new MetroFramework.Controls.MetroTextBox();
             this.tbxRepetitions13 = new MetroFramework.Controls.MetroTextBox();
             this.tbxRepetitions12 = new MetroFramework.Controls.MetroTextBox();
             this.tbxRepetitions11 = new MetroFramework.Controls.MetroTextBox();
@@ -1478,35 +1478,35 @@
             this.tbxSeries14.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbxSeries14.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // tbxRepetitions
+            // tbxRepetitions14
             // 
             // 
             // 
             // 
-            this.tbxRepetitions.CustomButton.Image = null;
-            this.tbxRepetitions.CustomButton.Location = new System.Drawing.Point(49, 1);
-            this.tbxRepetitions.CustomButton.Name = "";
-            this.tbxRepetitions.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tbxRepetitions.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbxRepetitions.CustomButton.TabIndex = 1;
-            this.tbxRepetitions.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbxRepetitions.CustomButton.UseSelectable = true;
-            this.tbxRepetitions.CustomButton.Visible = false;
-            this.tbxRepetitions.Lines = new string[0];
-            this.tbxRepetitions.Location = new System.Drawing.Point(587, 629);
-            this.tbxRepetitions.MaxLength = 32767;
-            this.tbxRepetitions.Name = "tbxRepetitions";
-            this.tbxRepetitions.PasswordChar = '\0';
-            this.tbxRepetitions.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbxRepetitions.SelectedText = "";
-            this.tbxRepetitions.SelectionLength = 0;
-            this.tbxRepetitions.SelectionStart = 0;
-            this.tbxRepetitions.ShortcutsEnabled = true;
-            this.tbxRepetitions.Size = new System.Drawing.Size(71, 23);
-            this.tbxRepetitions.TabIndex = 96;
-            this.tbxRepetitions.UseSelectable = true;
-            this.tbxRepetitions.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbxRepetitions.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbxRepetitions14.CustomButton.Image = null;
+            this.tbxRepetitions14.CustomButton.Location = new System.Drawing.Point(49, 1);
+            this.tbxRepetitions14.CustomButton.Name = "";
+            this.tbxRepetitions14.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbxRepetitions14.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tbxRepetitions14.CustomButton.TabIndex = 1;
+            this.tbxRepetitions14.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tbxRepetitions14.CustomButton.UseSelectable = true;
+            this.tbxRepetitions14.CustomButton.Visible = false;
+            this.tbxRepetitions14.Lines = new string[0];
+            this.tbxRepetitions14.Location = new System.Drawing.Point(587, 629);
+            this.tbxRepetitions14.MaxLength = 32767;
+            this.tbxRepetitions14.Name = "tbxRepetitions14";
+            this.tbxRepetitions14.PasswordChar = '\0';
+            this.tbxRepetitions14.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbxRepetitions14.SelectedText = "";
+            this.tbxRepetitions14.SelectionLength = 0;
+            this.tbxRepetitions14.SelectionStart = 0;
+            this.tbxRepetitions14.ShortcutsEnabled = true;
+            this.tbxRepetitions14.Size = new System.Drawing.Size(71, 23);
+            this.tbxRepetitions14.TabIndex = 96;
+            this.tbxRepetitions14.UseSelectable = true;
+            this.tbxRepetitions14.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tbxRepetitions14.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // tbxRepetitions13
             // 
@@ -1916,6 +1916,7 @@
             this.btnRegisterFicha.TabIndex = 98;
             this.btnRegisterFicha.Text = "Register Ficha";
             this.btnRegisterFicha.UseSelectable = true;
+            this.btnRegisterFicha.Click += new System.EventHandler(this.btnRegisterFicha_Click);
             // 
             // btnCleanFicha
             // 
@@ -1925,6 +1926,7 @@
             this.btnCleanFicha.TabIndex = 99;
             this.btnCleanFicha.Text = "Clean Ficha";
             this.btnCleanFicha.UseSelectable = true;
+            this.btnCleanFicha.Click += new System.EventHandler(this.btnCleanFicha_Click);
             // 
             // btnCancelFicha
             // 
@@ -1934,6 +1936,7 @@
             this.btnCancelFicha.TabIndex = 100;
             this.btnCancelFicha.Text = "Cancel Ficha";
             this.btnCancelFicha.UseSelectable = true;
+            this.btnCancelFicha.Click += new System.EventHandler(this.btnCancelFicha_Click);
             // 
             // frmRegisterFicha
             // 
@@ -1944,7 +1947,7 @@
             this.Controls.Add(this.btnCleanFicha);
             this.Controls.Add(this.btnRegisterFicha);
             this.Controls.Add(this.metroTile2);
-            this.Controls.Add(this.tbxRepetitions);
+            this.Controls.Add(this.tbxRepetitions14);
             this.Controls.Add(this.tbxRepetitions13);
             this.Controls.Add(this.tbxRepetitions12);
             this.Controls.Add(this.tbxRepetitions11);
@@ -2128,7 +2131,7 @@
         private MetroFramework.Controls.MetroTextBox tbxSeries12;
         private MetroFramework.Controls.MetroTextBox tbxSeries13;
         private MetroFramework.Controls.MetroTextBox tbxSeries14;
-        private MetroFramework.Controls.MetroTextBox tbxRepetitions;
+        private MetroFramework.Controls.MetroTextBox tbxRepetitions14;
         private MetroFramework.Controls.MetroTextBox tbxRepetitions13;
         private MetroFramework.Controls.MetroTextBox tbxRepetitions12;
         private MetroFramework.Controls.MetroTextBox tbxRepetitions11;
