@@ -1,0 +1,30 @@
+	//Classe Abstrata
+	Pessoa{
+		Nome, Cpf, Email, DataNasc;
+	}
+
+	//Classe Filha Herdada De Pessoa
+	Aluno:Pessoa{
+		Codigo, 
+		ConsultaFixa();
+	}
+
+	//Classe Filha Herdade De Pessoa
+	Instrutor:Pessoa{
+		Codigo, 
+		CadastraFixa(), ConsultaFixa(), AtualizaFixa();
+	}
+
+	Recepçao{
+		CadastraAluno(), AtualizaAluno(), ExcluiAluno(),
+		CadastraProfessor(), AtualizaProfessor(), ExcluiProfessor(),
+		ListaFixa(), ExcluiFixa();
+	}
+
+	Endereço{
+		Numero, Rua, Complemento, Bairro, Cidade, Estado;
+	}
+
+	Fixa{
+		Codigo, NomeAluno, NomeProfessor, ListaExercicios, DataInicio, Validade;
+	}
