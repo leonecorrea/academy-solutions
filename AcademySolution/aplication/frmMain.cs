@@ -75,13 +75,7 @@ namespace AcademySolution
             register.Show();
         }
 
-        private void criarNovaFichaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Thread t = new Thread(new ThreadStart(showRegisterFicha));
-            showRegisterFicha();
-        }
-
-        public void showRegisterFicha()
+        public void showRegisterRecord()
         {
             frmRegisterRecord registerFicha = new frmRegisterRecord();
             registerFicha.Show();
@@ -94,8 +88,18 @@ namespace AcademySolution
 
         private void smiAddNew_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void mniAccount_Click(object sender, EventArgs e)
+        {
             Thread t = new Thread(new ThreadStart(showRegister));
             showRegister();
+        }
+
+        private void mniRecord_Click(object sender, EventArgs e)
+        {
+            showRegisterRecord();
         }
     }
 }
