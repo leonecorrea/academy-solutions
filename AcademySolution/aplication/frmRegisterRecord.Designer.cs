@@ -133,9 +133,9 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(23, 95);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(108, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(115, 19);
             this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "Name Student :  ";
+            this.metroLabel1.Text = "Nome do Aluno:  ";
             // 
             // tbxNameStudent
             // 
@@ -170,11 +170,11 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(23, 140);
+            this.metroLabel2.Location = new System.Drawing.Point(11, 140);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(110, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(133, 19);
             this.metroLabel2.TabIndex = 2;
-            this.metroLabel2.Text = "Name Teacher :  ";
+            this.metroLabel2.Text = "Nome do Instrutor :  ";
             // 
             // tbxNameTeacher
             // 
@@ -209,20 +209,20 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(447, 95);
+            this.metroLabel3.Location = new System.Drawing.Point(425, 95);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(78, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(100, 19);
             this.metroLabel3.TabIndex = 4;
-            this.metroLabel3.Text = "Start Date : ";
+            this.metroLabel3.Text = "Data de Início : ";
             // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.Location = new System.Drawing.Point(419, 140);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(106, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(103, 19);
             this.metroLabel4.TabIndex = 5;
-            this.metroLabel4.Text = "Exchange Date : ";
+            this.metroLabel4.Text = "Data de Troca : ";
             // 
             // dateStart_Inicio
             // 
@@ -245,126 +245,126 @@
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.Location = new System.Drawing.Point(23, 231);
             this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel5.Size = new System.Drawing.Size(57, 19);
             this.metroLabel5.TabIndex = 9;
-            this.metroLabel5.Text = "Name : ";
+            this.metroLabel5.Text = "Nome : ";
             // 
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.Location = new System.Drawing.Point(23, 322);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(57, 19);
             this.metroLabel6.TabIndex = 10;
-            this.metroLabel6.Text = "Name : ";
+            this.metroLabel6.Text = "Nome : ";
             // 
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
             this.metroLabel7.Location = new System.Drawing.Point(23, 289);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(57, 19);
             this.metroLabel7.TabIndex = 11;
-            this.metroLabel7.Text = "Name : ";
+            this.metroLabel7.Text = "Nome : ";
             // 
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
             this.metroLabel8.Location = new System.Drawing.Point(23, 259);
             this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel8.Size = new System.Drawing.Size(57, 19);
             this.metroLabel8.TabIndex = 12;
-            this.metroLabel8.Text = "Name : ";
+            this.metroLabel8.Text = "Nome : ";
             // 
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
             this.metroLabel9.Location = new System.Drawing.Point(23, 357);
             this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel9.Size = new System.Drawing.Size(57, 19);
             this.metroLabel9.TabIndex = 13;
-            this.metroLabel9.Text = "Name : ";
+            this.metroLabel9.Text = "Nome : ";
             // 
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
             this.metroLabel10.Location = new System.Drawing.Point(23, 389);
             this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel10.Size = new System.Drawing.Size(57, 19);
             this.metroLabel10.TabIndex = 14;
-            this.metroLabel10.Text = "Name : ";
+            this.metroLabel10.Text = "Nome : ";
             // 
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
             this.metroLabel11.Location = new System.Drawing.Point(23, 422);
             this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel11.Size = new System.Drawing.Size(57, 19);
             this.metroLabel11.TabIndex = 15;
-            this.metroLabel11.Text = "Name : ";
+            this.metroLabel11.Text = "Nome : ";
             // 
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
             this.metroLabel12.Location = new System.Drawing.Point(23, 454);
             this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel12.Size = new System.Drawing.Size(57, 19);
             this.metroLabel12.TabIndex = 16;
-            this.metroLabel12.Text = "Name : ";
+            this.metroLabel12.Text = "Nome : ";
             // 
             // metroLabel13
             // 
             this.metroLabel13.AutoSize = true;
             this.metroLabel13.Location = new System.Drawing.Point(23, 482);
             this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel13.Size = new System.Drawing.Size(57, 19);
             this.metroLabel13.TabIndex = 17;
-            this.metroLabel13.Text = "Name : ";
+            this.metroLabel13.Text = "Nome : ";
             // 
             // metroLabel14
             // 
             this.metroLabel14.AutoSize = true;
             this.metroLabel14.Location = new System.Drawing.Point(23, 547);
             this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel14.Size = new System.Drawing.Size(57, 19);
             this.metroLabel14.TabIndex = 18;
-            this.metroLabel14.Text = "Name : ";
+            this.metroLabel14.Text = "Nome : ";
             // 
             // metroLabel15
             // 
             this.metroLabel15.AutoSize = true;
             this.metroLabel15.Location = new System.Drawing.Point(23, 513);
             this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel15.Size = new System.Drawing.Size(57, 19);
             this.metroLabel15.TabIndex = 19;
-            this.metroLabel15.Text = "Name : ";
+            this.metroLabel15.Text = "Nome : ";
             // 
             // metroLabel16
             // 
             this.metroLabel16.AutoSize = true;
             this.metroLabel16.Location = new System.Drawing.Point(23, 578);
             this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel16.Size = new System.Drawing.Size(57, 19);
             this.metroLabel16.TabIndex = 20;
-            this.metroLabel16.Text = "Name : ";
+            this.metroLabel16.Text = "Nome : ";
             // 
             // metroLabel17
             // 
             this.metroLabel17.AutoSize = true;
             this.metroLabel17.Location = new System.Drawing.Point(23, 607);
             this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel17.Size = new System.Drawing.Size(57, 19);
             this.metroLabel17.TabIndex = 21;
-            this.metroLabel17.Text = "Name : ";
+            this.metroLabel17.Text = "Nome : ";
             // 
             // metroLabel18
             // 
             this.metroLabel18.AutoSize = true;
             this.metroLabel18.Location = new System.Drawing.Point(23, 633);
             this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(56, 19);
+            this.metroLabel18.Size = new System.Drawing.Size(57, 19);
             this.metroLabel18.TabIndex = 22;
-            this.metroLabel18.Text = "Name : ";
+            this.metroLabel18.Text = "Nome : ";
             // 
             // tbxExerciseName1
             // 
@@ -802,9 +802,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(23, 177);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 25);
+            this.label1.Size = new System.Drawing.Size(121, 25);
             this.label1.TabIndex = 38;
-            this.label1.Text = "Exercises";
+            this.label1.Text = "Exercícios";
             // 
             // metroLabel19
             // 
@@ -937,126 +937,126 @@
             this.metroLabel34.AutoSize = true;
             this.metroLabel34.Location = new System.Drawing.Point(498, 607);
             this.metroLabel34.Name = "metroLabel34";
-            this.metroLabel34.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel34.Size = new System.Drawing.Size(79, 19);
             this.metroLabel34.TabIndex = 65;
-            this.metroLabel34.Text = "Repetitions : ";
+            this.metroLabel34.Text = "Repetições :";
             // 
             // metroLabel35
             // 
             this.metroLabel35.AutoSize = true;
             this.metroLabel35.Location = new System.Drawing.Point(498, 578);
             this.metroLabel35.Name = "metroLabel35";
-            this.metroLabel35.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel35.Size = new System.Drawing.Size(79, 19);
             this.metroLabel35.TabIndex = 64;
-            this.metroLabel35.Text = "Repetitions : ";
+            this.metroLabel35.Text = "Repetições :";
             // 
             // metroLabel36
             // 
             this.metroLabel36.AutoSize = true;
             this.metroLabel36.Location = new System.Drawing.Point(498, 547);
             this.metroLabel36.Name = "metroLabel36";
-            this.metroLabel36.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel36.Size = new System.Drawing.Size(79, 19);
             this.metroLabel36.TabIndex = 63;
-            this.metroLabel36.Text = "Repetitions : ";
+            this.metroLabel36.Text = "Repetições :";
             // 
             // metroLabel37
             // 
             this.metroLabel37.AutoSize = true;
             this.metroLabel37.Location = new System.Drawing.Point(498, 513);
             this.metroLabel37.Name = "metroLabel37";
-            this.metroLabel37.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel37.Size = new System.Drawing.Size(79, 19);
             this.metroLabel37.TabIndex = 62;
-            this.metroLabel37.Text = "Repetitions : ";
+            this.metroLabel37.Text = "Repetições :";
             // 
             // metroLabel38
             // 
             this.metroLabel38.AutoSize = true;
             this.metroLabel38.Location = new System.Drawing.Point(498, 482);
             this.metroLabel38.Name = "metroLabel38";
-            this.metroLabel38.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel38.Size = new System.Drawing.Size(79, 19);
             this.metroLabel38.TabIndex = 61;
-            this.metroLabel38.Text = "Repetitions : ";
+            this.metroLabel38.Text = "Repetições :";
             // 
             // metroLabel39
             // 
             this.metroLabel39.AutoSize = true;
             this.metroLabel39.Location = new System.Drawing.Point(498, 454);
             this.metroLabel39.Name = "metroLabel39";
-            this.metroLabel39.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel39.Size = new System.Drawing.Size(79, 19);
             this.metroLabel39.TabIndex = 60;
-            this.metroLabel39.Text = "Repetitions : ";
+            this.metroLabel39.Text = "Repetições :";
             // 
             // metroLabel40
             // 
             this.metroLabel40.AutoSize = true;
             this.metroLabel40.Location = new System.Drawing.Point(498, 422);
             this.metroLabel40.Name = "metroLabel40";
-            this.metroLabel40.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel40.Size = new System.Drawing.Size(79, 19);
             this.metroLabel40.TabIndex = 59;
-            this.metroLabel40.Text = "Repetitions : ";
+            this.metroLabel40.Text = "Repetições :";
             // 
             // metroLabel41
             // 
             this.metroLabel41.AutoSize = true;
             this.metroLabel41.Location = new System.Drawing.Point(498, 322);
             this.metroLabel41.Name = "metroLabel41";
-            this.metroLabel41.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel41.Size = new System.Drawing.Size(79, 19);
             this.metroLabel41.TabIndex = 58;
-            this.metroLabel41.Text = "Repetitions : ";
+            this.metroLabel41.Text = "Repetições :";
             // 
             // metroLabel42
             // 
             this.metroLabel42.AutoSize = true;
             this.metroLabel42.Location = new System.Drawing.Point(498, 356);
             this.metroLabel42.Name = "metroLabel42";
-            this.metroLabel42.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel42.Size = new System.Drawing.Size(79, 19);
             this.metroLabel42.TabIndex = 57;
-            this.metroLabel42.Text = "Repetitions : ";
+            this.metroLabel42.Text = "Repetições :";
             // 
             // metroLabel44
             // 
             this.metroLabel44.AutoSize = true;
             this.metroLabel44.Location = new System.Drawing.Point(498, 259);
             this.metroLabel44.Name = "metroLabel44";
-            this.metroLabel44.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel44.Size = new System.Drawing.Size(79, 19);
             this.metroLabel44.TabIndex = 55;
-            this.metroLabel44.Text = "Repetitions : ";
+            this.metroLabel44.Text = "Repetições :";
             // 
             // metroLabel45
             // 
             this.metroLabel45.AutoSize = true;
             this.metroLabel45.Location = new System.Drawing.Point(498, 289);
             this.metroLabel45.Name = "metroLabel45";
-            this.metroLabel45.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel45.Size = new System.Drawing.Size(79, 19);
             this.metroLabel45.TabIndex = 54;
-            this.metroLabel45.Text = "Repetitions : ";
+            this.metroLabel45.Text = "Repetições :";
             // 
             // metroLabel46
             // 
             this.metroLabel46.AutoSize = true;
             this.metroLabel46.Location = new System.Drawing.Point(498, 231);
             this.metroLabel46.Name = "metroLabel46";
-            this.metroLabel46.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel46.Size = new System.Drawing.Size(83, 19);
             this.metroLabel46.TabIndex = 53;
-            this.metroLabel46.Text = "Repetitions : ";
+            this.metroLabel46.Text = "Repetições : ";
             // 
             // metroLabel43
             // 
             this.metroLabel43.AutoSize = true;
             this.metroLabel43.Location = new System.Drawing.Point(498, 389);
             this.metroLabel43.Name = "metroLabel43";
-            this.metroLabel43.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel43.Size = new System.Drawing.Size(79, 19);
             this.metroLabel43.TabIndex = 67;
-            this.metroLabel43.Text = "Repetitions : ";
+            this.metroLabel43.Text = "Repetições :";
             // 
             // metroLabel33
             // 
             this.metroLabel33.AutoSize = true;
             this.metroLabel33.Location = new System.Drawing.Point(498, 633);
             this.metroLabel33.Name = "metroLabel33";
-            this.metroLabel33.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel33.Size = new System.Drawing.Size(79, 19);
             this.metroLabel33.TabIndex = 68;
-            this.metroLabel33.Text = "Repetitions : ";
+            this.metroLabel33.Text = "Repetições :";
             // 
             // tbxSeries1
             // 
@@ -1914,7 +1914,7 @@
             this.btnRegisterFicha.Name = "btnRegisterFicha";
             this.btnRegisterFicha.Size = new System.Drawing.Size(96, 23);
             this.btnRegisterFicha.TabIndex = 98;
-            this.btnRegisterFicha.Text = "Register Ficha";
+            this.btnRegisterFicha.Text = "Criar Ficha";
             this.btnRegisterFicha.UseSelectable = true;
             this.btnRegisterFicha.Click += new System.EventHandler(this.btnRegisterFicha_Click);
             // 
@@ -1924,7 +1924,7 @@
             this.btnCleanFicha.Name = "btnCleanFicha";
             this.btnCleanFicha.Size = new System.Drawing.Size(96, 23);
             this.btnCleanFicha.TabIndex = 99;
-            this.btnCleanFicha.Text = "Clean Ficha";
+            this.btnCleanFicha.Text = "Limpar Ficha";
             this.btnCleanFicha.UseSelectable = true;
             this.btnCleanFicha.Click += new System.EventHandler(this.btnCleanFicha_Click);
             // 
@@ -1934,15 +1934,16 @@
             this.btnCancelFicha.Name = "btnCancelFicha";
             this.btnCancelFicha.Size = new System.Drawing.Size(96, 23);
             this.btnCancelFicha.TabIndex = 100;
-            this.btnCancelFicha.Text = "Cancel Ficha";
+            this.btnCancelFicha.Text = "Cancelar Ficha";
             this.btnCancelFicha.UseSelectable = true;
             this.btnCancelFicha.Click += new System.EventHandler(this.btnCancelFicha_Click);
             // 
-            // frmRegisterFicha
+            // frmRegisterRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(758, 718);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancelFicha);
             this.Controls.Add(this.btnCleanFicha);
             this.Controls.Add(this.btnRegisterFicha);
@@ -2041,8 +2042,12 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.tbxNameStudent);
             this.Controls.Add(this.metroLabel1);
-            this.Name = "frmRegisterFicha";
-            this.Text = "Register New Ficha";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Movable = false;
+            this.Name = "frmRegisterRecord";
+            this.Resizable = false;
+            this.Text = "Registrar Nova Ficha";
             this.Load += new System.EventHandler(this.frmRegisterFicha_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
