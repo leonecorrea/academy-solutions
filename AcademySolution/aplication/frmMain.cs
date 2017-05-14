@@ -65,8 +65,7 @@ namespace AcademySolution
 
         private void mniRegisterStudent_Click(object sender, EventArgs e)
         {
-            Thread t = new Thread(new ThreadStart(showRegister));
-            showRegister();
+            
 
         }
 
@@ -88,26 +87,15 @@ namespace AcademySolution
             registerFicha.Show();
         }
 
-        private void lblInfoUser_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void mniInfoUser_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        private void smiAddNew_Click(object sender, EventArgs e)
         {
-            Thread t = new Thread(new ThreadStart(showInfoUser));
-            showInfoUser();
-        }
-
-        public void showInfoUser()
-        {
-            infoUser user = new infoUser();
-            user.Show();
+            Thread t = new Thread(new ThreadStart(showRegister));
+            showRegister();
         }
     }
 }
