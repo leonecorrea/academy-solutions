@@ -44,7 +44,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblLogo = new MetroFramework.Controls.MetroLabel();
             this.Menus.SuspendLayout();
-            this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -52,17 +51,16 @@
             // Menus
             // 
             this.Menus.BackColor = System.Drawing.Color.White;
-            this.Menus.Dock = System.Windows.Forms.DockStyle.None;
             this.Menus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
             this.viewToolStripMenuItem,
             this.consultaToolStripMenuItem,
             this.profileToolStripMenuItem,
             this.helpToolStripMenuItem});
-            this.Menus.Location = new System.Drawing.Point(1, 44);
+            this.Menus.Location = new System.Drawing.Point(10, 30);
             this.Menus.Name = "Menus";
             this.Menus.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.Menus.Size = new System.Drawing.Size(285, 24);
+            this.Menus.Size = new System.Drawing.Size(978, 24);
             this.Menus.TabIndex = 1;
             this.Menus.Text = "menuStrip1";
             // 
@@ -114,7 +112,7 @@
             this.lblInfoUser.AutoSize = true;
             this.lblInfoUser.BackColor = System.Drawing.Color.Transparent;
             this.lblInfoUser.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblInfoUser.Location = new System.Drawing.Point(907, 19);
+            this.lblInfoUser.Location = new System.Drawing.Point(920, 30);
             this.lblInfoUser.Name = "lblInfoUser";
             this.lblInfoUser.Size = new System.Drawing.Size(68, 19);
             this.lblInfoUser.TabIndex = 3;
@@ -125,12 +123,11 @@
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.lblInfoUser);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(978, 518);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(978, 494);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStripContainer1.Location = new System.Drawing.Point(10, 30);
+            this.toolStripContainer1.Location = new System.Drawing.Point(10, 54);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(978, 518);
+            this.toolStripContainer1.Size = new System.Drawing.Size(978, 494);
             this.toolStripContainer1.TabIndex = 4;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -160,7 +157,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(10, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(34, 36);
+            this.pictureBox1.Size = new System.Drawing.Size(23, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -168,7 +165,7 @@
             // lblLogo
             // 
             this.lblLogo.AutoSize = true;
-            this.lblLogo.Location = new System.Drawing.Point(50, 8);
+            this.lblLogo.Location = new System.Drawing.Point(39, 8);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(140, 19);
             this.lblLogo.TabIndex = 6;
@@ -178,10 +175,11 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(998, 558);
+            this.Controls.Add(this.lblInfoUser);
             this.Controls.Add(this.lblLogo);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.Menus);
             this.Controls.Add(this.toolStripContainer1);
+            this.Controls.Add(this.Menus);
             this.DisplayHeader = false;
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -199,8 +197,6 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.Menus.ResumeLayout(false);
             this.Menus.PerformLayout();
-            this.toolStripContainer1.ContentPanel.ResumeLayout(false);
-            this.toolStripContainer1.ContentPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
