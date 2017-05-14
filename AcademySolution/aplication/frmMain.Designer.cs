@@ -37,6 +37,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblInfoUser = new MetroFramework.Controls.MetroLabel();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.addNewFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menus.SuspendLayout();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -54,14 +55,15 @@
             this.Menus.Location = new System.Drawing.Point(1, 30);
             this.Menus.Name = "Menus";
             this.Menus.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.Menus.Size = new System.Drawing.Size(241, 24);
+            this.Menus.Size = new System.Drawing.Size(333, 24);
             this.Menus.TabIndex = 1;
             this.Menus.Text = "menuStrip1";
             // 
             // cadastrosToolStripMenuItem
             // 
             this.cadastrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.smiAddNew});
+            this.smiAddNew,
+            this.addNewFichaToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.cadastrosToolStripMenuItem.Text = "Registration";
@@ -69,8 +71,8 @@
             // smiAddNew
             // 
             this.smiAddNew.Name = "smiAddNew";
-            this.smiAddNew.Size = new System.Drawing.Size(152, 22);
-            this.smiAddNew.Text = "Add New";
+            this.smiAddNew.Size = new System.Drawing.Size(154, 22);
+            this.smiAddNew.Text = "Add New User";
             this.smiAddNew.Click += new System.EventHandler(this.smiAddNew_Click);
             // 
             // consultaToolStripMenuItem
@@ -84,6 +86,7 @@
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.profileToolStripMenuItem.Text = "Profile";
+            this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -109,13 +112,20 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.lblInfoUser);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(978, 518);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(978, 493);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(10, 30);
             this.toolStripContainer1.Name = "toolStripContainer1";
             this.toolStripContainer1.Size = new System.Drawing.Size(978, 518);
             this.toolStripContainer1.TabIndex = 4;
             this.toolStripContainer1.Text = "toolStripContainer1";
+            // 
+            // addNewFichaToolStripMenuItem
+            // 
+            this.addNewFichaToolStripMenuItem.Name = "addNewFichaToolStripMenuItem";
+            this.addNewFichaToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.addNewFichaToolStripMenuItem.Text = "Add New Ficha";
+            this.addNewFichaToolStripMenuItem.Click += new System.EventHandler(this.addNewFichaToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -158,5 +168,6 @@
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewFichaToolStripMenuItem;
     }
 }
