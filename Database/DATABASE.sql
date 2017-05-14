@@ -1,31 +1,7 @@
-CREATE DATABASE ACADEMYSOLUTIONS;
+CREATE DATABASE ACADEMYSOLUTION;
 GO
 
-USE ACADEMYSOLUTIONS;
-
-CREATE TABLE TblAccount(
-	CodAccount INT IDENTITY(1,1000),--PK
-	FirstName VARCHAR(10),
-	LastName VARCHAR(10),
-	NameFull VARCHAR (50),
-	DateBirth DATETIME,
-	DateRegister DATETIME,
-	Address VARCHAR (255),
-	CodCategory INT,--FK
-	CONSTRAINT PK_ACCOUNT PRIMARY KEY (CodAccount)
-)
-
-/*CREATE TABLE TblAddress(
-	CodAddress INT IDENTITY(1,00001),
-	
-)*/
-
-CREATE TABLE TblLogin(
-	CodAccount INT, --FK
-	Username VARCHAR(20),
-	Password VARCHAR (40),
-	CONSTRAINT FK_LOGIN_PK_ACCOUNT FOREIGN KEY (CodAccount) REFERENCES TblAccount (CodAccount)
-)
+USE ACADEMYSOLUTION;
 
 CREATE TABLE TblCategory(
 	CodCategory INT IDENTITY(1,1),--PK
@@ -34,19 +10,36 @@ CREATE TABLE TblCategory(
 	CONSTRAINT PK_CATEGORY PRIMARY KEY (CodCategory)
 )
 
-CREATE TABLE TblListAcademy(
+CREATE TABLE TblAccount(
+	CodAccount INT IDENTITY(100,1),--PK
+	FirstName VARCHAR(10),
+	LastName VARCHAR(10),
+	DateBirth DATE,
+	DateRegister DATETIME,
+	Address VARCHAR (255),
+	CodCategory INT,--FK
+	CONSTRAINT PK_ACCOUNT PRIMARY KEY (CodAccount),
+	CONSTRAINT FK_ACCOUNT_CATEGORY FOREIGN KEY (CodCategory) REFERENCES TblCategory (CodCategory)
+)
+
+CREATE TABLE TblLogin(
+	CodAccount INT, --FK
+	Username VARCHAR(20),
+	Password VARCHAR (40),
+	CONSTRAINT FK_LOGIN_PK_ACCOUNT FOREIGN KEY (CodAccount) REFERENCES TblAccount (CodAccount)
+)
+
+CREATE TABLE TblRecord(
 	CodStudent INT,--FK
-	CodInstructor INT,--FK
+	CodTrainer INT,--FK
 	DateBegin DATETIME,
-	DateExpiration DATETIME
+	DateExpiration DATETIME,
+	CONSTRAINT FK_RECORDSTUDENT_PKACCOUNT FOREIGN KEY (CodStudent) REFERENCES TblAccount (CodAccount),
+	CONSTRAINT FK_RECORDTRAINER_PKACCOUNT FOREIGN KEY (CodTrainer) REFERENCES TblAccount (CodAccount)
 )
 
 CREATE TABLE TblExercises(
-	CodExercise INT IDENTITY(1,1000),--PK
+	CodExercise INT IDENTITY(1,1),--PK
 	Name VARCHAR (20),
 	Description TEXT
 )
-
-ALTER TABLE TblListAcademy ADD 
-	FOREIGN KEY FKLISTACADEMY_PKSTUDENT (CodStudent) 
-		REFERENCES (TblAccount);

@@ -123,7 +123,7 @@
             // 
             // toolStripContainer1.ContentPanel
             // 
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(978, 494);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(953, 494);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(10, 54);
             this.toolStripContainer1.Name = "toolStripContainer1";
@@ -167,9 +167,9 @@
             this.lblLogo.AutoSize = true;
             this.lblLogo.Location = new System.Drawing.Point(39, 8);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(140, 19);
+            this.lblLogo.Size = new System.Drawing.Size(181, 19);
             this.lblLogo.TabIndex = 6;
-            this.lblLogo.Text = "ACADEMY SOLUTION";
+            this.lblLogo.Text = "ACADEMY SOLUTION - PRO";
             // 
             // frmMain
             // 
