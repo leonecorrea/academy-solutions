@@ -1,4 +1,4 @@
-﻿using aplication;
+﻿using AcademySolution;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

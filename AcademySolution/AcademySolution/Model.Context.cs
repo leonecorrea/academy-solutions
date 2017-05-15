@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace aplication
+namespace AcademySolution
 {
     using System;
     using System.Data.Entity;

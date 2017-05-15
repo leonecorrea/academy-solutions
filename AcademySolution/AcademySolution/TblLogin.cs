@@ -7,15 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace aplication
+namespace AcademySolution
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class TblExercis
+    public partial class TblLogin
     {
-        public int CodExercise { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
+        public int CodLogin { get; set; }
+        public Nullable<int> CodAccount { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+    
+        public virtual TblAccount TblAccount { get; set; }
     }
 }
