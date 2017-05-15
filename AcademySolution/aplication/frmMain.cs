@@ -114,5 +114,16 @@ namespace AcademySolution
             frmRegisterRecord registerFicha = new frmRegisterRecord();
             registerFicha.Show();
         }
+
+        private void fichasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSearchFicha registerFicha = new frmSearchFicha();
+            registerFicha.Show();
+        }
+
+        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

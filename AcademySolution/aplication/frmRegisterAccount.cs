@@ -48,6 +48,8 @@ namespace AcademySolution
             txbDateBirth.Text = "";
             cbbLevel.Text = "";
             cbbCountry.Text = "";
+            txbCidade.Text = "";
+            txbComplemento.Text = "";
             cbbPlace.Text = "";
             txbStreet.Text = "";
             txbNumber.Text = "";
@@ -72,6 +74,11 @@ namespace AcademySolution
         }
 
         private void txbFirstName_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbPlace_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
