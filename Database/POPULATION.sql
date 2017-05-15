@@ -1,4 +1,4 @@
-USE ACADEMYSOLUTION;
+USE AcademySolution;
 
 -- 
 INSERT INTO TblCategory VALUES ('Student','Student');
@@ -8,9 +8,9 @@ INSERT INTO TblCategory VALUES ('Developer','Desenvolvedor do sistema');
 --
 
 --
-INSERT INTO TblAccount VALUES ('Bruno','Leone','1997/05/08',GETDATE(),'R. Sergipe, 811 - Funcionários, Belo Horizonte - MG, 30130-171',4);
-INSERT INTO TblAccount VALUES ('Gladson','Bruno','1997/05/08',GETDATE(),'R. Sergipe, 811 - Funcionários, Belo Horizonte - MG, 30130-171',4);
-INSERT INTO TblAccount VALUES ('Robert','Max','1997/05/08',GETDATE(),'R. Sergipe, 811 - Funcionários, Belo Horizonte - MG, 30130-171',4);
+INSERT INTO TblAccount VALUES ('Bruno Leone Corrêa','contact@leonecorrea.com','1997/05/08',GETDATE(),'R. Sergipe, 811 - Funcionários, Belo Horizonte - MG, 30130-171',4);
+INSERT INTO TblAccount VALUES ('Gladson Bruno','gladsonbruno@gmail.com','1997/05/08',GETDATE(),'R. Sergipe, 811 - Funcionários, Belo Horizonte - MG, 30130-171',4);
+INSERT INTO TblAccount VALUES ('Robert Max','robermax@gmail.com','1997/05/08',GETDATE(),'R. Sergipe, 811 - Funcionários, Belo Horizonte - MG, 30130-171',4);
 --
 
 --

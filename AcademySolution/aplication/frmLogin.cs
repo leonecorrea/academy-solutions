@@ -1,4 +1,5 @@
-﻿using System;
+﻿using aplication;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,14 +65,44 @@ namespace AcademySolution
             login._LogOut = true;
             Application.Exit();
         }
+
+        private void txbUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+                txbPassword.Focus();
+        }
+
+        private void txbPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+                btnEntrar.PerformClick();
+        }
         
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+
             //Validação de login
-            login.ValidaLogin( txbUsername.Text, txbPassword.Text );
+            login.ValidaLogin(txbUsername.Text, txbPassword.Text);
+            try
+            {
+                using(AcademySolutionEntities academy = new AcademySolutionEntities())
+                {
+                    var query = from o in academy.TblLogins
+                                where o.Username == txbUsername.Text && o.Password == txbPassword.Text
+                                select o;
+                    if (query.SingleOrDefault() != null)
+                    {
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
 
             //Se logado
-            if(login.Status == true)
+            if (login.Status == true)
             {
                 login.Logar();
 

@@ -1,7 +1,7 @@
-CREATE DATABASE ACADEMYSOLUTION;
+CREATE DATABASE AcademySolution;
 GO
 
-USE ACADEMYSOLUTION;
+USE AcademySolution;
 
 CREATE TABLE TblCategory(
 	CodCategory INT IDENTITY(1,1),--PK
@@ -12,8 +12,8 @@ CREATE TABLE TblCategory(
 
 CREATE TABLE TblAccount(
 	CodAccount INT IDENTITY(100,1),--PK
-	FirstName VARCHAR(10),
-	LastName VARCHAR(10),
+	FullName VARCHAR(50),
+	Email VARCHAR(50),
 	DateBirth DATE,
 	DateRegister DATETIME,
 	Address VARCHAR (255),
@@ -23,9 +23,11 @@ CREATE TABLE TblAccount(
 )
 
 CREATE TABLE TblLogin(
+	CodLogin INT IDENTITY(1000,1),
 	CodAccount INT, --FK
 	Username VARCHAR(20),
 	Password VARCHAR (40),
+	CONSTRAINT PK_LOGIN PRIMARY KEY (CodLogin),
 	CONSTRAINT FK_LOGIN_PK_ACCOUNT FOREIGN KEY (CodAccount) REFERENCES TblAccount (CodAccount)
 )
 
@@ -42,4 +44,5 @@ CREATE TABLE TblExercises(
 	CodExercise INT IDENTITY(1,1),--PK
 	Name VARCHAR (20),
 	Description TEXT
+	CONSTRAINT PK_EXERCISE PRIMARY KEY (CodExercise)
 )
