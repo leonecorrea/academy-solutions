@@ -25,6 +25,11 @@ namespace AcademySolution
             this._LogOut = false;
         }
 
+        public string EncriptPass()
+        {
+            return Password;
+        }
+
         //Método usado para trocar status para logado
         public void Logar()
         {
