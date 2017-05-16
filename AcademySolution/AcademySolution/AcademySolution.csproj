@@ -98,11 +98,11 @@
     <Compile Include="frmRegisterRecord.Designer.cs">
       <DependentUpon>frmRegisterRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSearchFicha.cs">
+    <Compile Include="frmSearchRecord.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSearchFicha.Designer.cs">
-      <DependentUpon>frmSearchFicha.cs</DependentUpon>
+    <Compile Include="frmSearchRecord.Designer.cs">
+      <DependentUpon>frmSearchRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSplashScreen.cs">
       <SubType>Form</SubType>
@@ -158,8 +158,8 @@
     <EmbeddedResource Include="frmRegisterRecord.resx">
       <DependentUpon>frmRegisterRecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSearchFicha.resx">
-      <DependentUpon>frmSearchFicha.cs</DependentUpon>
+    <EmbeddedResource Include="frmSearchRecord.resx">
+      <DependentUpon>frmSearchRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
