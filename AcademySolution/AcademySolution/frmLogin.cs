@@ -83,7 +83,7 @@ namespace AcademySolution
 
             //Validação de login
             login.ValidaLogin(txbUsername.Text, txbPassword.Text);
-            try
+            /*try
             {
                 using(AcademySolutionEntities academy = new AcademySolutionEntities())
                 {
@@ -99,7 +99,7 @@ namespace AcademySolution
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Message",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
+            } */
 
             //Se logado
             if (login.Status == true)
