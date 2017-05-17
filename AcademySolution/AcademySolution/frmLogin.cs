@@ -118,5 +118,11 @@ namespace AcademySolution
                 return;
             }
         }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            Server server = new Server();
+            server.connection();
+        }
     }
 }

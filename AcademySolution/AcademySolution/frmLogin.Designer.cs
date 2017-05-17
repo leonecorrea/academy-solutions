@@ -38,6 +38,7 @@
             this.pcbCadeado = new System.Windows.Forms.PictureBox();
             this.lblBoasVindas = new MetroFramework.Controls.MetroLabel();
             this.btnCancelar = new MetroFramework.Controls.MetroButton();
+            this.btnConnect = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadeado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,12 +178,23 @@
             this.btnCancelar.UseSelectable = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnConnect
+            // 
+            this.btnConnect.Location = new System.Drawing.Point(271, 271);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(379, 23);
+            this.btnConnect.TabIndex = 12;
+            this.btnConnect.Text = "Teste de Conexão";
+            this.btnConnect.UseSelectable = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(712, 366);
+            this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblBoasVindas);
             this.Controls.Add(this.pcbCadeado);
@@ -216,5 +228,6 @@
         private System.Windows.Forms.PictureBox pcbCadeado;
         private MetroFramework.Controls.MetroLabel lblBoasVindas;
         private MetroFramework.Controls.MetroButton btnCancelar;
+        private MetroFramework.Controls.MetroButton btnConnect;
     }
 }
