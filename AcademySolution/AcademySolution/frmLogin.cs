@@ -14,6 +14,8 @@ namespace AcademySolution
 {
     public partial class frmLogin : MetroFramework.Forms.MetroForm
     {
+        public Instance server = new Instance();
+
         public Login login = new Login();
 
         public frmLogin()
@@ -83,28 +85,11 @@ namespace AcademySolution
 
             //Validação de login
             login.ValidaLogin(txbUsername.Text, txbPassword.Text);
-            /*try
-            {
-                using(AcademySolutionEntities academy = new AcademySolutionEntities())
-                {
-                    var query = from o in academy.TblLogins
-                                where o.Username == txbUsername.Text && o.Password == txbPassword.Text
-                                select o;
-                    if (query.SingleOrDefault() != null)
-                    {
-
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Message",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            } */
-
+            
             //Se logado
             if (login.Status == true)
             {
-                login.Logar();
+                login.Logar(txbUsername.Text,txbPassword.Text);
 
                 this.Hide();
                 frmMain frm = new frmMain();
@@ -115,13 +100,12 @@ namespace AcademySolution
             {
                 MetroFramework.MetroMessageBox.Show(this, $"{login._error}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txbUsername.Focus();
-                return;
             }
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            Server server = new Server();
+            Instance server = new Instance();
             server.connection();
         }
     }

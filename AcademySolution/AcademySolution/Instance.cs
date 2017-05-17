@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace AcademySolution
 {
-    public class Server : MetroFramework.Forms.MetroForm
+    public class Instance : MetroFramework.Forms.MetroForm
     {
         SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=DESKTOP-3NL4KDR\\SQLEXPRESS");
         
@@ -17,31 +17,18 @@ namespace AcademySolution
             try
             {
                 sqlCon.Open();
-                
-                MetroFramework.MetroMessageBox.Show(this, "Conexão feita com sucesso!");
+                //MetroFramework.MetroMessageBox.Show(this, "Conexão feita com sucesso!");
             }
             catch (Exception ex)
             {
                 MetroFramework.MetroMessageBox.Show(this,ex.Message);
             }
-            finally
+            /*finally
             {
                 sqlCon.Close();
                 MetroFramework.MetroMessageBox.Show(this,"Conexão finalizada!");
 
-            }
-        }
-
-        private void InitializeComponent()
-        {
-            this.SuspendLayout();
-            // 
-            // Server
-            // 
-            this.ClientSize = new System.Drawing.Size(270, 284);
-            this.Name = "Server";
-            this.ResumeLayout(false);
-
+            }*/
         }
     }
 }

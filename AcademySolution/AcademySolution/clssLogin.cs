@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace AcademySolution
 {
@@ -14,6 +15,8 @@ namespace AcademySolution
         public String _error { get; set; }
         public int Codigo { get; set; }
         public bool _LogOut { get; set; }
+
+        public Instance instance = new Instance();
         
         public Login()
         {
@@ -31,7 +34,7 @@ namespace AcademySolution
         }
 
         //Método usado para trocar status para logado
-        public void Logar()
+        public void Logar(string username,string password)
         {
             this.Status = true;
             return;
@@ -76,8 +79,26 @@ namespace AcademySolution
             //Se usuário e senha estiverem corretos
             else if (username == this.Username || password == this.Password)
             {
-                this.Logar();
-                return;
+                try
+                {
+                    //instance.connection();
+
+                    using (AcademySolutionEntities academy = new AcademySolutionEntities())
+                    {
+                        var query = from o in academy.TblLogins
+                                    where o.Username == username && o.Password == password
+                                    select o;
+                        if (query.SingleOrDefault() != null)
+                        {
+                            this.Logar(username, password);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message, "Message",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    this._error = Convert.ToString(ex);
+                }
             }
         }
 
