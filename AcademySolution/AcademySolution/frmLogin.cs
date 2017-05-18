@@ -102,11 +102,5 @@ namespace AcademySolution
                 txbUsername.Focus();
             }
         }
-
-        private void btnConnect_Click(object sender, EventArgs e)
-        {
-            Instance server = new Instance();
-            server.connection();
-        }
     }
 }

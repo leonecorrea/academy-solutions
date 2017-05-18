@@ -60,6 +60,8 @@
             this.txbComplemento = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
             this.txbDateBirth = new System.Windows.Forms.MaskedTextBox();
+            this.lblEmail = new MetroFramework.Controls.MetroLabel();
+            this.txbEmail = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,7 +122,6 @@
             this.txbLastName.UseSelectable = true;
             this.txbLastName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbLastName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txbLastName.Click += new System.EventHandler(this.txbFirstName_Click);
             // 
             // metroLabel3
             // 
@@ -143,7 +144,6 @@
             this.cbbLevel.Size = new System.Drawing.Size(231, 29);
             this.cbbLevel.TabIndex = 3;
             this.cbbLevel.UseSelectable = true;
-            this.cbbLevel.SelectedIndexChanged += new System.EventHandler(this.cbbLevel_SelectedIndexChanged);
             // 
             // metroButton1
             // 
@@ -163,7 +163,6 @@
             this.metroLabel4.Size = new System.Drawing.Size(135, 19);
             this.metroLabel4.TabIndex = 6;
             this.metroLabel4.Text = "Data de Nascimento :";
-            this.metroLabel4.Click += new System.EventHandler(this.metroLabel4_Click);
             // 
             // metroLabel5
             // 
@@ -203,7 +202,6 @@
             this.txbStreet.UseSelectable = true;
             this.txbStreet.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbStreet.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txbStreet.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // metroLabel6
             // 
@@ -243,7 +241,6 @@
             this.txbNumber.UseSelectable = true;
             this.txbNumber.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbNumber.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txbNumber.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // metroLabel7
             // 
@@ -266,7 +263,6 @@
             this.cbbPlace.Size = new System.Drawing.Size(217, 29);
             this.cbbPlace.TabIndex = 6;
             this.cbbPlace.UseSelectable = true;
-            this.cbbPlace.SelectedIndexChanged += new System.EventHandler(this.cbbPlace_SelectedIndexChanged);
             // 
             // metroLabel8
             // 
@@ -331,7 +327,6 @@
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.metroGrid1.Size = new System.Drawing.Size(728, 448);
             this.metroGrid1.TabIndex = 9;
-            this.metroGrid1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.metroGrid1_CellContentClick);
             // 
             // txbFirstName
             // 
@@ -362,7 +357,6 @@
             this.txbFirstName.UseSelectable = true;
             this.txbFirstName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbFirstName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.txbFirstName.Click += new System.EventHandler(this.txbFirstName_Click_1);
             // 
             // metroTile1
             // 
@@ -388,7 +382,7 @@
             this.tbxCellphone.Location = new System.Drawing.Point(456, 370);
             this.tbxCellphone.Mask = "00000-9999";
             this.tbxCellphone.Name = "tbxCellphone";
-            this.tbxCellphone.Size = new System.Drawing.Size(75, 20);
+            this.tbxCellphone.Size = new System.Drawing.Size(251, 20);
             this.tbxCellphone.TabIndex = 40;
             // 
             // metroLabel10
@@ -507,12 +501,53 @@
             this.txbDateBirth.Size = new System.Drawing.Size(221, 20);
             this.txbDateBirth.TabIndex = 47;
             // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(99, 185);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(48, 19);
+            this.lblEmail.TabIndex = 48;
+            this.lblEmail.Text = "Email :";
+            // 
+            // txbEmail
+            // 
+            // 
+            // 
+            // 
+            this.txbEmail.CustomButton.Image = null;
+            this.txbEmail.CustomButton.Location = new System.Drawing.Point(527, 1);
+            this.txbEmail.CustomButton.Name = "";
+            this.txbEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txbEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txbEmail.CustomButton.TabIndex = 1;
+            this.txbEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txbEmail.CustomButton.UseSelectable = true;
+            this.txbEmail.CustomButton.Visible = false;
+            this.txbEmail.Lines = new string[0];
+            this.txbEmail.Location = new System.Drawing.Point(158, 185);
+            this.txbEmail.MaxLength = 32767;
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.PasswordChar = '\0';
+            this.txbEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txbEmail.SelectedText = "";
+            this.txbEmail.SelectionLength = 0;
+            this.txbEmail.SelectionStart = 0;
+            this.txbEmail.ShortcutsEnabled = true;
+            this.txbEmail.Size = new System.Drawing.Size(549, 23);
+            this.txbEmail.TabIndex = 49;
+            this.txbEmail.UseSelectable = true;
+            this.txbEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txbEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // frmRegisterAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 528);
             this.ControlBox = false;
+            this.Controls.Add(this.txbEmail);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txbDateBirth);
             this.Controls.Add(this.metroLabel12);
             this.Controls.Add(this.txbComplemento);
@@ -550,7 +585,6 @@
             this.ShowIcon = false;
             this.Style = MetroFramework.MetroColorStyle.White;
             this.Text = "Criar Conta";
-            this.Load += new System.EventHandler(this.frmRegisterAccount_Load);
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -588,5 +622,7 @@
         private MetroFramework.Controls.MetroTextBox txbComplemento;
         private MetroFramework.Controls.MetroLabel metroLabel12;
         private System.Windows.Forms.MaskedTextBox txbDateBirth;
+        private MetroFramework.Controls.MetroLabel lblEmail;
+        private MetroFramework.Controls.MetroTextBox txbEmail;
     }
 }
