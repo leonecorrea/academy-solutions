@@ -112,15 +112,14 @@
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="clssPerson.cs" />
+    <Compile Include="GerarMD5.cs" />
     <Compile Include="infoUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="infoUser.Designer.cs">
       <DependentUpon>infoUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Instance.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Instance.cs" />
     <Compile Include="IPerson.cs" />
     <Compile Include="Model.Context.cs">
       <AutoGen>True</AutoGen>

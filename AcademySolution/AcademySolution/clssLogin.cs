@@ -53,11 +53,29 @@ namespace AcademySolution
             //{
             //    this._error = "Seus dados estão incorretos! Refaça a operação.";
             //}
+
+            //Se tudo correto
             else
             {
-                SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=DESKTOP-3NL4KDR\\SQLEXPRESS");
+                //Começando a comparar a senha
+                GerarMD5 md5 = new GerarMD5();
 
-                SqlCommand command = new SqlCommand("select * from TblLogin where Username='Bruno Leone'", sqlCon);
+                var senhabanco = "827ccb0eea8a706c4c34a16891f84e7b";
+                var Senha = "12345";
+
+                Boolean ComparaSenha = md5.CompararHash(Senha, senhabanco);
+
+                Console.WriteLine(ComparaSenha.ToString());
+
+                //SqlServer Notebook
+                //SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=DESKTOP-3NL4KDR\\SQLEXPRESS");
+
+                //SqlServer Una
+                SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=BRRLI0213");
+
+
+
+                SqlCommand command = new SqlCommand("select * from TblLogin where Username='" + username + "' and Password='" + password + "'", sqlCon);
 
                 //command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
 
@@ -71,11 +89,14 @@ namespace AcademySolution
                         //throw new Exception("Username and login were not found!");
                         this._error = "Username and login were not found!";
                     }
-                    dr.Read();
-                    this.Codigo = Convert.ToInt16(dr["CodLogin"]);
-                    this.Username = Convert.ToString(dr["Username"]);
-                    this.Password = Convert.ToString(dr["Password"]);
-                    Logar(Username, Password);
+                    else
+                    {
+                        dr.Read();
+                        this.Codigo = Convert.ToInt16(dr["CodLogin"]);
+                        this.Username = Convert.ToString(dr["Username"]);
+                        this.Password = Convert.ToString(dr["Password"]);
+                        Logar(Username, Password);
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -116,7 +137,6 @@ namespace AcademySolution
         public void Logar(string username,string password)
         {
             this.Status = true;
-            return;
         }
 
         public void Deslogar()
