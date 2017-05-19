@@ -14,22 +14,15 @@ namespace AcademySolution
         public int Nivel { get; set; }
         public Login Login = new Login();
         
-        public Account(int codigo, string nome, string idade, string cpf)
+        public Account()
         {
-            this.Codigo = codigo;
-            this.Cpf = cpf;
-            this.Nome = nome;
+            this.Codigo = Login.Codigo;
         }
 
         public void Logar(bool status, string username, string password)
         {
 
             this.Login.ValidaLogin(username, password);
-        }
-
-        public override void Show()
-        {
-            throw new NotImplementedException();
         }
     }
 }

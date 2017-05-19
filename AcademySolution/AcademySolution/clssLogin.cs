@@ -48,34 +48,15 @@ namespace AcademySolution
                     }
                 }
             }
-            //Mas se usuário ou senha forem diferentes dos definidos pela classe 
-            //else if (username != this.Username || password != this.Password)
-            //{
-            //    this._error = "Seus dados estão incorretos! Refaça a operação.";
-            //}
-
             //Se tudo correto
             else
             {
-                //Começando a comparar a senha
-                GerarMD5 md5 = new GerarMD5();
-
-                var senhabanco = "827ccb0eea8a706c4c34a16891f84e7b";
-                var Senha = "12345";
-
-                Boolean ComparaSenha = md5.CompararHash(Senha, senhabanco);
-
-                Console.WriteLine(ComparaSenha.ToString());
-
-                //SqlServer Notebook
-                //SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=DESKTOP-3NL4KDR\\SQLEXPRESS");
-
+                //SqlServer Notebook Leone
+                SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=DESKTOP-3NL4KDR\\SQLEXPRESS");
                 //SqlServer Una
-                SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=BRRLI0213");
-
-
-
-                SqlCommand command = new SqlCommand("select * from TblLogin where Username='" + username + "' and Password='" + password + "'", sqlCon);
+                //SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=BRRLI0213");
+                
+                SqlCommand command = new SqlCommand("select * from TblLogin where Username='"+username+"';", sqlCon);
 
                 //command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
 
@@ -92,10 +73,26 @@ namespace AcademySolution
                     else
                     {
                         dr.Read();
-                        this.Codigo = Convert.ToInt16(dr["CodLogin"]);
+                        this.Codigo = Convert.ToInt32(dr["CodLogin"]);
                         this.Username = Convert.ToString(dr["Username"]);
                         this.Password = Convert.ToString(dr["Password"]);
-                        Logar(Username, Password);
+
+                        //Começando a comparar a senha
+                        GerarMD5 md5 = new GerarMD5();
+
+                        var senhabanco = this.Password;
+                        var Senha = password;
+
+                        Boolean ComparaSenha = md5.CompararHash(Senha, senhabanco);
+
+                        if (ComparaSenha)
+                        {
+                            Logar(Username, Password);
+                        }
+                        else
+                        {
+                            this._error = "Password failed!";
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -107,7 +104,6 @@ namespace AcademySolution
                     sqlCon.Close();
                 }
             }
-            
             /*if (username == this.Username || password == this.Password)
             {
                 try

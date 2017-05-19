@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AcademySolution
 {
-    public abstract class Person
+    public abstract class Person : IPerson
     {
         public int Codigo;
 
@@ -20,6 +20,24 @@ namespace AcademySolution
 
         public Person() { }
 
-        public abstract void Show();
+        public void Create()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Read()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

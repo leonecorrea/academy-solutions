@@ -13,7 +13,7 @@ namespace AcademySolution
         {
             using (MD5 md5Hash = MD5.Create())
             {
-                return RetornarHash(md5Hash, Password);
+                return RetonarHash(md5Hash, Password);
             }
         }
 
@@ -22,7 +22,7 @@ namespace AcademySolution
             using (MD5 md5Hash = MD5.Create())
             {
                 var senha = RetornarMD5(senhabanco);
-                if (VerificarHash(md5Hash, Senha_MD5, password))
+                if (VerificarHash(md5Hash, Senha_MD5, senha))
                 {
                     return true;
                 }
@@ -61,5 +61,4 @@ namespace AcademySolution
             }
         }
     }
-}
 }

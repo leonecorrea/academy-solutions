@@ -71,10 +71,12 @@ INSERT INTO TblLogin VALUES (102,'Robert Max','c9dc13710e09a3c2fd13df39ca40d3ad'
 --
 
 -- Atualização de senha
-UPDATE TblLogin SET Password = '202cb962ac59075b964b07152d234b70' WHERE Username = 'Bruno Leone';--123
-
+DECLARE @USERNAME AS VARCHAR = 'Bruno Leone';
+DECLARE @PASSWORD AS VARCHAR = 'b41d0c91f1c31e2cddfdc24ce41a4f82';
+--UPDATE TblLogin SET Password = @PASSWORD WHERE Username = @USERNAME;
 --
-SELECT CodLogin,Username,Password FROM TblLogin WHERE Username='Bruno Leone' AND Password='b41d0c91f1c31e2cddfdc24ce41a4f82';
+SELECT CodLogin AS Codigo, FirstName, LastName, Email, Username, Password FROM TblLogin INNER JOIN TblAccount ON TblAccount.CodAccount=TblLogin.CodLogin WHERE CodLogin=1000;
+SELECT CodLogin AS Codigo, FirstName, LastName, Email, Username, Password FROM TblLogin INNER JOIN TblAccount ON TblAccount.CodAccount=TblLogin.CodLogin ORDER BY CodLogin ASC;
 --
 
 --
