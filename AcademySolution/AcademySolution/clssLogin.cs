@@ -52,13 +52,16 @@ namespace AcademySolution
             else
             {
                 //SqlServer Notebook Leone
-                SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=DESKTOP-3NL4KDR\\SQLEXPRESS");
+                //SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=DESKTOP-3NL4KDR\\SQLEXPRESS");
+                
                 //SqlServer Una
                 //SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=BRRLI0213");
                 
+                //Robert PC
+                SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=ROBERT-PC\\SQLEXPRESS");
                 SqlCommand command = new SqlCommand("select * from TblLogin where Username='"+username+"';", sqlCon);
 
-                //command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
+               // command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
 
                 //Se usuário e senha estiverem corretos
                 try

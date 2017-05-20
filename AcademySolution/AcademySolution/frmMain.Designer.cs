@@ -72,7 +72,7 @@
             this.smiAddNew,
             this.addNewFichaToolStripMenuItem});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.cadastrosToolStripMenuItem.Text = "Adicionar";
             // 
             // smiAddNew
@@ -95,7 +95,7 @@
             this.studentsToolStripMenuItem,
             this.traenersToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(36, 24);
             this.viewToolStripMenuItem.Text = "Ver";
             // 
             // studentsToolStripMenuItem
@@ -115,7 +115,7 @@
             this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichasToolStripMenuItem});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.consultaToolStripMenuItem.Text = "Procurar";
             // 
             // fichasToolStripMenuItem
@@ -128,14 +128,14 @@
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.profileToolStripMenuItem.Text = "Perfil";
             this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
             this.helpToolStripMenuItem.Text = "Ajuda";
             // 
             // lblInfoUser
@@ -172,6 +172,8 @@
             // frmMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(998, 558);
             this.Controls.Add(this.lblInfoUser);
             this.Controls.Add(this.lblLogo);
