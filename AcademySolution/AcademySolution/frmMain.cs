@@ -52,37 +52,10 @@ namespace AcademySolution
             
         }
 
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
-
-        private void cadastroDeFichaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mniRegisterStudent_Click(object sender, EventArgs e)
-        {
-            
-
-        }
-
         public void showRegister()
         {
             frmRegisterAccount register = new frmRegisterAccount();
             register.Show();
-        }
-
-        private void criarNovaFichaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void mniInfoUser_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void smiAddNew_Click(object sender, EventArgs e)
@@ -119,11 +92,6 @@ namespace AcademySolution
         {
             frmSearchFicha registerFicha = new frmSearchFicha();
             registerFicha.Show();
-        }
-
-        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

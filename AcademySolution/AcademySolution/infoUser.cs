@@ -17,21 +17,6 @@ namespace AcademySolution
             InitializeComponent();
         }
 
-        private void infoUser_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCloseInfoUser_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -41,17 +41,17 @@
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblInfoUser = new MetroFramework.Controls.MetroLabel();
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.lblLogo = new MetroFramework.Controls.MetroLabel();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.Menus.SuspendLayout();
-            this.toolStripContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // Menus
             // 
             this.Menus.BackColor = System.Drawing.Color.White;
+            this.Menus.GripMargin = new System.Windows.Forms.Padding(0);
             this.Menus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrosToolStripMenuItem,
             this.viewToolStripMenuItem,
@@ -60,10 +60,11 @@
             this.helpToolStripMenuItem});
             this.Menus.Location = new System.Drawing.Point(10, 30);
             this.Menus.Name = "Menus";
+            this.Menus.Padding = new System.Windows.Forms.Padding(0);
             this.Menus.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menus.Size = new System.Drawing.Size(978, 24);
             this.Menus.TabIndex = 1;
-            this.Menus.Text = "menuStrip1";
+            this.Menus.Text = "mnsMenuPrincipal";
             // 
             // cadastrosToolStripMenuItem
             // 
@@ -73,7 +74,6 @@
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.cadastrosToolStripMenuItem.Text = "Adicionar";
-            this.cadastrosToolStripMenuItem.Click += new System.EventHandler(this.cadastrosToolStripMenuItem_Click);
             // 
             // smiAddNew
             // 
@@ -150,35 +150,20 @@
             this.lblInfoUser.TabIndex = 3;
             this.lblInfoUser.Text = "Username";
             // 
-            // toolStripContainer1
+            // pcbLogo
             // 
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            this.toolStripContainer1.ContentPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripContainer1.ContentPanel.BackgroundImage")));
-            this.toolStripContainer1.ContentPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(978, 469);
-            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStripContainer1.Location = new System.Drawing.Point(10, 54);
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(978, 494);
-            this.toolStripContainer1.TabIndex = 4;
-            this.toolStripContainer1.Text = "toolStripContainer1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
+            this.pcbLogo.Location = new System.Drawing.Point(10, 5);
+            this.pcbLogo.Name = "pcbLogo";
+            this.pcbLogo.Size = new System.Drawing.Size(23, 22);
+            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcbLogo.TabIndex = 5;
+            this.pcbLogo.TabStop = false;
             // 
             // lblLogo
             // 
             this.lblLogo.AutoSize = true;
-            this.lblLogo.Location = new System.Drawing.Point(39, 8);
+            this.lblLogo.Location = new System.Drawing.Point(39, 5);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(181, 19);
             this.lblLogo.TabIndex = 6;
@@ -190,10 +175,10 @@
             this.ClientSize = new System.Drawing.Size(998, 558);
             this.Controls.Add(this.lblInfoUser);
             this.Controls.Add(this.lblLogo);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.toolStripContainer1);
+            this.Controls.Add(this.pcbLogo);
             this.Controls.Add(this.Menus);
             this.DisplayHeader = false;
+            this.Font = new System.Drawing.Font("MS Outlook", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menus;
@@ -203,16 +188,14 @@
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Style = MetroFramework.MetroColorStyle.White;
-            this.Text = "Academy Solution";
+            this.Text = "ACADEMY SOLUTION - FREE";
             this.TransparencyKey = System.Drawing.Color.Empty;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.Menus.ResumeLayout(false);
             this.Menus.PerformLayout();
-            this.toolStripContainer1.ResumeLayout(false);
-            this.toolStripContainer1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,15 +207,15 @@
         private System.Windows.Forms.ToolStripMenuItem smiAddNew;
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private MetroFramework.Controls.MetroLabel lblInfoUser;
-        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewFichaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem studentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem traenersToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcbLogo;
         private MetroFramework.Controls.MetroLabel lblLogo;
         private System.Windows.Forms.ToolStripMenuItem fichasToolStripMenuItem;
+        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
     }
 }
