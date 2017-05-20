@@ -25,21 +25,21 @@ namespace AcademySolution
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=DESKTOP-3NL4KDR\\SQLEXPRESS");
+            Instance instance = new Instance();
 
-            SqlCommand command = new SqlCommand("insert into TblAccount (FirstName,LastName,Email,DateBirth,DateRegister,Address,CodCategory) values (@LastName,@FirstName,@Email,@DateBirth,@DateRegister,@Address,@CodCategory)", sqlCon);
+            SqlCommand command = new SqlCommand("insert into TblAccount (FirstName,LastName,Email,DateBirth,DateRegister,Address,CodCategory) values (@LastName,@FirstName,@Email,@DateBirth,@DateRegister,@Address,@CodCategory)", instance.NovaInstancea());
 
             command.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = txbFirstName.Text;//Adcionando o nome da conta
             command.Parameters.Add("@LastName", SqlDbType.VarChar).Value = txbLastName.Text;//Adcionando o sobrenome
             command.Parameters.Add("@Email", SqlDbType.VarChar).Value = txbEmail.Text;
             command.Parameters.Add("@DateBirth", SqlDbType.Date).Value = txbDateBirth.Text;
             command.Parameters.Add("@DateRegister", SqlDbType.DateTime).Value = DateTime.Now;
-            command.Parameters.Add("@Address", SqlDbType.VarChar).Value = txbStreet.Text + ", " + txbNumber.Text + ", " + txbComplemento.Text + ", " + txbCidade.Text;
+            command.Parameters.Add("@Address", SqlDbType.VarChar).Value = txbStreet.Text + ", " + txbNumber.Text + ", " + txbComplemento.Text + ", " + cbbCidade.Text;
             command.Parameters.Add("@CodCategory", SqlDbType.VarChar).Value = cbbLevel.Text;
 
             try
             {
-                sqlCon.Open();
+                instance.NovaInstancea().Open();
                 command.ExecuteNonQuery();
                 MetroFramework.MetroMessageBox.Show(this, "Account successfully registered!");
             }catch(Exception ex)
@@ -48,7 +48,7 @@ namespace AcademySolution
             }
             finally
             {
-                sqlCon.Close();
+                instance.NovaInstancea().Close();
             }
         }
 
@@ -59,14 +59,13 @@ namespace AcademySolution
             txbDateBirth.Clear();
             cbbLevel.Text = "";
             cbbCountry.Text = "";
-            txbCidade.Clear();
+            cbbCidade.Text = "";
             txbComplemento.Clear();
             cbbPlace.Text = "";
             txbStreet.Clear();
             txbNumber.Clear();
             tbxCPF.Clear();
             tbxCellphone.Clear();
-            
         }
     }
 }

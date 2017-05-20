@@ -10,7 +10,7 @@ namespace AcademySolution
 {
     public class Login
     {
-        public Instance instance;
+        Instance instance = new Instance();
 
         public bool Status { get; set; }
 
@@ -51,22 +51,14 @@ namespace AcademySolution
             //Se tudo correto
             else
             {
-                //SqlServer Notebook Leone
-                //SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=DESKTOP-3NL4KDR\\SQLEXPRESS");
-                
-                //SqlServer Una
-                //SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=BRRLI0213");
-                
-                //Robert PC
-                SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=ROBERT-PC\\SQLEXPRESS");
-                SqlCommand command = new SqlCommand("select * from TblLogin where Username='"+username+"';", sqlCon);
+                SqlCommand command = new SqlCommand("select * from TblLogin where Username='"+username+"';", instance.NovaInstancea());
 
                // command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
 
                 //Se usuário e senha estiverem corretos
                 try
                 {
-                    sqlCon.Open();
+                    instance.NovaInstancea().Open();
                     SqlDataReader dr = command.ExecuteReader();
                     if (dr.HasRows == false)
                     {
@@ -104,7 +96,7 @@ namespace AcademySolution
                 }
                 finally
                 {
-                    sqlCon.Close();
+                    instance.NovaInstancea().Close();
                 }
             }
             /*if (username == this.Username || password == this.Password)

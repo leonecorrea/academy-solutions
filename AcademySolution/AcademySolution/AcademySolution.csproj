@@ -75,6 +75,12 @@
     <Compile Include="clssCategory.cs" />
     <Compile Include="clssEncript.cs" />
     <Compile Include="clssLogin.cs" />
+    <Compile Include="frmBuscarConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarConta.Designer.cs">
+      <DependentUpon>frmBuscarConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,23 +93,23 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegisterAccount.cs">
+    <Compile Include="frmRegistrarConta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegisterAccount.Designer.cs">
-      <DependentUpon>frmRegisterAccount.cs</DependentUpon>
+    <Compile Include="frmRegistrarConta.Designer.cs">
+      <DependentUpon>frmRegistrarConta.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegisterRecord.cs">
+    <Compile Include="frmRegistrarFixa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegisterRecord.Designer.cs">
-      <DependentUpon>frmRegisterRecord.cs</DependentUpon>
+    <Compile Include="frmRegistrarFixa.Designer.cs">
+      <DependentUpon>frmRegistrarFixa.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSearchRecord.cs">
+    <Compile Include="frmBuscarFixa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSearchRecord.Designer.cs">
-      <DependentUpon>frmSearchRecord.cs</DependentUpon>
+    <Compile Include="frmBuscarFixa.Designer.cs">
+      <DependentUpon>frmBuscarFixa.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSplashScreen.cs">
       <SubType>Form</SubType>
@@ -150,20 +156,23 @@
     <Compile Include="TblLogin.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmBuscarConta.resx">
+      <DependentUpon>frmBuscarConta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegisterAccount.resx">
-      <DependentUpon>frmRegisterAccount.cs</DependentUpon>
+    <EmbeddedResource Include="frmRegistrarConta.resx">
+      <DependentUpon>frmRegistrarConta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegisterRecord.resx">
-      <DependentUpon>frmRegisterRecord.cs</DependentUpon>
+    <EmbeddedResource Include="frmRegistrarFixa.resx">
+      <DependentUpon>frmRegistrarFixa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSearchRecord.resx">
-      <DependentUpon>frmSearchRecord.cs</DependentUpon>
+    <EmbeddedResource Include="frmBuscarFixa.resx">
+      <DependentUpon>frmBuscarFixa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>

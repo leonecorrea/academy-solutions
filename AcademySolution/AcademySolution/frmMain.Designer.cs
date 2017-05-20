@@ -44,6 +44,7 @@
             this.pcbLogo = new System.Windows.Forms.PictureBox();
             this.lblLogo = new MetroFramework.Controls.MetroLabel();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.mniProcurarAlunos = new System.Windows.Forms.ToolStripMenuItem();
             this.Menus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             this.SuspendLayout();
@@ -95,7 +96,7 @@
             this.studentsToolStripMenuItem,
             this.traenersToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(36, 24);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(35, 24);
             this.viewToolStripMenuItem.Text = "Ver";
             // 
             // studentsToolStripMenuItem
@@ -113,7 +114,8 @@
             // consultaToolStripMenuItem
             // 
             this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fichasToolStripMenuItem});
+            this.fichasToolStripMenuItem,
+            this.mniProcurarAlunos});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
             this.consultaToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.consultaToolStripMenuItem.Text = "Procurar";
@@ -121,7 +123,7 @@
             // fichasToolStripMenuItem
             // 
             this.fichasToolStripMenuItem.Name = "fichasToolStripMenuItem";
-            this.fichasToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.fichasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.fichasToolStripMenuItem.Text = "Fichas";
             this.fichasToolStripMenuItem.Click += new System.EventHandler(this.fichasToolStripMenuItem_Click);
             // 
@@ -168,6 +170,13 @@
             this.lblLogo.Size = new System.Drawing.Size(181, 19);
             this.lblLogo.TabIndex = 6;
             this.lblLogo.Text = "ACADEMY SOLUTION - PRO";
+            // 
+            // mniProcurarAlunos
+            // 
+            this.mniProcurarAlunos.Name = "mniProcurarAlunos";
+            this.mniProcurarAlunos.Size = new System.Drawing.Size(152, 22);
+            this.mniProcurarAlunos.Text = "Alunos";
+            this.mniProcurarAlunos.Click += new System.EventHandler(this.mniProcurarAlunos_Click);
             // 
             // frmMain
             // 
@@ -219,5 +228,6 @@
         private MetroFramework.Controls.MetroLabel lblLogo;
         private System.Windows.Forms.ToolStripMenuItem fichasToolStripMenuItem;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        private System.Windows.Forms.ToolStripMenuItem mniProcurarAlunos;
     }
 }

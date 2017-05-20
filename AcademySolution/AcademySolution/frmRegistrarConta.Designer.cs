@@ -49,12 +49,10 @@
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.txbFirstName = new MetroFramework.Controls.MetroTextBox();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.tbxCellphone = new System.Windows.Forms.MaskedTextBox();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.tbxCPF = new System.Windows.Forms.MaskedTextBox();
-            this.txbCidade = new MetroFramework.Controls.MetroTextBox();
             this.cbbCountry = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
             this.txbComplemento = new MetroFramework.Controls.MetroTextBox();
@@ -62,12 +60,13 @@
             this.txbDateBirth = new System.Windows.Forms.MaskedTextBox();
             this.lblEmail = new MetroFramework.Controls.MetroLabel();
             this.txbEmail = new MetroFramework.Controls.MetroTextBox();
+            this.cbbCidade = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(597, 469);
+            this.btnRegister.Location = new System.Drawing.Point(597, 539);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(110, 23);
             this.btnRegister.TabIndex = 8;
@@ -78,7 +77,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(101, 107);
+            this.metroLabel1.Location = new System.Drawing.Point(43, 92);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(53, 19);
             this.metroLabel1.TabIndex = 1;
@@ -87,7 +86,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(385, 107);
+            this.metroLabel2.Location = new System.Drawing.Point(385, 92);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(85, 19);
             this.metroLabel2.TabIndex = 1;
@@ -108,7 +107,7 @@
             this.txbLastName.CustomButton.UseSelectable = true;
             this.txbLastName.CustomButton.Visible = false;
             this.txbLastName.Lines = new string[0];
-            this.txbLastName.Location = new System.Drawing.Point(476, 107);
+            this.txbLastName.Location = new System.Drawing.Point(476, 92);
             this.txbLastName.MaxLength = 32767;
             this.txbLastName.Name = "txbLastName";
             this.txbLastName.PasswordChar = '\0';
@@ -126,7 +125,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(425, 146);
+            this.metroLabel3.Location = new System.Drawing.Point(425, 221);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(45, 19);
             this.metroLabel3.TabIndex = 3;
@@ -134,12 +133,13 @@
             // 
             // cbbLevel
             // 
+            this.cbbLevel.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cbbLevel.FormattingEnabled = true;
             this.cbbLevel.ItemHeight = 23;
             this.cbbLevel.Items.AddRange(new object[] {
             "Aluno",
             "Instrutor"});
-            this.cbbLevel.Location = new System.Drawing.Point(476, 146);
+            this.cbbLevel.Location = new System.Drawing.Point(476, 221);
             this.cbbLevel.Name = "cbbLevel";
             this.cbbLevel.Size = new System.Drawing.Size(231, 29);
             this.cbbLevel.TabIndex = 3;
@@ -147,7 +147,7 @@
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(476, 469);
+            this.metroButton1.Location = new System.Drawing.Point(476, 539);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(110, 23);
             this.metroButton1.TabIndex = 9;
@@ -158,16 +158,16 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(19, 146);
+            this.metroLabel4.Location = new System.Drawing.Point(11, 134);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(135, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(85, 19);
             this.metroLabel4.TabIndex = 6;
-            this.metroLabel4.Text = "Data de Nascimento :";
+            this.metroLabel4.Text = "Nascimento :";
             // 
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(69, 247);
+            this.metroLabel5.Location = new System.Drawing.Point(58, 346);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(38, 19);
             this.metroLabel5.TabIndex = 7;
@@ -188,7 +188,7 @@
             this.txbStreet.CustomButton.UseSelectable = true;
             this.txbStreet.CustomButton.Visible = false;
             this.txbStreet.Lines = new string[0];
-            this.txbStreet.Location = new System.Drawing.Point(113, 247);
+            this.txbStreet.Location = new System.Drawing.Point(102, 346);
             this.txbStreet.MaxLength = 32767;
             this.txbStreet.Name = "txbStreet";
             this.txbStreet.PasswordChar = '\0';
@@ -206,7 +206,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(560, 247);
+            this.metroLabel6.Location = new System.Drawing.Point(560, 346);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(65, 19);
             this.metroLabel6.TabIndex = 7;
@@ -227,7 +227,7 @@
             this.txbNumber.CustomButton.UseSelectable = true;
             this.txbNumber.CustomButton.Visible = false;
             this.txbNumber.Lines = new string[0];
-            this.txbNumber.Location = new System.Drawing.Point(631, 247);
+            this.txbNumber.Location = new System.Drawing.Point(631, 346);
             this.txbNumber.MaxLength = 32767;
             this.txbNumber.Name = "txbNumber";
             this.txbNumber.PasswordChar = '\0';
@@ -245,7 +245,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(411, 325);
+            this.metroLabel7.Location = new System.Drawing.Point(432, 424);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(38, 19);
             this.metroLabel7.TabIndex = 7;
@@ -258,16 +258,16 @@
             this.cbbPlace.Items.AddRange(new object[] {
             "Brazil",
             "Estados Unidos"});
-            this.cbbPlace.Location = new System.Drawing.Point(113, 325);
+            this.cbbPlace.Location = new System.Drawing.Point(102, 424);
             this.cbbPlace.Name = "cbbPlace";
-            this.cbbPlace.Size = new System.Drawing.Size(217, 29);
+            this.cbbPlace.Size = new System.Drawing.Size(231, 29);
             this.cbbPlace.TabIndex = 6;
             this.cbbPlace.UseSelectable = true;
             // 
             // metroLabel8
             // 
             this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(52, 325);
+            this.metroLabel8.Location = new System.Drawing.Point(41, 424);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(55, 19);
             this.metroLabel8.TabIndex = 7;
@@ -275,7 +275,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(349, 469);
+            this.btnCancel.Location = new System.Drawing.Point(349, 539);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(110, 23);
             this.btnCancel.TabIndex = 10;
@@ -325,7 +325,7 @@
             this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(728, 448);
+            this.metroGrid1.Size = new System.Drawing.Size(728, 540);
             this.metroGrid1.TabIndex = 9;
             // 
             // txbFirstName
@@ -334,7 +334,7 @@
             // 
             // 
             this.txbFirstName.CustomButton.Image = null;
-            this.txbFirstName.CustomButton.Location = new System.Drawing.Point(199, 1);
+            this.txbFirstName.CustomButton.Location = new System.Drawing.Point(209, 1);
             this.txbFirstName.CustomButton.Name = "";
             this.txbFirstName.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txbFirstName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -343,7 +343,7 @@
             this.txbFirstName.CustomButton.UseSelectable = true;
             this.txbFirstName.CustomButton.Visible = false;
             this.txbFirstName.Lines = new string[0];
-            this.txbFirstName.Location = new System.Drawing.Point(158, 107);
+            this.txbFirstName.Location = new System.Drawing.Point(102, 92);
             this.txbFirstName.MaxLength = 32767;
             this.txbFirstName.Name = "txbFirstName";
             this.txbFirstName.PasswordChar = '\0';
@@ -352,26 +352,16 @@
             this.txbFirstName.SelectionLength = 0;
             this.txbFirstName.SelectionStart = 0;
             this.txbFirstName.ShortcutsEnabled = true;
-            this.txbFirstName.Size = new System.Drawing.Size(221, 23);
+            this.txbFirstName.Size = new System.Drawing.Size(231, 23);
             this.txbFirstName.TabIndex = 0;
             this.txbFirstName.UseSelectable = true;
             this.txbFirstName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbFirstName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroTile1
-            // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(25, 57);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(708, 10);
-            this.metroTile1.TabIndex = 38;
-            this.metroTile1.Text = "metroTile1";
-            this.metroTile1.UseSelectable = true;
-            // 
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(380, 370);
+            this.metroLabel9.Location = new System.Drawing.Point(28, 261);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(68, 19);
             this.metroLabel9.TabIndex = 39;
@@ -379,16 +369,16 @@
             // 
             // tbxCellphone
             // 
-            this.tbxCellphone.Location = new System.Drawing.Point(456, 370);
+            this.tbxCellphone.Location = new System.Drawing.Point(102, 261);
             this.tbxCellphone.Mask = "00000-9999";
             this.tbxCellphone.Name = "tbxCellphone";
-            this.tbxCellphone.Size = new System.Drawing.Size(251, 20);
+            this.tbxCellphone.Size = new System.Drawing.Size(231, 20);
             this.tbxCellphone.TabIndex = 40;
             // 
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(63, 371);
+            this.metroLabel10.Location = new System.Drawing.Point(426, 133);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(44, 19);
             this.metroLabel10.TabIndex = 41;
@@ -396,41 +386,11 @@
             // 
             // tbxCPF
             // 
-            this.tbxCPF.Location = new System.Drawing.Point(113, 372);
+            this.tbxCPF.Location = new System.Drawing.Point(476, 133);
             this.tbxCPF.Mask = "000,000,000-00";
             this.tbxCPF.Name = "tbxCPF";
-            this.tbxCPF.Size = new System.Drawing.Size(217, 20);
+            this.tbxCPF.Size = new System.Drawing.Size(231, 20);
             this.tbxCPF.TabIndex = 42;
-            // 
-            // txbCidade
-            // 
-            // 
-            // 
-            // 
-            this.txbCidade.CustomButton.Image = null;
-            this.txbCidade.CustomButton.Location = new System.Drawing.Point(195, 1);
-            this.txbCidade.CustomButton.Name = "";
-            this.txbCidade.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txbCidade.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txbCidade.CustomButton.TabIndex = 1;
-            this.txbCidade.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txbCidade.CustomButton.UseSelectable = true;
-            this.txbCidade.CustomButton.Visible = false;
-            this.txbCidade.Lines = new string[0];
-            this.txbCidade.Location = new System.Drawing.Point(113, 285);
-            this.txbCidade.MaxLength = 32767;
-            this.txbCidade.Name = "txbCidade";
-            this.txbCidade.PasswordChar = '\0';
-            this.txbCidade.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txbCidade.SelectedText = "";
-            this.txbCidade.SelectionLength = 0;
-            this.txbCidade.SelectionStart = 0;
-            this.txbCidade.ShortcutsEnabled = true;
-            this.txbCidade.Size = new System.Drawing.Size(217, 23);
-            this.txbCidade.TabIndex = 43;
-            this.txbCidade.UseSelectable = true;
-            this.txbCidade.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txbCidade.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // cbbCountry
             // 
@@ -439,16 +399,16 @@
             this.cbbCountry.Items.AddRange(new object[] {
             "Brazil",
             "Estados Unidos"});
-            this.cbbCountry.Location = new System.Drawing.Point(456, 325);
+            this.cbbCountry.Location = new System.Drawing.Point(476, 424);
             this.cbbCountry.Name = "cbbCountry";
-            this.cbbCountry.Size = new System.Drawing.Size(251, 29);
+            this.cbbCountry.Size = new System.Drawing.Size(231, 29);
             this.cbbCountry.TabIndex = 7;
             this.cbbCountry.UseSelectable = true;
             // 
             // metroLabel11
             // 
             this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(49, 285);
+            this.metroLabel11.Location = new System.Drawing.Point(38, 384);
             this.metroLabel11.Name = "metroLabel11";
             this.metroLabel11.Size = new System.Drawing.Size(58, 19);
             this.metroLabel11.TabIndex = 44;
@@ -460,7 +420,7 @@
             // 
             // 
             this.txbComplemento.CustomButton.Image = null;
-            this.txbComplemento.CustomButton.Location = new System.Drawing.Point(153, 1);
+            this.txbComplemento.CustomButton.Location = new System.Drawing.Point(218, 1);
             this.txbComplemento.CustomButton.Name = "";
             this.txbComplemento.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txbComplemento.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -469,7 +429,7 @@
             this.txbComplemento.CustomButton.UseSelectable = true;
             this.txbComplemento.CustomButton.Visible = false;
             this.txbComplemento.Lines = new string[0];
-            this.txbComplemento.Location = new System.Drawing.Point(532, 285);
+            this.txbComplemento.Location = new System.Drawing.Point(467, 384);
             this.txbComplemento.MaxLength = 32767;
             this.txbComplemento.Name = "txbComplemento";
             this.txbComplemento.PasswordChar = '\0';
@@ -478,7 +438,7 @@
             this.txbComplemento.SelectionLength = 0;
             this.txbComplemento.SelectionStart = 0;
             this.txbComplemento.ShortcutsEnabled = true;
-            this.txbComplemento.Size = new System.Drawing.Size(175, 23);
+            this.txbComplemento.Size = new System.Drawing.Size(240, 23);
             this.txbComplemento.TabIndex = 45;
             this.txbComplemento.UseSelectable = true;
             this.txbComplemento.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -487,7 +447,7 @@
             // metroLabel12
             // 
             this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(425, 285);
+            this.metroLabel12.Location = new System.Drawing.Point(360, 384);
             this.metroLabel12.Name = "metroLabel12";
             this.metroLabel12.Size = new System.Drawing.Size(101, 19);
             this.metroLabel12.TabIndex = 46;
@@ -495,16 +455,16 @@
             // 
             // txbDateBirth
             // 
-            this.txbDateBirth.Location = new System.Drawing.Point(158, 146);
+            this.txbDateBirth.Location = new System.Drawing.Point(102, 134);
             this.txbDateBirth.Mask = "00/00/0000";
             this.txbDateBirth.Name = "txbDateBirth";
-            this.txbDateBirth.Size = new System.Drawing.Size(221, 20);
+            this.txbDateBirth.Size = new System.Drawing.Size(231, 20);
             this.txbDateBirth.TabIndex = 47;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(99, 185);
+            this.lblEmail.Location = new System.Drawing.Point(48, 225);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(48, 19);
             this.lblEmail.TabIndex = 48;
@@ -516,7 +476,7 @@
             // 
             // 
             this.txbEmail.CustomButton.Image = null;
-            this.txbEmail.CustomButton.Location = new System.Drawing.Point(527, 1);
+            this.txbEmail.CustomButton.Location = new System.Drawing.Point(209, 1);
             this.txbEmail.CustomButton.Name = "";
             this.txbEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.txbEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -525,7 +485,7 @@
             this.txbEmail.CustomButton.UseSelectable = true;
             this.txbEmail.CustomButton.Visible = false;
             this.txbEmail.Lines = new string[0];
-            this.txbEmail.Location = new System.Drawing.Point(158, 185);
+            this.txbEmail.Location = new System.Drawing.Point(102, 221);
             this.txbEmail.MaxLength = 32767;
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.PasswordChar = '\0';
@@ -534,17 +494,30 @@
             this.txbEmail.SelectionLength = 0;
             this.txbEmail.SelectionStart = 0;
             this.txbEmail.ShortcutsEnabled = true;
-            this.txbEmail.Size = new System.Drawing.Size(549, 23);
+            this.txbEmail.Size = new System.Drawing.Size(231, 23);
             this.txbEmail.TabIndex = 49;
             this.txbEmail.UseSelectable = true;
             this.txbEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // cbbCidade
+            // 
+            this.cbbCidade.FormattingEnabled = true;
+            this.cbbCidade.ItemHeight = 23;
+            this.cbbCidade.Items.AddRange(new object[] {
+            "Brazil",
+            "Estados Unidos"});
+            this.cbbCidade.Location = new System.Drawing.Point(102, 384);
+            this.cbbCidade.Name = "cbbCidade";
+            this.cbbCidade.Size = new System.Drawing.Size(231, 29);
+            this.cbbCidade.TabIndex = 6;
+            this.cbbCidade.UseSelectable = true;
+            // 
             // frmRegisterAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 528);
+            this.ClientSize = new System.Drawing.Size(768, 620);
             this.ControlBox = false;
             this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.lblEmail);
@@ -552,18 +525,17 @@
             this.Controls.Add(this.metroLabel12);
             this.Controls.Add(this.txbComplemento);
             this.Controls.Add(this.metroLabel11);
-            this.Controls.Add(this.txbCidade);
             this.Controls.Add(this.tbxCPF);
             this.Controls.Add(this.metroLabel10);
             this.Controls.Add(this.tbxCellphone);
             this.Controls.Add(this.metroLabel9);
-            this.Controls.Add(this.metroTile1);
             this.Controls.Add(this.txbFirstName);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel7);
             this.Controls.Add(this.metroLabel8);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.cbbCidade);
             this.Controls.Add(this.cbbPlace);
             this.Controls.Add(this.cbbCountry);
             this.Controls.Add(this.cbbLevel);
@@ -579,11 +551,11 @@
             this.Controls.Add(this.metroGrid1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Movable = false;
             this.Name = "frmRegisterAccount";
             this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.ShowIcon = false;
-            this.Style = MetroFramework.MetroColorStyle.White;
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Criar Conta";
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
@@ -611,12 +583,10 @@
         private MetroFramework.Controls.MetroButton btnCancel;
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private MetroFramework.Controls.MetroTextBox txbFirstName;
-        private MetroFramework.Controls.MetroTile metroTile1;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private System.Windows.Forms.MaskedTextBox tbxCellphone;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private System.Windows.Forms.MaskedTextBox tbxCPF;
-        private MetroFramework.Controls.MetroTextBox txbCidade;
         private MetroFramework.Controls.MetroComboBox cbbCountry;
         private MetroFramework.Controls.MetroLabel metroLabel11;
         private MetroFramework.Controls.MetroTextBox txbComplemento;
@@ -624,5 +594,6 @@
         private System.Windows.Forms.MaskedTextBox txbDateBirth;
         private MetroFramework.Controls.MetroLabel lblEmail;
         private MetroFramework.Controls.MetroTextBox txbEmail;
+        private MetroFramework.Controls.MetroComboBox cbbCidade;
     }
 }

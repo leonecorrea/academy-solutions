@@ -197,8 +197,10 @@
             this.MinimizeBox = false;
             this.Movable = false;
             this.Name = "frmLogin";
+            this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbCadeado)).EndInit();
             this.ResumeLayout(false);

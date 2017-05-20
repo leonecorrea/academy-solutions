@@ -17,14 +17,7 @@ namespace AcademySolution
             InitializeComponent();
         }
 
-
-
         private void frmSearchFicha_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroLabel1_Click(object sender, EventArgs e)
         {
 
         }
@@ -36,7 +29,7 @@ namespace AcademySolution
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            txbCodigo.Text = "";
+            cbbParametro.Text = "";
         }
     }      
 }

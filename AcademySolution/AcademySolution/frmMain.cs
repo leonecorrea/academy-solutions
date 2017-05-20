@@ -93,5 +93,11 @@ namespace AcademySolution
             frmSearchFicha registerFicha = new frmSearchFicha();
             registerFicha.Show();
         }
+
+        private void mniProcurarAlunos_Click(object sender, EventArgs e)
+        {
+            frmBuscarAluno buscarAluno = new frmBuscarAluno();
+            buscarAluno.Show();
+        }
     }
 }
