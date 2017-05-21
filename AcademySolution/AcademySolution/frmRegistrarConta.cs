@@ -27,15 +27,34 @@ namespace AcademySolution
         {
             Instance instance = new Instance();
 
-            SqlCommand command = new SqlCommand("insert into TblAccount (FirstName,LastName,Email,DateBirth,DateRegister,Address,CodCategory) values (@LastName,@FirstName,@Email,@DateBirth,@DateRegister,@Address,@CodCategory)", instance.NovaInstancea());
+            SqlCommand command = new SqlCommand("insert into TblConta (Nome,Sobrenome,DataNasc,DataRegistro,CodCategory,Email,Rua,Numero,Complemento,Bairro,Cidade,Estado,Pais,Cpf,Telefone) values(@FirstName,@LastName,@DateBirth,@DateRegister,@CodCategory,@Email,@Street,@Number,@Complemento,@Bairro,@Cidade,@Estado,@Country,@Cpf,@Telefone)", instance.NovaInstancea());
+            int nivelAcesso;
+            if(cbbLevel.Text == "Instrutor")
+            {
+                nivelAcesso = 2;
+            }else
+            {
+                nivelAcesso = 1;
+            }
+
 
             command.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = txbFirstName.Text;//Adcionando o nome da conta
             command.Parameters.Add("@LastName", SqlDbType.VarChar).Value = txbLastName.Text;//Adcionando o sobrenome
-            command.Parameters.Add("@Email", SqlDbType.VarChar).Value = txbEmail.Text;
-            command.Parameters.Add("@DateBirth", SqlDbType.Date).Value = txbDateBirth.Text;
+            command.Parameters.Add("@DateBirth", SqlDbType.Date).Value = txbDateBirth.Text.Replace("/", "-");
             command.Parameters.Add("@DateRegister", SqlDbType.DateTime).Value = DateTime.Now;
-            command.Parameters.Add("@Address", SqlDbType.VarChar).Value = txbStreet.Text + ", " + txbNumber.Text + ", " + txbComplemento.Text + ", " + cbbCidade.Text;
-            command.Parameters.Add("@CodCategory", SqlDbType.VarChar).Value = cbbLevel.Text;
+            command.Parameters.Add("@Email", SqlDbType.VarChar).Value = txbEmail.Text;
+            command.Parameters.Add("@CodCategory", SqlDbType.Int).Value = nivelAcesso;
+            command.Parameters.Add("@Street", SqlDbType.VarChar).Value = txbStreet.Text;
+            command.Parameters.Add("@Number", SqlDbType.Int).Value = txbNumber.Text;
+            command.Parameters.Add("@Complemento", SqlDbType.VarChar).Value = txbComplemento.Text;
+            command.Parameters.Add("@Bairro", SqlDbType.VarChar).Value = txbBairro.Text;
+            command.Parameters.Add("@Cidade", SqlDbType.VarChar).Value = cbbCidade.Text;
+            command.Parameters.Add("@Estado", SqlDbType.VarChar).Value = cbbPlace.Text;
+            command.Parameters.Add("@Country", SqlDbType.VarChar).Value = cbbCountry.Text;
+            command.Parameters.Add("@Cpf", SqlDbType.VarChar).Value = tbxCPF.Text;
+            command.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(tbxCellphone.Text.Replace("-", ""));
+
+
 
             try
             {
@@ -49,6 +68,20 @@ namespace AcademySolution
             finally
             {
                 instance.NovaInstancea().Close();
+                txbFirstName.Clear();
+                txbLastName.Clear();
+                txbDateBirth.Clear();
+                cbbLevel.Text = "";
+                txbEmail.Clear();
+                cbbCountry.Text = "";
+                cbbCidade.Text = "";
+                txbComplemento.Clear();
+                cbbPlace.Text = "";
+                txbStreet.Clear();
+                txbNumber.Clear();
+                tbxCPF.Clear();
+                tbxCellphone.Clear();
+                txbBairro.Clear();
             }
         }
 
@@ -58,6 +91,7 @@ namespace AcademySolution
             txbLastName.Clear();
             txbDateBirth.Clear();
             cbbLevel.Text = "";
+            txbEmail.Clear();
             cbbCountry.Text = "";
             cbbCidade.Text = "";
             txbComplemento.Clear();
@@ -66,6 +100,12 @@ namespace AcademySolution
             txbNumber.Clear();
             tbxCPF.Clear();
             tbxCellphone.Clear();
+            txbBairro.Clear();
+        }
+
+        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
