@@ -27,7 +27,8 @@ namespace AcademySolution
         {
             Instance instance = new Instance();
 
-            String query = "insert into TblConta(Nome, Sobrenome, DataNasc, DataRegistro, CodCategory, Email, Rua, Numero, Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone) values(@FirstName, @LastName, @DateBirth, @DateRegister, @CodCategory, @Email, @Street, @Number, @Complemento, @Bairro, @Cidade, @Estado, @Country, @Cpf, @Telefone)";
+            String query = "insert into tb_contas(Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone) " +
+                "values(@Name, @DateBirth, @DateRegister, @Cotegoria, @Email, @Street, @Number, @Complemento, @Bairro, @Cidade, @Estado, @Country, @Cpf, @Telefone)";
 
             SqlCommand comando = instance.NovoComando(query);
 
@@ -42,22 +43,25 @@ namespace AcademySolution
             {
                 try
                 {
-                    int nivelAcesso;
-                    if (cbbLevel.Text == "Instrutor")
+                    int nivel=0;
+                    switch (cbbLevel.Text)
                     {
-                        nivelAcesso = 2;
-                    }
-                    else
-                    {
-                        nivelAcesso = 1;
+                        case "Aluno":
+                            nivel = 1;
+                            break;
+                        case "Instrutor":
+                            nivel = 2;
+                            break;
+                        default:
+                            nivel = 0;
+                            break;
                     }
 
-                    comando.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = txbFirstName.Text;//Adcionando o nome da conta
-                    comando.Parameters.Add("@LastName", SqlDbType.VarChar).Value = txbLastName.Text;//Adcionando o sobrenome
+                    comando.Parameters.Add("@Name", SqlDbType.VarChar).Value = txbFirstName.Text + txbLastName.Text;
                     comando.Parameters.Add("@DateBirth", SqlDbType.Date).Value = txbNascimento.Text.Replace("/", "-");
                     comando.Parameters.Add("@DateRegister", SqlDbType.DateTime).Value = DateTime.Now;
                     comando.Parameters.Add("@Email", SqlDbType.VarChar).Value = txbEmail.Text;
-                    comando.Parameters.Add("@CodCategory", SqlDbType.Int).Value = nivelAcesso;
+                    comando.Parameters.Add("@Categoria", SqlDbType.Int).Value = nivel;
                     comando.Parameters.Add("@Street", SqlDbType.VarChar).Value = txbStreet.Text;
                     comando.Parameters.Add("@Number", SqlDbType.Int).Value = txbNumber.Text;
                     comando.Parameters.Add("@Complemento", SqlDbType.VarChar).Value = txbComplemento.Text;
@@ -93,7 +97,6 @@ namespace AcademySolution
                     tbxCpf.Clear();
                     tbxTelefone.Clear();
                     txbBairro.Clear();
-                    this.Close();
                 }
             }
         }
@@ -115,11 +118,6 @@ namespace AcademySolution
             tbxTelefone.Clear();
             txbBairro.Clear();
             txbFirstName.Focus();
-        }
-
-        private void metroGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

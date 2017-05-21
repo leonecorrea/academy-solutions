@@ -64,7 +64,7 @@ namespace AcademySolution
                     SqlDataReader leitura = instance.LerDados(query);
                     if (leitura.HasRows == false)
                     {
-                        this._error = "Username and login were not found!";
+                        this._error = "Login e senha não foram encontrados!";
                     }
                     else
                     {
