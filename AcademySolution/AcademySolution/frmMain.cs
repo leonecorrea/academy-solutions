@@ -54,7 +54,7 @@ namespace AcademySolution
 
         public void showRegister()
         {
-            frmRegisterAccount register = new frmRegisterAccount();
+            frmRegistrarConta register = new frmRegistrarConta();
             register.Show();
         }
 

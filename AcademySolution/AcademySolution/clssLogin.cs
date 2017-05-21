@@ -53,7 +53,7 @@ namespace AcademySolution
             {
                 //SqlCommand command = new SqlCommand("select * from TblLogin where Username='"+username+"';", instance.NewInstance());
                 
-                String query = "select * from tblLogin where Username='"+username+"'";
+                String query = "select * from tb_logins where Username='"+username+"'";
 
                // command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
 
@@ -69,7 +69,7 @@ namespace AcademySolution
                     else
                     {
                         leitura.Read();
-                        this.Codigo = Convert.ToInt32(leitura["CodLogin"]);
+                        this.Codigo = Convert.ToInt32(leitura["Id"]);
                         this.Username = Convert.ToString(leitura["Username"]);
                         this.Password = Convert.ToString(leitura["Password"]);
 
