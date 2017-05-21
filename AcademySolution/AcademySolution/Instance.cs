@@ -11,7 +11,7 @@ namespace AcademySolution
     public class Instance
     {
         //Leone Notebook
-        //SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=DESKTOP-3NL4KDR\\SQLEXPRESS");
+        SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=DESKTOP-3NL4KDR\\SQLEXPRESS");
 
         //Una Lab
         //SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=BRRLI0213");
@@ -20,11 +20,35 @@ namespace AcademySolution
         //SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=ROBERT-PC\\SQLEXPRESS");
 
         //Gladson PC
-        SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=PC-PC\\INSTANCIA_SQL");
-        
-        public SqlConnection NovaInstancea()
+        //SqlConnection sqlCon = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AcademySolution;Data Source=PC-PC\\INSTANCIA_SQL");
+
+        public SqlConnection instancia()
         {
             return sqlCon;
+        }
+
+        public void NovaConexao()
+        {
+            instancia().Open();
+        }
+
+        public void FechaConexao()
+        {
+            instancia().Close();
+        }
+
+        public SqlCommand NovoComando(string query)
+        {
+            SqlCommand command = new SqlCommand(query,instancia());
+            
+            return command;
+        }
+
+        public SqlDataReader LerDados(string query)
+        {
+            NovaConexao();
+            SqlDataReader leituras = NovoComando(query).ExecuteReader();
+            return leituras;
         }
     }
 }

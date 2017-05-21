@@ -51,26 +51,27 @@ namespace AcademySolution
             //Se tudo correto
             else
             {
-                SqlCommand command = new SqlCommand("select * from TblLogin where Username='"+username+"';", instance.NovaInstancea());
+                //SqlCommand command = new SqlCommand("select * from TblLogin where Username='"+username+"';", instance.NewInstance());
+                
+                String query = "select * from tblLogin where Username='"+username+"'";
 
                // command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
 
                 //Se usuário e senha estiverem corretos
                 try
                 {
-                    instance.NovaInstancea().Open();
-                    SqlDataReader dr = command.ExecuteReader();
-                    if (dr.HasRows == false)
+                    instance.NovaConexao();
+                    SqlDataReader leitura = instance.LerDados(query);
+                    if (leitura.HasRows == false)
                     {
-                        //throw new Exception("Username and login were not found!");
                         this._error = "Username and login were not found!";
                     }
                     else
                     {
-                        dr.Read();
-                        this.Codigo = Convert.ToInt32(dr["CodLogin"]);
-                        this.Username = Convert.ToString(dr["Username"]);
-                        this.Password = Convert.ToString(dr["Password"]);
+                        leitura.Read();
+                        this.Codigo = Convert.ToInt32(leitura["CodLogin"]);
+                        this.Username = Convert.ToString(leitura["Username"]);
+                        this.Password = Convert.ToString(leitura["Password"]);
 
                         //Começando a comparar a senha
                         GerarMD5 md5 = new GerarMD5();
@@ -96,7 +97,7 @@ namespace AcademySolution
                 }
                 finally
                 {
-                    instance.NovaInstancea().Close();
+                    instance.FechaConexao();
                 }
             }
             /*if (username == this.Username || password == this.Password)

@@ -27,7 +27,10 @@ namespace AcademySolution
         {
             Instance instance = new Instance();
 
-            SqlCommand command = new SqlCommand("insert into TblConta (Nome,Sobrenome,DataNasc,DataRegistro,CodCategory,Email,Rua,Numero,Complemento,Bairro,Cidade,Estado,Pais,Cpf,Telefone) values(@FirstName,@LastName,@DateBirth,@DateRegister,@CodCategory,@Email,@Street,@Number,@Complemento,@Bairro,@Cidade,@Estado,@Country,@Cpf,@Telefone)", instance.NovaInstancea());
+            String query = "insert into TblConta(Nome, Sobrenome, DataNasc, DataRegistro, CodCategory, Email, Rua, Numero, Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone) values(@FirstName, @LastName, @DateBirth, @DateRegister, @CodCategory, @Email, @Street, @Number, @Complemento, @Bairro, @Cidade, @Estado, @Country, @Cpf, @Telefone)";
+
+            SqlCommand comando = instance.NovoComando(query);
+
             int nivelAcesso;
             if(cbbLevel.Text == "Instrutor")
             {
@@ -37,29 +40,28 @@ namespace AcademySolution
                 nivelAcesso = 1;
             }
 
-
-            command.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = txbFirstName.Text;//Adcionando o nome da conta
-            command.Parameters.Add("@LastName", SqlDbType.VarChar).Value = txbLastName.Text;//Adcionando o sobrenome
-            command.Parameters.Add("@DateBirth", SqlDbType.Date).Value = txbDateBirth.Text.Replace("/", "-");
-            command.Parameters.Add("@DateRegister", SqlDbType.DateTime).Value = DateTime.Now;
-            command.Parameters.Add("@Email", SqlDbType.VarChar).Value = txbEmail.Text;
-            command.Parameters.Add("@CodCategory", SqlDbType.Int).Value = nivelAcesso;
-            command.Parameters.Add("@Street", SqlDbType.VarChar).Value = txbStreet.Text;
-            command.Parameters.Add("@Number", SqlDbType.Int).Value = txbNumber.Text;
-            command.Parameters.Add("@Complemento", SqlDbType.VarChar).Value = txbComplemento.Text;
-            command.Parameters.Add("@Bairro", SqlDbType.VarChar).Value = txbBairro.Text;
-            command.Parameters.Add("@Cidade", SqlDbType.VarChar).Value = cbbCidade.Text;
-            command.Parameters.Add("@Estado", SqlDbType.VarChar).Value = cbbPlace.Text;
-            command.Parameters.Add("@Country", SqlDbType.VarChar).Value = cbbCountry.Text;
-            command.Parameters.Add("@Cpf", SqlDbType.VarChar).Value = tbxCPF.Text;
-            command.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(tbxCellphone.Text.Replace("-", ""));
+            comando.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = txbFirstName.Text;//Adcionando o nome da conta
+            comando.Parameters.Add("@LastName", SqlDbType.VarChar).Value = txbLastName.Text;//Adcionando o sobrenome
+            comando.Parameters.Add("@DateBirth", SqlDbType.Date).Value = txbDateBirth.Text.Replace("/", "-");
+            comando.Parameters.Add("@DateRegister", SqlDbType.DateTime).Value = DateTime.Now;
+            comando.Parameters.Add("@Email", SqlDbType.VarChar).Value = txbEmail.Text;
+            comando.Parameters.Add("@CodCategory", SqlDbType.Int).Value = nivelAcesso;
+            comando.Parameters.Add("@Street", SqlDbType.VarChar).Value = txbStreet.Text;
+            comando.Parameters.Add("@Number", SqlDbType.Int).Value = txbNumber.Text;
+            comando.Parameters.Add("@Complemento", SqlDbType.VarChar).Value = txbComplemento.Text;
+            comando.Parameters.Add("@Bairro", SqlDbType.VarChar).Value = txbBairro.Text;
+            comando.Parameters.Add("@Cidade", SqlDbType.VarChar).Value = cbbCidade.Text;
+            comando.Parameters.Add("@Estado", SqlDbType.VarChar).Value = cbbPlace.Text;
+            comando.Parameters.Add("@Country", SqlDbType.VarChar).Value = cbbCountry.Text;
+            comando.Parameters.Add("@Cpf", SqlDbType.VarChar).Value = tbxCPF.Text;
+            comando.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(tbxCellphone.Text.Replace("-", ""));
 
 
 
             try
             {
-                instance.NovaInstancea().Open();
-                command.ExecuteNonQuery();
+                instance.NovaConexao();
+                comando.ExecuteNonQuery();
                 MetroFramework.MetroMessageBox.Show(this, "Account successfully registered!");
             }catch(Exception ex)
             {
@@ -67,7 +69,7 @@ namespace AcademySolution
             }
             finally
             {
-                instance.NovaInstancea().Close();
+                instance.FechaConexao();
                 txbFirstName.Clear();
                 txbLastName.Clear();
                 txbDateBirth.Clear();
