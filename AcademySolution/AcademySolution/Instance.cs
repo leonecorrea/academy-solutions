@@ -39,14 +39,14 @@ namespace AcademySolution
 
         public SqlCommand NovoComando(string query)
         {
-            SqlCommand command = new SqlCommand(query,instancia());
+            SqlCommand comando = new SqlCommand(query,instancia());
             
-            return command;
+            return comando;
         }
 
         public SqlDataReader LerDados(string query)
         {
-            NovaConexao();
+            //NovaConexao();
             SqlDataReader leituras = NovoComando(query).ExecuteReader();
             return leituras;
         }

@@ -55,17 +55,15 @@ namespace AcademySolution
             comando.Parameters.Add("@Country", SqlDbType.VarChar).Value = cbbCountry.Text;
             comando.Parameters.Add("@Cpf", SqlDbType.VarChar).Value = tbxCPF.Text;
             comando.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(tbxCellphone.Text.Replace("-", ""));
-
-
-
             try
             {
                 instance.NovaConexao();
                 comando.ExecuteNonQuery();
-                MetroFramework.MetroMessageBox.Show(this, "Account successfully registered!");
-            }catch(Exception ex)
+                MetroFramework.MetroMessageBox.Show(this, "Registro Concluido Com Exito!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, ex.Message);
+                MetroFramework.MetroMessageBox.Show(this, ex.Message,"Erro",MessageBoxButtons.RetryCancel,MessageBoxIcon.Warning);
             }
             finally
             {
@@ -84,6 +82,7 @@ namespace AcademySolution
                 tbxCPF.Clear();
                 tbxCellphone.Clear();
                 txbBairro.Clear();
+                this.Close();
             }
         }
 
