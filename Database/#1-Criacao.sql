@@ -70,27 +70,48 @@ CREATE TABLE tb_logins(
 -- Estrutura da tabela tb_records
 ---
 CREATE TABLE tb_records(
+	IdRecord INT  IDENTITY(1,1),
 	IdStudent INT,--FK
 	IdTrainer INT,--FK
-	DateBegin DATETIME,
-	DateExpiration DATETIME,
+	DateBegin DATE,
+	DateExpiration DATE,
+	CONSTRAINT PK_FICHA PRIMARY KEY(IdRecord),
 	CONSTRAINT FK_RECORDSTUDENT_PKACCOUNTS FOREIGN KEY (IdStudent) REFERENCES tb_contas (Id),
 	CONSTRAINT FK_RECORDTRAINER_PKACCOUNTS FOREIGN KEY (IdTrainer) REFERENCES tb_contas (Id)
 )
+--Inserção de teste
+--INSERT INTO tb_records (IdStudent, IdTrainer, DateBegin, DateExpiration) values(100, 101, GETDATE(), '2017-08-22');
 ---
 -- Estrutura da tabela tb_exercises
 ---
 CREATE TABLE tb_exercises(
 	Id INT IDENTITY(1,1),--PK
 	Name VARCHAR (20),
-	Description TEXT
-	CONSTRAINT PK_EXERCISES PRIMARY KEY (Id)
+	Description Text,
+	CONSTRAINT PK_EXERCISES PRIMARY KEY (Id),
 )
+--inserção de teste
+--insert into tb_exercises(Name, Description) values('Prancha fronta', 'Prancha frontal com elevação do quadril');
+---
+---
+-- Estrutura tabela tb_record_exercises(Exercicios de uma ficha)
+create table tb_record_exercises(
+	idRecord int,
+	idExercise int,
+	Series int,
+	repetitions int,
+	CONSTRAINT FK_RECORD FOREIGN KEY (idRecord) references tb_records(IdRecord),
+	CONSTRAINT FK_EXERCISE FOREIGN KEY(idExercise) references tb_exercises(ID)
+)
+--inserção de teste
+--insert into tb_record_exercises values(1,1,3,12);
+--Comando para obter os exercicios de determinada ficha
+--select tb_exercises.Name from tb_exercises inner join tb_record_exercises on tb_exercises.Id = tb_record_exercises.idExercise  inner join tb_records on tb_records.IdRecord = tb_record_exercises.idRecord where tb_record_exercises.idRecord = @idFicha;
 ---
 --Estrutura da View Alunos
 ---
--- Vis�o de todos os alunos
+-- Visão de todos os alunos
 CREATE VIEW v_aluno AS SELECT Id AS Codigo, Nome, DataNasc AS DataDeNascimento, Cpf, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado,Telefone FROM tb_contas;
--- Vis�o de um aluno especifico
-DECLARE @Id AS INT = 103;
+-- Visão de um aluno especifico
+DECLARE @Id AS INT = 100;
 SELECT * FROM v_aluno WHERE Codigo=@Id;

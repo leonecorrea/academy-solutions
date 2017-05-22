@@ -49,7 +49,13 @@ namespace AcademySolution
 
         private void btnRegisterFicha_Click(object sender, EventArgs e)
         {
-            MetroFramework.MetroMessageBox.Show(this, "Ficha registrada com Sucesso");
+            if(tbxNameStudent.Text == "" || tbxNameTeacher.Text == "")
+            {
+
+            }
+
+
+            //MetroFramework.MetroMessageBox.Show(this, "Ficha registrada com Sucesso");
         }
 
         private void btnCleanFicha_Click(object sender, EventArgs e)

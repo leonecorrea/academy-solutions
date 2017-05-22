@@ -76,14 +76,14 @@ namespace AcademySolution
                     command.Parameters.Add("@Email", SqlDbType.VarChar).Value = txbEmail.Text.ToString();
                     command.Parameters.Add("@Categoria", SqlDbType.Int).Value = categoria;
                     command.Parameters.Add("@Street", SqlDbType.VarChar).Value = txbStreet.Text.ToString();
-                    command.Parameters.Add("@Number", SqlDbType.Int).Value = txbNumber.Text;
+                    command.Parameters.Add("@Number", SqlDbType.Int).Value = Convert.ToInt32(txbNumber.Text);
                     command.Parameters.Add("@Complemento", SqlDbType.VarChar).Value = txbComplemento.Text;
                     command.Parameters.Add("@Bairro", SqlDbType.VarChar).Value = txbBairro.Text;
                     command.Parameters.Add("@Cidade", SqlDbType.VarChar).Value = cbbCidade.Text.ToString();
                     command.Parameters.Add("@Estado", SqlDbType.VarChar).Value = cbbPlace.Text.ToString();
                     command.Parameters.Add("@Country", SqlDbType.VarChar).Value = cbbCountry.Text.ToString();
                     command.Parameters.Add("@Cpf", SqlDbType.VarChar).Value = tbxCpf.Text;
-                    command.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(tbxTelefone.Text.Replace("-","").Replace("(","").Replace(")",""));
+                    command.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(tbxTelefone.Text.Replace("-","").Replace("(", "").Replace(")", ""));
 
                     instance.NovaConexao();
                     command.ExecuteNonQuery();
