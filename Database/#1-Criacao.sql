@@ -10,7 +10,7 @@ GO
 CREATE TABLE tb_estados (
   id INT NOT NULL,
   uf VARCHAR(10) DEFAULT '',
-  nome varchar(20) NOT NULL DEFAULT '',
+  nome VARCHAR(20) NOT NULL DEFAULT '',
   PRIMARY KEY  (id)
 )
 ---
@@ -20,7 +20,7 @@ CREATE TABLE tb_cidades (
   id INT NOT NULL,
   estado INT NOT NULL DEFAULT '00',
   uf VARCHAR(4) NOT NULL DEFAULT '',
-  nome varchar(50) NOT NULL DEFAULT '',
+  nome VARCHAR(50) NOT NULL DEFAULT '',
   CONSTRAINT UK_CIDADES UNIQUE(id),
   CONSTRAINT FK_CIDADES_PK_ESTADOS FOREIGN KEY (estado) REFERENCES tb_estados(id)
 )
@@ -40,17 +40,17 @@ CREATE TABLE tb_contas(
 	Id INT IDENTITY(100,1),--PK
 	Nome VARCHAR(100),
 	DataNasc DATE,
-	DataRegistro Date,
-	Categoria int,
+	DataRegistro DATETIME,
+	Categoria INT,
 	Email VARCHAR(50),
-	Rua	varchar(100),
-	Numero int,
-	Complemento varchar(30),
-	Bairro varchar(50),
+	Rua	VARCHAR(100),
+	Numero INT,
+	Complemento VARCHAR(30),
+	Bairro VARCHAR(50),
 	Cidade VARCHAR(50),
 	Estado VARCHAR(50),
-	Pais varchar(50),
-	Cpf varchar(20),
+	Pais VARCHAR(50),
+	Cpf VARCHAR(20),
 	Telefone float,
 	CONSTRAINT PK_ACCOUNT PRIMARY KEY (Id),
 	CONSTRAINT FK_ACCOUNT_CATEGORY FOREIGN KEY (Categoria) REFERENCES tb_categorias (Id)
@@ -86,3 +86,11 @@ CREATE TABLE tb_exercises(
 	Description TEXT
 	CONSTRAINT PK_EXERCISES PRIMARY KEY (Id)
 )
+---
+--Estrutura da View Alunos
+---
+-- Visão de todos os alunos
+CREATE VIEW v_aluno AS SELECT Id AS Codigo, Nome, DataNasc AS DataDeNascimento, Cpf, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado,Telefone FROM tb_contas;
+-- Visão de um aluno especifico
+DECLARE @Id AS INT = 100;
+SELECT * FROM v_aluno WHERE Codigo=@Id;
