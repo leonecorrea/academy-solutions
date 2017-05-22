@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AcademySolution.Properties {
+namespace aplication.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -31,6 +31,17 @@ namespace AcademySolution.Properties {
         public string AcademiaSolutionsConnectionString {
             get {
                 return ((string)(this["AcademiaSolutionsConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-3NL4KDR\\SQLEXPRESS;Initial Catalog=AcademySolution;Integrated" +
+            " Security=True")]
+        public string DbAcademySolution {
+            get {
+                return ((string)(this["DbAcademySolution"]));
             }
         }
     }

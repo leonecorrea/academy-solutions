@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRegistrar = new MetroFramework.Controls.MetroButton();
             this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.lblSobrenome = new MetroFramework.Controls.MetroLabel();
@@ -59,10 +59,10 @@
             this.lblComplemento = new MetroFramework.Controls.MetroLabel();
             this.txbNascimento = new System.Windows.Forms.MaskedTextBox();
             this.lblEmail = new MetroFramework.Controls.MetroLabel();
-            this.txbEmail = new MetroFramework.Controls.MetroTextBox();
             this.cbbCidade = new MetroFramework.Controls.MetroComboBox();
             this.lblBairro = new MetroFramework.Controls.MetroLabel();
             this.txbBairro = new MetroFramework.Controls.MetroTextBox();
+            this.txbEmail = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdPrincipal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,7 +140,7 @@
             this.cbbLevel.ItemHeight = 23;
             this.cbbLevel.Items.AddRange(new object[] {
             "Aluno",
-            "Instrutor"});
+            "Trainer"});
             this.cbbLevel.Location = new System.Drawing.Point(476, 221);
             this.cbbLevel.Name = "cbbLevel";
             this.cbbLevel.Size = new System.Drawing.Size(231, 29);
@@ -255,16 +255,19 @@
             // 
             // cbbPlace
             // 
+            this.cbbPlace.DisplayMember = "nome";
             this.cbbPlace.FormattingEnabled = true;
             this.cbbPlace.ItemHeight = 23;
             this.cbbPlace.Items.AddRange(new object[] {
-            "Brazil",
-            "Estados Unidos"});
+            "Minas Gerais",
+            "São Paulo",
+            "Rio de Janeiro"});
             this.cbbPlace.Location = new System.Drawing.Point(467, 419);
             this.cbbPlace.Name = "cbbPlace";
             this.cbbPlace.Size = new System.Drawing.Size(231, 29);
-            this.cbbPlace.TabIndex = 11;
+            this.cbbPlace.TabIndex = 12;
             this.cbbPlace.UseSelectable = true;
+            this.cbbPlace.ValueMember = "nome";
             // 
             // lblEstado
             // 
@@ -293,23 +296,23 @@
             this.grdPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdPrincipal.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdPrincipal.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdPrincipal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdPrincipal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grdPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdPrincipal.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdPrincipal.DefaultCellStyle = dataGridViewCellStyle5;
             this.grdPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdPrincipal.EnableHeadersVisualStyles = false;
             this.grdPrincipal.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -317,14 +320,14 @@
             this.grdPrincipal.Location = new System.Drawing.Point(20, 60);
             this.grdPrincipal.Name = "grdPrincipal";
             this.grdPrincipal.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdPrincipal.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdPrincipal.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.grdPrincipal.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdPrincipal.Size = new System.Drawing.Size(728, 540);
@@ -372,7 +375,7 @@
             // tbxTelefone
             // 
             this.tbxTelefone.Location = new System.Drawing.Point(102, 261);
-            this.tbxTelefone.Mask = "00000-9999";
+            this.tbxTelefone.Mask = "(00)00000-9999";
             this.tbxTelefone.Name = "tbxTelefone";
             this.tbxTelefone.Size = new System.Drawing.Size(231, 20);
             this.tbxTelefone.TabIndex = 6;
@@ -399,12 +402,11 @@
             this.cbbCountry.FormattingEnabled = true;
             this.cbbCountry.ItemHeight = 23;
             this.cbbCountry.Items.AddRange(new object[] {
-            "Brazil",
-            "Estados Unidos"});
+            "Brazil"});
             this.cbbCountry.Location = new System.Drawing.Point(467, 465);
             this.cbbCountry.Name = "cbbCountry";
             this.cbbCountry.Size = new System.Drawing.Size(231, 29);
-            this.cbbCountry.TabIndex = 12;
+            this.cbbCountry.TabIndex = 13;
             this.cbbCountry.UseSelectable = true;
             // 
             // lblCidade
@@ -472,48 +474,22 @@
             this.lblEmail.TabIndex = 48;
             this.lblEmail.Text = "Email :";
             // 
-            // txbEmail
-            // 
-            // 
-            // 
-            // 
-            this.txbEmail.CustomButton.Image = null;
-            this.txbEmail.CustomButton.Location = new System.Drawing.Point(209, 1);
-            this.txbEmail.CustomButton.Name = "";
-            this.txbEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txbEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txbEmail.CustomButton.TabIndex = 1;
-            this.txbEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txbEmail.CustomButton.UseSelectable = true;
-            this.txbEmail.CustomButton.Visible = false;
-            this.txbEmail.Lines = new string[0];
-            this.txbEmail.Location = new System.Drawing.Point(102, 221);
-            this.txbEmail.MaxLength = 32767;
-            this.txbEmail.Name = "txbEmail";
-            this.txbEmail.PasswordChar = '\0';
-            this.txbEmail.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txbEmail.SelectedText = "";
-            this.txbEmail.SelectionLength = 0;
-            this.txbEmail.SelectionStart = 0;
-            this.txbEmail.ShortcutsEnabled = true;
-            this.txbEmail.Size = new System.Drawing.Size(231, 23);
-            this.txbEmail.TabIndex = 4;
-            this.txbEmail.UseSelectable = true;
-            this.txbEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txbEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
             // cbbCidade
             // 
+            this.cbbCidade.DisplayMember = "nome";
             this.cbbCidade.FormattingEnabled = true;
             this.cbbCidade.ItemHeight = 23;
             this.cbbCidade.Items.AddRange(new object[] {
-            "Brazil",
-            "Estados Unidos"});
+            "Betim",
+            "Belo Horizonte",
+            "Contagem",
+            "Ibirité"});
             this.cbbCidade.Location = new System.Drawing.Point(102, 423);
             this.cbbCidade.Name = "cbbCidade";
             this.cbbCidade.Size = new System.Drawing.Size(231, 29);
-            this.cbbCidade.TabIndex = 9;
+            this.cbbCidade.TabIndex = 11;
             this.cbbCidade.UseSelectable = true;
+            this.cbbCidade.ValueMember = "nome";
             // 
             // lblBairro
             // 
@@ -549,19 +525,26 @@
             this.txbBairro.SelectionStart = 0;
             this.txbBairro.ShortcutsEnabled = true;
             this.txbBairro.Size = new System.Drawing.Size(231, 23);
-            this.txbBairro.TabIndex = 13;
+            this.txbBairro.TabIndex = 9;
             this.txbBairro.UseSelectable = true;
             this.txbBairro.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbBairro.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txbEmail
+            // 
+            this.txbEmail.Location = new System.Drawing.Point(102, 230);
+            this.txbEmail.Name = "txbEmail";
+            this.txbEmail.Size = new System.Drawing.Size(231, 20);
+            this.txbEmail.TabIndex = 51;
             // 
             // frmRegistrarConta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 620);
+            this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.txbBairro);
             this.Controls.Add(this.lblBairro);
-            this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txbNascimento);
             this.Controls.Add(this.lblComplemento);
@@ -635,9 +618,9 @@
         private MetroFramework.Controls.MetroLabel lblComplemento;
         private System.Windows.Forms.MaskedTextBox txbNascimento;
         private MetroFramework.Controls.MetroLabel lblEmail;
-        private MetroFramework.Controls.MetroTextBox txbEmail;
         private MetroFramework.Controls.MetroComboBox cbbCidade;
         private MetroFramework.Controls.MetroLabel lblBairro;
         private MetroFramework.Controls.MetroTextBox txbBairro;
+        private System.Windows.Forms.MaskedTextBox txbEmail;
     }
 }

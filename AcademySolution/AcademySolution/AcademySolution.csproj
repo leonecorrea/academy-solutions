@@ -70,6 +70,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcademySolutionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AcademySolutionDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Aluno.cs" />
     <Compile Include="clssAccount.cs" />
     <Compile Include="clssCategory.cs" />
@@ -162,6 +167,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="AcademySolutionDataSet.xsc">
+      <DependentUpon>AcademySolutionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AcademySolutionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AcademySolutionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AcademySolutionDataSet.xss">
+      <DependentUpon>AcademySolutionDataSet.xsd</DependentUpon>
+    </None>
     <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
