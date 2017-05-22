@@ -25,25 +25,25 @@ namespace AcademySolution
         {
             try
             {
-                String query = "SELECT * FROM v_aluno WHERE Codigo = @Codigo;";
+                String query = "SELECT * FROM v_aluno WHERE Codigo = "+txbParametro.Text+"";
 
                 instance.NovaConexao();
                 
-                instance.NovoComando(query).Parameters.Add("@Codigo", SqlDbType.Int).Value = int.Parse(txbParametro.Text);
+                //instance.NovoComando(query).Parameters.Add("@Codigo", SqlDbType.Int).Value = Convert.ToInt32(txbParametro.Text);
 
-                if (instance.LerDados(query).HasRows == false)
-                {
-                    throw new Exception("Código do aluno não foi encontrado!");
-                }
+                //if (instance.LerDados(query).HasRows == false)
+                //{
+                //    MetroFramework.MetroMessageBox.Show(this,"Código do aluno não foi encontrado!");
+                //}
                 SqlDataReader leituras = instance.NovoComando(query).ExecuteReader();
 
                 leituras.Read();
 
                 txbNome.Text = Convert.ToString(leituras["Nome"]);
-                txbNascimento.Text = Convert.ToString(leituras["Nascimento"]);
+                txbNascimento.Text = Convert.ToString(leituras["DataDeNascimento"]);
                 txbCpf.Text = Convert.ToString(leituras["Cpf"]);
                 txbEmail.Text = Convert.ToString(leituras["Email"]);
-                txbCategoria.Text = Convert.ToString(leituras["Categoria"]);
+                txbEstado.Text = Convert.ToString(leituras["Estado"]);
                 txbTelefone.Text = Convert.ToString(leituras["Telefone"]);
                 txbRua.Text = Convert.ToString(leituras["Rua"]);
                 txbNumero.Text = Convert.ToString(leituras["Numero"]);
