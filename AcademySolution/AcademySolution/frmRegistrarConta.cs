@@ -83,7 +83,7 @@ namespace AcademySolution
                     command.Parameters.Add("@Estado", SqlDbType.VarChar).Value = cbbPlace.Text.ToString();
                     command.Parameters.Add("@Country", SqlDbType.VarChar).Value = cbbCountry.Text.ToString();
                     command.Parameters.Add("@Cpf", SqlDbType.VarChar).Value = tbxCpf.Text;
-                    command.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(tbxTelefone.Text.Replace("-",""));
+                    command.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(tbxTelefone.Text.Replace("-","").Replace("(","").Replace(")",""));
 
                     instance.NovaConexao();
                     command.ExecuteNonQuery();

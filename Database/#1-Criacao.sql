@@ -92,5 +92,5 @@ CREATE TABLE tb_exercises(
 -- Visão de todos os alunos
 CREATE VIEW v_aluno AS SELECT Id AS Codigo, Nome, DataNasc AS DataDeNascimento, Cpf, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado,Telefone FROM tb_contas;
 -- Visão de um aluno especifico
-DECLARE @Id AS INT = 100;
+DECLARE @Id AS INT = 103;
 SELECT * FROM v_aluno WHERE Codigo=@Id;
