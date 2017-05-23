@@ -73,6 +73,7 @@ namespace AcademySolution
 
         public void LimparDados()
         {
+            txbParametro.Clear();
             txbNome.Clear();
             txbNascimento.Clear();
             txbCpf.Clear();
@@ -85,6 +86,11 @@ namespace AcademySolution
             txbCidade.Clear();
             txbBairro.Clear();
             txbPais.Clear();
+        }
+
+        private void grdPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
