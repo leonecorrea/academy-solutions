@@ -15,6 +15,7 @@ namespace AcademySolution
     {
 
         Instance instance = new Instance();
+        bool att = false;
 
         public frmBuscarAluno()
         {
@@ -31,7 +32,7 @@ namespace AcademySolution
 
                 switch (cbbItemFiltragem.Text)
                 {
-                    case "Código":
+                    case "Codigo":
                         parametro = "Codigo";
                         query = query + parametro + " = "+campo+";";
                         break;
@@ -64,6 +65,7 @@ namespace AcademySolution
                 {
                     leituras.Read();
 
+                    txbCodigo.Text = Convert.ToString(leituras["Codigo"]);
                     txbNome.Text = Convert.ToString(leituras["Nome"]);
                     txbNascimento.Text = Convert.ToString(leituras["DataDeNascimento"]);
                     txbCpf.Text = Convert.ToString(leituras["Cpf"]);
@@ -77,18 +79,21 @@ namespace AcademySolution
                     txbBairro.Text = Convert.ToString(leituras["Bairro"]);
                     txbPais.Text = Convert.ToString(leituras["Pais"]);
 
-                    txbNome.Enabled = true;
-                    txbNascimento.Enabled = true;
-                    txbCpf.Enabled = true;
-                    txbEmail.Enabled = true;
-                    txbEstado.Enabled = true;
-                    txbTelefone.Enabled = true;
-                    txbRua.Enabled = true;
-                    txbNumero.Enabled = true;
-                    txbComplemento.Enabled = true;
-                    txbCidade.Enabled = true;
-                    txbBairro.Enabled = true;
-                    txbPais.Enabled = true;
+                    txbNome.Enabled = false;
+                    txbNascimento.Enabled = false;
+                    txbCpf.Enabled = false;
+                    txbEmail.Enabled = false;
+                    txbEstado.Enabled = false;
+                    txbTelefone.Enabled = false;
+                    txbRua.Enabled = false;
+                    txbNumero.Enabled = false;
+                    txbComplemento.Enabled = false;
+                    txbCidade.Enabled = false;
+                    txbBairro.Enabled = false;
+                    txbPais.Enabled = false;
+
+                    btnAtualizar.Enabled = true;
+                    btnDeletar.Enabled = true;
                 }
             }
             catch (Exception ex)
@@ -105,7 +110,86 @@ namespace AcademySolution
         {
             LimparDados();
         }
+        
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            if(att == false)
+            {
+                att = true;
+                txbNome.Enabled = true;
+                txbNascimento.Enabled = true;
+                txbCpf.Enabled = true;
+                txbEmail.Enabled = true;
+                txbEstado.Enabled = true;
+                txbTelefone.Enabled = true;
+                txbRua.Enabled = true;
+                txbNumero.Enabled = true;
+                txbComplemento.Enabled = true;
+                txbCidade.Enabled = true;
+                txbBairro.Enabled = true;
+                txbPais.Enabled = true;
+            }
+            else if (att == true)
+            {
+                att = false;
+                txbNome.Enabled = false;
+                txbNascimento.Enabled = false;
+                txbCpf.Enabled = false;
+                txbEmail.Enabled = false;
+                txbEstado.Enabled = false;
+                txbTelefone.Enabled = false;
+                txbRua.Enabled = false;
+                txbNumero.Enabled = false;
+                txbComplemento.Enabled = false;
+                txbCidade.Enabled = false;
+                txbBairro.Enabled = false;
+                txbPais.Enabled = false;
 
+                txbNome.Focus();
+
+                String query = "update v_alunos SET Nome = @Nome, DataDeNascimento = @DataDeNascimento, Email = @Email, Rua = @Rua, Numero = @Numero, " +
+                            "Complemento = @Complemento, Bairro = @Bairro, Cidade = @Cidade, Estado = @Estado, Pais = @Pais, " +
+                            "Cpf = @Cpf, Telefone = @Telefone, DataUpdate = @DataUpdate " +
+                            "where Codigo = " + txbCodigo.Text;
+
+                try
+                {
+                    SqlCommand command = instance.NovoComando(query);
+
+                    command.Parameters.Add("@Nome", SqlDbType.VarChar).Value = txbNome.Text;
+                    command.Parameters.Add("@DataDeNascimento", SqlDbType.Date).Value = Convert.ToDateTime(txbNascimento.Text.Replace("/", "-"));
+                    command.Parameters.Add("@DataUpdate", SqlDbType.Date).Value = DateTime.Now;
+                    command.Parameters.Add("@Email", SqlDbType.VarChar).Value = txbEmail.Text.ToString();
+                    command.Parameters.Add("@Street", SqlDbType.VarChar).Value = txbRua.Text.ToString();
+                    command.Parameters.Add("@Numero", SqlDbType.Int).Value = Convert.ToInt32(txbNumero.Text);
+                    command.Parameters.Add("@Complemento", SqlDbType.VarChar).Value = txbComplemento.Text;
+                    command.Parameters.Add("@Rua", SqlDbType.VarChar).Value = txbRua.Text;
+                    command.Parameters.Add("@Bairro", SqlDbType.VarChar).Value = txbBairro.Text;
+                    command.Parameters.Add("@Cidade", SqlDbType.VarChar).Value = txbCidade.Text.ToString();
+                    command.Parameters.Add("@Estado", SqlDbType.VarChar).Value = txbEstado.Text.ToString();
+                    command.Parameters.Add("@Pais", SqlDbType.VarChar).Value = txbPais.Text.ToString();
+                    command.Parameters.Add("@Cpf", SqlDbType.VarChar).Value = txbCpf.Text;
+                    command.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(txbTelefone.Text.Replace("-", "").Replace("(", "").Replace(")", ""));
+
+                    instance.NovaConexao();
+                    command.ExecuteNonQuery();
+
+                    MetroFramework.MetroMessageBox.Show(this, "Registro Atualizado Com Exito!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    instance.FechaConexao();
+                }
+                catch (Exception ex)
+                {
+                    MetroFramework.MetroMessageBox.Show(this, ex.Message, "Erro", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Exclamation);
+                }
+                finally
+                {
+                    txbNome.Focus();
+                    instance.FechaConexao();
+                }
+            }
+        }
+        
         public void LimparDados()
         {
             txbParametro.Clear();
@@ -124,39 +208,6 @@ namespace AcademySolution
 
             btnAtualizar.Enabled = false;
             btnDeletar.Enabled = false;
-        }
-
-        public void Atualizar(SqlDataReader leituras)
-        {
-            String query = "UPDATE v_alunos SET Nome = '@Nome', Cpf = '@Cpf',DataAtualizacao = " + DateTime.Now +",Email = '@Email'," +
-                " Rua = '', Numero = '', Cidade = '', Pais = '', Telefone = '', Complemento = '' WHERE Codigo = '103';";
-
-            try
-            {
-                leituras.Read();
-
-                txbNome.Text = Convert.ToString(leituras["Nome"]);
-                txbNascimento.Text = Convert.ToString(leituras["DataDeNascimento"]);
-                txbCpf.Text = Convert.ToString(leituras["Cpf"]);
-                txbEmail.Text = Convert.ToString(leituras["Email"]);
-                txbEstado.Text = Convert.ToString(leituras["Estado"]);
-                txbTelefone.Text = Convert.ToString(leituras["Telefone"]);
-                txbRua.Text = Convert.ToString(leituras["Rua"]);
-                txbNumero.Text = Convert.ToString(leituras["Numero"]);
-                txbComplemento.Text = Convert.ToString(leituras["Complemento"]);
-                txbCidade.Text = Convert.ToString(leituras["Cidade"]);
-                txbBairro.Text = Convert.ToString(leituras["Bairro"]);
-                txbPais.Text = Convert.ToString(leituras["Pais"]);
-            }
-            catch ()
-            {
-
-            }
-        }
-        
-        private void btnAtualizar_Click(object sender, EventArgs e)
-        {
-            Atualizar();
         }
     }
 }

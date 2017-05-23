@@ -59,25 +59,20 @@ namespace AcademySolution
                     }
                     
                     String query = "insert into tb_contas(Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, " +
-                        "Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone) " +
-                        "values(@Nome, @DateBirth, @DateRegister, @Categoria, @Email, @Street, @Number, @Complemento, @Bairro, " +
-                        "@Cidade, @Estado, @Country, @Cpf, @Telefone)";
-
-                    /*String query = "insert into tb_contas(Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, " +
-                        "Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone) " +
-                        "values('" + txbFirstName.Text + " " + txbLastName.Text + "', '" + txbNascimento.Text + "', GETDATE(), " +
-                        categoria + ", '" + txbEmail.Text +"', '" + txbStreet.Text + "', '" + txbNumber.Text + "', '"+txbComplemento.Text + "', '" + 
-                        txbBairro.Text + "', '" + cbbCidade + "', '"+ cbbPlace + "', '" +cbbCountry+ "', '"+ tbxCpf.Text + "', '" + tbxTelefone.Text + "');";*/
-
+                        "Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone,DataUpdate) " +
+                        "values(@Nome, @DateBirth, @DateRegister, @Categoria, @Email, @Rua, @Numero, @Complemento, @Bairro, " +
+                        "@Cidade, @Estado, @Country, @Cpf, @Telefone,@DataUpdate)";
+                    
                     SqlCommand command = instance.NovoComando(query);
 
                     command.Parameters.Add("@Nome", SqlDbType.VarChar).Value = txbFullName.Text;
                     command.Parameters.Add("@DateBirth", SqlDbType.Date).Value = Convert.ToDateTime(txbNascimento.Text.Replace("/", "-"));
-                    command.Parameters.Add("@DateRegister", SqlDbType.Date).Value = DateTime.Now;
+                    command.Parameters.Add("@DateRegister", SqlDbType.DateTime).Value = DateTime.Now;
+                    command.Parameters.Add("@DataUpdate", SqlDbType.DateTime).Value = DateTime.Now;
                     command.Parameters.Add("@Email", SqlDbType.VarChar).Value = txbEmail.Text.ToString();
                     command.Parameters.Add("@Categoria", SqlDbType.Int).Value = categoria;
-                    command.Parameters.Add("@Street", SqlDbType.VarChar).Value = txbStreet.Text.ToString();
-                    command.Parameters.Add("@Number", SqlDbType.Int).Value = Convert.ToInt32(txbNumber.Text);
+                    command.Parameters.Add("@Rua", SqlDbType.Int).Value = Convert.ToInt32(txbStreet.Text);
+                    command.Parameters.Add("@Numero", SqlDbType.Int).Value = Convert.ToInt32(txbNumber.Text);
                     command.Parameters.Add("@Complemento", SqlDbType.VarChar).Value = txbComplemento.Text;
                     command.Parameters.Add("@Bairro", SqlDbType.VarChar).Value = txbBairro.Text;
                     command.Parameters.Add("@Cidade", SqlDbType.VarChar).Value = cbbCidade.Text.ToString();
