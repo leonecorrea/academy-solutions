@@ -1,3 +1,4 @@
+USE AcademySolution;
 ---
 --Estraindo dados da tabela Categorias
 ---

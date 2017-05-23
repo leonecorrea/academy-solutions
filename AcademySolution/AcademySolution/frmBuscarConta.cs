@@ -25,32 +25,36 @@ namespace AcademySolution
         {
             try
             {
-                String query = "SELECT * FROM v_aluno WHERE Codigo = "+txbParametro.Text+"";
+                String query = "SELECT * FROM v_alunos WHERE "+cbbItemFiltragem.Text+" = "+txbParametro.Text+";";
 
                 instance.NovaConexao();
-                
+
                 //instance.NovoComando(query).Parameters.Add("@Codigo", SqlDbType.Int).Value = Convert.ToInt32(txbParametro.Text);
 
-                //if (instance.LerDados(query).HasRows == false)
-                //{
-                //    MetroFramework.MetroMessageBox.Show(this,"Código do aluno não foi encontrado!");
-                //}
-                SqlDataReader leituras = instance.NovoComando(query).ExecuteReader();
+                SqlDataReader leituras = instance.LerDados(query);
 
-                leituras.Read();
+                if (leituras.HasRows == false)
+                {
+                    MetroFramework.MetroMessageBox.Show(this,"Código do aluno não foi encontrado!","Erro",MessageBoxButtons.RetryCancel,MessageBoxIcon.Error);
+                    LimparDados();
+                }
+                else
+                {
+                    leituras.Read();
 
-                txbNome.Text = Convert.ToString(leituras["Nome"]);
-                txbNascimento.Text = Convert.ToString(leituras["DataDeNascimento"]);
-                txbCpf.Text = Convert.ToString(leituras["Cpf"]);
-                txbEmail.Text = Convert.ToString(leituras["Email"]);
-                txbEstado.Text = Convert.ToString(leituras["Estado"]);
-                txbTelefone.Text = Convert.ToString(leituras["Telefone"]);
-                txbRua.Text = Convert.ToString(leituras["Rua"]);
-                txbNumero.Text = Convert.ToString(leituras["Numero"]);
-                txbComplemento.Text = Convert.ToString(leituras["Complemento"]);
-                txbCidade.Text = Convert.ToString(leituras["Cidade"]);
-                txbBairro.Text = Convert.ToString(leituras["Bairro"]);
-                txbPais.Text = Convert.ToString(leituras["Pais"]);
+                    txbNome.Text = Convert.ToString(leituras["Nome"]);
+                    txbNascimento.Text = Convert.ToString(leituras["DataDeNascimento"]);
+                    txbCpf.Text = Convert.ToString(leituras["Cpf"]);
+                    txbEmail.Text = Convert.ToString(leituras["Email"]);
+                    txbEstado.Text = Convert.ToString(leituras["Estado"]);
+                    txbTelefone.Text = Convert.ToString(leituras["Telefone"]);
+                    txbRua.Text = Convert.ToString(leituras["Rua"]);
+                    txbNumero.Text = Convert.ToString(leituras["Numero"]);
+                    txbComplemento.Text = Convert.ToString(leituras["Complemento"]);
+                    txbCidade.Text = Convert.ToString(leituras["Cidade"]);
+                    txbBairro.Text = Convert.ToString(leituras["Bairro"]);
+                    txbPais.Text = Convert.ToString(leituras["Pais"]);
+                }
             }
             catch (Exception ex)
             {
@@ -60,6 +64,27 @@ namespace AcademySolution
             {
                 instance.FechaConexao();
             }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparDados();
+        }
+
+        public void LimparDados()
+        {
+            txbNome.Clear();
+            txbNascimento.Clear();
+            txbCpf.Clear();
+            txbEmail.Clear();
+            txbEstado.Clear();
+            txbTelefone.Clear();
+            txbRua.Clear();
+            txbNumero.Clear();
+            txbComplemento.Clear();
+            txbCidade.Clear();
+            txbBairro.Clear();
+            txbPais.Clear();
         }
     }
 }

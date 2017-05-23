@@ -39,7 +39,7 @@
             this.txbParametro = new MetroFramework.Controls.MetroTextBox();
             this.cbbItemFiltragem = new MetroFramework.Controls.MetroComboBox();
             this.btnPesquisar = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.btnLimpar = new MetroFramework.Controls.MetroButton();
             this.txbEmail = new System.Windows.Forms.MaskedTextBox();
             this.txbBairro = new MetroFramework.Controls.MetroTextBox();
             this.lblBairro = new MetroFramework.Controls.MetroLabel();
@@ -160,7 +160,7 @@
             this.cbbItemFiltragem.FormattingEnabled = true;
             this.cbbItemFiltragem.ItemHeight = 23;
             this.cbbItemFiltragem.Items.AddRange(new object[] {
-            "Código",
+            "Codigo",
             "Nome",
             "Cpf",
             "Data de Cadastro",
@@ -183,15 +183,16 @@
             this.btnPesquisar.UseSelectable = true;
             this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // metroButton2
+            // btnLimpar
             // 
-            this.metroButton2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.metroButton2.Location = new System.Drawing.Point(786, 136);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(87, 23);
-            this.metroButton2.TabIndex = 6;
-            this.metroButton2.Text = "Limpar";
-            this.metroButton2.UseSelectable = true;
+            this.btnLimpar.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnLimpar.Location = new System.Drawing.Point(786, 136);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(87, 23);
+            this.btnLimpar.TabIndex = 6;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseSelectable = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // txbEmail
             // 
@@ -646,7 +647,7 @@
             this.Controls.Add(this.txbNumero);
             this.Controls.Add(this.txbRua);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.cbbItemFiltragem);
             this.Controls.Add(this.txbParametro);
@@ -673,7 +674,7 @@
         private MetroFramework.Controls.MetroTextBox txbParametro;
         private MetroFramework.Controls.MetroComboBox cbbItemFiltragem;
         private MetroFramework.Controls.MetroButton btnPesquisar;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton btnLimpar;
         private System.Windows.Forms.MaskedTextBox txbEmail;
         private MetroFramework.Controls.MetroTextBox txbBairro;
         private MetroFramework.Controls.MetroLabel lblBairro;
