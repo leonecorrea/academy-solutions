@@ -111,8 +111,14 @@ create table tb_record_exercises(
 --Estrutura da View Alunos
 ---
 -- Visão de todos os alunos
-DROP VIEW v_alunos
-CREATE VIEW v_alunos AS SELECT Id AS Codigo, Nome, DataNasc AS DataDeNascimento, Cpf, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado,Telefone,Complemento,Pais FROM tb_contas WHERE Categoria = 1;
+--DROP VIEW v_alunos
+CREATE VIEW v_alunos AS SELECT Id AS Codigo, Nome, DataNasc AS Data De Nascimento, Cpf, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado,Telefone,Complemento,Pais FROM tb_contas WHERE Categoria = 1;
 -- Visão de um aluno especifico
-DECLARE @Id AS INT = 100;
-SELECT * FROM v_aluno WHERE Codigo=@Id;
+/*DECLARE @Id AS INT = 100;
+SELECT * FROM v_aluno WHERE Codigo=@Id;*/
+CREATE VIEW v_trainers AS SELECT Id AS Codigo, Nome, DataNasc AS DataDeNascimento, Cpf, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado,Telefone,Complemento,Pais FROM tb_contas WHERE Categoria = 2;
+SELECT * FROM v_trainers 
+
+
+
+
