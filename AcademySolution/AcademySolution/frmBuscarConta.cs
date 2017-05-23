@@ -25,7 +25,29 @@ namespace AcademySolution
         {
             try
             {
-                String query = "SELECT * FROM v_alunos WHERE "+cbbItemFiltragem.Text+" = "+txbParametro.Text+";";
+                String parametro = "";
+                String campo = txbParametro.Text;
+                String query = "SELECT * FROM v_alunos WHERE ";
+
+                switch (cbbItemFiltragem.Text)
+                {
+                    case "Código":
+                        parametro = "Codigo";
+                        query = query + parametro + " = "+campo+";";
+                        break;
+                    case "Nome":
+                        parametro = "Nome";
+                        campo = "'%"+campo+"%'";
+                        query = query + parametro + " LIKE " + campo + ";";
+                        break;
+                    case "Cpf":
+                        parametro = "Cpf";
+                        query = query + parametro + " = " + campo + ";";
+                        break;
+                    default:
+                        query = "select * from v_alunos;";
+                        break;
+                }
 
                 instance.NovaConexao();
 
@@ -54,6 +76,19 @@ namespace AcademySolution
                     txbCidade.Text = Convert.ToString(leituras["Cidade"]);
                     txbBairro.Text = Convert.ToString(leituras["Bairro"]);
                     txbPais.Text = Convert.ToString(leituras["Pais"]);
+
+                    txbNome.Enabled = true;
+                    txbNascimento.Enabled = true;
+                    txbCpf.Enabled = true;
+                    txbEmail.Enabled = true;
+                    txbEstado.Enabled = true;
+                    txbTelefone.Enabled = true;
+                    txbRua.Enabled = true;
+                    txbNumero.Enabled = true;
+                    txbComplemento.Enabled = true;
+                    txbCidade.Enabled = true;
+                    txbBairro.Enabled = true;
+                    txbPais.Enabled = true;
                 }
             }
             catch (Exception ex)
@@ -86,11 +121,42 @@ namespace AcademySolution
             txbCidade.Clear();
             txbBairro.Clear();
             txbPais.Clear();
+
+            btnAtualizar.Enabled = false;
+            btnDeletar.Enabled = false;
         }
 
-        private void grdPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void Atualizar(SqlDataReader leituras)
         {
+            String query = "UPDATE v_alunos SET Nome = '@Nome', Cpf = '@Cpf',DataAtualizacao = " + DateTime.Now +",Email = '@Email'," +
+                " Rua = '', Numero = '', Cidade = '', Pais = '', Telefone = '', Complemento = '' WHERE Codigo = '103';";
 
+            try
+            {
+                leituras.Read();
+
+                txbNome.Text = Convert.ToString(leituras["Nome"]);
+                txbNascimento.Text = Convert.ToString(leituras["DataDeNascimento"]);
+                txbCpf.Text = Convert.ToString(leituras["Cpf"]);
+                txbEmail.Text = Convert.ToString(leituras["Email"]);
+                txbEstado.Text = Convert.ToString(leituras["Estado"]);
+                txbTelefone.Text = Convert.ToString(leituras["Telefone"]);
+                txbRua.Text = Convert.ToString(leituras["Rua"]);
+                txbNumero.Text = Convert.ToString(leituras["Numero"]);
+                txbComplemento.Text = Convert.ToString(leituras["Complemento"]);
+                txbCidade.Text = Convert.ToString(leituras["Cidade"]);
+                txbBairro.Text = Convert.ToString(leituras["Bairro"]);
+                txbPais.Text = Convert.ToString(leituras["Pais"]);
+            }
+            catch ()
+            {
+
+            }
+        }
+        
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            Atualizar();
         }
     }
 }

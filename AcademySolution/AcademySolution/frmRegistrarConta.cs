@@ -13,6 +13,8 @@ namespace AcademySolution
 {
     public partial class frmRegistrarConta : MetroFramework.Forms.MetroForm
     {
+        Instance instance;
+
         public frmRegistrarConta()
         {
             InitializeComponent();
@@ -26,7 +28,7 @@ namespace AcademySolution
         private void btnRegister_Click(object sender, EventArgs e)
         {
             if(
-                txbFirstName.Text == "" || txbLastName.Text == "" || txbStreet.Text == "" ||
+                txbFullName.Text == "" || txbStreet.Text == "" ||
                 txbEmail.Text == "" || txbBairro.Text == "" || txbNascimento.Text == ""
                 )
             {
@@ -55,8 +57,7 @@ namespace AcademySolution
                             categoria = 5;
                             break;
                     }
-                    Instance instance = new Instance();
-
+                    
                     String query = "insert into tb_contas(Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, " +
                         "Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone) " +
                         "values(@Nome, @DateBirth, @DateRegister, @Categoria, @Email, @Street, @Number, @Complemento, @Bairro, " +
@@ -70,7 +71,7 @@ namespace AcademySolution
 
                     SqlCommand command = instance.NovoComando(query);
 
-                    command.Parameters.Add("@Nome", SqlDbType.VarChar).Value = txbFirstName.Text + " " + txbLastName.Text;
+                    command.Parameters.Add("@Nome", SqlDbType.VarChar).Value = txbFullName.Text;
                     command.Parameters.Add("@DateBirth", SqlDbType.Date).Value = Convert.ToDateTime(txbNascimento.Text.Replace("/", "-"));
                     command.Parameters.Add("@DateRegister", SqlDbType.Date).Value = DateTime.Now;
                     command.Parameters.Add("@Email", SqlDbType.VarChar).Value = txbEmail.Text.ToString();
@@ -91,20 +92,7 @@ namespace AcademySolution
                     MetroFramework.MetroMessageBox.Show(this, "Registro Concluido Com Exito!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     instance.FechaConexao();
-                    txbFirstName.Clear();
-                    txbLastName.Clear();
-                    txbNascimento.Clear();
-                    cbbLevel.Text = "";
-                    txbEmail.Clear();
-                    cbbCountry.Text = "";
-                    cbbCidade.Text = "";
-                    txbComplemento.Clear();
-                    cbbPlace.Text = "";
-                    txbStreet.Clear();
-                    txbNumber.Clear();
-                    tbxCpf.Clear();
-                    tbxTelefone.Clear();
-                    txbBairro.Clear();
+                    Clear();
                 }
                 catch (Exception ex)
                 {
@@ -112,29 +100,20 @@ namespace AcademySolution
                 }
                 finally
                 {
-                    /*instance.FechaConexao();
-                    txbFirstName.Clear();
-                    txbLastName.Clear();
-                    txbNascimento.Clear();
-                    cbbLevel.Text = "";
-                    txbEmail.Clear();
-                    cbbCountry.Text = "";
-                    cbbCidade.Text = "";
-                    txbComplemento.Clear();
-                    cbbPlace.Text = "";
-                    txbStreet.Clear();
-                    txbNumber.Clear();
-                    tbxCpf.Clear();
-                    tbxTelefone.Clear();
-                    txbBairro.Clear();*/
+                    txbFullName.Focus();
                 }
             }
         }
 
         private void btnClean_Click(object sender, EventArgs e)
         {
-            txbFirstName.Clear();
-            txbLastName.Clear();
+            Clear();
+            txbFullName.Focus();
+        }
+
+        public void Clear()
+        {
+            txbFullName.Clear();
             txbNascimento.Clear();
             cbbLevel.Text = "";
             txbEmail.Clear();
@@ -147,7 +126,6 @@ namespace AcademySolution
             tbxCpf.Clear();
             tbxTelefone.Clear();
             txbBairro.Clear();
-            txbFirstName.Focus();
         }
     }
 }
