@@ -1,9 +1,9 @@
 CREATE DATABASE AcademySolution;
 GO
-
+--drop database AcademySolution
+--use gabaritoprova
 USE AcademySolution;
 GO
-
 -- 
 -- Estrutura da tabela tb_estados
 -- 
@@ -52,6 +52,7 @@ CREATE TABLE tb_contas(
 	Pais VARCHAR(50),
 	Cpf VARCHAR(20),
 	Telefone float,
+	DataUpdate Datetime
 	CONSTRAINT PK_ACCOUNT PRIMARY KEY (Id),
 	CONSTRAINT FK_ACCOUNT_CATEGORY FOREIGN KEY (Categoria) REFERENCES tb_categorias (Id)
 )
@@ -59,7 +60,7 @@ CREATE TABLE tb_contas(
 --Estrutura da tabela tb_logins
 ---
 CREATE TABLE tb_logins(
-	Id INT IDENTITY(1000,1),
+	Id INT IDENTITY(100,1),
 	IdConta INT, --FK
 	Username VARCHAR(20),
 	Password VARCHAR (40),

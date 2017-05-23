@@ -10,13 +10,18 @@ INSERT INTO tb_categorias VALUES ('Developer','Desenvolvedor do Sistema');
 -----------------------------------------------------------------------------------
 ---
 --Extraindo dados para tb_contas
----
-INSERT INTO tb_contas VALUES ('Bruno Leone','1997/05/08',GETDATE(),4,'contact@leonecorrea.com','R. Sergipe','811',null,
-	'Funcionários','Belo Horizonte','MG','Brasil', '12046659820', 31998885050);
-INSERT INTO tb_contas VALUES ('Gladson Bruno','1997/05/08',GETDATE(),4,'gladsonbruno@gmail.com','R. Sergipe','811',null,
-'Funcionários', 'Belo Horizonte' , 'MG', 'Brasil', '12046659830', 31998885060);
-INSERT INTO tb_contas VALUES ('Robert Max','1997/05/08',GETDATE(),4,'robermax@gmail.com','R. Sergipe', '811',null,
-	'Funcionários', 'Belo Horizonte', 'MG','Brasil','12046659840', 31998885070);
+---(Nome, DataNasc, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado, Cpf,Telefone,Complemento,Pais,DataUpdate)
+INSERT INTO tb_contas (Nome, DataNasc,DataRegistro,Categoria,Email, Rua, Numero, Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone, DataUpdate ) 
+VALUES ('Bruno Leone','1997/05/08',GETDATE(),4,'contact@leonecorrea.com','R. Sergipe','811',null, 'Funcionários','Belo Horizonte','MG','Brasil', '12046659820', 31998885050, null);
+
+INSERT INTO tb_contas (Nome, DataNasc,DataRegistro,Categoria,Email, Rua, Numero, Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone, DataUpdate )
+ VALUES ('Gladson Bruno','1997/05/08',GETDATE(),4,'gladsonbruno@gmail.com','R. Sergipe','811',null,'Funcionários', 'Belo Horizonte' , 'MG', 'Brasil', '12046659830', 31998885060, null);
+
+INSERT INTO tb_contas (Nome, DataNasc,DataRegistro,Categoria,Email, Rua, Numero, Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone, DataUpdate )
+ VALUES ('Robert Max','1997/05/08',GETDATE(),4,'robermax@gmail.com','R. Sergipe', '811',null,'Funcionários', 'Belo Horizonte', 'MG','Brasil','12046659840', 31998885070, null);
+
+INSERT INTO tb_contas (Nome, DataNasc,DataRegistro,Categoria,Email, Rua, Numero, Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone, DataUpdate )
+ VALUES ('Gina Souza','1997/05/08',GETDATE(),1,'gina@gmail.com','R. Sergipe', '811',null,'Funcionários', 'Belo Horizonte', 'MG','Brasil','12046699840', 31989885070, null);
 -----------------------------------------------------------------------------------
 ---
 -- Extraindo dados para tb_logins
