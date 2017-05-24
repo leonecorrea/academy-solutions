@@ -37,6 +37,7 @@
             this.btnFiltrar = new MetroFramework.Controls.MetroButton();
             this.btnLimpar = new MetroFramework.Controls.MetroButton();
             this.txbEntrada = new MetroFramework.Controls.MetroTextBox();
+            this.listaExercicios = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdBusca)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +100,8 @@
             this.cbbParametro.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cbbParametro.FormattingEnabled = true;
             this.cbbParametro.ItemHeight = 23;
+            this.cbbParametro.Items.AddRange(new object[] {
+            "Codigo Ficha"});
             this.cbbParametro.Location = new System.Drawing.Point(53, 110);
             this.cbbParametro.Name = "cbbParametro";
             this.cbbParametro.Size = new System.Drawing.Size(261, 29);
@@ -154,12 +157,21 @@
             this.txbEntrada.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbEntrada.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // listaExercicios
+            // 
+            this.listaExercicios.FormattingEnabled = true;
+            this.listaExercicios.Location = new System.Drawing.Point(50, 217);
+            this.listaExercicios.Name = "listaExercicios";
+            this.listaExercicios.Size = new System.Drawing.Size(933, 264);
+            this.listaExercicios.TabIndex = 17;
+            // 
             // frmSearchFicha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1006, 539);
+            this.Controls.Add(this.listaExercicios);
             this.Controls.Add(this.txbEntrada);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnFiltrar);
@@ -192,5 +204,6 @@
         private MetroFramework.Controls.MetroButton btnFiltrar;
         private MetroFramework.Controls.MetroButton btnLimpar;
         private MetroFramework.Controls.MetroTextBox txbEntrada;
+        private System.Windows.Forms.ListBox listaExercicios;
     }
 }
