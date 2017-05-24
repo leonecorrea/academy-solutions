@@ -75,7 +75,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AcademySolutionDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Aluno.cs" />
+    <Compile Include="clAluno.cs" />
     <Compile Include="clssAccount.cs" />
     <Compile Include="clssCategory.cs" />
     <Compile Include="clssEncript.cs" />
@@ -140,8 +140,8 @@
     <Compile Include="frmSplashScreen.Designer.cs">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="clssPerson.cs" />
     <Compile Include="GerarMD5.cs" />
+    <Compile Include="IAluno.cs" />
     <Compile Include="infoUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,7 +149,7 @@
       <DependentUpon>infoUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Instance.cs" />
-    <Compile Include="IPerson.cs" />
+    <Compile Include="IPessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBuscarConta.resx">
