@@ -13,6 +13,7 @@ namespace AcademySolution
     public partial class frmSearchFicha : MetroFramework.Forms.MetroForm
     {
         Instance instancia = new Instance();
+
         public frmSearchFicha()
         {
             InitializeComponent();
