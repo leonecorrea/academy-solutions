@@ -93,7 +93,7 @@ GO
 ---
 CREATE TABLE tb_exercises(
 	Id INT IDENTITY(1,1),--PK
-	Name VARCHAR (20),
+	Name VARCHAR (50),
 	Description Text,
 	CONSTRAINT PK_EXERCISES PRIMARY KEY (Id),
 )
