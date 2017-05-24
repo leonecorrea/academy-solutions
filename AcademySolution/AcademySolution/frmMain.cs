@@ -52,52 +52,55 @@ namespace AcademySolution
             
         }
 
-        public void showRegister()
-        {
-            frmRegistrarConta register = new frmRegistrarConta();
-            register.Show();
-        }
+
 
         private void smiAddNew_Click(object sender, EventArgs e)
         {
-            Thread t = new Thread(new ThreadStart(showRegister));
-            showRegister();
+            frmRegistrarConta register = new frmRegistrarConta();
+            register.ShowDialog();
         }
 
         private void profileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Thread t = new Thread(new ThreadStart(showInfoUser));
-            showInfoUser();
+            infoUser user = new infoUser();
+            user.ShowDialog();
         }
 
-        public void showInfoUser()
-        {
-            infoUser user = new infoUser();
-            user.Show();
-        }
+       
 
         private void addNewFichaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Thread t = new Thread(new ThreadStart(showRegisterFicha));
-            showRegisterFicha();
+            frmRegisterRecord registerFicha = new frmRegisterRecord();
+            registerFicha.ShowDialog();
         }
 
-        public void showRegisterFicha()
-        {
-            frmRegisterRecord registerFicha = new frmRegisterRecord();
-            registerFicha.Show();
-        }
+       
 
         private void fichasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmSearchFicha registerFicha = new frmSearchFicha();
-            registerFicha.Show();
+            registerFicha.ShowDialog();
         }
 
         private void mniProcurarAlunos_Click(object sender, EventArgs e)
         {
             frmBuscarAluno buscarAluno = new frmBuscarAluno();
-            buscarAluno.Show();
+            buscarAluno.ShowDialog();
+        }
+
+        private void excluirFichaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void excluirAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void excluirTrainerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void excluirFichaToolStripMenuItem_Click(object sender, EventArgs e)

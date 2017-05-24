@@ -13,6 +13,7 @@ CREATE TABLE tb_estados (
   nome VARCHAR(20) NOT NULL DEFAULT '',
   PRIMARY KEY  (id)
 )
+GO
 ---
 -- Estrutura da tabela tb_cidades
 --
@@ -24,6 +25,7 @@ CREATE TABLE tb_cidades (
   CONSTRAINT UK_CIDADES UNIQUE(id),
   CONSTRAINT FK_CIDADES_PK_ESTADOS FOREIGN KEY (estado) REFERENCES tb_estados(id)
 )
+GO
 ---
 --Estrutura da tabela tb_categorias
 ---
@@ -33,6 +35,7 @@ CREATE TABLE tb_categorias(
 	Description TEXT,
 	CONSTRAINT PK_CATEGORY PRIMARY KEY (Id)
 )
+GO
 ---
 --Estrutura da tabela tb_contas
 --
@@ -56,6 +59,7 @@ CREATE TABLE tb_contas(
 	CONSTRAINT PK_ACCOUNT PRIMARY KEY (Id),
 	CONSTRAINT FK_ACCOUNT_CATEGORY FOREIGN KEY (Categoria) REFERENCES tb_categorias (Id)
 )
+GO
 ---
 --Estrutura da tabela tb_logins
 ---
@@ -67,6 +71,7 @@ CREATE TABLE tb_logins(
 	CONSTRAINT PK_LOGINS PRIMARY KEY (Id),
 	CONSTRAINT FK_LOGINS_PK_CONTAS FOREIGN KEY (IdConta) REFERENCES tb_contas (Id)
 )
+GO
 ---
 -- Estrutura da tabela tb_records
 ---
@@ -80,6 +85,7 @@ CREATE TABLE tb_records(
 	CONSTRAINT FK_RECORDSTUDENT_PKACCOUNTS FOREIGN KEY (IdStudent) REFERENCES tb_contas (Id),
 	CONSTRAINT FK_RECORDTRAINER_PKACCOUNTS FOREIGN KEY (IdTrainer) REFERENCES tb_contas (Id)
 )
+GO
 --Inserção de teste
 --INSERT INTO tb_records (IdStudent, IdTrainer, DateBegin, DateExpiration) values(100, 101, GETDATE(), '2017-08-22');
 ---
@@ -91,6 +97,7 @@ CREATE TABLE tb_exercises(
 	Description Text,
 	CONSTRAINT PK_EXERCISES PRIMARY KEY (Id),
 )
+GO
 --inserção de teste
 --insert into tb_exercises(Name, Description) values('Prancha fronta', 'Prancha frontal com elevação do quadril');
 ---
@@ -104,6 +111,7 @@ create table tb_record_exercises(
 	CONSTRAINT FK_RECORD FOREIGN KEY (idRecord) references tb_records(IdRecord),
 	CONSTRAINT FK_EXERCISE FOREIGN KEY(idExercise) references tb_exercises(ID)
 )
+GO
 --inserção de teste
 --insert into tb_record_exercises values(1,1,3,12);
 --Comando para obter os exercicios de determinada ficha
@@ -114,11 +122,13 @@ create table tb_record_exercises(
 -- Visão de todos os alunos
 --DROP VIEW v_alunos
 CREATE VIEW v_alunos AS SELECT Id AS Codigo, Nome, DataNasc AS DataDeNascimento, Cpf, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado,Telefone,Complemento,Pais,DataUpdate FROM tb_contas WHERE Categoria = 1;
+GO
 -- Visão de um aluno especifico
 /*DECLARE @Id AS INT = 100;
 SELECT * FROM v_alunos WHERE Codigo=100;*/
+GO
 CREATE VIEW v_trainers AS SELECT Id AS Codigo, Nome, DataNasc AS DataDeNascimento, Cpf, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado,Telefone,Complemento,Pais FROM tb_contas WHERE Categoria = 2;
-SELECT * FROM v_trainers 
+--SELECT * FROM v_trainers 
 
 
 

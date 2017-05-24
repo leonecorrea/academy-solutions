@@ -51,7 +51,7 @@ namespace AcademySolution
         {
             if(tbxNameStudent.Text == "" || tbxNameTeacher.Text == "")
             {
-
+                MetroFramework.MetroMessageBox.Show(this,"Por favor, Preencha os campos corretamente!","Mensagem",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
 
 
@@ -64,52 +64,12 @@ namespace AcademySolution
             tbxNameTeacher.Text = "";
             //Limpando Campos Nome Exercicio
             tbxExerciseName1.Text = "";
-            tbxExerciseName2.Text = "";
-            tbxExerciseName3.Text = "";
-            tbxExerciseName4.Text = "";
-            tbxExerciseName5.Text = "";
-            tbxExerciseName6.Text = "";
-            tbxExerciseName7.Text = "";
-            tbxExerciseName8.Text = "";
-            tbxExerciseName9.Text = "";
-            tbxExerciseName10.Text = "";
-            tbxExerciseName11.Text = "";
-            tbxExerciseName12.Text = "";
-            tbxExerciseName13.Text = "";
-            tbxExerciseName14.Text = "";
-
+            
             //Limpando Campos Series Exercicios
             tbxSeries1.Text = "";
-            tbxSeries2.Text = "";
-            tbxSeries3.Text = "";
-            tbxSeries4.Text = "";
-            tbxSeries5.Text = "";
-            tbxSeries6.Text = "";
-            tbxSeries7.Text = "";
-            tbxSeries8.Text = "";
-            tbxSeries9.Text = "";
-            tbxSeries10.Text = "";
-            tbxSeries11.Text = "";
-            tbxSeries12.Text = "";
-            tbxSeries13.Text = "";
-            tbxSeries14.Text = "";
-
+            
             //Limpando campo repetições
-
             tbxRepetitions1.Text = "";
-            tbxRepetitions2.Text = "";
-            tbxRepetitions3.Text = "";
-            tbxRepetitions4.Text = "";
-            tbxRepetitions5.Text = "";
-            tbxRepetitions6.Text = "";
-            tbxRepetitions7.Text = "";
-            tbxRepetitions8.Text = "";
-            tbxRepetitions9.Text = "";
-            tbxRepetitions10.Text = "";
-            tbxRepetitions11.Text = "";
-            tbxRepetitions12.Text = "";
-            tbxRepetitions13.Text = "";
-            tbxRepetitions14.Text = "";
         }
 
         private void btnCancelFicha_Click(object sender, EventArgs e)
