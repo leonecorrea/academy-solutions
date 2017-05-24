@@ -113,6 +113,7 @@
             this.btnFiltrar.TabIndex = 15;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseSelectable = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // btnLimpar
             // 

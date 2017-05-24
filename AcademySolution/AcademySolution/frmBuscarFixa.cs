@@ -12,6 +12,8 @@ namespace AcademySolution
 {
     public partial class frmSearchFicha : MetroFramework.Forms.MetroForm
     {
+        Instance instancia = new Instance();
+
         public frmSearchFicha()
         {
             InitializeComponent();
@@ -30,6 +32,11 @@ namespace AcademySolution
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             cbbParametro.Text = "";
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+
         }
     }      
 }
