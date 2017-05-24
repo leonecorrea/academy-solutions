@@ -56,7 +56,7 @@ namespace AcademySolution
 
         private void smiAddNew_Click(object sender, EventArgs e)
         {
-            frmRegistrarConta register = new frmRegistrarConta();
+            CriarConta register = new CriarConta();
             register.ShowDialog();
         }
 
@@ -86,21 +86,6 @@ namespace AcademySolution
         {
             frmBuscarAluno buscarAluno = new frmBuscarAluno();
             buscarAluno.ShowDialog();
-        }
-
-        private void excluirFichaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void excluirAlunoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void excluirTrainerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void excluirFichaToolStripMenuItem_Click(object sender, EventArgs e)

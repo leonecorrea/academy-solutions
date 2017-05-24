@@ -11,11 +11,11 @@ using System.Data.SqlClient;
 
 namespace AcademySolution
 {
-    public partial class frmRegistrarConta : MetroFramework.Forms.MetroForm
+    public partial class CriarConta : MetroFramework.Forms.MetroForm
     {
         Instance instance;
 
-        public frmRegistrarConta()
+        public CriarConta()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace AcademySolution
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if(
+            /*if(
                 txbFullName.Text == "" || txbStreet.Text == "" ||
                 txbEmail.Text == "" || txbBairro.Text == "" || txbNascimento.Text == ""
                 )
@@ -97,6 +97,15 @@ namespace AcademySolution
                 {
                     txbFullName.Focus();
                 }
+            }*/
+
+            Aluno aluno = new Aluno(txbCodigo.Text,txbFullName.Text, txbRua.Text, txbRua.Text, txbEmail.Text, txbBairro.Text, txbNascimento.Text, 
+                cbbCategoria.Text, txbNumero.Text, txbComplemento.Text, cbbCidade.Text, cbbEstado.Text, cbbPais.Text, txbTelefone.Text);
+
+            aluno.Create();
+
+            var v = MetroFramework.MetroMessageBox.Show(this, aluno._error);
+            if ( v == DialogResult.OK ) {
             }
         }
 
@@ -110,22 +119,17 @@ namespace AcademySolution
         {
             txbFullName.Clear();
             txbNascimento.Clear();
-            cbbLevel.Text = "";
+            cbbCategoria.Text = "";
             txbEmail.Clear();
-            cbbCountry.Text = "";
+            cbbPais.Text = "";
             cbbCidade.Text = "";
             txbComplemento.Clear();
-            cbbPlace.Text = "";
-            txbStreet.Clear();
-            txbNumber.Clear();
+            cbbEstado.Text = "";
+            txbRua.Clear();
+            txbNumero.Clear();
             tbxCpf.Clear();
-            tbxTelefone.Clear();
+            txbTelefone.Clear();
             txbBairro.Clear();
-        }
-
-        private void grdPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

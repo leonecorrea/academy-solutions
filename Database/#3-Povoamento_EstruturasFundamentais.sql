@@ -1,5 +1,5 @@
 USE AcademySolution;
-
+GO
 ---
 --Estraindo dados da tabela Categorias
 ---

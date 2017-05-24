@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace AcademySolution
 
 {
-    public class Account : Person
+    public class Account
     {
         public Boolean Status { get; set; }
         public String Username { get; set; }
@@ -17,7 +17,7 @@ namespace AcademySolution
         
         public Account()
         {
-            this.Codigo = Login.Codigo;
+            //this.Codigo = Login.Codigo;
         }
 
         public void Logar(bool status, string username, string password)

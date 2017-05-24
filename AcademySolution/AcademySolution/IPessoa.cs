@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AcademySolution
 {
-    public interface IPerson
+    public interface IPessoa
     {
         //Criação
         void Create();
