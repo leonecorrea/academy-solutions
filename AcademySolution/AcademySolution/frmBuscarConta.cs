@@ -93,7 +93,7 @@ namespace AcademySolution
                     txbPais.Enabled = false;
 
                     btnAtualizar.Enabled = true;
-                    btnDeletar.Enabled = true;
+                   
                 }
             }
             catch (Exception ex)
@@ -207,7 +207,7 @@ namespace AcademySolution
             txbPais.Clear();
 
             btnAtualizar.Enabled = false;
-            btnDeletar.Enabled = false;
+            
         }
     }
 }

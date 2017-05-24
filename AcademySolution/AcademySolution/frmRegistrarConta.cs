@@ -122,5 +122,10 @@ namespace AcademySolution
             tbxTelefone.Clear();
             txbBairro.Clear();
         }
+
+        private void grdPrincipal_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

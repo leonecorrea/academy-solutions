@@ -291,6 +291,7 @@
             this.grdPrincipal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdPrincipal.Size = new System.Drawing.Size(728, 540);
             this.grdPrincipal.TabIndex = 9;
+            this.grdPrincipal.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdPrincipal_CellContentClick);
             // 
             // txbFullName
             // 

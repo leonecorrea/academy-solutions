@@ -72,7 +72,6 @@
             this.txbEstado = new System.Windows.Forms.MaskedTextBox();
             this.txbPais = new System.Windows.Forms.MaskedTextBox();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.btnDeletar = new MetroFramework.Controls.MetroButton();
             this.btnAtualizar = new MetroFramework.Controls.MetroButton();
             this.metroGrid2 = new MetroFramework.Controls.MetroGrid();
             this.txbCodigo = new MetroFramework.Controls.MetroTextBox();
@@ -502,24 +501,14 @@
             this.metroGrid1.Size = new System.Drawing.Size(853, 76);
             this.metroGrid1.TabIndex = 80;
             // 
-            // btnDeletar
-            // 
-            this.btnDeletar.Enabled = false;
-            this.btnDeletar.Location = new System.Drawing.Point(695, 634);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(75, 23);
-            this.btnDeletar.TabIndex = 81;
-            this.btnDeletar.Text = "Deletar";
-            this.btnDeletar.UseSelectable = true;
-            // 
             // btnAtualizar
             // 
             this.btnAtualizar.Enabled = false;
-            this.btnAtualizar.Location = new System.Drawing.Point(614, 634);
+            this.btnAtualizar.Location = new System.Drawing.Point(377, 635);
             this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnAtualizar.Size = new System.Drawing.Size(156, 23);
             this.btnAtualizar.TabIndex = 81;
-            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.Text = "Alterar Dados";
             this.btnAtualizar.UseSelectable = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
@@ -604,7 +593,6 @@
             this.ClientSize = new System.Drawing.Size(893, 697);
             this.Controls.Add(this.txbCodigo);
             this.Controls.Add(this.btnAtualizar);
-            this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.txbNome);
             this.Controls.Add(this.txbNumero);
             this.Controls.Add(this.txbPais);
@@ -687,7 +675,6 @@
         private System.Windows.Forms.MaskedTextBox txbEstado;
         private System.Windows.Forms.MaskedTextBox txbPais;
         private MetroFramework.Controls.MetroGrid metroGrid1;
-        private MetroFramework.Controls.MetroButton btnDeletar;
         private MetroFramework.Controls.MetroButton btnAtualizar;
         private MetroFramework.Controls.MetroGrid metroGrid2;
         private MetroFramework.Controls.MetroTextBox txbCodigo;

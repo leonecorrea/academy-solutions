@@ -99,5 +99,23 @@ namespace AcademySolution
             frmBuscarAluno buscarAluno = new frmBuscarAluno();
             buscarAluno.Show();
         }
+
+        private void excluirFichaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmExcluirFicha excluirFicha = new frmExcluirFicha();
+            excluirFicha.ShowDialog();
+        }
+
+        private void excluirAlunoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmExcluirAluno excluirAluno = new frmExcluirAluno();
+            excluirAluno.ShowDialog();
+        }
+
+        private void excluirTrainerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmExcluirTrainer excluirTrainer = new frmExcluirTrainer();
+            excluirTrainer.ShowDialog();
+        }
     }
 }

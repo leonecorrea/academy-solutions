@@ -86,6 +86,24 @@
     <Compile Include="frmBuscarConta.Designer.cs">
       <DependentUpon>frmBuscarConta.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmExcluirAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExcluirAluno.Designer.cs">
+      <DependentUpon>frmExcluirAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExcluirFicha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExcluirFicha.Designer.cs">
+      <DependentUpon>frmExcluirFicha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExcluirTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExcluirTrainer.Designer.cs">
+      <DependentUpon>frmExcluirTrainer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +154,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBuscarConta.resx">
       <DependentUpon>frmBuscarConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExcluirAluno.resx">
+      <DependentUpon>frmExcluirAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExcluirFicha.resx">
+      <DependentUpon>frmExcluirFicha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExcluirTrainer.resx">
+      <DependentUpon>frmExcluirTrainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
