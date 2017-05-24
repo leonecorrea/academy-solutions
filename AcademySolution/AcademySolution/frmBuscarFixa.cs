@@ -54,8 +54,10 @@ namespace AcademySolution
                 }else
                 {
                     leituras.Read();
-                    for(int i = 0; i < )
-                    listaExercicios.Items.Add(Convert.ToString(leituras["NomeExercicio"]));
+                    while (leituras.HasRows == true)
+                    {
+                        listaExercicios.Items.Add(Convert.ToString(leituras["NomeExercicio"]));
+                    }
                 }
             }
             catch (Exception ex)
@@ -64,7 +66,7 @@ namespace AcademySolution
             }
             finally
             {
-
+                instancia.FechaConexao();
             }
             
         }
