@@ -17,36 +17,6 @@ namespace AcademySolution
             InitializeComponent();
         }
 
-        private void frmRegisterFicha_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroToolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
-        private void metroLabel43_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroLabel33_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClean_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRegisterFicha_Click(object sender, EventArgs e)
         {
             if(tbxNameStudent.Text == "" || tbxNameTeacher.Text == "")
@@ -63,18 +33,23 @@ namespace AcademySolution
             tbxNameStudent.Text = "";
             tbxNameTeacher.Text = "";
             //Limpando Campos Nome Exercicio
-            tbxExerciseName1.Text = "";
+            cbbNome.Text = "";
             
             //Limpando Campos Series Exercicios
-            tbxSeries1.Text = "";
+            cbbRepeticao.Text = "";
             
             //Limpando campo repetições
-            tbxRepetitions1.Text = "";
+            cbbSeries.Text = "";
         }
 
         private void btnCancelFicha_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
