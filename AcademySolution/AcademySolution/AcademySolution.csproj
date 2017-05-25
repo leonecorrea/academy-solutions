@@ -75,7 +75,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AcademySolutionDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="clAluno.cs" />
+    <Compile Include="Aluno.cs" />
     <Compile Include="clssAccount.cs" />
     <Compile Include="clssCategory.cs" />
     <Compile Include="clssEncript.cs" />

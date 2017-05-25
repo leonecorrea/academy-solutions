@@ -30,3 +30,11 @@ select tb_contas.Nome as NomeProf from tb_contas inner join tb_records on tb_con
 
 --Exercicios da ficha (Nome Exercicio, series, repetições)
 select tb_exercises.Name as NomeExercicio, tb_record_exercises.repetitions as Repeticoes, tb_record_exercises.Series as Series from tb_exercises inner join tb_record_exercises on tb_exercises.Id = tb_record_exercises.idExercise  inner join tb_records on tb_records.IdRecord = tb_record_exercises.idRecord where tb_record_exercises.idRecord = @IDFICHA;
+----------------------------------------------------------------------------------------------------------------------------------------
+
+-- Todos os dados de um usuario que esteja logando no sistema
+select * FROM tb_contas inner join tb_logins on tb_contas.Id=tb_logins.IdConta AND tb_contas.Id=100;
+
+
+
+

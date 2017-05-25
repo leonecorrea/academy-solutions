@@ -44,19 +44,17 @@ namespace AcademySolution
         public void pedeLogin()
         {
             frmLogin frm = new frmLogin();
-            frm.Show();
+            frm.ShowDialog();
         }
 
         public void getUsernameAccount()
         {
             
         }
-
-
-
+        
         private void smiAddNew_Click(object sender, EventArgs e)
         {
-            CriarConta register = new CriarConta();
+            CreateConta register = new CreateConta();
             register.ShowDialog();
         }
 

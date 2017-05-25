@@ -11,11 +11,9 @@ using System.Data.SqlClient;
 
 namespace AcademySolution
 {
-    public partial class CriarConta : MetroFramework.Forms.MetroForm
+    public partial class CreateConta : MetroFramework.Forms.MetroForm
     {
-        Instance instance;
-
-        public CriarConta()
+        public CreateConta()
         {
             InitializeComponent();
         }
@@ -27,82 +25,35 @@ namespace AcademySolution
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            /*if(
-                txbFullName.Text == "" || txbStreet.Text == "" ||
-                txbEmail.Text == "" || txbBairro.Text == "" || txbNascimento.Text == ""
-                )
-            {
-                MetroFramework.MetroMessageBox.Show(this, "Por favor, preencha os campos corretamente!", "Erro", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                try
-                {
-                    int categoria=0;
-                    switch (cbbLevel.Text)
-                    {
-                        case "Aluno":
-                            categoria = 1;
-                            break;
-                        case "Trainer":
-                            categoria = 2;
-                            break;
-                        case "Recepção":
-                            categoria = 3;
-                            break;
-                        case "Developer":
-                            categoria = 4;
-                            break;
-                        default:
-                            categoria = 5;
-                            break;
-                    }
-                    
-                    String query = "insert into tb_contas(Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, " +
-                        "Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone,DataUpdate) " +
-                        "values(@Nome, @DateBirth, @DateRegister, @Categoria, @Email, @Rua, @Numero, @Complemento, @Bairro, " +
-                        "@Cidade, @Estado, @Country, @Cpf, @Telefone,@DataUpdate)";
-                    
-                    SqlCommand command = instance.NovoComando(query);
+            Aluno aluno = new Aluno();
 
-                    command.Parameters.Add("@Nome", SqlDbType.VarChar).Value = txbFullName.Text;
-                    command.Parameters.Add("@DateBirth", SqlDbType.Date).Value = Convert.ToDateTime(txbNascimento.Text.Replace("/", "-"));
-                    command.Parameters.Add("@DateRegister", SqlDbType.DateTime).Value = DateTime.Now;
-                    command.Parameters.Add("@DataUpdate", SqlDbType.DateTime).Value = DateTime.Now;
-                    command.Parameters.Add("@Email", SqlDbType.VarChar).Value = txbEmail.Text.ToString();
-                    command.Parameters.Add("@Categoria", SqlDbType.Int).Value = categoria;
-                    command.Parameters.Add("@Rua", SqlDbType.Int).Value = Convert.ToInt32(txbStreet.Text);
-                    command.Parameters.Add("@Numero", SqlDbType.Int).Value = Convert.ToInt32(txbNumber.Text);
-                    command.Parameters.Add("@Complemento", SqlDbType.VarChar).Value = txbComplemento.Text;
-                    command.Parameters.Add("@Bairro", SqlDbType.VarChar).Value = txbBairro.Text;
-                    command.Parameters.Add("@Cidade", SqlDbType.VarChar).Value = cbbCidade.Text.ToString();
-                    command.Parameters.Add("@Estado", SqlDbType.VarChar).Value = cbbPlace.Text.ToString();
-                    command.Parameters.Add("@Country", SqlDbType.VarChar).Value = cbbCountry.Text.ToString();
-                    command.Parameters.Add("@Cpf", SqlDbType.VarChar).Value = tbxCpf.Text;
-                    command.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(tbxTelefone.Text.Replace("-","").Replace("(", "").Replace(")", ""));
-
-                    instance.NovaConexao();
-                    command.ExecuteNonQuery();
-
-                    MetroFramework.MetroMessageBox.Show(this, "Registro Concluido Com Exito!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    instance.FechaConexao();
-                    Clear();
-                }
-                catch (Exception ex)
-                {
-                    MetroFramework.MetroMessageBox.Show(this, ex.Message, "Erro", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-                }
-                finally
-                {
-                    txbFullName.Focus();
-                }
-            }*/
-
-            Aluno aluno = new Aluno(txbCodigo.Text,txbFullName.Text, txbRua.Text, txbRua.Text, txbEmail.Text, txbBairro.Text, txbNascimento.Text, 
+            aluno.PegaDados(txbCodigo.Text, txbFullName.Text, txbRua.Text, txbRua.Text, txbEmail.Text, txbBairro.Text, txbNascimento.Text,
                 cbbCategoria.Text, txbNumero.Text, txbComplemento.Text, cbbCidade.Text, cbbEstado.Text, cbbPais.Text, txbTelefone.Text);
 
             aluno.Create();
+
+            switch (aluno._error)
+            {
+                case "0001":
+                    var m = MetroFramework.MetroMessageBox.Show(this,"Usuário cadastrado com sucesso!");
+
+                    if (m == DialogResult.OK)
+                    {
+                        txbCodigo.Text = Convert.ToString(aluno.Codigo);
+                        txbFullName.Enabled = false;
+                        btnRegistrar.Enabled = false;
+                    }
+                    else if (m == DialogResult.Retry)
+                    {
+
+                    }
+                    break;
+                case "0002":
+                    MetroFramework.MetroMessageBox.Show(this, "Erro ao cadastrar usuário!");
+                    break;
+                default:
+                    break;
+            }
 
             var v = MetroFramework.MetroMessageBox.Show(this, aluno._error);
             if ( v == DialogResult.OK ) {

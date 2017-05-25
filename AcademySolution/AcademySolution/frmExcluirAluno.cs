@@ -24,6 +24,17 @@ namespace AcademySolution
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
+
+            String codigo = txbCodFicha.Text;
+
+            Aluno aluno = new Aluno();
+
+            aluno.Codigo = codigo;
+
+            aluno.Delete();
+            
+            aluno.Delete();
+
           var ex =  MetroFramework.MetroMessageBox.Show(this, "Deseja Mesmo Excluir o Aluno?", "Confimação de Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             
           if (ex == DialogResult.Yes)

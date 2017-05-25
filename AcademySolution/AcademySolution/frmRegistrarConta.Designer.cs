@@ -1,6 +1,6 @@
 ﻿namespace AcademySolution
 {
-    partial class CriarConta
+    partial class CreateConta
     {
         /// <summary>
         /// Required designer variable.
