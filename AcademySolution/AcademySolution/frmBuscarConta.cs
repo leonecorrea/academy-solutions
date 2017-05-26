@@ -149,7 +149,7 @@ namespace AcademySolution
 
                 String query = "update v_alunos SET Nome = @Nome, DataDeNascimento = @DataDeNascimento, Email = @Email, Rua = @Rua, Numero = @Numero, " +
                             "Complemento = @Complemento, Bairro = @Bairro, Cidade = @Cidade, Estado = @Estado, Pais = @Pais, " +
-                            "Cpf = @Cpf, Telefone = @Telefone, DataUpdate = @DataUpdate " +
+                            "Cpf = @Cpf, Telefone = @Telefone, DataUpdate = SYSDATETIME() " +
                             "where Codigo = " + txbCodigo.Text;
 
                 try

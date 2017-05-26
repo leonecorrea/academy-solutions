@@ -9,15 +9,15 @@ namespace AcademySolution
     public interface IPessoa
     {
         //Criação
-        void Create();
+        String Create();
 
         //Leitura
-        void Read();
+        String Read();
 
         //Atualização
-        void Update();
+        String Update();
 
         //Deleção
-        void Delete();
+        String Delete();
     }
 }

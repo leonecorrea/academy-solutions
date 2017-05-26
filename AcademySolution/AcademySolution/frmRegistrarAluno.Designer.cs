@@ -35,7 +35,7 @@
             this.lblNome = new MetroFramework.Controls.MetroLabel();
             this.lblNivel = new MetroFramework.Controls.MetroLabel();
             this.cbbCategoria = new MetroFramework.Controls.MetroComboBox();
-            this.btnLimpar = new MetroFramework.Controls.MetroButton();
+            this.btnCadastrarNovo = new MetroFramework.Controls.MetroButton();
             this.lblNascimento = new MetroFramework.Controls.MetroLabel();
             this.lblRua = new MetroFramework.Controls.MetroLabel();
             this.txbRua = new MetroFramework.Controls.MetroTextBox();
@@ -50,7 +50,7 @@
             this.lblTelefone = new MetroFramework.Controls.MetroLabel();
             this.txbTelefone = new System.Windows.Forms.MaskedTextBox();
             this.lblCpf = new MetroFramework.Controls.MetroLabel();
-            this.tbxCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txbCpf = new System.Windows.Forms.MaskedTextBox();
             this.cbbPais = new MetroFramework.Controls.MetroComboBox();
             this.lblCidade = new MetroFramework.Controls.MetroLabel();
             this.txbComplemento = new MetroFramework.Controls.MetroTextBox();
@@ -68,11 +68,11 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(597, 539);
+            this.btnRegistrar.Location = new System.Drawing.Point(517, 559);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(110, 23);
+            this.btnRegistrar.Size = new System.Drawing.Size(164, 23);
             this.btnRegistrar.TabIndex = 14;
-            this.btnRegistrar.Text = "Criar";
+            this.btnRegistrar.Text = "Cadastrar Usuário";
             this.btnRegistrar.UseSelectable = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegister_Click);
             // 
@@ -108,15 +108,16 @@
             this.cbbCategoria.TabIndex = 5;
             this.cbbCategoria.UseSelectable = true;
             // 
-            // btnLimpar
+            // btnCadastrarNovo
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(476, 539);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(110, 23);
-            this.btnLimpar.TabIndex = 15;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseSelectable = true;
-            this.btnLimpar.Click += new System.EventHandler(this.btnClean_Click);
+            this.btnCadastrarNovo.Enabled = false;
+            this.btnCadastrarNovo.Location = new System.Drawing.Point(312, 559);
+            this.btnCadastrarNovo.Name = "btnCadastrarNovo";
+            this.btnCadastrarNovo.Size = new System.Drawing.Size(164, 23);
+            this.btnCadastrarNovo.TabIndex = 15;
+            this.btnCadastrarNovo.Text = "Cadastrar Novo";
+            this.btnCadastrarNovo.UseSelectable = true;
+            this.btnCadastrarNovo.Click += new System.EventHandler(this.btnCadastrarNovo_Click_1);
             // 
             // lblNascimento
             // 
@@ -241,9 +242,9 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(349, 539);
+            this.btnCancel.Location = new System.Drawing.Point(107, 559);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(110, 23);
+            this.btnCancel.Size = new System.Drawing.Size(164, 23);
             this.btnCancel.TabIndex = 16;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseSelectable = true;
@@ -350,13 +351,13 @@
             this.lblCpf.TabIndex = 41;
             this.lblCpf.Text = "CPF : ";
             // 
-            // tbxCpf
+            // txbCpf
             // 
-            this.tbxCpf.Location = new System.Drawing.Point(476, 133);
-            this.tbxCpf.Mask = "000,000,000-00";
-            this.tbxCpf.Name = "tbxCpf";
-            this.tbxCpf.Size = new System.Drawing.Size(231, 20);
-            this.tbxCpf.TabIndex = 3;
+            this.txbCpf.Location = new System.Drawing.Point(476, 133);
+            this.txbCpf.Mask = "000,000,000-00";
+            this.txbCpf.Name = "txbCpf";
+            this.txbCpf.Size = new System.Drawing.Size(231, 20);
+            this.txbCpf.TabIndex = 3;
             // 
             // cbbPais
             // 
@@ -538,7 +539,7 @@
             this.txbCodigo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbCodigo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // CriarConta
+            // CreateConta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -553,7 +554,7 @@
             this.Controls.Add(this.lblComplemento);
             this.Controls.Add(this.txbComplemento);
             this.Controls.Add(this.lblCidade);
-            this.Controls.Add(this.tbxCpf);
+            this.Controls.Add(this.txbCpf);
             this.Controls.Add(this.lblCpf);
             this.Controls.Add(this.txbTelefone);
             this.Controls.Add(this.lblTelefone);
@@ -572,12 +573,12 @@
             this.Controls.Add(this.txbRua);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnCadastrarNovo);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.grdPrincipal);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "CriarConta";
+            this.Name = "CreateConta";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.ShowIcon = false;
@@ -595,7 +596,7 @@
         private MetroFramework.Controls.MetroLabel lblNome;
         private MetroFramework.Controls.MetroLabel lblNivel;
         private MetroFramework.Controls.MetroComboBox cbbCategoria;
-        private MetroFramework.Controls.MetroButton btnLimpar;
+        private MetroFramework.Controls.MetroButton btnCadastrarNovo;
         private MetroFramework.Controls.MetroLabel lblNascimento;
         private MetroFramework.Controls.MetroLabel lblRua;
         private MetroFramework.Controls.MetroTextBox txbRua;
@@ -610,7 +611,7 @@
         private MetroFramework.Controls.MetroLabel lblTelefone;
         private System.Windows.Forms.MaskedTextBox txbTelefone;
         private MetroFramework.Controls.MetroLabel lblCpf;
-        private System.Windows.Forms.MaskedTextBox tbxCpf;
+        private System.Windows.Forms.MaskedTextBox txbCpf;
         private MetroFramework.Controls.MetroComboBox cbbPais;
         private MetroFramework.Controls.MetroLabel lblCidade;
         private MetroFramework.Controls.MetroTextBox txbComplemento;

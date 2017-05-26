@@ -12,123 +12,100 @@ namespace AcademySolution
     class Aluno : IPessoa
     {
         public Instance instance = new Instance();
-        public String _error;
-        public String Codigo { get; set; }
-        public String Nome { get; set; }
-        public String Cpf { get; set; }
-        public String Email { get; set; }
-        public String Nascimento { get; set; }
-        public String Categoria { get; set; }
-        public String Numero { get; set; }
-        public String Rua { get; set; }
-        public String Complemento { get; set; }
-        public String Bairro { get; set; }
-        public String Cidade { get; set; }
-        public String Estado { get; set; }
-        public String Pais { get; set; }
-        public String Telefone { get; set; }
+        private String _error;
+        private String _codigo;
+        private String _nome;
+        private String _cpf;
+        private String _email;
+        private String _nascimento;
+        private String _categoria;
+        private String _numero;
+        private String _rua;
+        private String _complemento;
+        private String _bairro;
+        private String _cidade;
+        private String _estado;
+        private String _pais;
+        private String _telefone;
+        
+        public String Codigo{get => _codigo; set => _codigo = value; }
+        public String Nome { get => _nome; set => _nome = value; }
+        public String Cpf { get => _cpf; set => _cpf = value; }
+        public String Email { get => _email; set => _email = value; }
+        public String Categoria { get => _categoria; set => _categoria = value; }
+        public String Numero { get => _numero; set => _numero = value; }
+        public String Rua { get => _rua; set => _rua = value; }
+        public String Complemento { get => _complemento; set => _complemento = value; }
+        public String Bairro { get => _bairro; set => _bairro = value; }
+        public String Cidade { get => _cidade; set => _cidade = value; }
+        public String Estado { get => _estado; set => _estado = value; }
+        public String Pais { get => _pais; set => _pais = value; }
+        public String Telefone { get => _telefone; set => _telefone = value; }
+        public String Nascimento { get => _nascimento; set => _nascimento = value; }
+        public string Error { get => _error; set => _error = value; }
 
         public Aluno()
         {
-            this.Codigo = null;
-            this.Nome = null;
-            this.Cpf = null;
-            this.Email = null;
-            this.Nascimento = null;
-            this.Categoria = null;
-            this.Numero = null;
-            this.Rua = null;
-            this.Complemento = null;
-            this.Bairro = null;
-            this.Cidade = null;
-            this.Estado = null;
-            this.Pais = null;
-            this.Telefone = null;
+
         }
 
-        public void PegaDados(String codigo, String nome, String rua, String email, String bairro, String nascimento, String categoria,
+        /*public void PegaDados(String codigo, String nome, String rua, String email, String bairro, String nascimento, String categoria,
             String numero, String complemento, String cidade, String estado, String pais, String cpf, String telefone)
         {
-            this.Codigo = codigo;
-            this.Nome = nome;
-            this.Cpf = cpf;
-            this.Email = email;
-            this.Nascimento = nascimento;
-            this.Categoria = categoria;
-            this.Numero = numero;
-            this.Rua = rua;
-            this.Complemento = complemento;
-            this.Bairro = bairro;
-            this.Cidade = cidade;
-            this.Estado = estado;
-            this.Pais = pais;
-            this.Telefone = telefone;
-        }
+            Codigo = codigo;
+            Nome = nome;
+            Cpf = cpf;
+            Email = email;
+            Nascimento = nascimento;
+            Categoria = categoria;
+            Numero = numero;
+            Rua = rua;
+            Complemento = complemento;
+            Bairro = bairro;
+            Cidade = cidade;
+            Estado = estado;
+            Pais = pais;
+            Telefone = telefone;
+        }*/
 
-        public void ValidaDados()
-        {
-                if (Nome != "" && Cpf != "" && Email != "" && Nascimento != "" && Categoria != "" &&
-                    Numero != "" && Rua != "" && Complemento != "" && Bairro != "" && Cidade != "" && Cidade != "" &&
-                    Estado != "" && Pais != "" && Telefone != "")
-                {
-                    _error = "0000";
-                }
-                else if(Nome == "" || Cpf == "" || Email == "" || Nascimento == "" || Categoria == "" ||
-                    Numero == "" || Rua == "" || Complemento == "" || Bairro == "" || Cidade == "" || Cidade == "" ||
-                    Estado == "" || Pais == "" || Telefone == "")
-                {
-                    _error = "0001";
-                }
-                else
-                {
-                    _error = "0002";
-                }
-        }
-
-        public void Create()
+        public String Create()
         {
             try
             {
                 String query = "insert into tb_contas(Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, " +
-                    "Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone,DataUpdate) " +
-                    "values(@Nome, @DateBirth, SYSDATETIME(), @Categoria, @Email, @Rua, @Numero, @Complemento, @Bairro, " +
-                    "@Cidade, @Estado, @Country, @Cpf, @Telefone,SYSDATETIME())";
+                    "Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone) " +
+                    "values(@Nome, @DataDeNascimento, SYSDATETIME(), @Categoria, @Email, @Rua, @Numero, @Complemento, @Bairro, " +
+                    "@Cidade, @Estado, @Pais, @Cpf, @Telefone)";
 
                 SqlCommand command = instance.NovoComando(query);
 
                 command.Parameters.Add("@Nome", SqlDbType.VarChar).Value = Nome;
-                command.Parameters.Add("@DateBirth", SqlDbType.Date).Value = Nascimento.Replace("/", "-");
-                //command.Parameters.Add("@DateRegister", SqlDbType.DateTime).Value = DateTime.Now;
-                //command.Parameters.Add("@DataUpdate", SqlDbType.DateTime).Value = DateTime.Now;
+                command.Parameters.Add("@DataDeNascimento", SqlDbType.Date).Value = Convert.ToDateTime(Nascimento.Replace("/", "-"));
+                command.Parameters.Add("@Categoria", SqlDbType.Int).Value = Convert.ToInt32(1);
                 command.Parameters.Add("@Email", SqlDbType.VarChar).Value = Email.ToString();
-                command.Parameters.Add("@Categoria", SqlDbType.Int).Value = 1;
-                command.Parameters.Add("@Rua", SqlDbType.Int).Value = Convert.ToInt32(Rua);
+                command.Parameters.Add("@Rua", SqlDbType.VarChar).Value = Rua.ToString();
                 command.Parameters.Add("@Numero", SqlDbType.Int).Value = Convert.ToInt32(Numero);
                 command.Parameters.Add("@Complemento", SqlDbType.VarChar).Value = Complemento;
-                command.Parameters.Add("@Bairro", SqlDbType.VarChar).Value = Bairro.ToString();
+                command.Parameters.Add("@Bairro", SqlDbType.VarChar).Value = Bairro;
                 command.Parameters.Add("@Cidade", SqlDbType.VarChar).Value = Cidade.ToString();
                 command.Parameters.Add("@Estado", SqlDbType.VarChar).Value = Estado.ToString();
-                command.Parameters.Add("@Country", SqlDbType.VarChar).Value = Pais.ToString();
+                command.Parameters.Add("@Pais", SqlDbType.VarChar).Value = Pais.ToString();
                 command.Parameters.Add("@Cpf", SqlDbType.VarChar).Value = Cpf;
                 command.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(Telefone.Replace("-", "").Replace("(", "").Replace(")", ""));
 
                 instance.NovaConexao();
                 command.ExecuteNonQuery();
 
-                this._error = "0010";
+                return "CSPAD1";
             }
             catch (Exception ex)
             {
-                this._error = "0011";
-                this._error = ex.Message.ToString();
-            }
-            finally
-            {
-                instance.FechaConexao();
+                Error = ex.Message.ToString();
+                return Error;
             }
         }
 
-        public void Delete()
+        public String Delete()
         {
             try
             {
@@ -137,10 +114,14 @@ namespace AcademySolution
                 String query = "delete from tb_contas where Codigo = @Codigo";
 
                 SqlCommand comando = instance.NovoComando(query);
+
+                return "";
             }
             catch (Exception ex)
             {
                 _error = ex.Message;
+
+                return "";
             }
             finally
             {
@@ -148,10 +129,11 @@ namespace AcademySolution
             }
         }
 
-        public void Read()
+        public String Read()
         {
             instance.NovaConexao();
 
+            return "";
             /*try
             {
                 String parametro = "";
@@ -234,9 +216,11 @@ namespace AcademySolution
             }*/
         }
 
-        public void Update()
+        public string Update()
         {
             instance.NovaConexao();
+
+            return "";
         }
     }
 }
