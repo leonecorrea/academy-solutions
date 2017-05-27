@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblDescricao = new MetroFramework.Controls.MetroLabel();
             this.grdBusca = new MetroFramework.Controls.MetroGrid();
             this.cbbParametro = new MetroFramework.Controls.MetroComboBox();
@@ -71,23 +71,23 @@
             this.grdBusca.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdBusca.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdBusca.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdBusca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdBusca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.grdBusca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdBusca.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdBusca.DefaultCellStyle = dataGridViewCellStyle8;
             this.grdBusca.EnableHeadersVisualStyles = false;
             this.grdBusca.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdBusca.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -95,14 +95,14 @@
             this.grdBusca.Name = "grdBusca";
             this.grdBusca.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.grdBusca.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdBusca.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdBusca.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.grdBusca.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdBusca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdBusca.Size = new System.Drawing.Size(960, 90);
@@ -172,6 +172,7 @@
             // 
             // listaExercicios
             // 
+            this.listaExercicios.Enabled = false;
             this.listaExercicios.FormattingEnabled = true;
             this.listaExercicios.Location = new System.Drawing.Point(174, 356);
             this.listaExercicios.Name = "listaExercicios";
@@ -181,6 +182,7 @@
             // 
             // listaSeries
             // 
+            this.listaSeries.Enabled = false;
             this.listaSeries.FormattingEnabled = true;
             this.listaSeries.Location = new System.Drawing.Point(383, 356);
             this.listaSeries.Name = "listaSeries";
@@ -189,6 +191,7 @@
             // 
             // listaRepeticoes
             // 
+            this.listaRepeticoes.Enabled = false;
             this.listaRepeticoes.FormattingEnabled = true;
             this.listaRepeticoes.Location = new System.Drawing.Point(592, 356);
             this.listaRepeticoes.Name = "listaRepeticoes";
@@ -209,6 +212,7 @@
             this.txbNomeAlunoProcuraFicha.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbNomeAlunoProcuraFicha.CustomButton.UseSelectable = true;
             this.txbNomeAlunoProcuraFicha.CustomButton.Visible = false;
+            this.txbNomeAlunoProcuraFicha.Enabled = false;
             this.txbNomeAlunoProcuraFicha.Lines = new string[0];
             this.txbNomeAlunoProcuraFicha.Location = new System.Drawing.Point(174, 205);
             this.txbNomeAlunoProcuraFicha.MaxLength = 32767;
@@ -257,6 +261,7 @@
             this.txbNomeTrainerProcuraFicha.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbNomeTrainerProcuraFicha.CustomButton.UseSelectable = true;
             this.txbNomeTrainerProcuraFicha.CustomButton.Visible = false;
+            this.txbNomeTrainerProcuraFicha.Enabled = false;
             this.txbNomeTrainerProcuraFicha.Lines = new string[0];
             this.txbNomeTrainerProcuraFicha.Location = new System.Drawing.Point(174, 255);
             this.txbNomeTrainerProcuraFicha.MaxLength = 32767;
@@ -287,6 +292,7 @@
             this.txbBuscaFichaDataInicio.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbBuscaFichaDataInicio.CustomButton.UseSelectable = true;
             this.txbBuscaFichaDataInicio.CustomButton.Visible = false;
+            this.txbBuscaFichaDataInicio.Enabled = false;
             this.txbBuscaFichaDataInicio.Lines = new string[0];
             this.txbBuscaFichaDataInicio.Location = new System.Drawing.Point(810, 205);
             this.txbBuscaFichaDataInicio.MaxLength = 32767;
@@ -317,6 +323,7 @@
             this.txbBuscaFichaDataTroca.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txbBuscaFichaDataTroca.CustomButton.UseSelectable = true;
             this.txbBuscaFichaDataTroca.CustomButton.Visible = false;
+            this.txbBuscaFichaDataTroca.Enabled = false;
             this.txbBuscaFichaDataTroca.Lines = new string[0];
             this.txbBuscaFichaDataTroca.Location = new System.Drawing.Point(810, 255);
             this.txbBuscaFichaDataTroca.MaxLength = 32767;

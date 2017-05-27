@@ -35,6 +35,19 @@ namespace AcademySolution
             cbbParametro.Text = "";
         }
 
+        private void limpaCampos() {
+            //Limpa lista todos os campos
+            txbEntrada.Text = "";
+            txbNomeAlunoProcuraFicha.Text = "";
+            txbNomeTrainerProcuraFicha.Text = "";
+            txbBuscaFichaDataInicio.Text = "";
+            txbBuscaFichaDataTroca.Text = "";
+            listaExercicios.Items.Clear();
+            listaRepeticoes.Items.Clear();
+            listaSeries.Items.Clear();
+        }
+
+
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
 
@@ -65,32 +78,44 @@ namespace AcademySolution
                 if (buscaFicha.HasRows == false)
                 {
                     MetroFramework.MetroMessageBox.Show(this, "Nenhum ficha encontrada", "Erro", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    txbEntrada.Text = "";
+                    limpaCampos();
                 }
                 else
                 {
                     buscaFicha.Close();
 
-                    //Limpa lista de exercicios
-                    txbNomeAlunoProcuraFicha.Text = "";
-                    txbNomeTrainerProcuraFicha.Text = "";
-                    txbBuscaFichaDataInicio.Text = "";
-                    txbBuscaFichaDataTroca.Text = "";
-                    listaExercicios.Items.Clear();
-                    listaRepeticoes.Items.Clear();
-                    listaSeries.Items.Clear();
-
 
                     SqlDataReader buscaExercicios = instancia.LerDados(query);
+                    
+                    
                     if (buscaExercicios.HasRows == false)
                     {
-                        listaExercicios.Items.Add("Exercicios não cadastrados");
+                        buscaExercicios.Close();
+                        limpaCampos();
+
+                        SqlDataReader pegaInfoAluno = instancia.LerDados(infoAluno);
+                        pegaInfoAluno.Read();
+                        txbNomeAlunoProcuraFicha.Text = Convert.ToString(pegaInfoAluno["Nome"]);
+                        txbBuscaFichaDataInicio.Text = Convert.ToString(pegaInfoAluno["dataInicio"]).Replace("00:00:00", "");
+                        txbBuscaFichaDataTroca.Text = Convert.ToString(pegaInfoAluno["dataTroca"]).Replace("00:00:00", "");
+
+                        pegaInfoAluno.Close();
+
+                        SqlDataReader pegaInfoProf = instancia.LerDados(infoProf);
+                        pegaInfoProf.Read();
+                        txbNomeTrainerProcuraFicha.Text = Convert.ToString(pegaInfoProf["NomeProf"]);
+
+                        pegaInfoProf.Close();
+
+                        listaExercicios.Items.Add("Nenhum Exercicio cadastrado");
                         listaRepeticoes.Items.Add("Nenhum resultado encontrado");
                         listaSeries.Items.Add("Nenhum resultado encontrado");
-                        buscaExercicios.Close();
+                        
                     }
                     else
                     {
+                        limpaCampos();
+
                         while (buscaExercicios.Read())
                         {
                             listaExercicios.Items.Add(Convert.ToString(buscaExercicios["NomeExercicio"]));
@@ -102,8 +127,8 @@ namespace AcademySolution
                         SqlDataReader pegaInfoAluno = instancia.LerDados(infoAluno);
                         pegaInfoAluno.Read();
                         txbNomeAlunoProcuraFicha.Text = Convert.ToString(pegaInfoAluno["Nome"]);
-                        txbBuscaFichaDataInicio.Text = Convert.ToString(pegaInfoAluno["dataInicio"]);
-                        txbBuscaFichaDataTroca.Text = Convert.ToString(pegaInfoAluno["dataTroca"]);
+                        txbBuscaFichaDataInicio.Text = Convert.ToString(pegaInfoAluno["dataInicio"]).Replace("00:00:00", "");
+                        txbBuscaFichaDataTroca.Text = Convert.ToString(pegaInfoAluno["dataTroca"]).Replace("00:00:00", "");
 
                         pegaInfoAluno.Close();
 
