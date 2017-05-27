@@ -43,12 +43,7 @@ namespace AcademySolution
         public String Telefone { get { return _telefone; } set { _telefone = value; } }
         public String Nascimento { get { return _nascimento; } set { _nascimento = value; } }
         public string Error { get { return _error; } set { _error = value; } }
-
-        public Aluno()
-        {
-
-        }
-
+        
         public String Create()
         {
             try
@@ -73,8 +68,7 @@ namespace AcademySolution
                 command.Parameters.Add("@Pais", SqlDbType.VarChar).Value = Pais.ToString();
                 command.Parameters.Add("@Cpf", SqlDbType.VarChar).Value = Cpf;
                 command.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(Telefone.Replace("-", "").Replace("(", "").Replace(")", ""));
-
-                instance.NovaConexao();
+                
                 command.ExecuteNonQuery();
 
                 return "CSPAD1";
@@ -112,95 +106,11 @@ namespace AcademySolution
 
         public String Read()
         {
-            instance.NovaConexao();
-
             return "";
-            /*try
-            {
-                String parametro = "";
-                String campo = txbParametro.Text;
-                String query = "SELECT * FROM v_alunos WHERE ";
-
-                switch (cbbItemFiltragem.Text)
-                {
-                    case "Codigo":
-                        parametro = "Codigo";
-                        query = query + parametro + " = " + campo + ";";
-                        break;
-                    case "Nome":
-                        parametro = "Nome";
-                        campo = "'%" + campo + "%'";
-                        query = query + parametro + " LIKE " + campo + ";";
-                        break;
-                    case "Cpf":
-                        parametro = "Cpf";
-                        query = query + parametro + " = " + campo + ";";
-                        break;
-                    default:
-                        query = "select * from v_alunos;";
-                        break;
-                }
-
-                instance.NovaConexao();
-
-                //instance.NovoComando(query).Parameters.Add("@Codigo", SqlDbType.Int).Value = Convert.ToInt32(txbParametro.Text);
-
-                SqlDataReader leituras = instance.LerDados(query);
-
-                if (leituras.HasRows == false)
-                {
-                    MetroFramework.MetroMessageBox.Show(this, "Código do aluno não foi encontrado!", "Erro", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    LimparDados();
-                }
-                else
-                {
-                    leituras.Read();
-
-                    txbCodigo.Text = Convert.ToString(leituras["Codigo"]);
-                    txbNome.Text = Convert.ToString(leituras["Nome"]);
-                    txbNascimento.Text = Convert.ToString(leituras["DataDeNascimento"]);
-                    txbCpf.Text = Convert.ToString(leituras["Cpf"]);
-                    txbEmail.Text = Convert.ToString(leituras["Email"]);
-                    txbEstado.Text = Convert.ToString(leituras["Estado"]);
-                    txbTelefone.Text = Convert.ToString(leituras["Telefone"]);
-                    txbRua.Text = Convert.ToString(leituras["Rua"]);
-                    txbNumero.Text = Convert.ToString(leituras["Numero"]);
-                    txbComplemento.Text = Convert.ToString(leituras["Complemento"]);
-                    txbCidade.Text = Convert.ToString(leituras["Cidade"]);
-                    txbBairro.Text = Convert.ToString(leituras["Bairro"]);
-                    txbPais.Text = Convert.ToString(leituras["Pais"]);
-
-                    txbNome.Enabled = false;
-                    txbNascimento.Enabled = false;
-                    txbCpf.Enabled = false;
-                    txbEmail.Enabled = false;
-                    txbEstado.Enabled = false;
-                    txbTelefone.Enabled = false;
-                    txbRua.Enabled = false;
-                    txbNumero.Enabled = false;
-                    txbComplemento.Enabled = false;
-                    txbCidade.Enabled = false;
-                    txbBairro.Enabled = false;
-                    txbPais.Enabled = false;
-
-                    btnAtualizar.Enabled = true;
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MetroFramework.MetroMessageBox.Show(this, ex.Message, "Erro", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                instance.FechaConexao();
-            }*/
         }
 
         public string Update()
         {
-            instance.NovaConexao();
-
             return "";
         }
     }
