@@ -27,22 +27,22 @@ namespace AcademySolution
         private String _estado;
         private String _pais;
         private String _telefone;
-        
-        public String Codigo{get => _codigo; set => _codigo = value; }
-        public String Nome { get => _nome; set => _nome = value; }
-        public String Cpf { get => _cpf; set => _cpf = value; }
-        public String Email { get => _email; set => _email = value; }
-        public String Categoria { get => _categoria; set => _categoria = value; }
-        public String Numero { get => _numero; set => _numero = value; }
-        public String Rua { get => _rua; set => _rua = value; }
-        public String Complemento { get => _complemento; set => _complemento = value; }
-        public String Bairro { get => _bairro; set => _bairro = value; }
-        public String Cidade { get => _cidade; set => _cidade = value; }
-        public String Estado { get => _estado; set => _estado = value; }
-        public String Pais { get => _pais; set => _pais = value; }
-        public String Telefone { get => _telefone; set => _telefone = value; }
-        public String Nascimento { get => _nascimento; set => _nascimento = value; }
-        public string Error { get => _error; set => _error = value; }
+
+        public String Codigo { get { return _codigo; } set { _codigo = value; } }
+        public String Nome { get { return _nome; } set { _nome = value; } } 
+        public String Cpf { get { return _cpf; } set { _cpf = value; } }
+        public String Email { get { return _email; } set { _email = value; } }
+        public String Categoria { get { return _categoria; } set { _categoria = value; } }
+        public String Numero { get { return _numero; } set { _numero = value; } }
+        public String Rua { get { return _rua; } set { _rua = value; } }
+        public String Complemento { get { return _complemento; } set { _complemento = value; } }
+        public String Bairro { get { return _bairro; } set { _bairro = value; } }
+        public String Cidade { get { return _cidade; } set { _cidade = value; } }
+        public String Estado { get { return _estado; } set { _estado = value; } }
+        public String Pais { get { return _pais; } set { _pais = value; } }
+        public String Telefone { get { return _telefone; } set { _telefone = value; } }
+        public String Nascimento { get { return _nascimento; } set { _nascimento = value; } }
+        public string Error { get { return _error; } set { _error = value; } }
 
         public Aluno()
         {
