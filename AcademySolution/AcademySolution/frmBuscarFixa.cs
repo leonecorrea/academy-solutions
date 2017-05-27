@@ -41,42 +41,78 @@ namespace AcademySolution
             try
             {
                 String campo = txbEntrada.Text;
-                String parametro = "tb_record_exercises.idRecord";
-                //Lista Exercicios
+                //Parametro para pegar pelo id da ficha 
+                String parametrPegaPelaFicha = "tb_record_exercises.idRecord";
+                //Lista Exercicios os exercicios da ficha
                 String query = "select tb_exercises.Name as NomeExercicio, tb_record_exercises.repetitions as Repeticoes, tb_record_exercises.Series as Series from tb_exercises inner join tb_record_exercises on tb_exercises.Id = tb_record_exercises.idExercise  inner join tb_records on tb_records.IdRecord = tb_record_exercises.idRecord where ";
-                query = query + parametro + " = " + campo;
+                query = query + parametrPegaPelaFicha + " = " + campo;
 
-                String queryContarRegistros = "select count(tb_record_exercises.idRecord) as registros from tb_record_exercises inner join tb_records on tb_record_exercises.idRecord = tb_records.IdRecord where ";
-                queryContarRegistros = queryContarRegistros + parametro + " = " + campo;
+                //Lista nome do aluno, data inicio e data troca
+                String infoAluno = "select tb_contas.Nome as Nome, tb_records.DateBegin as dataInicio, tb_records.DateExpiration as dataTroca from tb_contas inner join tb_records on tb_records.IdStudent = tb_contas.id where tb_records.IdRecord";
+                infoAluno = infoAluno + " = " + campo;
+
+                //Pega o nome do professor
+                String infoProf = "select tb_contas.Nome as NomeProf from tb_contas inner join tb_records on tb_records.IdTrainer = tb_contas.id where tb_records.IdRecord";
+                infoProf = infoProf + " = " + campo;
+
+                //Verificar se a ficha está cadastrada
+                String stringBuscaFicha = "select * from tb_records where idRecord ";
+                stringBuscaFicha = stringBuscaFicha + " = " + campo;
 
                 instancia.NovaConexao();
-
-                SqlDataReader contaRegistros = instancia.LerDados(queryContarRegistros);
-                contaRegistros.Read();
-
-                int registrosContados = Convert.ToInt32(contaRegistros["registros"]);
-                contaRegistros.Close();
-
-
-                SqlDataReader leituras = instancia.LerDados(query);
-
-                if (leituras.HasRows == false)
+                SqlDataReader buscaFicha = instancia.LerDados(stringBuscaFicha);
+                
+                if (buscaFicha.HasRows == false)
                 {
                     MetroFramework.MetroMessageBox.Show(this, "Nenhum ficha encontrada", "Erro", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
                     txbEntrada.Text = "";
                 }
                 else
                 {
+                    buscaFicha.Close();
 
                     //Limpa lista de exercicios
+                    txbNomeAlunoProcuraFicha.Text = "";
+                    txbNomeTrainerProcuraFicha.Text = "";
+                    txbBuscaFichaDataInicio.Text = "";
+                    txbBuscaFichaDataTroca.Text = "";
                     listaExercicios.Items.Clear();
-                    
+                    listaRepeticoes.Items.Clear();
+                    listaSeries.Items.Clear();
 
-                    while (leituras.Read())
+
+                    SqlDataReader buscaExercicios = instancia.LerDados(query);
+                    if (buscaExercicios.HasRows == false)
                     {
-                        listaExercicios.Items.Add("Exercicios: " + Convert.ToString(leituras["NomeExercicio"]).ToString() + " Series: " + Convert.ToString(leituras["Series"]).ToString() + " Repetições: " + Convert.ToString(leituras["Repeticoes"]).ToString());
+                        listaExercicios.Items.Add("Exercicios não cadastrados");
+                        listaRepeticoes.Items.Add("Nenhum resultado encontrado");
+                        listaSeries.Items.Add("Nenhum resultado encontrado");
+                        buscaExercicios.Close();
                     }
+                    else
+                    {
+                        while (buscaExercicios.Read())
+                        {
+                            listaExercicios.Items.Add(Convert.ToString(buscaExercicios["NomeExercicio"]));
+                            listaSeries.Items.Add(Convert.ToString(buscaExercicios["Series"]));
+                            listaRepeticoes.Items.Add(Convert.ToString(buscaExercicios["Repeticoes"]));
+                        }
+                        buscaExercicios.Close();
 
+                        SqlDataReader pegaInfoAluno = instancia.LerDados(infoAluno);
+                        pegaInfoAluno.Read();
+                        txbNomeAlunoProcuraFicha.Text = Convert.ToString(pegaInfoAluno["Nome"]);
+                        txbBuscaFichaDataInicio.Text = Convert.ToString(pegaInfoAluno["dataInicio"]);
+                        txbBuscaFichaDataTroca.Text = Convert.ToString(pegaInfoAluno["dataTroca"]);
+
+                        pegaInfoAluno.Close();
+
+                        SqlDataReader pegaInfoProf = instancia.LerDados(infoProf);
+                        pegaInfoProf.Read();
+                        txbNomeTrainerProcuraFicha.Text = Convert.ToString(pegaInfoProf["NomeProf"]);
+
+                        pegaInfoProf.Close();
+                    }
                 }           
                 
             }
