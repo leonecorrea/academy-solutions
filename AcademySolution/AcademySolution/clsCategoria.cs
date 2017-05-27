@@ -11,12 +11,5 @@ namespace AcademySolution
         public int Codigo { get; set; }
         public string Nome { get; set; }
         public string Descricao { get; set; }
-        
-        public Categoria(int codigo, string nome, string descricao)
-        {
-            this.Codigo = codigo;
-            this.Nome = nome;
-            this.Descricao = descricao;
-        }
     }
 }

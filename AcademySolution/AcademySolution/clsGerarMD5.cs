@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 
 namespace AcademySolution
 {
-    class GerarMD5
+    public class GerarMD5
     {
         public string RetornarMD5(string Password)
         {

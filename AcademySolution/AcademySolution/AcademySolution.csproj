@@ -82,6 +82,12 @@
     <Compile Include="frmBuscarAluno.Designer.cs">
       <DependentUpon>frmBuscarAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscarTreiner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarTreiner.Designer.cs">
+      <DependentUpon>frmBuscarTreiner.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmExcluirAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="frmExcluirTrainer.Designer.cs">
       <DependentUpon>frmExcluirTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListarCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarCategorias.Designer.cs">
+      <DependentUpon>frmListarCategorias.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -150,6 +162,12 @@
     </Compile>
     <Compile Include="frmListarAlunos.Designer.cs">
       <DependentUpon>frmListarAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarFixas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarFixas.Designer.cs">
+      <DependentUpon>ListarFixas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
