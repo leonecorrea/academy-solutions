@@ -115,12 +115,14 @@
             this.Controls.Add(this.infoUserLastName);
             this.Controls.Add(this.pictureBox1);
             this.DisplayHeader = false;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Movable = false;
             this.Name = "infoUser";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;
-            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
-            this.Style = MetroFramework.MetroColorStyle.White;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.SystemShadow;
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -72,10 +72,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AcademySolutionDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Aluno.cs" />
-    <Compile Include="clssAccount.cs" />
-    <Compile Include="clssCategoria.cs" />
-    <Compile Include="clssLogin.cs" />
+    <Compile Include="clsAluno.cs" />
+    <Compile Include="clsAccount.cs" />
+    <Compile Include="clsCategoria.cs" />
+    <Compile Include="clsLogin.cs" />
+    <Compile Include="frmBuscarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarAluno.Designer.cs">
+      <DependentUpon>frmBuscarAluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscarConta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,15 +142,14 @@
     <Compile Include="frmSplashScreen.Designer.cs">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="GerarMD5.cs" />
-    <Compile Include="IAluno.cs" />
+    <Compile Include="clsGerarMD5.cs" />
     <Compile Include="infoUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="infoUser.Designer.cs">
       <DependentUpon>infoUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Instance.cs" />
+    <Compile Include="clsInstance.cs" />
     <Compile Include="IPessoa.cs" />
     <Compile Include="frmListarAlunos.cs">
       <SubType>Form</SubType>
@@ -154,6 +159,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBuscarAluno.resx">
+      <DependentUpon>frmBuscarAluno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarConta.resx">
       <DependentUpon>frmBuscarConta.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,9 +229,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

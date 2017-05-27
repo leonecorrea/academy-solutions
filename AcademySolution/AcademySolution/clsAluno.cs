@@ -49,25 +49,6 @@ namespace AcademySolution
 
         }
 
-        /*public void PegaDados(String codigo, String nome, String rua, String email, String bairro, String nascimento, String categoria,
-            String numero, String complemento, String cidade, String estado, String pais, String cpf, String telefone)
-        {
-            Codigo = codigo;
-            Nome = nome;
-            Cpf = cpf;
-            Email = email;
-            Nascimento = nascimento;
-            Categoria = categoria;
-            Numero = numero;
-            Rua = rua;
-            Complemento = complemento;
-            Bairro = bairro;
-            Cidade = cidade;
-            Estado = estado;
-            Pais = pais;
-            Telefone = telefone;
-        }*/
-
         public String Create()
         {
             try
