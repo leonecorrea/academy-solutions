@@ -198,7 +198,6 @@
             // 
             // btnRegisterFicha
             // 
-            this.btnRegisterFicha.Enabled = false;
             this.btnRegisterFicha.Location = new System.Drawing.Point(443, 434);
             this.btnRegisterFicha.Name = "btnRegisterFicha";
             this.btnRegisterFicha.Size = new System.Drawing.Size(96, 23);
@@ -209,7 +208,6 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Enabled = false;
             this.btnCancelar.Location = new System.Drawing.Point(317, 434);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(96, 23);

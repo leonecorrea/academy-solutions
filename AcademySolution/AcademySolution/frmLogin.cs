@@ -21,7 +21,7 @@ namespace AcademySolution
 
         public frmLogin()
         {
-            if (login._LogOut == false)
+            if (login.LogOut == false)
             {
                 Thread t = new Thread(new ThreadStart(Loading));
                 //Inicializado
@@ -37,7 +37,7 @@ namespace AcademySolution
                 this.Show();
 
             }
-            else if(login._LogOut == true)
+            else if(login.LogOut == true)
             {
                 InitializeComponent();
                 this.Show();
@@ -65,7 +65,7 @@ namespace AcademySolution
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            login._LogOut = true;
+            login.LogOut = true;
             Application.Exit();
         }
 
@@ -98,7 +98,7 @@ namespace AcademySolution
             //Se não logado
             else
             {
-                MetroFramework.MetroMessageBox.Show(this, $"{login._error}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MetroFramework.MetroMessageBox.Show(this, $"{login.Error}", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txbUsername.Focus();
             }
         }

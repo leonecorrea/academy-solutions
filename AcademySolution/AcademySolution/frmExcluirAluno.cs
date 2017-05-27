@@ -13,7 +13,7 @@ namespace AcademySolution
 {
     public partial class frmExcluirAluno : MetroFramework.Forms.MetroForm
     {
-        private object instance;
+        //private object instance;
 
         public frmExcluirAluno()
         {

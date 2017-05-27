@@ -132,7 +132,7 @@ namespace AcademySolution
             }
             else
             {
-                //MetroFramework.MetroMessageBox.Show(this, "Por favor, preencha os campos obrigatórios!", "Falha", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MetroFramework.MetroMessageBox.Show(this, "Por favor, preencha os campos obrigatórios!", "Falha", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return false;
             }
         }

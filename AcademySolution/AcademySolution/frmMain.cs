@@ -23,7 +23,7 @@ namespace AcademySolution
         private void lnkLogOut_Click(object sender, EventArgs e)
         {
             login.Deslogar();
-            login._LogOut = true;
+            login.LogOut = true;
             this.Close();
             pedeLogin();
 
@@ -32,7 +32,7 @@ namespace AcademySolution
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             //Main Form Close
-            if (!login._LogOut)
+            if (!login.LogOut)
                 Application.Exit();
         }
 
@@ -82,8 +82,11 @@ namespace AcademySolution
 
         private void mniProcurarAlunos_Click(object sender, EventArgs e)
         {
-            frmBuscarAluno buscarAluno = new frmBuscarAluno();
-            buscarAluno.ShowDialog();
+            //frmBuscarAluno buscarAluno = new frmBuscarAluno();
+            //buscarAluno.ShowDialog();
+
+            ListarAlunos view = new ListarAlunos();
+            view.ShowDialog();
         }
 
         private void excluirFichaToolStripMenuItem_Click(object sender, EventArgs e)

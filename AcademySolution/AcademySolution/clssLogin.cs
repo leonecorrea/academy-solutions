@@ -11,18 +11,18 @@ namespace AcademySolution
     public class Login
     {
         Instance instance = new Instance();
-
+        
         public bool Status { get; set; }
 
-        public String Username { get; set; }
+        public String Username { get; set;}
 
         public String Password { get; set; }
 
-        public String _error { get; set; }
+        public String Error { get; set; }
 
         public int Codigo { get; set; }
 
-        public bool _LogOut { get; set; }
+        public bool LogOut { get; set; }
 
         //Método usado para validar o login
         public void ValidaLogin(String username, String password)
@@ -35,16 +35,16 @@ namespace AcademySolution
                     //Mas se usuario for vazio e senha não
                     if (username == "" && password != "")
                     {
-                            this._error = "Por favor, preencha o campo usuário!";
+                            this.Error = "Por favor, preencha o campo usuário!";
                     }
                     //Mas se usuario for preenchido e senha não
                     else if (username != "" && password == "")
                     {
-                        this._error = "Por favor, preencha sua senha!";
+                        this.Error = "Por favor, preencha sua senha!";
                     }
                     else
                     {
-                        this._error = "Por favor, preencha seus dados corretamente.";
+                        this.Error = "Por favor, preencha seus dados corretamente.";
                     }
                 }
             }
@@ -53,18 +53,18 @@ namespace AcademySolution
             {
                 //SqlCommand command = new SqlCommand("select * from TblLogin where Username='"+username+"';", instance.NewInstance());
                 
-                String query = "select * from tb_logins where Username='"+username+"'";
-
-               // command.Parameters.Add("@username", SqlDbType.VarChar).Value = username;
-
+                String query = "select * from tb_logins where Username='"+username+"';";
+                
                 //Se usuário e senha estiverem corretos
                 try
                 {
                     instance.NovaConexao();
+                    //instance.NovoComando(query).Parameters.Add("@username", SqlDbType.VarChar).Value = username;
+
                     SqlDataReader leitura = instance.LerDados(query);
                     if (leitura.HasRows == false)
                     {
-                        this._error = "Login e senha não foram encontrados!";
+                        this.Error = "Login e senha não foram encontrados!";
                     }
                     else
                     {
@@ -87,42 +87,19 @@ namespace AcademySolution
                         }
                         else
                         {
-                            this._error = "Password failed!";
+                            this.Error = "Password failed!";
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    this._error = ex.ToString();
+                    this.Error = ex.ToString();
                 }
                 finally
                 {
                     instance.FechaConexao();
                 }
             }
-            /*if (username == this.Username || password == this.Password)
-            {
-                try
-                {
-                    //instance.connection();
-
-                    using (AcademySolutionEntities academy = new AcademySolutionEntities())
-                    {
-                        var query = from o in academy.TblLogins
-                                    where o.Username == username && o.Password == password
-                                    select o;
-                        if (query.SingleOrDefault() != null)
-                        {
-                            this.Logar(username, password);
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    //MessageBox.Show(ex.Message, "Message",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                    this._error = Convert.ToString(ex);
-                }
-            }*/
         }
 
         //Método usado para trocar status para logado
@@ -134,7 +111,7 @@ namespace AcademySolution
         public void Deslogar()
         {
             this.Status = false;
-            this._LogOut = true;
+            this.LogOut = true;
         }
         
         //Cadastra Logins
@@ -167,8 +144,8 @@ namespace AcademySolution
             this.Codigo = 0;
             this.Username = null;
             this.Password = null;
-            this._error = null;
-            this._LogOut = false;
+            this.Error = null;
+            this.LogOut = false;
         }
     }
 }
