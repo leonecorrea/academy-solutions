@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace AcademySolution
 {
@@ -72,7 +73,24 @@ namespace AcademySolution
                         this.Codigo = Convert.ToInt32(leitura["Id"]);
                         this.Username = Convert.ToString(leitura["Username"]);
                         this.Password = Convert.ToString(leitura["Password"]);
+                        Stream Arquivo;
+                        String nomeArquivo = "Id.txt";
+                        if(File.Exists(nomeArquivo) == true)
+                        {
+                            File.Delete(nomeArquivo);
+                            Arquivo = File.Create("Id.txt");
+                        }
+                        else
+                        {
+                            Arquivo = File.Create("Id.txt");
+                        }
 
+                        StreamWriter escrever = new StreamWriter(Arquivo);
+                        escrever.Write(Convert.ToInt32(leitura["Id"]));
+
+                        escrever.Close();
+                        Arquivo.Close();
+                        
                         //Começando a comparar a senha
                         GerarMD5 md5 = new GerarMD5();
 
@@ -101,11 +119,12 @@ namespace AcademySolution
                 }
             }
         }
+        
 
         //Método usado para trocar status para logado
         public void Logar(string username,string password)
         {
-            this.Status = true;
+            this.Status = true;            
         }
 
         public void Deslogar()

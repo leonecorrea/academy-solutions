@@ -106,5 +106,10 @@ namespace AcademySolution
             frmExcluirTrainer excluirTrainer = new frmExcluirTrainer();
             excluirTrainer.ShowDialog();
         }
+
+        private void lblInfoUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
