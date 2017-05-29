@@ -16,5 +16,10 @@ namespace AcademySolution
         {
             InitializeComponent();
         }
+
+        private void frmBuscarTreiner_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

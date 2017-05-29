@@ -17,6 +17,8 @@ namespace AcademySolution
             InitializeComponent();
         }
 
+        //tratamento de validacao de campos
+
         private void btnRegisterFicha_Click(object sender, EventArgs e)
         {
             if(tbxNameStudent.Text == "" || tbxNameTeacher.Text == "")

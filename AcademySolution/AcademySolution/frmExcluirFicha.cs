@@ -28,6 +28,8 @@ namespace AcademySolution
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
+
+        // tratamento da exclusão de fichas no banco
         {
             var r = MetroFramework.MetroMessageBox.Show(this, "Deseja Mesmo Excluir a Ficha?", "Confimação de Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 

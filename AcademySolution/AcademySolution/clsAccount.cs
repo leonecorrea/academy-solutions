@@ -20,6 +20,8 @@ namespace AcademySolution
             //this.Codigo = Login.Codigo;
         }
 
+        //metodo que valida o login
+
         public void Logar(bool status, string username, string password)
         {
 
