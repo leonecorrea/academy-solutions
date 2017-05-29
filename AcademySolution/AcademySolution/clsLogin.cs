@@ -73,22 +73,27 @@ namespace AcademySolution
                         this.Codigo = Convert.ToInt32(leitura["Id"]);
                         this.Username = Convert.ToString(leitura["Username"]);
                         this.Password = Convert.ToString(leitura["Password"]);
+                        //Salva o Id do usuario logado em um arquivo
                         Stream Arquivo;
                         String nomeArquivo = "Id.txt";
+                        //Se o arquivo existir ele vai ser deletado e criado novamente
                         if(File.Exists(nomeArquivo) == true)
                         {
                             File.Delete(nomeArquivo);
                             Arquivo = File.Create("Id.txt");
                         }
                         else
-                        {
+                        {   //Se o arquivo não existir ele cria
                             Arquivo = File.Create("Id.txt");
                         }
 
+                        //StreamWriter para escrever no arquivo
                         StreamWriter escrever = new StreamWriter(Arquivo);
+                        //Escrevo no arquivo o id do usuairo
                         escrever.Write(Convert.ToInt32(leitura["Id"]));
-
+                        //Fecho o StreamWriter
                         escrever.Close();
+                        //Fecho o Strem
                         Arquivo.Close();
                         
                         //Começando a comparar a senha
