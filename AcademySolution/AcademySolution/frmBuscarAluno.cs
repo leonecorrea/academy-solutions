@@ -13,6 +13,7 @@ namespace AcademySolution
 {
     public partial class frmBuscarAluno : MetroFramework.Forms.MetroForm
     {
+        // nova instancia criada da classe Instance
 
         Instance instance = new Instance();
         bool att = false;
@@ -22,8 +23,12 @@ namespace AcademySolution
             InitializeComponent();
         }
 
+        // botao que faz a busca de cadastros no banco de dados
+
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
+            // tratamento de buscas de cadastro no banco de dados
+
             try
             {
                 String parametro = "";
@@ -106,13 +111,18 @@ namespace AcademySolution
             }
         }
 
+        // botao que limpa os campos
+
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             LimparDados();
         }
+
+        // botao que faz a atualização dos dados do usuario
         
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
+
             if(att == false)
             {
                 att = true;
@@ -147,11 +157,14 @@ namespace AcademySolution
 
                 txbNome.Focus();
 
+                //comando para atualizacao de dados
+
                 String query = "update v_alunos SET Nome = @Nome, DataDeNascimento = @DataDeNascimento, Email = @Email, Rua = @Rua, Numero = @Numero, " +
                             "Complemento = @Complemento, Bairro = @Bairro, Cidade = @Cidade, Estado = @Estado, Pais = @Pais, " +
                             "Cpf = @Cpf, Telefone = @Telefone, DataUpdate = SYSDATETIME() " +
                             "where Codigo = " + txbCodigo.Text;
 
+                //tratamento da atualizacao de dados
                 try
                 {
                     SqlCommand command = instance.NovoComando(query);

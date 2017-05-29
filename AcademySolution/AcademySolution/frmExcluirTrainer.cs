@@ -23,6 +23,8 @@ namespace AcademySolution
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
+
+        // tratamento da exclusão de trainer no banco
         {
             var ex = MetroFramework.MetroMessageBox.Show(this, "Deseja Mesmo Excluir o Trainer?", "Confimação de Trainer", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 

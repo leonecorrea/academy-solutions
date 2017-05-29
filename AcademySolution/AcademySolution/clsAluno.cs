@@ -9,6 +9,8 @@ using System.Windows.Forms;
 
 namespace AcademySolution
 {
+    // classe aluno que herda da interface IPessoa
+
     class Aluno : IPessoa
     {
         public Instance instance = new Instance();
@@ -44,6 +46,8 @@ namespace AcademySolution
         public String Nascimento { get { return _nascimento; } set { _nascimento = value; } }
         public string Error { get { return _error; } set { _error = value; } }
         
+        //metodo  create que é herdado e IPessoa que implementa o cadastro de novos usuarios no sistema
+
         public String Create()
         {
             try
@@ -80,6 +84,8 @@ namespace AcademySolution
             }
         }
 
+        //metodo  delete que é herdado e IPessoa que implementa o cadastro de novos usuarios no sistema
+
         public String Delete()
         {
             try
@@ -104,10 +110,14 @@ namespace AcademySolution
             }
         }
 
+        //metodo  read que é herdado e IPessoa que implementa o cadastro de novos usuarios no sistema
+
         public String Read()
         {
             return "";
         }
+
+        //metodo  update que é herdado e IPessoa que implementa o cadastro de novos usuarios no sistema
 
         public string Update()
         {

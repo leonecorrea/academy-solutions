@@ -28,7 +28,7 @@ namespace AcademySolution
         private void btnExcluir_Click(object sender, EventArgs e)
         {
 
-        
+        // tratamento da exclusão de alunos no banco
 
           var ex =  MetroFramework.MetroMessageBox.Show(this, "Deseja Mesmo Excluir o Aluno?", "Confimação de Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             
