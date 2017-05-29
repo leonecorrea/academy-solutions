@@ -108,6 +108,8 @@
             this.Movable = false;
             this.Name = "frmExcluirFicha";
             this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.SystemShadow;
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Excluir Ficha";
             this.Load += new System.EventHandler(this.frmExcluirFicha_Load);
             this.ResumeLayout(false);

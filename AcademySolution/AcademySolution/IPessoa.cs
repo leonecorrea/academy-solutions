@@ -10,7 +10,6 @@ namespace AcademySolution
 {
     public interface IPessoa
     {
-
         //Criação
         String Create();
 

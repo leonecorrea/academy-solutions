@@ -8,8 +8,41 @@ namespace AcademySolution
 {
     public class Categoria
     {
-        public int Codigo { get; set; }
-        public string Nome { get; set; }
-        public string Descricao { get; set; }
+        private string codigo;
+        private string nome;
+        private string descricao;
+
+        public string Codigo {
+            get
+            {
+                return codigo;
+            }
+            set
+            {
+                codigo = value;
+            }
+        }
+
+        public string Nome {
+            get
+            {
+                return nome;
+            }
+            set
+            {
+                nome = value;
+            }
+        }
+
+        public string Descricao {
+            get
+            {
+                return descricao;
+            }
+            set
+            {
+                descricao = value;
+            }
+        }
     }
 }

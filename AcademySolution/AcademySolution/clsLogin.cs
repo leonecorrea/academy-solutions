@@ -161,15 +161,5 @@ namespace AcademySolution
         {
 
         }
-
-        public Login()
-        {
-            //this.Status = false;
-            this.Codigo = 0;
-            this.Username = null;
-            this.Password = null;
-            this.Error = null;
-            this.LogOut = false;
-        }
     }
 }

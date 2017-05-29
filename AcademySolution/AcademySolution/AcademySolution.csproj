@@ -73,15 +73,23 @@
       <DependentUpon>AcademySolutionDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="clsAluno.cs" />
-    <Compile Include="clsAccount.cs" />
+    <Compile Include="clsConta.cs" />
     <Compile Include="clsCategoria.cs" />
+    <Compile Include="clsFixa.cs" />
     <Compile Include="clsLogin.cs" />
     <Compile Include="clsPrograma.cs" />
+    <Compile Include="clsTreiner.cs" />
     <Compile Include="frmBuscarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBuscarAluno.Designer.cs">
       <DependentUpon>frmBuscarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBuscarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscarCategoria.Designer.cs">
+      <DependentUpon>frmBuscarCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBuscarTreiner.cs">
       <SubType>Form</SubType>
@@ -174,6 +182,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBuscarAluno.resx">
       <DependentUpon>frmBuscarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscarCategoria.resx">
+      <DependentUpon>frmBuscarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarTreiner.resx">
       <DependentUpon>frmBuscarTreiner.cs</DependentUpon>

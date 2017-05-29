@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace AcademySolution
 
 {
-    public class Account
+    public class Conta
     {
         public Boolean Status { get; set; }
         public String Username { get; set; }
@@ -15,13 +15,12 @@ namespace AcademySolution
         public int Nivel { get; set; }
         public Login Login = new Login();
         
-        public Account()
+        public Conta()
         {
             //this.Codigo = Login.Codigo;
         }
 
         //metodo que valida o login
-
         public void Logar(bool status, string username, string password)
         {
 

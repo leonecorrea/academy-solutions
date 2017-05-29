@@ -31,9 +31,6 @@ namespace AcademySolution
 
             Aluno aluno = new Aluno();
 
-            //aluno.PegaDados(txbCodigo.Text, txbFullName.Text, txbRua.Text, txbRua.Text, txbEmail.Text, txbBairro.Text, txbNascimento.Text,
-            //  cbbCategoria.Text, txbNumero.Text, txbComplemento.Text, cbbCidade.Text, cbbEstado.Text, cbbPais.Text, txbTelefone.Text);
-
             //tratamento para inserção de alunos
             
             if (ValidaDados()==true)
@@ -134,7 +131,7 @@ namespace AcademySolution
         public bool ValidaDados()
         {
             if (txbFullName.Text != "" && txbRua.Text != "" && txbRua.Text != "" && txbEmail.Text != "" && txbBairro.Text != "" &&
-                txbNascimento.Text != "" && cbbCategoria.Text != "" && txbNumero.Text != "" && txbComplemento.Text != "" && 
+                txbNascimento.Text != "" && cbbCategoria.Text != "" && txbNumero.Text != "" && 
                 cbbCidade.Text != "" && cbbEstado.Text != "" && cbbPais.Text != "" && txbTelefone.Text != "")
             {
                 //MetroFramework.MetroMessageBox.Show(this, "Dados validos", "Valido", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -142,7 +139,8 @@ namespace AcademySolution
             }
             else
             {
-                MetroFramework.MetroMessageBox.Show(this, "Por favor, preencha os campos obrigatórios!", "Falha", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MetroFramework.MetroMessageBox.Show(this, "Por favor, preencha os campos obrigatórios!", "Falha", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txbFullName.Focus();
                 return false;
             }
         }

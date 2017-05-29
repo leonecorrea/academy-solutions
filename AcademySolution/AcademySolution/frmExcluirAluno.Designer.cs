@@ -108,6 +108,8 @@
             this.Movable = false;
             this.Name = "frmExcluirAluno";
             this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.SystemShadow;
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Excluir Aluno";
             this.Load += new System.EventHandler(this.frmExcluirAluno_Load);
             this.ResumeLayout(false);
