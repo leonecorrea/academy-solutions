@@ -33,8 +33,8 @@
             this.infoUserLastName = new System.Windows.Forms.Label();
             this.infoUserDateBirth = new System.Windows.Forms.Label();
             this.infoUserStreet = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.infoUserCpf = new System.Windows.Forms.Label();
+            this.infoUserTelefone = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,9 +55,8 @@
             this.infoUserLastName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.infoUserLastName.Location = new System.Drawing.Point(441, 235);
             this.infoUserLastName.Name = "infoUserLastName";
-            this.infoUserLastName.Size = new System.Drawing.Size(74, 25);
+            this.infoUserLastName.Size = new System.Drawing.Size(0, 25);
             this.infoUserLastName.TabIndex = 45;
-            this.infoUserLastName.Text = "Name";
             // 
             // infoUserDateBirth
             // 
@@ -66,9 +65,8 @@
             this.infoUserDateBirth.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.infoUserDateBirth.Location = new System.Drawing.Point(414, 280);
             this.infoUserDateBirth.Name = "infoUserDateBirth";
-            this.infoUserDateBirth.Size = new System.Drawing.Size(128, 25);
+            this.infoUserDateBirth.Size = new System.Drawing.Size(0, 25);
             this.infoUserDateBirth.TabIndex = 46;
-            this.infoUserDateBirth.Text = "xx/xx/xxxx";
             // 
             // infoUserStreet
             // 
@@ -77,39 +75,36 @@
             this.infoUserStreet.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.infoUserStreet.Location = new System.Drawing.Point(429, 323);
             this.infoUserStreet.Name = "infoUserStreet";
-            this.infoUserStreet.Size = new System.Drawing.Size(98, 25);
+            this.infoUserStreet.Size = new System.Drawing.Size(0, 25);
             this.infoUserStreet.TabIndex = 47;
-            this.infoUserStreet.Text = "Street X";
             // 
-            // label7
+            // infoUserCpf
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(395, 368);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(181, 25);
-            this.label7.TabIndex = 50;
-            this.label7.Text = "000.000.000-00";
+            this.infoUserCpf.AutoSize = true;
+            this.infoUserCpf.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoUserCpf.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.infoUserCpf.Location = new System.Drawing.Point(395, 368);
+            this.infoUserCpf.Name = "infoUserCpf";
+            this.infoUserCpf.Size = new System.Drawing.Size(0, 25);
+            this.infoUserCpf.TabIndex = 50;
             // 
-            // label9
+            // infoUserTelefone
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label9.Location = new System.Drawing.Point(414, 413);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(139, 25);
-            this.label9.TabIndex = 52;
-            this.label9.Text = "00000-0000";
+            this.infoUserTelefone.AutoSize = true;
+            this.infoUserTelefone.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoUserTelefone.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.infoUserTelefone.Location = new System.Drawing.Point(414, 413);
+            this.infoUserTelefone.Name = "infoUserTelefone";
+            this.infoUserTelefone.Size = new System.Drawing.Size(0, 25);
+            this.infoUserTelefone.TabIndex = 52;
             // 
             // infoUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(959, 570);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.infoUserTelefone);
+            this.Controls.Add(this.infoUserCpf);
             this.Controls.Add(this.infoUserStreet);
             this.Controls.Add(this.infoUserDateBirth);
             this.Controls.Add(this.infoUserLastName);
@@ -123,6 +118,7 @@
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.SystemShadow;
             this.Style = MetroFramework.MetroColorStyle.Orange;
+            this.Load += new System.EventHandler(this.infoUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,7 +131,7 @@
         private System.Windows.Forms.Label infoUserLastName;
         private System.Windows.Forms.Label infoUserDateBirth;
         private System.Windows.Forms.Label infoUserStreet;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label infoUserCpf;
+        private System.Windows.Forms.Label infoUserTelefone;
     }
 }
