@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{AB3C7E29-1103-4CF0-8ECD-1BC9CF979F3D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>aplication</RootNamespace>
-    <AssemblyName>aplication</AssemblyName>
+    <RootNamespace>AcademySolution</RootNamespace>
+    <AssemblyName>AcademySolution</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -76,6 +76,7 @@
     <Compile Include="clsAccount.cs" />
     <Compile Include="clsCategoria.cs" />
     <Compile Include="clsLogin.cs" />
+    <Compile Include="clsPrograma.cs" />
     <Compile Include="frmBuscarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
