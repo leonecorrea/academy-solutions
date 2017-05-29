@@ -23,12 +23,18 @@ namespace AcademySolution
             this.Close();
         }
 
+        //botao que faz a acao da criacao de um novo aluno
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            //instancia de um novo aluno para inserção
+
             Aluno aluno = new Aluno();
 
             //aluno.PegaDados(txbCodigo.Text, txbFullName.Text, txbRua.Text, txbRua.Text, txbEmail.Text, txbBairro.Text, txbNascimento.Text,
             //  cbbCategoria.Text, txbNumero.Text, txbComplemento.Text, cbbCidade.Text, cbbEstado.Text, cbbPais.Text, txbTelefone.Text);
+
+            //tratamento para inserção de alunos
             
             if (ValidaDados()==true)
             {
@@ -45,6 +51,8 @@ namespace AcademySolution
                 aluno.Estado = cbbEstado.Text;
                 aluno.Pais = cbbPais.Text;
                 aluno.Telefone = txbTelefone.Text;
+
+                //chama o metodo create criado em IPessoa e implementado na classe Aluno
 
                 string cr = aluno.Create();
 
@@ -81,6 +89,8 @@ namespace AcademySolution
             }
         }
 
+        //metodo para cadastrar um novo usuario logo apos ter cadastrado um
+
         private void btnCadastrarNovo_Click_1(object sender, EventArgs e)
         {
             Clear();
@@ -103,7 +113,7 @@ namespace AcademySolution
 
             txbFullName.Focus();
         }
-
+        //metodo para limpar os campos
         public void Clear()
         {
             txbFullName.Clear();
