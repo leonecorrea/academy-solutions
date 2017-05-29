@@ -56,8 +56,10 @@ namespace AcademySolution
             infoUserDateBirth.Text = "Data Nascimento : " + Convert.ToString(lerInfo["DataNasc"]).Replace("00:00:00", "");
             infoUserStreet.Text = "Rua : " + Convert.ToString(lerInfo["Rua"]);
             long cpf = Convert.ToInt64(lerInfo["Cpf"]);
+            //Campo cpf com formatação
             infoUserCpf.Text = "CPF : " + String.Format(@"{0: ###\.###\.###-##}", cpf);
             long telefone = Convert.ToInt64(lerInfo["Telefone"]);
+            //Campo telefone com formatação
             infoUserTelefone.Text = "Telefone : " + String.Format("{0:(##) #####-####}", telefone);
             
             
