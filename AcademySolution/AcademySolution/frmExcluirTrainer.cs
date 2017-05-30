@@ -30,14 +30,19 @@ namespace AcademySolution
 
             if (ex == DialogResult.Yes)
             {
+                Aluno aluno = new Aluno();
+
+
+                aluno.Delete(Convert.ToString(txbCodTrainer.Text));
+
                 MetroFramework.MetroMessageBox.Show(this, "Trainer Excluido Com Sucesso!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txbCodFicha.Clear();
+                txbCodTrainer.Clear();
             }
 
             if (ex == DialogResult.No)
             {
-                txbCodFicha.Focus();
-                txbCodFicha.Clear();
+                txbCodTrainer.Focus();
+                txbCodTrainer.Clear();
             }
 
         }
