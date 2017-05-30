@@ -164,5 +164,10 @@ namespace AcademySolution
             frmBuscarTreiner buscarTrainer = new frmBuscarTreiner();
             buscarTrainer.ShowDialog();
         }
+
+        private void adicionarNovoExercícioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

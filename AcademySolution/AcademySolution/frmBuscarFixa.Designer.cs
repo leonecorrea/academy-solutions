@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblDescricao = new MetroFramework.Controls.MetroLabel();
             this.grdBusca = new MetroFramework.Controls.MetroGrid();
             this.cbbParametro = new MetroFramework.Controls.MetroComboBox();
@@ -59,7 +59,7 @@
             this.lblDescricao.AutoSize = true;
             this.lblDescricao.Location = new System.Drawing.Point(50, 75);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(75, 19);
+            this.lblDescricao.Size = new System.Drawing.Size(74, 19);
             this.lblDescricao.TabIndex = 2;
             this.lblDescricao.Text = "Filtrar Por :";
             // 
@@ -71,23 +71,23 @@
             this.grdBusca.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.grdBusca.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdBusca.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdBusca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdBusca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdBusca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdBusca.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdBusca.DefaultCellStyle = dataGridViewCellStyle2;
             this.grdBusca.EnableHeadersVisualStyles = false;
             this.grdBusca.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdBusca.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -95,14 +95,14 @@
             this.grdBusca.Name = "grdBusca";
             this.grdBusca.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.grdBusca.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdBusca.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdBusca.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grdBusca.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdBusca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdBusca.Size = new System.Drawing.Size(960, 90);
@@ -159,6 +159,7 @@
             this.txbEntrada.MaxLength = 32767;
             this.txbEntrada.Name = "txbEntrada";
             this.txbEntrada.PasswordChar = '\0';
+            this.txbEntrada.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txbEntrada.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txbEntrada.SelectedText = "";
             this.txbEntrada.SelectionLength = 0;
@@ -186,6 +187,7 @@
             this.listaSeries.FormattingEnabled = true;
             this.listaSeries.Location = new System.Drawing.Point(383, 356);
             this.listaSeries.Name = "listaSeries";
+            this.listaSeries.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listaSeries.Size = new System.Drawing.Size(203, 160);
             this.listaSeries.TabIndex = 18;
             // 
@@ -195,6 +197,7 @@
             this.listaRepeticoes.FormattingEnabled = true;
             this.listaRepeticoes.Location = new System.Drawing.Point(592, 356);
             this.listaRepeticoes.Name = "listaRepeticoes";
+            this.listaRepeticoes.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.listaRepeticoes.Size = new System.Drawing.Size(203, 160);
             this.listaRepeticoes.TabIndex = 19;
             // 
@@ -218,6 +221,7 @@
             this.txbNomeAlunoProcuraFicha.MaxLength = 32767;
             this.txbNomeAlunoProcuraFicha.Name = "txbNomeAlunoProcuraFicha";
             this.txbNomeAlunoProcuraFicha.PasswordChar = '\0';
+            this.txbNomeAlunoProcuraFicha.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txbNomeAlunoProcuraFicha.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txbNomeAlunoProcuraFicha.SelectedText = "";
             this.txbNomeAlunoProcuraFicha.SelectionLength = 0;
@@ -243,7 +247,7 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(53, 259);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(102, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(100, 19);
             this.metroLabel2.TabIndex = 22;
             this.metroLabel2.Text = "Nome Trainer : ";
             // 
@@ -267,6 +271,7 @@
             this.txbNomeTrainerProcuraFicha.MaxLength = 32767;
             this.txbNomeTrainerProcuraFicha.Name = "txbNomeTrainerProcuraFicha";
             this.txbNomeTrainerProcuraFicha.PasswordChar = '\0';
+            this.txbNomeTrainerProcuraFicha.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txbNomeTrainerProcuraFicha.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txbNomeTrainerProcuraFicha.SelectedText = "";
             this.txbNomeTrainerProcuraFicha.SelectionLength = 0;
@@ -298,6 +303,7 @@
             this.txbBuscaFichaDataInicio.MaxLength = 32767;
             this.txbBuscaFichaDataInicio.Name = "txbBuscaFichaDataInicio";
             this.txbBuscaFichaDataInicio.PasswordChar = '\0';
+            this.txbBuscaFichaDataInicio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txbBuscaFichaDataInicio.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txbBuscaFichaDataInicio.SelectedText = "";
             this.txbBuscaFichaDataInicio.SelectionLength = 0;
@@ -329,6 +335,7 @@
             this.txbBuscaFichaDataTroca.MaxLength = 32767;
             this.txbBuscaFichaDataTroca.Name = "txbBuscaFichaDataTroca";
             this.txbBuscaFichaDataTroca.PasswordChar = '\0';
+            this.txbBuscaFichaDataTroca.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txbBuscaFichaDataTroca.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txbBuscaFichaDataTroca.SelectedText = "";
             this.txbBuscaFichaDataTroca.SelectionLength = 0;
@@ -354,7 +361,7 @@
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.Location = new System.Drawing.Point(662, 259);
             this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(84, 19);
+            this.metroLabel4.Size = new System.Drawing.Size(82, 19);
             this.metroLabel4.TabIndex = 27;
             this.metroLabel4.Text = "Data Troca : ";
             // 

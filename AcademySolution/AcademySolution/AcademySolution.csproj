@@ -72,6 +72,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AcademySolutionDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AdicionarExercicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarExercicio.Designer.cs">
+      <DependentUpon>AdicionarExercicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="clsAluno.cs" />
     <Compile Include="clsConta.cs" />
     <Compile Include="clsCategoria.cs" />
@@ -180,6 +186,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdicionarExercicio.resx">
+      <DependentUpon>AdicionarExercicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarAluno.resx">
       <DependentUpon>frmBuscarAluno.cs</DependentUpon>
     </EmbeddedResource>
