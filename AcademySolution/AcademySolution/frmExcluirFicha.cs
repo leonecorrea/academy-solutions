@@ -31,6 +31,11 @@ namespace AcademySolution
 
         // tratamento da exclusão de fichas no banco
         {
+            Fixa ficha = new Fixa();
+
+            ficha.ExcluirFicha(Convert.ToString(txbCodFicha.Text));
+
+
             var r = MetroFramework.MetroMessageBox.Show(this, "Deseja Mesmo Excluir a Ficha?", "Confimação de Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             if  (r == DialogResult.Yes)

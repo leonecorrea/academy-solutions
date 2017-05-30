@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblNome = new MetroFramework.Controls.MetroLabel();
-            this.txbCodFicha = new MetroFramework.Controls.MetroTextBox();
+            this.txbCodTrainer = new MetroFramework.Controls.MetroTextBox();
             this.btnExcluir = new MetroFramework.Controls.MetroButton();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
@@ -43,35 +43,35 @@
             this.lblNome.TabIndex = 4;
             this.lblNome.Text = "Código do Trainer :";
             // 
-            // txbCodFicha
+            // txbCodTrainer
             // 
             // 
             // 
             // 
-            this.txbCodFicha.CustomButton.Image = null;
-            this.txbCodFicha.CustomButton.Location = new System.Drawing.Point(105, 1);
-            this.txbCodFicha.CustomButton.Name = "";
-            this.txbCodFicha.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txbCodFicha.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txbCodFicha.CustomButton.TabIndex = 1;
-            this.txbCodFicha.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txbCodFicha.CustomButton.UseSelectable = true;
-            this.txbCodFicha.CustomButton.Visible = false;
-            this.txbCodFicha.Lines = new string[0];
-            this.txbCodFicha.Location = new System.Drawing.Point(212, 130);
-            this.txbCodFicha.MaxLength = 32767;
-            this.txbCodFicha.Name = "txbCodFicha";
-            this.txbCodFicha.PasswordChar = '\0';
-            this.txbCodFicha.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txbCodFicha.SelectedText = "";
-            this.txbCodFicha.SelectionLength = 0;
-            this.txbCodFicha.SelectionStart = 0;
-            this.txbCodFicha.ShortcutsEnabled = true;
-            this.txbCodFicha.Size = new System.Drawing.Size(127, 23);
-            this.txbCodFicha.TabIndex = 5;
-            this.txbCodFicha.UseSelectable = true;
-            this.txbCodFicha.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txbCodFicha.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txbCodTrainer.CustomButton.Image = null;
+            this.txbCodTrainer.CustomButton.Location = new System.Drawing.Point(105, 1);
+            this.txbCodTrainer.CustomButton.Name = "";
+            this.txbCodTrainer.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txbCodTrainer.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txbCodTrainer.CustomButton.TabIndex = 1;
+            this.txbCodTrainer.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txbCodTrainer.CustomButton.UseSelectable = true;
+            this.txbCodTrainer.CustomButton.Visible = false;
+            this.txbCodTrainer.Lines = new string[0];
+            this.txbCodTrainer.Location = new System.Drawing.Point(212, 130);
+            this.txbCodTrainer.MaxLength = 32767;
+            this.txbCodTrainer.Name = "txbCodTrainer";
+            this.txbCodTrainer.PasswordChar = '\0';
+            this.txbCodTrainer.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txbCodTrainer.SelectedText = "";
+            this.txbCodTrainer.SelectionLength = 0;
+            this.txbCodTrainer.SelectionStart = 0;
+            this.txbCodTrainer.ShortcutsEnabled = true;
+            this.txbCodTrainer.Size = new System.Drawing.Size(127, 23);
+            this.txbCodTrainer.TabIndex = 5;
+            this.txbCodTrainer.UseSelectable = true;
+            this.txbCodTrainer.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txbCodTrainer.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // btnExcluir
             // 
@@ -101,7 +101,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.txbCodFicha);
+            this.Controls.Add(this.txbCodTrainer);
             this.Controls.Add(this.lblNome);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -118,7 +118,7 @@
         #endregion
 
         private MetroFramework.Controls.MetroLabel lblNome;
-        private MetroFramework.Controls.MetroTextBox txbCodFicha;
+        private MetroFramework.Controls.MetroTextBox txbCodTrainer;
         private MetroFramework.Controls.MetroButton btnExcluir;
         private MetroFramework.Controls.MetroButton btnCancel;
     }
