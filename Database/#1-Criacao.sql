@@ -126,9 +126,16 @@ GO
 -- Visão de um aluno especifico
 /*DECLARE @Id AS INT = 100;
 SELECT * FROM v_alunos WHERE Codigo=100;*/
-GO
 CREATE VIEW v_trainers AS SELECT Id AS Codigo, Nome, DataNasc AS DataDeNascimento, Cpf, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado,Telefone,Complemento,Pais FROM tb_contas WHERE Categoria = 2;
+GO
 --SELECT * FROM v_trainers 
+create view v_categorias as select id as Codigo, name as Nome, description as Descricao from tb_categorias
+go
+--select * from v_categorias
+
+
+
+
 
 
 

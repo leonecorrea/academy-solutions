@@ -46,8 +46,8 @@
             this.estadoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valunosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.academySolutionDataSet = new aplication.AcademySolutionDataSet();
-            this.v_alunosTableAdapter = new aplication.AcademySolutionDataSetTableAdapters.v_alunosTableAdapter();
+            this.academySolutionDataSet = new AcademySolution.AcademySolutionDataSet();
+            this.v_alunosTableAdapter = new AcademySolution.AcademySolutionDataSetTableAdapters.v_alunosTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bdsListarAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.valunosBindingSource)).BeginInit();
@@ -206,9 +206,9 @@
         #endregion
         private System.Windows.Forms.BindingSource bdsListarAlunos;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private aplication.AcademySolutionDataSet academySolutionDataSet;
+        private AcademySolution.AcademySolutionDataSet academySolutionDataSet;
         private System.Windows.Forms.BindingSource valunosBindingSource;
-        private aplication.AcademySolutionDataSetTableAdapters.v_alunosTableAdapter v_alunosTableAdapter;
+        private AcademySolution.AcademySolutionDataSetTableAdapters.v_alunosTableAdapter v_alunosTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpfDataGridViewTextBoxColumn;

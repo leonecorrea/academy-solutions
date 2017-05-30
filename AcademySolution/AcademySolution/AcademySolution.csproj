@@ -83,6 +83,7 @@
     <Compile Include="clsCategoria.cs" />
     <Compile Include="clsFixa.cs" />
     <Compile Include="clsLogin.cs" />
+    <Compile Include="clsPessoa.cs" />
     <Compile Include="clsPrograma.cs" />
     <Compile Include="clsTreiner.cs" />
     <Compile Include="frmBuscarAluno.cs">
@@ -171,6 +172,7 @@
       <DependentUpon>frmPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="clsInstance.cs" />
+    <Compile Include="ICrud.cs" />
     <Compile Include="IPessoa.cs" />
     <Compile Include="frmListarAlunos.cs">
       <SubType>Form</SubType>

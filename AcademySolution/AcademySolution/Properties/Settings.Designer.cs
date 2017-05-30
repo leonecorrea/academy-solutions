@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace aplication.Properties {
+namespace AcademySolution.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
