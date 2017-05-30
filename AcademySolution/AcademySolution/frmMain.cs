@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Data.SqlClient;
 
 namespace AcademySolution
 {
     public partial class frmMain : MetroFramework.Forms.MetroForm
     {
+        Instance instancia = new Instance();
         public Login login = new Login();
 
         public frmMain()
@@ -38,7 +41,24 @@ namespace AcademySolution
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            lblInfoUser.Text = login.Username;
+            Stream arquivo;
+            String nomeArq = "Id.txt";
+
+            arquivo = File.Open(nomeArq, FileMode.Open);
+
+            StreamReader ler = new StreamReader(arquivo);
+
+            string IdUser = Convert.ToString(ler.ReadLine());
+
+            instancia.NovaConexao();
+            string query = "SELECT * FROM tb_logins WHERE Id = "+IdUser+"";
+            SqlDataReader pegaNomeAluno = instancia.LerDados(query);
+            pegaNomeAluno.Read();
+
+            lblInfoUser.Text = "Logado como : " + Convert.ToString(pegaNomeAluno["Username"]);
+
+            ler.Close();
+            arquivo.Close();
         }
 
         public void pedeLogin()
