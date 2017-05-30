@@ -158,11 +158,11 @@
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="clsGerarMD5.cs" />
-    <Compile Include="infoUser.cs">
+    <Compile Include="frmPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="infoUser.Designer.cs">
-      <DependentUpon>infoUser.cs</DependentUpon>
+    <Compile Include="frmPerfil.Designer.cs">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
     </Compile>
     <Compile Include="clsInstance.cs" />
     <Compile Include="IPessoa.cs" />
@@ -216,8 +216,8 @@
     <EmbeddedResource Include="frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="infoUser.resx">
-      <DependentUpon>infoUser.cs</DependentUpon>
+    <EmbeddedResource Include="frmPerfil.resx">
+      <DependentUpon>frmPerfil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListarAlunos.resx">
       <DependentUpon>frmListarAlunos.cs</DependentUpon>

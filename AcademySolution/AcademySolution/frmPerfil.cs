@@ -12,11 +12,11 @@ using System.IO;
 
 namespace AcademySolution
 {
-    public partial class infoUser : MetroFramework.Forms.MetroForm
+    public partial class frmPerfil : MetroFramework.Forms.MetroForm
     {
         Instance instancia = new Instance();
 
-        public infoUser()
+        public frmPerfil()
         {
             InitializeComponent();
         }

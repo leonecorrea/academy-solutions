@@ -13,7 +13,7 @@ namespace AcademySolution
             throw new NotImplementedException();
         }
 
-        public string Delete()
+        public string Delete(string p)
         {
             throw new NotImplementedException();
         }

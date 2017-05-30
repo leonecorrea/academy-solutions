@@ -38,7 +38,7 @@ namespace AcademySolution
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            this.lblInfoUser.Text = login.Username;
+            lblInfoUser.Text = login.Username;
         }
 
         public void pedeLogin()
@@ -67,7 +67,7 @@ namespace AcademySolution
         private void profileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // instancia do form infoUser para chamar a tela
-            infoUser user = new infoUser();
+            frmPerfil user = new frmPerfil();
             user.ShowDialog();
         }
 

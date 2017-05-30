@@ -1,6 +1,6 @@
 ﻿namespace AcademySolution
 {
-    partial class infoUser
+    partial class frmPerfil
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(infoUser));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPerfil));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.infoUserLastName = new System.Windows.Forms.Label();
             this.infoUserDateBirth = new System.Windows.Forms.Label();

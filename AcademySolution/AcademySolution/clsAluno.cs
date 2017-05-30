@@ -59,6 +59,8 @@ namespace AcademySolution
 
                 SqlCommand command = instance.NovoComando(query);
 
+                instance.NovaConexao();
+
                 command.Parameters.Add("@Nome", SqlDbType.VarChar).Value = Nome;
                 command.Parameters.Add("@DataDeNascimento", SqlDbType.Date).Value = Convert.ToDateTime(Nascimento.Replace("/", "-"));
                 command.Parameters.Add("@Categoria", SqlDbType.Int).Value = Convert.ToInt32(1);
@@ -84,19 +86,21 @@ namespace AcademySolution
             }
         }
 
-        //metodo  delete que é herdado e IPessoa que implementa o cadastro de novos usuarios no sistema
+        //metodo  delete que é herdado e IPessoa que implementa a exclusão de usuarios no sistema
 
-        public String Delete()
+        public String Delete(string parametro)
         {
             try
             {
                 instance.NovaConexao();
 
-                String query = "delete from tb_contas where Codigo = @Codigo";
+                String query = "delete from tb_contas where Id ="+parametro+" ";
 
+                
                 SqlCommand comando = instance.NovoComando(query);
 
-                return "";
+                comando.ExecuteNonQuery();
+                return "ok";
             }
             catch (Exception ex)
             {
@@ -110,14 +114,15 @@ namespace AcademySolution
             }
         }
 
-        //metodo  read que é herdado e IPessoa que implementa o cadastro de novos usuarios no sistema
+        //metodo  read que é herdado e IPessoa que implementa a leitura usuarios no sistema
 
         public String Read()
         {
             return "";
         }
 
-        //metodo  update que é herdado e IPessoa que implementa o cadastro de novos usuarios no sistema
+        //metodo  update que é herdado e IPessoa que implementa a modificacao de cadastros de 
+        //usuarios no sistema
 
         public string Update()
         {

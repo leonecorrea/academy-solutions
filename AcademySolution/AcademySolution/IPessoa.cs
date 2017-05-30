@@ -20,6 +20,6 @@ namespace AcademySolution
         String Update();
 
         //Deleção
-        String Delete();
+        String Delete(string p);
     }
 }

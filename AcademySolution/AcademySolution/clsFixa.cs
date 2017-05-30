@@ -15,7 +15,7 @@ namespace AcademySolution
 
         public string Id { get { return id; } set { id = value; } }
         public string Nome { get { return nome; } set { nome = value; } }
-        public string IdAluno { get => idAluno; set => idAluno = value; }
-        public string IdTreiner { get => idTreiner; set => idTreiner = value; }
+        public string IdAluno { get { return idAluno; } set { idAluno = value; } }
+        public string IdTreiner { get { return idTreiner; } set { idTreiner = value; } }
     }
 }

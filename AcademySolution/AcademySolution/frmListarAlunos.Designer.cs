@@ -188,7 +188,9 @@
             this.Controls.Add(this.dataGridView1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.Movable = false;
             this.Name = "ListarAlunos";
+            this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "ListarAlunos";
