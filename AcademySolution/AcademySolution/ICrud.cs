@@ -10,10 +10,9 @@ namespace AcademySolution
 {
     public interface ICrud
     {
-        Instance Instancia();
-        String Create(String q);
+        String Create();
         String Read();
         String Update();
-        String Delete(String q);
+        String Delete();
     }
 }
