@@ -14,38 +14,24 @@ namespace AcademySolution
     class Aluno : IPessoa
     {
         public Instance instance = new Instance();
-        private String _error;
-        private String _codigo;
-        private String _nome;
-        private String _cpf;
-        private String _email;
-        private String _nascimento;
-        private String _categoria;
-        private String _numero;
-        private String _rua;
-        private String _complemento;
-        private String _bairro;
-        private String _cidade;
-        private String _estado;
-        private String _pais;
-        private String _telefone;
+       
 
-        public String Codigo { get { return _codigo; } set { _codigo = value; } }
-        public String Nome { get { return _nome; } set { _nome = value; } } 
-        public String Cpf { get { return _cpf; } set { _cpf = value; } }
-        public String Email { get { return _email; } set { _email = value; } }
-        public String Categoria { get { return _categoria; } set { _categoria = value; } }
-        public String Numero { get { return _numero; } set { _numero = value; } }
-        public String Rua { get { return _rua; } set { _rua = value; } }
-        public String Complemento { get { return _complemento; } set { _complemento = value; } }
-        public String Bairro { get { return _bairro; } set { _bairro = value; } }
-        public String Cidade { get { return _cidade; } set { _cidade = value; } }
-        public String Estado { get { return _estado; } set { _estado = value; } }
-        public String Pais { get { return _pais; } set { _pais = value; } }
-        public String Telefone { get { return _telefone; } set { _telefone = value; } }
-        public String Nascimento { get { return _nascimento; } set { _nascimento = value; } }
-        public string Error { get { return _error; } set { _error = value; } }
-        
+        public String Codigo { get; set; }
+        public String Nome { get; set; }
+        public String Cpf { get; set; }
+        public String Email { get; set; }
+        public String Categoria { get; set; }
+        public String Numero { get; set; }
+        public String Rua { get; set; }
+        public String Complemento { get; set; }
+        public String Bairro { get; set; }
+        public String Cidade { get; set; }
+        public String Estado { get; set; }
+        public String Pais { get; set; }
+        public String Telefone { get; set; }
+        public String Nascimento { get; set; }
+        public string Error { get; set; }
+
         //metodo  create que é herdado e IPessoa que implementa o cadastro de novos usuarios no sistema
 
         public String Create()
@@ -104,7 +90,7 @@ namespace AcademySolution
             }
             catch (Exception ex)
             {
-                _error = ex.Message;
+                Error = ex.Message;
 
                 return "";
             }
