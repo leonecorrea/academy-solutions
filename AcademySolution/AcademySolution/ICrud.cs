@@ -10,9 +10,13 @@ namespace AcademySolution
 {
     public interface ICrud
     {
-        String Create();
-        String Read();
-        String Update();
-        String Delete();
+        //Criação
+        String Create(String tb);
+        //Leitura
+        String Read(String tb);
+        //Atualização
+        String Update(String tb);
+        //Deleção
+        String Delete(String tb);
     }
 }

@@ -10,36 +10,200 @@ namespace AcademySolution
 {
     public abstract class Pessoa : ICrud
     {
-        public abstract String GetNome();
+        private String id;
 
-        public abstract String GetId();
+        public String GetId()
+        {
+            return id;
+        }
+
+        public void SetId(String value)
+        {
+            id = value;
+        }
+
+        private String nome;
+
+        public string GetNome()
+        {
+            return nome;
+        }
+
+        public void SetNome(String value)
+        {
+            nome = value;
+        }
+
+        private String dataNascimento;
+
+        public String GetDataNascimento()
+        {
+            return dataNascimento;
+        }
+
+        public void SetDataNascimento(String value)
+        {
+            dataNascimento = value;
+        }
+
+        private String dataRegistro;
+
+        public String GetDataRegistro()
+        {
+            return dataRegistro;
+        }
+
+        public void SetDataRegistro(String value)
+        {
+            dataRegistro = value;
+        }
+
+        private String email;
+
+        public String GetEmail()
+        {
+            return dataRegistro;
+        }
+
+        public void SetEmail(String value)
+        {
+            email = value;
+        }
+
+        private Categoria categoria;
+
+        public Categoria GetCategoria()
+        {
+            return categoria;
+        }
+
+        public void SetCategoria(Categoria value)
+        {
+            categoria = value;
+        }
+
+        private String endereco;
+
+        public String GetEndereco()
+        {
+            return endereco;
+        }
+
+        public void SetEndereco(String r, String n, String c, String b, String ci, String e, String p)
+        {
+            endereco = "Rua: " + r + ", Número: " + n + "Complemento: " + c + ", Bairro: " + b + "Cidade: " + ci + ", Estado: " + e + ", Pais: " + p;
+        }
+
+        private String cpf;
+
+        public String GetCpf()
+        {
+            return cpf;
+        }
+
+        public void SetCpf(string value)
+        {
+            cpf = value;
+        }
+
+        private String telefone;
+
+        public String GetTelefone()
+        {
+            return telefone;
+        }
+
+        public void SetTelefone(string value)
+        {
+            telefone = value;
+        }
+
+        private DateTime dateUpdate;
+
+        public DateTime GetDataUpdate()
+        {
+            return dateUpdate;
+        }
+
+        public void SetDateUpdate(DateTime value)
+        {
+            dateUpdate = value;
+        }
+
+        private String erro;
+
+        public String GetErro()
+        {
+            return erro;
+        }
+
+        public void SetErro(String value)
+        {
+            erro = value;
+        }
         
-        public abstract String GetDataRegistro();
-
-        public abstract String GetDataNascimento();
-
-        public abstract String GetEmail();
-
-        public abstract Categoria GetCategoria();
-
-        public abstract String GetEndereco();
-
-        public abstract String GetCpf();
-
-        public abstract String GetTelefone();
-
-        public abstract DateTime GetDataUpdate();
-
-        public abstract String GetErro();
-
         public Instance instancia;
 
-        public abstract string Create();
+        public String Create(String tbname)
+        {
+            instancia.NovaConexao();
+            try
+            {
+                String query = $"insert into {tbname} values @Nome,@DataDeNascimento,@Categoria,@Email,@Endereco,@Cpf,@Telefone;";
+                SqlCommand comando = instancia.NovoComando(query);
+                instancia.NovaConexao();
 
-        public abstract string Read();
+                comando.Parameters.Add("@Nome", SqlDbType.VarChar).Value = GetNome();
+                comando.Parameters.Add("@DataDeNascimento", SqlDbType.Date).Value = Convert.ToDateTime(GetDataNascimento().Replace("/", "-"));
+                comando.Parameters.Add("@Categoria", SqlDbType.Int).Value = Convert.ToInt32(GetCategoria());
+                comando.Parameters.Add("@Email", SqlDbType.VarChar).Value = GetEmail().ToString();
+                comando.Parameters.Add("@Endereco", SqlDbType.VarChar).Value = GetEndereco().ToString();
+                comando.Parameters.Add("@Cpf", SqlDbType.VarChar).Value = GetCpf();
+                comando.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(GetTelefone().Replace("-", "").Replace("(", "").Replace(")", ""));
 
-        public abstract string Update();
+                comando.ExecuteNonQuery();
+                return "CSPAD1";
+            }
+            catch (Exception ex)
+            {
+                return Convert.ToString(ex.Message);
+            }
+            finally
+            {
+                instancia.FechaConexao();
+            }
+        }
+        
+        public String Read(String tb)
+        {
+            return "";
+        }
 
-        public abstract string Delete();
+        public String Update(String tb)
+        {
+            return "";
+        }
+
+        public String Delete(String tbname)
+        {
+            try
+            {
+                instancia.NovaConexao();//Cria nova conexão
+                String query = $"delete into {tbname} where ;";//Determina a query a ser executada
+                SqlCommand comando = instancia.NovoComando(query);//Abre novo comando na basa de dados
+
+                comando.ExecuteNonQuery();//Executa o comando
+                return "CSPAD1";//Retorna valor aleatório para falar que deu certo
+            }
+            catch (Exception ex)
+            {
+                SetErro(Convert.ToString(ex));
+                return GetErro();//Retorna o valor da Exception de erro em string
+            }
+            finally
+            {
+                instancia.FechaConexao();//Fecha a conexão
+            }
+        }
     }
 }

@@ -104,6 +104,12 @@
     <Compile Include="frmBuscarTreiner.Designer.cs">
       <DependentUpon>frmBuscarTreiner.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCreateTreiner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateTreiner.Designer.cs">
+      <DependentUpon>frmCreateTreiner.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmExcluirAluno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,17 +146,17 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrarAluno.cs">
+    <Compile Include="frmCreateAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistrarAluno.Designer.cs">
-      <DependentUpon>frmRegistrarAluno.cs</DependentUpon>
+    <Compile Include="frmCreateAluno.Designer.cs">
+      <DependentUpon>frmCreateAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrarFixa.cs">
+    <Compile Include="frmCreateFixa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmRegistrarFixa.Designer.cs">
-      <DependentUpon>frmRegistrarFixa.cs</DependentUpon>
+    <Compile Include="frmCreateFixa.Designer.cs">
+      <DependentUpon>frmCreateFixa.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBuscarFixa.cs">
       <SubType>Form</SubType>
@@ -200,6 +206,9 @@
     <EmbeddedResource Include="frmBuscarTreiner.resx">
       <DependentUpon>frmBuscarTreiner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateTreiner.resx">
+      <DependentUpon>frmCreateTreiner.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmExcluirAluno.resx">
       <DependentUpon>frmExcluirAluno.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,11 +224,11 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarAluno.resx">
-      <DependentUpon>frmRegistrarAluno.cs</DependentUpon>
+    <EmbeddedResource Include="frmCreateAluno.resx">
+      <DependentUpon>frmCreateAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarFixa.resx">
-      <DependentUpon>frmRegistrarFixa.cs</DependentUpon>
+    <EmbeddedResource Include="frmCreateFixa.resx">
+      <DependentUpon>frmCreateFixa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscarFixa.resx">
       <DependentUpon>frmBuscarFixa.cs</DependentUpon>
