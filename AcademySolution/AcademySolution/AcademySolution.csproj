@@ -73,6 +73,7 @@
       <DependentUpon>AcademySolutionDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Classes\Connection.cs" />
+    <Compile Include="Classes\TreinnerDAO.cs" />
     <Compile Include="Views\AdicionarExercicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,7 +87,7 @@
     <Compile Include="Classes\clsLogin.cs" />
     <Compile Include="Classes\clsPessoa.cs" />
     <Compile Include="Classes\clsPrograma.cs" />
-    <Compile Include="Classes\clsTreiner.cs" />
+    <Compile Include="Classes\Treinner.cs" />
     <Compile Include="Views\frmBuscarAluno.cs">
       <SubType>Form</SubType>
     </Compile>

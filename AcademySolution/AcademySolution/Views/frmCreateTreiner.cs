@@ -20,7 +20,7 @@ namespace AcademySolution
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             //Criação de nova classe
-            Treiner t = new Treiner();
+            Treinner t = new Treinner();
 
             //Setando valores para a classe
             t.SetNome(txbFullName.Text);

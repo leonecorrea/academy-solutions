@@ -8,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace AcademySolution
 {
-    public class Treiner : Pessoa
+    public class Treinner
     {
-        
+        public string id { get; set; }
+        public string nome { get; set; }
+        public string email { get; set; }
     }
 }

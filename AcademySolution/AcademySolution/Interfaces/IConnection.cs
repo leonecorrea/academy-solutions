@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace AcademySolution
 {
-    interface IConnection:IDisposable
+    public interface IConnection:IDisposable
     {
         //Método para abrir a conexão
         SqlConnection Abrir();

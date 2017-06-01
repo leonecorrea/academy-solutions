@@ -18,7 +18,7 @@ namespace AcademySolution
         //Método para remover
         bool remover(T model);
         //Método para procurar um registro específico
-        T localizarPodigo(params Object[] keys);
+        T localizarPorCodigo(params Object[] keys);
         //Método para localizar todos
         ICollection<T> ListarTudo();
     }
