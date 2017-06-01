@@ -30,6 +30,7 @@ namespace AcademySolution
             t.SetEmail(txbEmail.Text);
             t.SetEndereco(txbRua.Text, txbNumero.Text, txbComplemento.Text, txbBairro.Text, cbbCidade.Text, cbbEstado.Text, cbbPais.Text);
             t.SetTelefone(txbTelefone.Text);
+            t.GetCategoria().Codigo = "2";
 
             //Chama método de criação de usuário
             t.Create("tb_conta");

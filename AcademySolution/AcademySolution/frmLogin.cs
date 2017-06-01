@@ -119,5 +119,15 @@ namespace AcademySolution
 
             return sBuilder.ToString();
         }
+
+        private void txbUsername_Click(object sender, EventArgs e)
+        {
+            lblUsername.Text = "Usuário";
+        }
+
+        private void txbPassword_Click(object sender, EventArgs e)
+        {
+            lblPassword.Text = "Senha";
+        }
     }
 }

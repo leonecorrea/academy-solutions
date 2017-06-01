@@ -11,11 +11,9 @@ namespace AcademySolution
 {
     // classe aluno que herda da interface IPessoa
 
-    class Aluno : IPessoa
+    class Aluno : Pessoa
     {
         public Instance instance = new Instance();
-       
-
         public String Codigo { get; set; }
         public String Nome { get; set; }
         public String Cpf { get; set; }
@@ -72,7 +70,7 @@ namespace AcademySolution
             }
         }
 
-        //metodo  delete que é herdado e IPessoa que implementa a exclusão de usuarios no sistema
+        //metodo  delete que é herdado e Pessoa que implementa a exclusão de usuarios no sistema
 
         public String Delete(string parametro)
         {
@@ -102,8 +100,61 @@ namespace AcademySolution
 
         //metodo  read que é herdado e IPessoa que implementa a leitura usuarios no sistema
 
-        public String Read()
+        public String Read(String var)
         {
+            /*try
+            {
+                instance.NovaConexao();
+
+                SqlDataReader leituras = instance.LerDados(var);
+
+                if (leituras.HasRows == false)
+                {
+                    return "Código do aluno não foi encontrado!";
+                }
+                else
+                {
+                    leituras.Read();
+
+                    SetCodigo(Convert.ToString(leituras["Codigo"]));
+                    txbNome.Text = Convert.ToString(leituras["Nome"]);
+                    txbNascimento.Text = Convert.ToString(leituras["DataDeNascimento"]);
+                    txbCpf.Text = Convert.ToString(leituras["Cpf"]);
+                    txbEmail.Text = Convert.ToString(leituras["Email"]);
+                    txbEstado.Text = Convert.ToString(leituras["Estado"]);
+                    txbTelefone.Text = Convert.ToString(leituras["Telefone"]);
+                    txbRua.Text = Convert.ToString(leituras["Rua"]);
+                    txbNumero.Text = Convert.ToString(leituras["Numero"]);
+                    txbComplemento.Text = Convert.ToString(leituras["Complemento"]);
+                    txbCidade.Text = Convert.ToString(leituras["Cidade"]);
+                    txbBairro.Text = Convert.ToString(leituras["Bairro"]);
+                    txbPais.Text = Convert.ToString(leituras["Pais"]);
+
+                    txbNome.Enabled = false;
+                    txbNascimento.Enabled = false;
+                    txbCpf.Enabled = false;
+                    txbEmail.Enabled = false;
+                    txbEstado.Enabled = false;
+                    txbTelefone.Enabled = false;
+                    txbRua.Enabled = false;
+                    txbNumero.Enabled = false;
+                    txbComplemento.Enabled = false;
+                    txbCidade.Enabled = false;
+                    txbBairro.Enabled = false;
+                    txbPais.Enabled = false;
+
+                    btnAtualizar.Enabled = true;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, ex.Message, "Erro", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                instance.FechaConexao();
+            }*/
             return "";
         }
 

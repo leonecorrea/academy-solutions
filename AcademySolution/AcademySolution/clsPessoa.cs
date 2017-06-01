@@ -179,17 +179,56 @@ namespace AcademySolution
             return "";
         }
 
-        public String Update(String tb)
+        public String Update(String var)
         {
-            return "";
+            try
+            {
+                instancia.NovaConexao();
+
+                SqlDataReader leituras = instancia.LerDados(var);
+
+                if (leituras.HasRows == false)
+                {
+                    return "Código do aluno não foi encontrado!";
+                }
+                else
+                {
+                    leituras.Read();
+
+                    SetId(Convert.ToString(leituras["Codigo"]));
+                    SetNome(Convert.ToString(leituras["Nome"]));
+                    SetDataNascimento(Convert.ToString(leituras["DataDeNascimento"]));
+                    SetCpf(Convert.ToString(leituras["Cpf"]));
+                    SetEmail(Convert.ToString(leituras["Email"]));
+                    //SetEstado(Convert.ToString(leituras["Estado"]);
+                    SetTelefone(Convert.ToString(leituras["Telefone"]));
+                    //SetEndereco(Convert.ToString(leituras["Rua"]),Convert.ToString(leituras["Numero"]),Convert.ToString(leituras["Rua"]),Convert.ToString(leituras["Rua"]),Convert.ToString(leituras["Rua"]),Convert.ToString(leituras["Rua"]));
+                    //SetRua(Convert.ToString(leituras["Rua"]));
+                    //SetNumero(Convert.ToString(leituras["Numero"]));
+                    //SetComplemento(Convert.ToString(leituras["Complemento"]));
+                    //SetCidade(Convert.ToString(leituras["Cidade"]));
+                    //txbBairro.Text = Convert.ToString(leituras["Bairro"]);
+                    //txbPais.Text = Convert.ToString(leituras["Pais"]);
+
+                    return "ADFADFA";
+                }
+            }
+            catch (Exception ex)
+            {
+                return Convert.ToString(ex.Message);
+            }
+            finally
+            {
+                instancia.FechaConexao();
+            }
         }
 
-        public String Delete(String tbname)
+        public String Delete(String var)
         {
             try
             {
                 instancia.NovaConexao();//Cria nova conexão
-                String query = $"delete into {tbname} where ;";//Determina a query a ser executada
+                String query = $"delete into {var} where ;";//Determina a query a ser executada
                 SqlCommand comando = instancia.NovoComando(query);//Abre novo comando na basa de dados
 
                 comando.ExecuteNonQuery();//Executa o comando

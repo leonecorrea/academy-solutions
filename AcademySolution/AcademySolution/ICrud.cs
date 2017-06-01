@@ -11,12 +11,12 @@ namespace AcademySolution
     public interface ICrud
     {
         //Criação
-        String Create(String tb);
+        String Create(String var);
         //Leitura
-        String Read(String tb);
+        String Read(String var);
         //Atualização
-        String Update(String tb);
+        String Update(String var);
         //Deleção
-        String Delete(String tb);
+        String Delete(String var);
     }
 }
