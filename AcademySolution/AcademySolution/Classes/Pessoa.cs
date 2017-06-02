@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AcademySolution
 {
-    public abstract class Pessoa : ICrud
+    public abstract class Pessoa
     {
         private String id;
 
@@ -142,7 +142,7 @@ namespace AcademySolution
             erro = value;
         }
         
-        public Instance instancia;
+        /*public Instance instancia;
 
         public String Create(String tbname)
         {
@@ -243,6 +243,6 @@ namespace AcademySolution
             {
                 instancia.FechaConexao();//Fecha a conexão
             }
-        }
+        }*/
     }
 }
