@@ -72,6 +72,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AcademySolutionDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Classes\AlunoDAO.cs" />
     <Compile Include="Classes\Connection.cs" />
     <Compile Include="Classes\TreinnerDAO.cs" />
     <Compile Include="Views\AdicionarExercicio.cs">
@@ -80,116 +81,116 @@
     <Compile Include="Views\AdicionarExercicio.Designer.cs">
       <DependentUpon>AdicionarExercicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\clsAluno.cs" />
-    <Compile Include="Classes\clsConta.cs" />
-    <Compile Include="Classes\clsCategoria.cs" />
-    <Compile Include="Classes\clsFixa.cs" />
-    <Compile Include="Classes\clsLogin.cs" />
-    <Compile Include="Classes\clsPessoa.cs" />
-    <Compile Include="Classes\clsPrograma.cs" />
+    <Compile Include="Classes\Aluno.cs" />
+    <Compile Include="Classes\Conta.cs" />
+    <Compile Include="Classes\Categoria.cs" />
+    <Compile Include="Classes\Fixa.cs" />
+    <Compile Include="Classes\Login.cs" />
+    <Compile Include="Classes\Pessoa.cs" />
+    <Compile Include="Classes\Programa.cs" />
     <Compile Include="Classes\Treinner.cs" />
-    <Compile Include="Views\frmBuscarAluno.cs">
+    <Compile Include="Views\BuscarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmBuscarAluno.Designer.cs">
-      <DependentUpon>frmBuscarAluno.cs</DependentUpon>
+    <Compile Include="Views\BuscarAluno.Designer.cs">
+      <DependentUpon>BuscarAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmBuscarCategoria.cs">
+    <Compile Include="Views\BuscarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmBuscarCategoria.Designer.cs">
-      <DependentUpon>frmBuscarCategoria.cs</DependentUpon>
+    <Compile Include="Views\BuscarCategoria.Designer.cs">
+      <DependentUpon>BuscarCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmBuscarTreiner.cs">
+    <Compile Include="Views\BuscarTreiner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmBuscarTreiner.Designer.cs">
-      <DependentUpon>frmBuscarTreiner.cs</DependentUpon>
+    <Compile Include="Views\BuscarTreiner.Designer.cs">
+      <DependentUpon>BuscarTreiner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmCreateTreiner.cs">
+    <Compile Include="Views\CreateTreiner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmCreateTreiner.Designer.cs">
-      <DependentUpon>frmCreateTreiner.cs</DependentUpon>
+    <Compile Include="Views\CreateTreiner.Designer.cs">
+      <DependentUpon>CreateTreiner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmExcluirAluno.cs">
+    <Compile Include="Views\ExcluirAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmExcluirAluno.Designer.cs">
-      <DependentUpon>frmExcluirAluno.cs</DependentUpon>
+    <Compile Include="Views\ExcluirAluno.Designer.cs">
+      <DependentUpon>ExcluirAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmExcluirFicha.cs">
+    <Compile Include="Views\ExcluirFicha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmExcluirFicha.Designer.cs">
-      <DependentUpon>frmExcluirFicha.cs</DependentUpon>
+    <Compile Include="Views\ExcluirFicha.Designer.cs">
+      <DependentUpon>ExcluirFicha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmExcluirTrainer.cs">
+    <Compile Include="Views\ExcluirTrainer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmExcluirTrainer.Designer.cs">
-      <DependentUpon>frmExcluirTrainer.cs</DependentUpon>
+    <Compile Include="Views\ExcluirTrainer.Designer.cs">
+      <DependentUpon>ExcluirTrainer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmListarCategorias.cs">
+    <Compile Include="Views\ListarCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmListarCategorias.Designer.cs">
-      <DependentUpon>frmListarCategorias.cs</DependentUpon>
+    <Compile Include="Views\ListarCategorias.Designer.cs">
+      <DependentUpon>ListarCategorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmLogin.cs">
+    <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="Views\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmMain.cs">
+    <Compile Include="Views\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="Views\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmCreateAluno.cs">
+    <Compile Include="Views\CreateAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmCreateAluno.Designer.cs">
-      <DependentUpon>frmCreateAluno.cs</DependentUpon>
+    <Compile Include="Views\CreateAluno.Designer.cs">
+      <DependentUpon>CreateAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmCreateFixa.cs">
+    <Compile Include="Views\CreateFixa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmCreateFixa.Designer.cs">
-      <DependentUpon>frmCreateFixa.cs</DependentUpon>
+    <Compile Include="Views\CreateFixa.Designer.cs">
+      <DependentUpon>CreateFixa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmBuscarFixa.cs">
+    <Compile Include="Views\BuscarFixa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmBuscarFixa.Designer.cs">
-      <DependentUpon>frmBuscarFixa.cs</DependentUpon>
+    <Compile Include="Views\BuscarFixa.Designer.cs">
+      <DependentUpon>BuscarFixa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\frmSplashScreen.cs">
+    <Compile Include="Views\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmSplashScreen.Designer.cs">
-      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    <Compile Include="Views\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\clsGerarMD5.cs" />
-    <Compile Include="Views\frmPerfil.cs">
+    <Compile Include="Classes\GerarMD5.cs" />
+    <Compile Include="Views\Perfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmPerfil.Designer.cs">
-      <DependentUpon>frmPerfil.cs</DependentUpon>
+    <Compile Include="Views\Perfil.Designer.cs">
+      <DependentUpon>Perfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\clsInstance.cs" />
+    <Compile Include="Classes\Instance.cs" />
     <Compile Include="Interfaces\IConnection.cs" />
     <Compile Include="Interfaces\ICrud.cs" />
     <Compile Include="Interfaces\IDAO.cs" />
     <Compile Include="Interfaces\ILogavel.cs" />
     <Compile Include="Interfaces\IPessoa.cs" />
-    <Compile Include="Views\frmListarAlunos.cs">
+    <Compile Include="Views\ListarAlunos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmListarAlunos.Designer.cs">
-      <DependentUpon>frmListarAlunos.cs</DependentUpon>
+    <Compile Include="Views\ListarAlunos.Designer.cs">
+      <DependentUpon>ListarAlunos.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ListarFixas.cs">
       <SubType>Form</SubType>
@@ -208,50 +209,50 @@
     <EmbeddedResource Include="Views\AdicionarExercicio.resx">
       <DependentUpon>AdicionarExercicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmBuscarAluno.resx">
-      <DependentUpon>frmBuscarAluno.cs</DependentUpon>
+    <EmbeddedResource Include="Views\BuscarAluno.resx">
+      <DependentUpon>BuscarAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmBuscarCategoria.resx">
-      <DependentUpon>frmBuscarCategoria.cs</DependentUpon>
+    <EmbeddedResource Include="Views\BuscarCategoria.resx">
+      <DependentUpon>BuscarCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmBuscarTreiner.resx">
-      <DependentUpon>frmBuscarTreiner.cs</DependentUpon>
+    <EmbeddedResource Include="Views\BuscarTreiner.resx">
+      <DependentUpon>BuscarTreiner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmCreateTreiner.resx">
-      <DependentUpon>frmCreateTreiner.cs</DependentUpon>
+    <EmbeddedResource Include="Views\CreateTreiner.resx">
+      <DependentUpon>CreateTreiner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmExcluirAluno.resx">
-      <DependentUpon>frmExcluirAluno.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ExcluirAluno.resx">
+      <DependentUpon>ExcluirAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmExcluirFicha.resx">
-      <DependentUpon>frmExcluirFicha.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ExcluirFicha.resx">
+      <DependentUpon>ExcluirFicha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmExcluirTrainer.resx">
-      <DependentUpon>frmExcluirTrainer.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ExcluirTrainer.resx">
+      <DependentUpon>ExcluirTrainer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmCreateAluno.resx">
-      <DependentUpon>frmCreateAluno.cs</DependentUpon>
+    <EmbeddedResource Include="Views\CreateAluno.resx">
+      <DependentUpon>CreateAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmCreateFixa.resx">
-      <DependentUpon>frmCreateFixa.cs</DependentUpon>
+    <EmbeddedResource Include="Views\CreateFixa.resx">
+      <DependentUpon>CreateFixa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmBuscarFixa.resx">
-      <DependentUpon>frmBuscarFixa.cs</DependentUpon>
+    <EmbeddedResource Include="Views\BuscarFixa.resx">
+      <DependentUpon>BuscarFixa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmSplashScreen.resx">
-      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    <EmbeddedResource Include="Views\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmPerfil.resx">
-      <DependentUpon>frmPerfil.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Perfil.resx">
+      <DependentUpon>Perfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\frmListarAlunos.resx">
-      <DependentUpon>frmListarAlunos.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ListarAlunos.resx">
+      <DependentUpon>ListarAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Main2.resx">
       <DependentUpon>Main2.cs</DependentUpon>

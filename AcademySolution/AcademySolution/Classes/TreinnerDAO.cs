@@ -14,8 +14,7 @@ namespace AcademySolution.Classes
         private IConnection _connection;
         public TreinnerDAO(IConnection Connection)
         {
-            //this._connection = Connection;
-            _connection = Connection;
+            this._connection = Connection;
         }
 
         public Treinner atualizar(Treinner model)
@@ -33,9 +32,9 @@ namespace AcademySolution.Classes
             using (SqlCommand comando = _connection.Buscar().CreateCommand() )
             {
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = "insert into tb_treinner";
+                comando.CommandText = "insert into tb_treinner ";
 
-                comando.Parameters.Add();
+                comando.Parameters.Add("@");
             }
             return model;
         }

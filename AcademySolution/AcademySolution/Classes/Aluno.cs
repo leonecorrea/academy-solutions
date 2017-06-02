@@ -11,7 +11,7 @@ namespace AcademySolution
 {
     // classe aluno que herda da interface IPessoa
 
-    class Aluno : Pessoa
+    public class Aluno : Pessoa
     {
         public Instance instance = new Instance();
         public String Codigo { get; set; }
