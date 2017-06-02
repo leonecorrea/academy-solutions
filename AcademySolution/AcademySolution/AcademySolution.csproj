@@ -67,7 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcademySolutionDataSet.Designer.cs">
+    <Compile Include="Data\AcademySolutionDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AcademySolutionDataSet.xsd</DependentUpon>
@@ -75,10 +75,10 @@
     <Compile Include="Classes\AlunoDAO.cs" />
     <Compile Include="Classes\Connection.cs" />
     <Compile Include="Classes\TreinnerDAO.cs" />
-    <Compile Include="Views\AdicionarExercicio.cs">
+    <Compile Include="Forms\AdicionarExercicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\AdicionarExercicio.Designer.cs">
+    <Compile Include="Forms\AdicionarExercicio.Designer.cs">
       <DependentUpon>AdicionarExercicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Aluno.cs" />
@@ -89,95 +89,95 @@
     <Compile Include="Classes\Pessoa.cs" />
     <Compile Include="Classes\Programa.cs" />
     <Compile Include="Classes\Treinner.cs" />
-    <Compile Include="Views\BuscarAluno.cs">
+    <Compile Include="Forms\BuscarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\BuscarAluno.Designer.cs">
+    <Compile Include="Forms\BuscarAluno.Designer.cs">
       <DependentUpon>BuscarAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\BuscarCategoria.cs">
+    <Compile Include="Forms\BuscarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\BuscarCategoria.Designer.cs">
+    <Compile Include="Forms\BuscarCategoria.Designer.cs">
       <DependentUpon>BuscarCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\BuscarTreiner.cs">
+    <Compile Include="Forms\BuscarTreiner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\BuscarTreiner.Designer.cs">
+    <Compile Include="Forms\BuscarTreiner.Designer.cs">
       <DependentUpon>BuscarTreiner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CreateTreiner.cs">
+    <Compile Include="Forms\CreateTreiner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\CreateTreiner.Designer.cs">
+    <Compile Include="Forms\CreateTreiner.Designer.cs">
       <DependentUpon>CreateTreiner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ExcluirAluno.cs">
+    <Compile Include="Forms\ExcluirAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ExcluirAluno.Designer.cs">
+    <Compile Include="Forms\ExcluirAluno.Designer.cs">
       <DependentUpon>ExcluirAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ExcluirFicha.cs">
+    <Compile Include="Forms\ExcluirFicha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ExcluirFicha.Designer.cs">
+    <Compile Include="Forms\ExcluirFicha.Designer.cs">
       <DependentUpon>ExcluirFicha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ExcluirTrainer.cs">
+    <Compile Include="Forms\ExcluirTrainer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ExcluirTrainer.Designer.cs">
+    <Compile Include="Forms\ExcluirTrainer.Designer.cs">
       <DependentUpon>ExcluirTrainer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ListarCategorias.cs">
+    <Compile Include="Forms\ListarCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ListarCategorias.Designer.cs">
+    <Compile Include="Forms\ListarCategorias.Designer.cs">
       <DependentUpon>ListarCategorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Login.cs">
+    <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Login.Designer.cs">
+    <Compile Include="Forms\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Main.cs">
+    <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Main.Designer.cs">
+    <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CreateAluno.cs">
+    <Compile Include="Forms\CreateAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\CreateAluno.Designer.cs">
+    <Compile Include="Forms\CreateAluno.Designer.cs">
       <DependentUpon>CreateAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CreateFixa.cs">
+    <Compile Include="Forms\CreateFixa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\CreateFixa.Designer.cs">
+    <Compile Include="Forms\CreateFixa.Designer.cs">
       <DependentUpon>CreateFixa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\BuscarFixa.cs">
+    <Compile Include="Forms\BuscarFixa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\BuscarFixa.Designer.cs">
+    <Compile Include="Forms\BuscarFixa.Designer.cs">
       <DependentUpon>BuscarFixa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\SplashScreen.cs">
+    <Compile Include="Forms\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\SplashScreen.Designer.cs">
+    <Compile Include="Forms\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\GerarMD5.cs" />
-    <Compile Include="Views\Perfil.cs">
+    <Compile Include="Forms\Perfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Perfil.Designer.cs">
+    <Compile Include="Forms\Perfil.Designer.cs">
       <DependentUpon>Perfil.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Instance.cs" />
@@ -186,75 +186,75 @@
     <Compile Include="Interfaces\IDAO.cs" />
     <Compile Include="Interfaces\ILogavel.cs" />
     <Compile Include="Interfaces\IPessoa.cs" />
-    <Compile Include="Views\ListarAlunos.cs">
+    <Compile Include="Forms\ListarAlunos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ListarAlunos.Designer.cs">
+    <Compile Include="Forms\ListarAlunos.Designer.cs">
       <DependentUpon>ListarAlunos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ListarFixas.cs">
+    <Compile Include="Forms\ListarFixas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ListarFixas.Designer.cs">
+    <Compile Include="Forms\ListarFixas.Designer.cs">
       <DependentUpon>ListarFixas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Main2.cs">
+    <Compile Include="Forms\Main2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Main2.Designer.cs">
+    <Compile Include="Forms\Main2.Designer.cs">
       <DependentUpon>Main2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Views\AdicionarExercicio.resx">
+    <EmbeddedResource Include="Forms\AdicionarExercicio.resx">
       <DependentUpon>AdicionarExercicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\BuscarAluno.resx">
+    <EmbeddedResource Include="Forms\BuscarAluno.resx">
       <DependentUpon>BuscarAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\BuscarCategoria.resx">
+    <EmbeddedResource Include="Forms\BuscarCategoria.resx">
       <DependentUpon>BuscarCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\BuscarTreiner.resx">
+    <EmbeddedResource Include="Forms\BuscarTreiner.resx">
       <DependentUpon>BuscarTreiner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\CreateTreiner.resx">
+    <EmbeddedResource Include="Forms\CreateTreiner.resx">
       <DependentUpon>CreateTreiner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ExcluirAluno.resx">
+    <EmbeddedResource Include="Forms\ExcluirAluno.resx">
       <DependentUpon>ExcluirAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ExcluirFicha.resx">
+    <EmbeddedResource Include="Forms\ExcluirFicha.resx">
       <DependentUpon>ExcluirFicha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ExcluirTrainer.resx">
+    <EmbeddedResource Include="Forms\ExcluirTrainer.resx">
       <DependentUpon>ExcluirTrainer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Login.resx">
+    <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Main.resx">
+    <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\CreateAluno.resx">
+    <EmbeddedResource Include="Forms\CreateAluno.resx">
       <DependentUpon>CreateAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\CreateFixa.resx">
+    <EmbeddedResource Include="Forms\CreateFixa.resx">
       <DependentUpon>CreateFixa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\BuscarFixa.resx">
+    <EmbeddedResource Include="Forms\BuscarFixa.resx">
       <DependentUpon>BuscarFixa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\SplashScreen.resx">
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Perfil.resx">
+    <EmbeddedResource Include="Forms\Perfil.resx">
       <DependentUpon>Perfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ListarAlunos.resx">
+    <EmbeddedResource Include="Forms\ListarAlunos.resx">
       <DependentUpon>ListarAlunos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\Main2.resx">
+    <EmbeddedResource Include="Forms\Main2.resx">
       <DependentUpon>Main2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -266,15 +266,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="AcademySolutionDataSet.xsc">
+    <None Include="Data\AcademySolutionDataSet.xsc">
       <DependentUpon>AcademySolutionDataSet.xsd</DependentUpon>
     </None>
-    <None Include="AcademySolutionDataSet.xsd">
+    <None Include="Data\AcademySolutionDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>AcademySolutionDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="AcademySolutionDataSet.xss">
+    <None Include="Data\AcademySolutionDataSet.xss">
       <DependentUpon>AcademySolutionDataSet.xsd</DependentUpon>
     </None>
     <None Include="App.Config" />

@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace AcademySolution {
+namespace AcademySolution.Data {
     
     
     /// <summary>
@@ -6561,7 +6561,7 @@ namespace AcademySolution {
         }
     }
 }
-namespace AcademySolution.AcademySolutionDataSetTableAdapters {
+namespace AcademySolution.Data.AcademySolutionDataSetTableAdapters {
     
     
     /// <summary>
@@ -6724,7 +6724,7 @@ namespace AcademySolution.AcademySolutionDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AcademySolution.Properties.Settings.Default.DbAcademySolution;
+            this._connection.ConnectionString = global::aplication.Properties.Settings.Default.DbAcademySolution;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7046,7 +7046,7 @@ namespace AcademySolution.AcademySolutionDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AcademySolution.Properties.Settings.Default.DbAcademySolution;
+            this._connection.ConnectionString = global::aplication.Properties.Settings.Default.DbAcademySolution;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7420,7 +7420,7 @@ SELECT Id, Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, Compleme
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AcademySolution.Properties.Settings.Default.DbAcademySolution;
+            this._connection.ConnectionString = global::aplication.Properties.Settings.Default.DbAcademySolution;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8223,7 +8223,7 @@ SELECT Id, Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, Compleme
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AcademySolution.Properties.Settings.Default.DbAcademySolution;
+            this._connection.ConnectionString = global::aplication.Properties.Settings.Default.DbAcademySolution;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8577,7 +8577,7 @@ SELECT Id, Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, Compleme
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AcademySolution.Properties.Settings.Default.DbAcademySolution;
+            this._connection.ConnectionString = global::aplication.Properties.Settings.Default.DbAcademySolution;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8926,7 +8926,7 @@ SELECT Id, IdConta, Username, Password FROM tb_logins WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AcademySolution.Properties.Settings.Default.DbAcademySolution;
+            this._connection.ConnectionString = global::aplication.Properties.Settings.Default.DbAcademySolution;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9292,7 +9292,7 @@ SELECT Id, IdConta, Username, Password FROM tb_logins WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AcademySolution.Properties.Settings.Default.DbAcademySolution;
+            this._connection.ConnectionString = global::aplication.Properties.Settings.Default.DbAcademySolution;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9578,7 +9578,7 @@ SELECT IdRecord, IdStudent, IdTrainer, DateBegin, DateExpiration FROM tb_records
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AcademySolution.Properties.Settings.Default.DbAcademySolution;
+            this._connection.ConnectionString = global::aplication.Properties.Settings.Default.DbAcademySolution;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9975,7 +9975,7 @@ SELECT IdRecord, IdStudent, IdTrainer, DateBegin, DateExpiration FROM tb_records
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AcademySolution.Properties.Settings.Default.DbAcademySolution;
+            this._connection.ConnectionString = global::aplication.Properties.Settings.Default.DbAcademySolution;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10174,7 +10174,7 @@ SELECT IdRecord, IdStudent, IdTrainer, DateBegin, DateExpiration FROM tb_records
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::AcademySolution.Properties.Settings.Default.DbAcademySolution;
+            this._connection.ConnectionString = global::aplication.Properties.Settings.Default.DbAcademySolution;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

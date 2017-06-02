@@ -10,14 +10,14 @@ namespace AcademySolution
 {
     public abstract class Pessoa
     {
-        private String id;
+        private int id;
 
-        public String GetId()
+        public int GetId()
         {
             return id;
         }
 
-        public void SetId(String value)
+        public void SetId(int value)
         {
             id = value;
         }

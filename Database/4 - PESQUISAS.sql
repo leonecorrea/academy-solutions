@@ -35,7 +35,28 @@ select tb_exercises.Name as NomeExercicio, tb_record_exercises.repetitions as Re
 -- Todos os dados de um usuario que esteja logando no sistema
 select * FROM tb_contas inner join tb_logins on tb_contas.Id=tb_logins.IdConta AND tb_contas.Id=100;
 
+DECLARE @Nome VARCHAR(23) = 'Teet';
+DECLARE @DateBirth DATETIME = SYSDATETIME();
+DECLARE @DateRegister DATETIME = SYSDATETIME();
+DECLARE @Categoria INT = 1;
+DECLARE @Email VARCHAR(234) = 'ADFA'
+DECLARE @Rua VARCHAR(34) = 'ASDF'
+DECLARE @Numero INT = 23;
+DECLARE @Complemento VARCHAR(234) = '';
+DECLARE @Bairro VARCHAR(32) = '';
+DECLARE @Cidade VARCHAR(23) = '';
+DECLARE @Estado VARCHAR (324) = '';
+DECLARE @Country VARCHAR(23) = '';
+DECLARE @Cpf VARCHAR(22) = '';
+DECLARE @Telefone VARCHAR(234) = '';
+DECLARE @DataUpdate DATETIME = SYSDATETIME();
 
+insert into tb_contas(Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, 
+Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone,DataUpdate) 
+values(@Nome, @DateBirth, @DateRegister, @Categoria, @Email, @Rua, @Numero, @Complemento, @Bairro,
+@Cidade, @Estado, @Country, @Cpf, @Telefone,@DataUpdate);
+
+SELECT * FROM TB_CONTAS
 
 
 
