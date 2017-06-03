@@ -5,10 +5,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AcademySolution.Classes;
 
 namespace AcademySolution
 {
-    public abstract class Pessoa
+    public abstract class Pessoa:Endereco
     {
         private int id;
 
@@ -19,6 +20,7 @@ namespace AcademySolution
 
         public void SetId(int value)
         {
+            Convert.ToInt32(value);
             id = value;
         }
 
@@ -70,19 +72,13 @@ namespace AcademySolution
             email = value;
         }
 
-        private Categoria categoria;
-
-        public Categoria GetCategoria()
+        public Categoria Categoria
         {
-            return categoria;
+            get;
+            set;
         }
 
-        public void SetCategoria(Categoria value)
-        {
-            categoria = value;
-        }
-
-        private String endereco;
+        /*private String endereco;
 
         public String GetEndereco()
         {
@@ -92,8 +88,8 @@ namespace AcademySolution
         public void SetEndereco(String r, String n, String c, String b, String ci, String e, String p)
         {
             endereco = "Rua: " + r + ", Número: " + n + "Complemento: " + c + ", Bairro: " + b + "Cidade: " + ci + ", Estado: " + e + ", Pais: " + p;
-        }
-
+        }*/
+        
         private String cpf;
 
         public String GetCpf()
@@ -131,7 +127,7 @@ namespace AcademySolution
         }
 
         private String erro;
-
+        
         public String GetErro()
         {
             return erro;

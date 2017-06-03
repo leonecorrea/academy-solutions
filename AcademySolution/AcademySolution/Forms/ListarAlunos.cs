@@ -16,25 +16,5 @@ namespace AcademySolution
         {
             InitializeComponent();
         }
-
-        private void ListarAlunos_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'academySolutionDataSet.v_alunos'. Você pode movê-la ou removê-la conforme necessário.
-            this.v_alunosTableAdapter.Fill(this.academySolutionDataSet.v_alunos);
-
-        }
-
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.v_alunosTableAdapter.FillBy(this.academySolutionDataSet.v_alunos);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
     }
 }

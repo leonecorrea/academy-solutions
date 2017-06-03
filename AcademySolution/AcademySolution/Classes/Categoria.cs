@@ -8,47 +8,42 @@ using System.Threading.Tasks;
 
 namespace AcademySolution
 {
-    public class Categoria:ICrud
+    public class Categoria
     {
-        private string codigo;
+        private int id;
 
-        public string Codigo
+        public int GetId()
         {
-            get
-            {
-                return codigo;
-            }
-            set
-            {
-                codigo = value;
-            }
+            return id;
+        }
+
+        public void SetId(int value)
+        {
+            this.id = value;
         }
 
         private string nome;
 
-        public string Nome
+        public string GetNome()
         {
-            get
-            {
-                return nome;
-            }
-            set
-            {
-                nome = value;
-            }
+            return nome;
         }
 
-        private string descricao;
+        public void SetNome(String value)
+        {
+            this.nome = value;
+        }
+
+        private String descricao;
         
-        public string Descricao {
-            get
-            {
+        public String GetDescricao()
+        {
                 return descricao;
-            }
-            set
-            {
-                descricao = value;
-            }
+        }
+
+        public void SetDescricao(String value)
+        {
+            this.descricao = value;
         }
 
         public Instance instance = new Instance();
@@ -61,9 +56,9 @@ namespace AcademySolution
 
                 SqlCommand comando = instance.NovoComando(query);
 
-                comando.Parameters.Add("@Codigo", SqlDbType.VarChar).Value = Codigo;
-                comando.Parameters.Add("@Nome", SqlDbType.VarChar).Value = Nome;
-                comando.Parameters.Add("@Descricao", SqlDbType.VarChar).Value = Descricao;
+                comando.Parameters.Add("@Codigo", SqlDbType.VarChar).Value = GetId();
+                comando.Parameters.Add("@Nome", SqlDbType.VarChar).Value = GetNome();
+                comando.Parameters.Add("@Descricao", SqlDbType.VarChar).Value = GetDescricao();
 
                 instance.NovoComando(query).ExecuteNonQuery();
 
@@ -77,21 +72,6 @@ namespace AcademySolution
             {
                 instance.FechaConexao();
             }
-        }
-
-        public string Delete(string tb)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string Read(string tb)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string Update(string tb)
-        {
-            throw new NotImplementedException();
         }
     }
 }

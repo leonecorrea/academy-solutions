@@ -31,8 +31,8 @@ GO
 ---
 CREATE TABLE tb_categorias(
 	Id 					INT IDENTITY(1,1),--PK
-	Name 				VARCHAR(20),
-	Description 		TEXT,
+	Nome 				VARCHAR(20),
+	Descricao 			TEXT,
 	CONSTRAINT PK_CATEGORY PRIMARY KEY (Id)
 )
 GO
@@ -43,7 +43,7 @@ CREATE TABLE tb_contas(
 	Id 					INT IDENTITY(100,1),--PK
 	Nome 				VARCHAR(100),
 	DataNasc 			DATE,
-	Categoria 			VARCHAR(20),
+	Categoria 			INT,
 	Email 				VARCHAR(50),
 	Cpf 				VARCHAR(20),
 	Telefone 			VARCHAR(20),
@@ -78,12 +78,12 @@ GO
 CREATE TABLE tb_records(
 	IdRecord 			INT  IDENTITY(1,1),
 	IdStudent 			INT,--FK
-	IdTrainer 			INT,--FK
+	IdTrainner 			INT,--FK
 	DateBegin 			DATE,
 	DateExpiration 		DATE,
 	CONSTRAINT PK_FICHA PRIMARY KEY(IdRecord),
 	CONSTRAINT FK_RECORDSTUDENT_PKACCOUNTS FOREIGN KEY (IdStudent) REFERENCES tb_contas (Id),
-	CONSTRAINT FK_RECORDTRAINER_PKACCOUNTS FOREIGN KEY (IdTrainer) REFERENCES tb_contas (Id)
+	CONSTRAINT FK_RECORDTRAINER_PKACCOUNTS FOREIGN KEY (IdTrainner) REFERENCES tb_contas (Id)
 )
 GO
 --Inserção de teste
@@ -104,10 +104,10 @@ GO
 ---
 -- Estrutura tabela tb_record_exercises(Exercicios de uma ficha)
 CREATE TABLE tb_record_exercises(
-	idRecord 			INT,
-	idExercise 			INT,
-	Series 				VARCHAR (50),
-	repetitions 			VARCHAR (50),
+	idRecord 				INT,
+	idExercise 				INT,
+	Series 					VARCHAR (50),
+	Repetitions 			VARCHAR (50),
 	CONSTRAINT FK_RECORD FOREIGN KEY (idRecord) references tb_records(IdRecord),
 	CONSTRAINT FK_EXERCISE FOREIGN KEY(idExercise) references tb_exercises(ID)
 )
@@ -121,14 +121,14 @@ GO
 ---
 -- Visão de todos os alunos
 --DROP VIEW v_alunos
-CREATE VIEW v_alunos AS SELECT Id AS Codigo, Nome, DataNasc AS DataDeNascimento, Cpf, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado,Telefone,Complemento,Pais,DataUpdate FROM tb_contas WHERE Categoria = 1;
+CREATE VIEW v_alunos AS SELECT Id, Nome, DataNasc, Cpf, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado,Telefone,Complemento,Pais,DataUpdate FROM tb_contas WHERE Categoria = 1;
 GO
 -- Visão de um aluno especifico
 /*DECLARE @Id AS INT = 100;
 SELECT * FROM v_alunos WHERE Codigo=100;*/
-CREATE VIEW v_trainners AS SELECT Id AS Codigo, Nome, DataNasc AS DataDeNascimento, Cpf, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado,Telefone,Complemento,Pais FROM tb_contas WHERE Categoria = 2;
+CREATE VIEW v_trainners AS SELECT Id, Nome, DataNasc, Cpf, DataRegistro, Email, Rua, Numero, Bairro, Cidade,Estado,Telefone,Complemento,Pais FROM tb_contas WHERE Categoria = 2;
 GO
 --SELECT * FROM v_trainers 
-create view v_categorias as select id as Codigo, name as Nome, description as Descricao from tb_categorias
+create view v_categorias as select Id, Nome, Descricao from tb_categorias
 GO
 --select * from v_categorias

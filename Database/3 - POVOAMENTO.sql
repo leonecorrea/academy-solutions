@@ -63,20 +63,21 @@ insert into tb_exercises(Name, Description) values('Banco adutor', 'Exercício e
 insert into tb_exercises(Name, Description) values('Agachamento com TRX', 'Agachamento no TRX');
 
 --Inserindo uma ficha
-insert into tb_records(IdStudent, IdTrainer, DateBegin, DateExpiration) values(103, 101, SYSDATETIME(), '2017-08-24');
+insert into tb_records(IdStudent, IdTrainner, DateBegin, DateExpiration) values(103, 101, SYSDATETIME(), '2017-08-24');
 
-insert into tb_records(IdStudent, IdTrainer, DateBegin, DateExpiration) values(104, 101, SYSDATETIME(), '2017-08-24');
+insert into tb_records(IdStudent, IdTrainner, DateBegin, DateExpiration) values(104, 101, SYSDATETIME(), '2017-08-24');
 
 
 --Inserindo os exercicios de uma ficha
-insert into tb_record_exercises values(1, 1, 3, 12);
-insert into tb_record_exercises values(1, 2, 3, 12);
-insert into tb_record_exercises values(1, 3, 3, 15);
-insert into tb_record_exercises values(1, 4, 4, 12);
-insert into tb_record_exercises values(1, 5, 4, 12);
+insert into tb_record_exercises values(1, 1, '3', '12');
+insert into tb_record_exercises values(1, 2, '3', '12');
+insert into tb_record_exercises values(1, 3, '3', '15');
+insert into tb_record_exercises values(1, 4, '4', '12');
+insert into tb_record_exercises values(1, 5, '4', '12');
 
-insert into tb_record_exercises values(2, 1, 3, 12);
-insert into tb_record_exercises values(2, 2, 3, 12);
-insert into tb_record_exercises values(2, 3, 3, 15);
-insert into tb_record_exercises values(2, 4, 4, 12);
-insert into tb_record_exercises values(2, 5, 4, 12);
+insert into tb_record_exercises values(2, 1, '3', '12');
+insert into tb_record_exercises values(2, 2, '3', '12');
+insert into tb_record_exercises values(2, 3, '3', '15');
+insert into tb_record_exercises values(2, 4, '4', '12');
+insert into tb_record_exercises values(2, 5, '4', '12');
+
