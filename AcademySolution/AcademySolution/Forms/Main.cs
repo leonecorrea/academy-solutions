@@ -169,5 +169,11 @@ namespace AcademySolution
         {
 
         }
+
+        private void mniNovoTreinner_Click(object sender, EventArgs e)
+        {
+            frmCreateTreiner frm = new frmCreateTreiner();
+            frm.ShowDialog();
+        }
     }
 }

@@ -25,7 +25,29 @@ namespace AcademySolution
 
         public Categoria inserir(Categoria model)
         {
-            throw new NotImplementedException();
+            /*try
+            {
+                String query = $"insert into {tb} values (@Codigo,@Nome,@Descricao)";
+
+                SqlCommand comando = instance.NovoComando(query);
+
+                comando.Parameters.Add("@Codigo", SqlDbType.VarChar).Value = GetId();
+                comando.Parameters.Add("@Nome", SqlDbType.VarChar).Value = GetNome();
+                comando.Parameters.Add("@Descricao", SqlDbType.VarChar).Value = GetDescricao();
+
+                instance.NovoComando(query).ExecuteNonQuery();
+
+                return "SLEAJDF";
+            }
+            catch (Exception ex)
+            {
+                return Convert.ToString(ex.Message);
+            }
+            finally
+            {
+                instance.FechaConexao();
+            }*/
+            return model;
         }
 
         public ICollection<Categoria> ListarTudo()

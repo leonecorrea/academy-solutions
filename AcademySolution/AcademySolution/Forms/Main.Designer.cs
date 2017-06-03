@@ -53,7 +53,7 @@
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.pcbImagem = new System.Windows.Forms.PictureBox();
-            this.adicionarNovoTreinnerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniNovoTreinner = new System.Windows.Forms.ToolStripMenuItem();
             this.Menus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
@@ -83,7 +83,7 @@
             this.smiAddNew,
             this.addNewFichaToolStripMenuItem,
             this.adicionarNovoExercícioToolStripMenuItem,
-            this.adicionarNovoTreinnerToolStripMenuItem});
+            this.mniNovoTreinner});
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
             this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
             this.cadastrosToolStripMenuItem.Text = "Adicionar";
@@ -273,11 +273,12 @@
             this.pcbImagem.TabIndex = 8;
             this.pcbImagem.TabStop = false;
             // 
-            // adicionarNovoTreinnerToolStripMenuItem
+            // mniNovoTreinner
             // 
-            this.adicionarNovoTreinnerToolStripMenuItem.Name = "adicionarNovoTreinnerToolStripMenuItem";
-            this.adicionarNovoTreinnerToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-            this.adicionarNovoTreinnerToolStripMenuItem.Text = "Adicionar Novo Treinner";
+            this.mniNovoTreinner.Name = "mniNovoTreinner";
+            this.mniNovoTreinner.Size = new System.Drawing.Size(206, 22);
+            this.mniNovoTreinner.Text = "Adicionar Novo Treinner";
+            this.mniNovoTreinner.Click += new System.EventHandler(this.mniNovoTreinner_Click);
             // 
             // frmMain
             // 
@@ -338,6 +339,6 @@
         private System.Windows.Forms.ToolStripMenuItem listarAlunosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trainersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarNovoExercícioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adicionarNovoTreinnerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mniNovoTreinner;
     }
 }

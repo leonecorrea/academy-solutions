@@ -26,22 +26,30 @@ namespace AcademySolution.Classes
                     "@Email, @Rua, @Numero, @Complemento, @Bairro, @Cidade, @Estado, @Pais, @Cpf, @Telefone;" +
                     "Select @@Identity";
 
-                comando.Parameters.Add("@Nome", SqlDbType.Text).Value = model.GetNome();
-                comando.Parameters.Add("@Nascimento", SqlDbType.Date).Value = model.GetDataNascimento();
-                comando.Parameters.Add("@Categoria", SqlDbType.Int).Value = model.Categoria.GetId();
-                comando.Parameters.Add("@Email", SqlDbType.Text).Value = model.GetEmail().ToString();
-                //comando.Parameters.Add("@Endereco", SqlDbType.VarChar).Value = model.GetEndereco();
-                comando.Parameters.Add("@Rua", SqlDbType.Text).Value = model.GetRua();
-                comando.Parameters.Add("@Numero", SqlDbType.Text).Value = model.GetNumero();
-                comando.Parameters.Add("@Complemento", SqlDbType.Text).Value = model.GetComplemento();
-                comando.Parameters.Add("@Bairro", SqlDbType.Text).Value = model.GetBairro();
-                comando.Parameters.Add("@Cidade", SqlDbType.Text).Value = model.GetCidade();
-                comando.Parameters.Add("@Estado", SqlDbType.Text).Value = model.GetEstado();
-                comando.Parameters.Add("@Pais", SqlDbType.Text).Value = model.GetPais();
-                comando.Parameters.Add("@Cpf", SqlDbType.Text).Value = model.GetCpf();
-                comando.Parameters.Add("@Telefone", SqlDbType.Text).Value = model.GetTelefone();
+                try
+                {
+                    comando.Parameters.Add("@Nome", SqlDbType.Text).Value = model.GetNome();
+                    comando.Parameters.Add("@Nascimento", SqlDbType.Date).Value = model.GetDataNascimento();
+                    comando.Parameters.Add("@Categoria", SqlDbType.Int).Value = model.Categoria.GetId();
+                    comando.Parameters.Add("@Email", SqlDbType.Text).Value = model.GetEmail();
+                    //comando.Parameters.Add("@Endereco", SqlDbType.VarChar).Value = model.GetEndereco();
+                    comando.Parameters.Add("@Rua", SqlDbType.Text).Value = model.GetRua();
+                    comando.Parameters.Add("@Numero", SqlDbType.Text).Value = model.GetNumero();
+                    comando.Parameters.Add("@Complemento", SqlDbType.Text).Value = model.GetComplemento();
+                    comando.Parameters.Add("@Bairro", SqlDbType.Text).Value = model.GetBairro();
+                    comando.Parameters.Add("@Cidade", SqlDbType.Text).Value = model.GetCidade();
+                    comando.Parameters.Add("@Estado", SqlDbType.Text).Value = model.GetEstado();
+                    comando.Parameters.Add("@Pais", SqlDbType.Text).Value = model.GetPais();
+                    comando.Parameters.Add("@Cpf", SqlDbType.Text).Value = model.GetCpf();
+                    comando.Parameters.Add("@Telefone", SqlDbType.Text).Value = model.GetTelefone();
 
-                model.SetId(int.Parse(comando.ExecuteScalar().ToString()));
+                    //model.SetId(int.Parse(comando.ExecuteScalar().ToString()));
+                    comando.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    Console.Write(ex);
+                }
             }
             return model;
         }

@@ -43,7 +43,8 @@ namespace AcademySolution
                 t.SetEstado(cbbEstado.Text);
                 t.SetPais(cbbPais.Text);
                 t.SetTelefone(txbTelefone.Text);
-                t.Categoria.SetId(2);
+                t.Categoria = new Categoria();
+                t.Categoria.SetId('2');
 
                 var r = TreinnerDAO.inserir(t);
 
