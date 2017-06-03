@@ -9,7 +9,7 @@ using AcademySolution.Classes;
 
 namespace AcademySolution
 {
-    public abstract class Pessoa:Endereco
+    public abstract class Pessoa : Endereco
     {
         private int id;
 
@@ -21,7 +21,7 @@ namespace AcademySolution
         public void SetId(int value)
         {
             Convert.ToInt32(value);
-            id = value;
+            this.id = value;
         }
 
         private String nome;
@@ -33,7 +33,8 @@ namespace AcademySolution
 
         public void SetNome(String value)
         {
-            nome = value;
+            Convert.ToString(value);
+            this.nome = value;
         }
 
         private String dataNascimento;
@@ -45,7 +46,8 @@ namespace AcademySolution
 
         public void SetDataNascimento(String value)
         {
-            dataNascimento = value;
+            Convert.ToString(value);
+            this.dataNascimento = value;
         }
 
         private String dataRegistro;
@@ -57,7 +59,8 @@ namespace AcademySolution
 
         public void SetDataRegistro(String value)
         {
-            dataRegistro = value;
+            Convert.ToString(value);
+            this.dataRegistro = value;
         }
 
         private String email;
@@ -69,14 +72,11 @@ namespace AcademySolution
 
         public void SetEmail(String value)
         {
-            email = value;
+            Convert.ToString(value);
+            this.email = value;
         }
 
-        public Categoria Categoria
-        {
-            get;
-            set;
-        }
+        public Categoria Categoria;
 
         /*private String endereco;
 
@@ -99,7 +99,8 @@ namespace AcademySolution
 
         public void SetCpf(string value)
         {
-            cpf = value;
+            Convert.ToString(value);
+            this.cpf = value;
         }
 
         private String telefone;
@@ -111,7 +112,8 @@ namespace AcademySolution
 
         public void SetTelefone(string value)
         {
-            telefone = value;
+            Convert.ToString(value);
+            this.telefone = value;
         }
 
         private DateTime dateUpdate;
@@ -123,7 +125,8 @@ namespace AcademySolution
 
         public void SetDateUpdate(DateTime value)
         {
-            dateUpdate = value;
+            Convert.ToDateTime(value);
+            this.dateUpdate = value;
         }
 
         private String erro;
@@ -135,7 +138,7 @@ namespace AcademySolution
 
         public void SetErro(String value)
         {
-            erro = value;
+            this.erro = value;
         }
         
         /*public Instance instancia;

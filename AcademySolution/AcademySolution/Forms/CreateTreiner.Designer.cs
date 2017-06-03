@@ -1,6 +1,6 @@
 ﻿namespace AcademySolution
 {
-    partial class frmCreateTreiner
+    partial class frmCreateTreinner
     {
         /// <summary>
         /// Required designer variable.

@@ -11,9 +11,9 @@ using AcademySolution.Classes;
 
 namespace AcademySolution
 {
-    public partial class frmCreateTreiner : MetroFramework.Forms.MetroForm
+    public partial class frmCreateTreinner : MetroFramework.Forms.MetroForm
     {
-        public frmCreateTreiner()
+        public frmCreateTreinner()
         {
             InitializeComponent();
         }
@@ -43,8 +43,7 @@ namespace AcademySolution
                 t.SetEstado(cbbEstado.Text);
                 t.SetPais(cbbPais.Text);
                 t.SetTelefone(txbTelefone.Text);
-                t.Categoria = new Categoria();
-                t.Categoria.SetId('2');
+                //t.Categoria.SetId();
 
                 var r = TreinnerDAO.inserir(t);
 

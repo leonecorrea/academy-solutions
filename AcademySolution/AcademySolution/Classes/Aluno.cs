@@ -46,7 +46,7 @@ namespace AcademySolution
                 instance.NovaConexao();
 
                 command.Parameters.Add("@Nome", SqlDbType.VarChar).Value = Nome;
-                command.Parameters.Add("@DataDeNascimento", SqlDbType.Date).Value = GetDataNascimento();
+                command.Parameters.Add("@DataDeNascimento", SqlDbType.Date).Value = Nascimento;
                 command.Parameters.Add("@Categoria", SqlDbType.Int).Value = Convert.ToInt32(1);
                 command.Parameters.Add("@Email", SqlDbType.VarChar).Value = Email.ToString();
                 command.Parameters.Add("@Rua", SqlDbType.VarChar).Value = Rua.ToString();

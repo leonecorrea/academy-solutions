@@ -172,7 +172,7 @@ namespace AcademySolution
 
         private void mniNovoTreinner_Click(object sender, EventArgs e)
         {
-            frmCreateTreiner frm = new frmCreateTreiner();
+            frmCreateTreinner frm = new frmCreateTreinner();
             frm.ShowDialog();
         }
     }

@@ -22,36 +22,30 @@ namespace AcademySolution.Classes
             using (SqlCommand comando = _connection.Buscar().CreateCommand())
             {
                 comando.CommandType = CommandType.Text;
-                comando.CommandText = "insert into treinners values @Nome, @Nascimento, SYSDATETIME(), @Categoria, " +
-                    "@Email, @Rua, @Numero, @Complemento, @Bairro, @Cidade, @Estado, @Pais, @Cpf, @Telefone;" +
+                comando.CommandText = "insert into treinners values (@Nome, @Nascimento, SYSDATETIME(), @Categoria, " +
+                    "@Email, @Rua, @Numero, @Complemento, @Bairro, @Cidade, @Estado, @Pais, @Cpf, @Telefone);" +
                     "Select @@Identity";
 
-                try
-                {
-                    comando.Parameters.Add("@Nome", SqlDbType.Text).Value = model.GetNome();
-                    comando.Parameters.Add("@Nascimento", SqlDbType.Date).Value = model.GetDataNascimento();
-                    comando.Parameters.Add("@Categoria", SqlDbType.Int).Value = model.Categoria.GetId();
-                    comando.Parameters.Add("@Email", SqlDbType.Text).Value = model.GetEmail();
-                    //comando.Parameters.Add("@Endereco", SqlDbType.VarChar).Value = model.GetEndereco();
-                    comando.Parameters.Add("@Rua", SqlDbType.Text).Value = model.GetRua();
-                    comando.Parameters.Add("@Numero", SqlDbType.Text).Value = model.GetNumero();
-                    comando.Parameters.Add("@Complemento", SqlDbType.Text).Value = model.GetComplemento();
-                    comando.Parameters.Add("@Bairro", SqlDbType.Text).Value = model.GetBairro();
-                    comando.Parameters.Add("@Cidade", SqlDbType.Text).Value = model.GetCidade();
-                    comando.Parameters.Add("@Estado", SqlDbType.Text).Value = model.GetEstado();
-                    comando.Parameters.Add("@Pais", SqlDbType.Text).Value = model.GetPais();
-                    comando.Parameters.Add("@Cpf", SqlDbType.Text).Value = model.GetCpf();
-                    comando.Parameters.Add("@Telefone", SqlDbType.Text).Value = model.GetTelefone();
+                comando.Parameters.Add("@Nome", SqlDbType.Text).Value = Convert.ToString(model.GetNome().ToString());
+                comando.Parameters.Add("@Nascimento", SqlDbType.Date).Value = model.GetDataNascimento();
+                comando.Parameters.Add("@Categoria", SqlDbType.Int).Value = Convert.ToInt32(2); //model.Categoria.GetId();
+                comando.Parameters.Add("@Email", SqlDbType.Text).Value = model.GetEmail();
+                //comando.Parameters.Add("@Endereco", SqlDbType.VarChar).Value = model.GetEndereco();
+                comando.Parameters.Add("@Rua", SqlDbType.Text).Value = model.GetRua();
+                comando.Parameters.Add("@Numero", SqlDbType.Text).Value = model.GetNumero();
+                comando.Parameters.Add("@Complemento", SqlDbType.Text).Value = model.GetComplemento();
+                comando.Parameters.Add("@Bairro", SqlDbType.Text).Value = model.GetBairro();
+                comando.Parameters.Add("@Cidade", SqlDbType.Text).Value = model.GetCidade();
+                comando.Parameters.Add("@Estado", SqlDbType.Text).Value = model.GetEstado();
+                comando.Parameters.Add("@Pais", SqlDbType.Text).Value = model.GetPais();
+                comando.Parameters.Add("@Cpf", SqlDbType.Text).Value = model.GetCpf();
+                comando.Parameters.Add("@Telefone", SqlDbType.Text).Value = model.GetTelefone();
 
-                    //model.SetId(int.Parse(comando.ExecuteScalar().ToString()));
-                    comando.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    Console.Write(ex);
-                }
+                model.SetId(Convert.ToInt32(comando.ExecuteScalar().ToString()));
+
+                comando.ExecuteNonQuery();
             }
-            return model;
+        return model;
         }
 
         public Treinner atualizar(Treinner model)

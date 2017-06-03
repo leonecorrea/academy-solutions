@@ -42,7 +42,7 @@
             // 
             this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.Location = new System.Drawing.Point(202, 500);
+            this.btnEntrar.Location = new System.Drawing.Point(113, 501);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(310, 35);
             this.btnEntrar.Style = MetroFramework.MetroColorStyle.Blue;
@@ -55,18 +55,20 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(202, 358);
+            this.lblUsername.Location = new System.Drawing.Point(110, 365);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(0, 0);
+            this.lblUsername.Size = new System.Drawing.Size(60, 19);
             this.lblUsername.TabIndex = 2;
+            this.lblUsername.Text = "Usuário :";
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(201, 428);
+            this.lblPassword.Location = new System.Drawing.Point(110, 427);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(0, 0);
+            this.lblPassword.Size = new System.Drawing.Size(51, 19);
             this.lblPassword.TabIndex = 3;
+            this.lblPassword.Text = "Senha :";
             // 
             // txbUsername
             // 
@@ -84,7 +86,7 @@
             this.txbUsername.CustomButton.Visible = false;
             this.txbUsername.Icon = ((System.Drawing.Image)(resources.GetObject("txbUsername.Icon")));
             this.txbUsername.Lines = new string[0];
-            this.txbUsername.Location = new System.Drawing.Point(202, 380);
+            this.txbUsername.Location = new System.Drawing.Point(110, 389);
             this.txbUsername.Margin = new System.Windows.Forms.Padding(5, 5, 3, 3);
             this.txbUsername.MaxLength = 20;
             this.txbUsername.Name = "txbUsername";
@@ -99,7 +101,6 @@
             this.txbUsername.UseSelectable = true;
             this.txbUsername.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbUsername.WaterMarkFont = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbUsername.Click += new System.EventHandler(this.txbUsername_Click);
             this.txbUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbUsername_KeyPress);
             // 
             // txbPassword
@@ -118,7 +119,7 @@
             this.txbPassword.CustomButton.Visible = false;
             this.txbPassword.Icon = ((System.Drawing.Image)(resources.GetObject("txbPassword.Icon")));
             this.txbPassword.Lines = new string[0];
-            this.txbPassword.Location = new System.Drawing.Point(201, 450);
+            this.txbPassword.Location = new System.Drawing.Point(112, 451);
             this.txbPassword.Margin = new System.Windows.Forms.Padding(5, 5, 3, 3);
             this.txbPassword.MaxLength = 100;
             this.txbPassword.Name = "txbPassword";
@@ -133,12 +134,11 @@
             this.txbPassword.UseSelectable = true;
             this.txbPassword.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txbPassword.WaterMarkFont = new System.Drawing.Font("MS Reference Sans Serif", 12F);
-            this.txbPassword.Click += new System.EventHandler(this.txbPassword_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(295, 186);
+            this.pictureBox1.Location = new System.Drawing.Point(206, 157);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -150,22 +150,22 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(723, 652);
+            this.ClientSize = new System.Drawing.Size(556, 652);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txbPassword);
             this.Controls.Add(this.txbUsername);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.btnEntrar);
+            this.DisplayHeader = false;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Movable = false;
             this.Name = "frmLogin";
+            this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.Text = "Login";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
