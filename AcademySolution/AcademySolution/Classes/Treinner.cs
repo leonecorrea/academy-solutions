@@ -8,6 +8,6 @@ using System.Threading.Tasks;
 
 namespace AcademySolution.Classes{
 	public class Treinner:Pessoa{
-			
+		
 	}
 }

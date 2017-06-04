@@ -32,6 +32,12 @@ namespace AcademySolution.Classes
 			return this.Abrir();
 		}
 
+        public SqlCommand NovoComando(string q)
+        {
+            SqlCommand comando = new SqlCommand(q,_connection);
+            return comando;
+        }
+
 		public void Fechar()
 		{
 			if (_connection.State == ConnectionState.Open)

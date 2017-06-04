@@ -103,11 +103,11 @@
     <Compile Include="Forms\BuscarTreiner.Designer.cs">
       <DependentUpon>BuscarTreiner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CreateTreiner.cs">
+    <Compile Include="Forms\CreateTreinner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CreateTreiner.Designer.cs">
-      <DependentUpon>CreateTreiner.cs</DependentUpon>
+    <Compile Include="Forms\CreateTreinner.Designer.cs">
+      <DependentUpon>CreateTreinner.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ExcluirAluno.cs">
       <SubType>Form</SubType>
@@ -182,12 +182,6 @@
     <Compile Include="Interfaces\IDAO.cs" />
     <Compile Include="Interfaces\ILogavel.cs" />
     <Compile Include="Interfaces\IPessoa.cs" />
-    <Compile Include="Forms\ListarAlunos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ListarAlunos.Designer.cs">
-      <DependentUpon>ListarAlunos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\ListarFixas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,8 +202,8 @@
     <EmbeddedResource Include="Forms\BuscarTreiner.resx">
       <DependentUpon>BuscarTreiner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CreateTreiner.resx">
-      <DependentUpon>CreateTreiner.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CreateTreinner.resx">
+      <DependentUpon>CreateTreinner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExcluirAluno.resx">
       <DependentUpon>ExcluirAluno.cs</DependentUpon>
@@ -240,9 +234,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Perfil.resx">
       <DependentUpon>Perfil.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ListarAlunos.resx">
-      <DependentUpon>ListarAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

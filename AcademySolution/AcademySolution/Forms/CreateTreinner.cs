@@ -34,7 +34,7 @@ namespace AcademySolution.Forms
                 t.SetNome(txbFullName.Text);
                 t.SetCpf(txbCpf.Text);
                 t.SetNascimento(txbNascimento.Text);
-                //t.SetDataRegistro("SYSDATETYME()");
+                t.SetDataRegistro("SYSDATETYME()");
                 t.SetEmail(txbEmail.Text);
                 //t.SetEndereco(txbRua.Text, txbNumero.Text, txbComplemento.Text, txbBairro.Text, cbbCidade.Text, cbbEstado.Text, cbbPais.Text);
                 t.Endereco.SetRua(txbRua.Text);
@@ -49,10 +49,35 @@ namespace AcademySolution.Forms
                 TreinnerDAO.inserir(t);
 
                 if (t.Erro == null || t.Erro == ""){
-                    MetroFramework.MetroMessageBox.Show(this,"Usuário cadastrado com sucesso!","Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                }else{
-                    MetroFramework.MetroMessageBox.Show(this, "Usuário não cadastrado!", "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
-                    MetroFramework.MetroMessageBox.Show(this, t.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                    var q = MetroFramework.MetroMessageBox.Show(this,"Usuário cadastrado com sucesso!","Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+                    if (q == DialogResult.Abort) {
+                        
+                    } else if (q == DialogResult.Cancel){
+
+                    }
+                    else{
+
+                    }
+                } else{
+
+                    var q = MetroFramework.MetroMessageBox.Show(this, "Usuário não cadastrado!", "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+
+                    if (q == DialogResult.Abort)
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, t.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                        //this.Close();
+                    }
+                    else if (q == DialogResult.Cancel)
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, t.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                        //this.Close();
+                    }
+                    else
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, t.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                        //this.Close();
+                    }
                 }
             }
         }

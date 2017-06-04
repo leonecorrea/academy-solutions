@@ -7,36 +7,34 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace AcademySolution.Classes
-{
+namespace AcademySolution.Classes{
 	// classe aluno que herda da interface IPessoa
 
-	public class Aluno : Pessoa
-	{
+	public class Aluno : Pessoa	{
 		public Instance instance = new Instance();
-		public String Codigo { get; set; }
-		public String Nome { get; set; }
-		public String Cpf { get; set; }
-		public String Email { get; set; }
-		//public String Categoria { get; set; }
-		public String Numero { get; set; }
-		public String Rua { get; set; }
-		public String Complemento { get; set; }
-		public String Bairro { get; set; }
-		public String Cidade { get; set; }
-		public String Estado { get; set; }
-		public String Pais { get; set; }
-		public String Telefone { get; set; }
-		public String Nascimento { get; set; }
+		public string Codigo { get; set; }
+		public string Nome { get; set; }
+		public string Cpf { get; set; }
+		public string Email { get; set; }
+		//public string Categoria { get; set; }
+		public string Numero { get; set; }
+		public string Rua { get; set; }
+		public string Complemento { get; set; }
+		public string Bairro { get; set; }
+		public string Cidade { get; set; }
+		public string Estado { get; set; }
+		public string Pais { get; set; }
+		public string Telefone { get; set; }
+		public string Nascimento { get; set; }
 		public string Error { get; set; }
 
 		//metodo  create que é herdado e IPessoa que implementa o cadastro de novos usuarios no sistema
 
-		public String Create()
+		public string Create()
 		{
 			try
 			{
-				String query = "insert into tb_contas(Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, " +
+				string query = "insert into tb_contas (Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, " +
 					"Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone) " +
 					"values(@Nome, @DataDeNascimento, SYSDATETIME(), @Categoria, @Email, @Rua, @Numero, @Complemento, @Bairro, " +
 					"@Cidade, @Estado, @Pais, @Cpf, @Telefone)";
@@ -71,64 +69,50 @@ namespace AcademySolution.Classes
 		}
 
 		//metodo  delete que é herdado e Pessoa que implementa a exclusão de usuarios no sistema
-
-		public String Delete(string parametro)
-		{
-			try
-			{
+		public string Delete(string parametro){
+			try{
 				instance.NovaConexao();
 
-				String query = "delete from tb_contas where Id ="+parametro+" ";
-
+				string query = "delete from tb_contas where Id ="+parametro+" ";
 				
 				SqlCommand comando = instance.NovoComando(query);
 
 				comando.ExecuteNonQuery();
 				return "ok";
-			}
-			catch (Exception ex)
-			{
+			}catch (Exception ex){
 				Error = ex.Message;
 
 				return "";
-			}
-			finally
-			{
+			}finally{
 				instance.FechaConexao();
 			}
 		}
 
 		//metodo  read que é herdado e IPessoa que implementa a leitura usuarios no sistema
-
-		public String Read(String var)
-		{
-			/*try
-			{
+		public string Read(string var){
+			/*try{
 				instance.NovaConexao();
 
 				SqlDataReader leituras = instance.LerDados(var);
 
-				if (leituras.HasRows == false)
-				{
+				if (leituras.HasRows == false){
 					return "Código do aluno não foi encontrado!";
-				}
-				else
-				{
+				}else{
 					leituras.Read();
 
-					SetCodigo(Convert.ToString(leituras["Codigo"]));
-					txbNome.Text = Convert.ToString(leituras["Nome"]);
-					txbNascimento.Text = Convert.ToString(leituras["DataDeNascimento"]);
-					txbCpf.Text = Convert.ToString(leituras["Cpf"]);
-					txbEmail.Text = Convert.ToString(leituras["Email"]);
-					txbEstado.Text = Convert.ToString(leituras["Estado"]);
-					txbTelefone.Text = Convert.ToString(leituras["Telefone"]);
-					txbRua.Text = Convert.ToString(leituras["Rua"]);
-					txbNumero.Text = Convert.ToString(leituras["Numero"]);
-					txbComplemento.Text = Convert.ToString(leituras["Complemento"]);
-					txbCidade.Text = Convert.ToString(leituras["Cidade"]);
-					txbBairro.Text = Convert.ToString(leituras["Bairro"]);
-					txbPais.Text = Convert.ToString(leituras["Pais"]);
+					SetCodigo(Convert.Tostring(leituras["Codigo"]));
+					txbNome.Text = Convert.Tostring(leituras["Nome"]);
+					txbNascimento.Text = Convert.Tostring(leituras["DataDeNascimento"]);
+					txbCpf.Text = Convert.Tostring(leituras["Cpf"]);
+					txbEmail.Text = Convert.Tostring(leituras["Email"]);
+					txbEstado.Text = Convert.Tostring(leituras["Estado"]);
+					txbTelefone.Text = Convert.Tostring(leituras["Telefone"]);
+					txbRua.Text = Convert.Tostring(leituras["Rua"]);
+					txbNumero.Text = Convert.Tostring(leituras["Numero"]);
+					txbComplemento.Text = Convert.Tostring(leituras["Complemento"]);
+					txbCidade.Text = Convert.Tostring(leituras["Cidade"]);
+					txbBairro.Text = Convert.Tostring(leituras["Bairro"]);
+					txbPais.Text = Convert.Tostring(leituras["Pais"]);
 
 					txbNome.Enabled = false;
 					txbNascimento.Enabled = false;
@@ -147,12 +131,10 @@ namespace AcademySolution.Classes
 
 				}
 			}
-			catch (Exception ex)
-			{
+			catch (Exception ex){
 				MetroFramework.MetroMessageBox.Show(this, ex.Message, "Erro", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
 			}
-			finally
-			{
+			finally{
 				instance.FechaConexao();
 			}*/
 			return "";

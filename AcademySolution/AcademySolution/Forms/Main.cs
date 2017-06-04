@@ -154,8 +154,8 @@ namespace AcademySolution.Forms
         private void listarAlunosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // instancia do form ListarAlunos para chamar a tela
-            ListarAlunos view = new ListarAlunos();
-            view.ShowDialog();
+            //ListarAlunos view = new ListarAlunos();
+            //view.ShowDialog();
         }
 
         //chama a tela de buscar trainer

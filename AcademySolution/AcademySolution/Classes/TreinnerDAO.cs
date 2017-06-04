@@ -11,15 +11,15 @@ namespace AcademySolution.Classes{
 	public class TreinnerDAO : IDAO<Treinner>, IDisposable{
 		//Conexão com o banco
 		private IConnection _connection;
-        //Defindo construtor para a classe DAO
+		//Defindo construtor para a classe DAO
 		public TreinnerDAO(IConnection Connection){
 			this._connection = Connection;
 		}
 
-        //Método para inserção de dados
+		//Método para inserção de dados
 		public Treinner inserir(Treinner model){
-            /*
-             using (SqlCommand comando = _connection.Buscar().CreateCommand()){
+			/*
+						 using (SqlCommand comando = _connection.Buscar().CreateCommand()){
 				comando.CommandType = CommandType.Text;
 				comando.CommandText = "insert into v_treinners values (@Nome, @Nascimento, SYSDATETIME(), '2', " +
 					"@Email, @Rua, @Numero, @Complemento, @Bairro, @Cidade, @Estado, @Pais, @Cpf, @Telefone);" +
@@ -42,41 +42,43 @@ namespace AcademySolution.Classes{
 
 				//comando.ExecuteNonQuery();
 			}
-             */
-            try
-            {
-                String query = "insert into tb_contas(Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, " +
-                    "Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone) " +
-                    "values(@Nome, @DataDeNascimento, SYSDATETIME(), @Categoria, @Email, @Rua, @Numero, @Complemento, @Bairro, " +
-                    "@Cidade, @Estado, @Pais, @Cpf, @Telefone)";
+						 */
+			try{
+                String query = "insert into tb_contas (Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, " +
+							"Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone) " +
+							"values(@Nome, @DataDeNascimento, SYSDATETIME(), @Categoria, @Email, @Rua, @Numero, @Complemento, @Bairro, " +
+							"@Cidade, @Estado, @Pais, @Cpf, @Telefone);";
 
                 SqlCommand comando = _connection.Buscar().CreateCommand();
-                comando.CommandText = query;
-                
-                comando.Parameters.Add("@Nome", SqlDbType.VarChar).Value = model.GetNome();
-                comando.Parameters.Add("@DataDeNascimento", SqlDbType.Date).Value = model.GetNascimento();
-                comando.Parameters.Add("@Categoria", SqlDbType.Int).Value = Convert.ToInt32(1);
-                comando.Parameters.Add("@Email", SqlDbType.VarChar).Value = model.GetEmail().ToString();
-                comando.Parameters.Add("@Rua", SqlDbType.VarChar).Value = model.Endereco.GetRua().ToString();
-                comando.Parameters.Add("@Numero", SqlDbType.Int).Value = Convert.ToInt32(model.Endereco.GetNumero());
-                comando.Parameters.Add("@Complemento", SqlDbType.VarChar).Value = model.Endereco.GetComplemento();
-                comando.Parameters.Add("@Bairro", SqlDbType.VarChar).Value = model.Endereco.GetBairro();
-                comando.Parameters.Add("@Cidade", SqlDbType.VarChar).Value = model.Endereco.GetCidade().ToString();
-                comando.Parameters.Add("@Estado", SqlDbType.VarChar).Value = model.Endereco.GetEstado().ToString();
-                comando.Parameters.Add("@Pais", SqlDbType.VarChar).Value = model.Endereco.GetPais().ToString();
-                comando.Parameters.Add("@Cpf", SqlDbType.VarChar).Value = model.GetCpf();
-                comando.Parameters.Add("@Telefone", SqlDbType.Float).Value = Convert.ToDouble(model.GetTelefone().Replace("-", "").Replace("(", "").Replace(")", ""));
 
-                comando.ExecuteNonQuery();
+                comando.CommandText = "INSERT INTO tb_contas (Nome, DataNasc,DataRegistro,Categoria,Email, Rua, Numero, " +
+                    "Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone, DataUpdate )"+
+                    "VALUES(@Nome, @Nascimento, SYSDATETIME(), 2, @Email, @Rua, @Numero, @Complemento,@Bairro, " +
+                    "@Cidade, @Estado, @Pais, @Cpf, @Telefone, SYSDATETIME());SELECT @@IDENTITY";
 
-                return model;
-            }
-            catch (Exception ex)
-            {
-                model.Erro = ex.Message.ToString();
-                Console.WriteLine(ex.Message);
-                return model;
-            }
+			    comando.Parameters.Add("@Nome", SqlDbType.Text).Value = model.GetNome();
+			    comando.Parameters.Add("@Nascimento", SqlDbType.Date).Value = model.GetNascimento();
+			    comando.Parameters.Add("@Email", SqlDbType.Text).Value = model.GetEmail().ToString();
+			    comando.Parameters.Add("@Rua", SqlDbType.Text).Value = model.Endereco.GetRua().ToString();
+			    comando.Parameters.Add("@Numero", SqlDbType.Text).Value = model.Endereco.GetNumero().ToString();
+			    comando.Parameters.Add("@Complemento", SqlDbType.Text).Value = model.Endereco.GetComplemento().ToString();
+			    comando.Parameters.Add("@Bairro", SqlDbType.Text).Value = model.Endereco.GetBairro().ToString();
+			    comando.Parameters.Add("@Cidade", SqlDbType.Text).Value = model.Endereco.GetCidade().ToString();
+			    comando.Parameters.Add("@Estado", SqlDbType.Text).Value = model.Endereco.GetEstado().ToString();
+			    comando.Parameters.Add("@Pais", SqlDbType.Text).Value = model.Endereco.GetPais().ToString();
+			    comando.Parameters.Add("@Cpf", SqlDbType.Text).Value = model.GetCpf();
+                comando.Parameters.Add("@Telefone", SqlDbType.Text).Value = model.GetTelefone();//.Replace("-", "").Replace("(", "").Replace(")", "");
+
+                model.SetId(Convert.ToInt32(comando.ExecuteScalar()));
+
+			    comando.ExecuteNonQuery();
+
+			    return model;
+			}catch (Exception ex){
+					model.Erro = ex.Message.ToString();
+					Console.WriteLine(ex.Message);
+					return model;
+			}
 		}
 
 		public Treinner atualizar(Treinner model){
@@ -99,7 +101,7 @@ namespace AcademySolution.Classes{
 				comando.Parameters.Add("@Cpf", SqlDbType.Text).Value = model.GetCpf();
 				comando.Parameters.Add("@Telefone", SqlDbType.Text).Value = model.GetTelefone();
 				comando.Parameters.Add("@Id", SqlDbType.Int).Value = model.GetId();
-                
+								
 				comando.ExecuteNonQuery();
 			}
 			return model;
