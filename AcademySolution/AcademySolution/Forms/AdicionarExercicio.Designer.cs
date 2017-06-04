@@ -32,6 +32,9 @@
             this.TxbAddExercicioNome = new MetroFramework.Controls.MetroTextBox();
             this.AddExercicioDescricao = new MetroFramework.Controls.MetroLabel();
             this.TxbAddExercicioDescricao = new MetroFramework.Controls.MetroTextBox();
+            this.BtnAddExercicio = new MetroFramework.Controls.MetroButton();
+            this.BtnAddExercicioLimpaCampos = new MetroFramework.Controls.MetroButton();
+            this.btnCancelarAddExercicio = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // AddExercicioNome
@@ -112,11 +115,43 @@
             this.TxbAddExercicioDescricao.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxbAddExercicioDescricao.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // BtnAddExercicio
+            // 
+            this.BtnAddExercicio.Location = new System.Drawing.Point(285, 241);
+            this.BtnAddExercicio.Name = "BtnAddExercicio";
+            this.BtnAddExercicio.Size = new System.Drawing.Size(108, 38);
+            this.BtnAddExercicio.TabIndex = 4;
+            this.BtnAddExercicio.Text = "Cadastrar Exercicio";
+            this.BtnAddExercicio.UseSelectable = true;
+            // 
+            // BtnAddExercicioLimpaCampos
+            // 
+            this.BtnAddExercicioLimpaCampos.Location = new System.Drawing.Point(154, 241);
+            this.BtnAddExercicioLimpaCampos.Name = "BtnAddExercicioLimpaCampos";
+            this.BtnAddExercicioLimpaCampos.Size = new System.Drawing.Size(110, 38);
+            this.BtnAddExercicioLimpaCampos.TabIndex = 5;
+            this.BtnAddExercicioLimpaCampos.Text = "Limpar Campos";
+            this.BtnAddExercicioLimpaCampos.UseSelectable = true;
+            this.BtnAddExercicioLimpaCampos.Click += new System.EventHandler(this.BtnAddExercicioLimpaCampos_Click);
+            // 
+            // btnCancelarAddExercicio
+            // 
+            this.btnCancelarAddExercicio.Location = new System.Drawing.Point(23, 241);
+            this.btnCancelarAddExercicio.Name = "btnCancelarAddExercicio";
+            this.btnCancelarAddExercicio.Size = new System.Drawing.Size(110, 38);
+            this.btnCancelarAddExercicio.TabIndex = 6;
+            this.btnCancelarAddExercicio.Text = "Cancelar";
+            this.btnCancelarAddExercicio.UseSelectable = true;
+            this.btnCancelarAddExercicio.Click += new System.EventHandler(this.btnCancelarAddExercicio_Click);
+            // 
             // AdicionarExercicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 316);
+            this.ClientSize = new System.Drawing.Size(434, 316);
+            this.Controls.Add(this.btnCancelarAddExercicio);
+            this.Controls.Add(this.BtnAddExercicioLimpaCampos);
+            this.Controls.Add(this.BtnAddExercicio);
             this.Controls.Add(this.TxbAddExercicioDescricao);
             this.Controls.Add(this.AddExercicioDescricao);
             this.Controls.Add(this.TxbAddExercicioNome);
@@ -136,5 +171,8 @@
         private MetroFramework.Controls.MetroTextBox TxbAddExercicioNome;
         private MetroFramework.Controls.MetroLabel AddExercicioDescricao;
         private MetroFramework.Controls.MetroTextBox TxbAddExercicioDescricao;
+        private MetroFramework.Controls.MetroButton BtnAddExercicio;
+        private MetroFramework.Controls.MetroButton BtnAddExercicioLimpaCampos;
+        private MetroFramework.Controls.MetroButton btnCancelarAddExercicio;
     }
 }

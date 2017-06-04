@@ -71,6 +71,8 @@
     <Compile Include="Classes\AlunoDAO.cs" />
     <Compile Include="Classes\Connection.cs" />
     <Compile Include="Classes\Endereco.cs" />
+    <Compile Include="Classes\Exercicio.cs" />
+    <Compile Include="Classes\ExercicioDAO.cs" />
     <Compile Include="Classes\TreinnerDAO.cs" />
     <Compile Include="Forms\AdicionarExercicio.cs">
       <SubType>Form</SubType>
