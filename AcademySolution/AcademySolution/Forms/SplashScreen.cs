@@ -9,7 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcademySolution
+namespace AcademySolution.Forms
 {
     public partial class frmSplashScreen : MetroFramework.Forms.MetroForm
     {

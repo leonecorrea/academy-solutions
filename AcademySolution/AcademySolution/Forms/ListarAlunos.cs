@@ -8,12 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcademySolution
-{
-    public partial class ListarAlunos : MetroFramework.Forms.MetroForm
-    {
-        public ListarAlunos()
-        {
+namespace AcademySolution.Forms{
+    public partial class ListarAlunos : MetroFramework.Forms.MetroForm    {
+        public ListarAlunos(){
             InitializeComponent();
         }
     }

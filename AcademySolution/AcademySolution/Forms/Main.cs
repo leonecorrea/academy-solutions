@@ -10,8 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
+using AcademySolution.Classes;
 
-namespace AcademySolution
+namespace AcademySolution.Forms
 {
     public partial class frmMain : MetroFramework.Forms.MetroForm
     {

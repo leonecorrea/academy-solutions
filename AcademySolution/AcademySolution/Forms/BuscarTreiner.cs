@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcademySolution
+namespace AcademySolution.Forms
 {
     public partial class frmBuscarTreiner : MetroFramework.Forms.MetroForm
     {

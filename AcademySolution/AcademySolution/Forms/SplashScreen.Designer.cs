@@ -1,4 +1,4 @@
-﻿namespace AcademySolution
+﻿namespace AcademySolution.Forms
 {
     partial class frmSplashScreen
     {

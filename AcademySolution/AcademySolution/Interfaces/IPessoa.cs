@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AcademySolution
-
+namespace AcademySolution.Interfaces{
     // interface IPessoa que contem os metodos de Criação, leitura, Alteração e Exclusão.
-{
     public interface IPessoa
     {
         //Criação

@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using AcademySolution.Classes;
 
-namespace AcademySolution
+namespace AcademySolution.Forms
 {
     public partial class frmSearchFicha : MetroFramework.Forms.MetroForm
     {

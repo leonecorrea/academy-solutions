@@ -1,4 +1,4 @@
-﻿namespace AcademySolution
+﻿namespace AcademySolution.Forms
 {
     partial class frmMain
     {
@@ -262,8 +262,8 @@
             // 
             // pcbImagem
             // 
-            this.pcbImagem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.pcbImagem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbImagem.Image = ((System.Drawing.Image)(resources.GetObject("pcbImagem.Image")));
             this.pcbImagem.Location = new System.Drawing.Point(-1, 57);

@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AcademySolution.Classes;
+using AcademySolution.Interfaces;
 
-namespace AcademySolution
+namespace AcademySolution.Forms
 {
     public partial class frmCreateTreinner : MetroFramework.Forms.MetroForm
     {
@@ -32,27 +33,26 @@ namespace AcademySolution
                 //Setando valores para a classe
                 t.SetNome(txbFullName.Text);
                 t.SetCpf(txbCpf.Text);
-                t.SetDataNascimento(txbNascimento.Text);
+                t.SetNascimento(txbNascimento.Text);
                 //t.SetDataRegistro("SYSDATETYME()");
                 t.SetEmail(txbEmail.Text);
                 //t.SetEndereco(txbRua.Text, txbNumero.Text, txbComplemento.Text, txbBairro.Text, cbbCidade.Text, cbbEstado.Text, cbbPais.Text);
-                t.SetRua(txbRua.Text);
-                t.SetNumero(txbNumero.Text);
-                t.SetComplemento(txbComplemento.Text);
-                t.SetBairro(txbBairro.Text);
-                t.SetEstado(cbbEstado.Text);
-                t.SetPais(cbbPais.Text);
+                t.Endereco.SetRua(txbRua.Text);
+                t.Endereco.SetNumero(txbNumero.Text);
+                t.Endereco.SetComplemento(txbComplemento.Text);
+                t.Endereco.SetBairro(txbBairro.Text);
+                t.Endereco.SetEstado(cbbEstado.Text);
+                t.Endereco.SetPais(cbbPais.Text);
                 t.SetTelefone(txbTelefone.Text);
-                //t.Categoria.SetId();
+                t.Categoria.SetId(2);
 
-                var r = TreinnerDAO.inserir(t);
+                TreinnerDAO.inserir(t);
 
-                if (r == t)
-                {
+                if (t.Erro == null || t.Erro == ""){
                     MetroFramework.MetroMessageBox.Show(this,"Usuário cadastrado com sucesso!","Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                }
-                else{
+                }else{
                     MetroFramework.MetroMessageBox.Show(this, "Usuário não cadastrado!", "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                    MetroFramework.MetroMessageBox.Show(this, t.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
                 }
             }
         }

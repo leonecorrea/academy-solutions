@@ -6,89 +6,89 @@ using System.Threading.Tasks;
 
 namespace AcademySolution.Classes
 {
-    public class Endereco
-    {
-        private String numero;
+	public class Endereco
+	{
+		private String numero;
 
-        public String GetNumero()
-        {
-            return numero;
-        }
+		public String GetNumero()
+		{
+			return numero;
+		}
 
-        public void SetNumero(string value)
-        {
-            this.numero = value;
-        }
+		public void SetNumero(string value)
+		{
+			this.numero = value;
+		}
 
-        private String rua;
+		private String rua;
 
-        public String GetRua()
-        {
-            return rua;
-        }
+		public String GetRua()
+		{
+			return rua;
+		}
 
-        public void SetRua(string value)
-        {
-            this.rua = value;
-        }
-        private String bairro;
+		public void SetRua(string value)
+		{
+			this.rua = value;
+		}
+		private String bairro;
 
-        public String GetBairro()
-        {
-            return bairro;
-        }
+		public String GetBairro()
+		{
+			return bairro;
+		}
 
-        public void SetBairro(string value)
-        {
-            this.bairro = value;
-        }
+		public void SetBairro(string value)
+		{
+			this.bairro = value;
+		}
 
-        private String estado;
+		private String estado;
 
-        public String GetEstado()
-        {
-            return estado;
-        }
+		public String GetEstado()
+		{
+			return estado;
+		}
 
-        public void SetEstado(String value)
-        {
-            this.estado = value;
-        }
+		public void SetEstado(String value)
+		{
+			this.estado = value;
+		}
 
-        private String cidade;
+		private String cidade;
 
-        public String GetCidade()
-        {
-            return cidade;
-        }
+		public String GetCidade()
+		{
+			return cidade;
+		}
 
-        public void SetCidade(String value)
-        {
-            this.cidade = value;
-        }
+		public void SetCidade(String value)
+		{
+			this.cidade = value;
+		}
 
-        private String pais;
+		private String pais;
 
-        public String GetPais()
-        {
-            return pais;
-        }
+		public String GetPais()
+		{
+			return pais;
+		}
 
-        public void SetPais(String value)
-        {
-            this.pais = value;
-        }
+		public void SetPais(String value)
+		{
+			this.pais = value;
+		}
 
-        private String complemento;
+		private String complemento;
 
-        public String GetComplemento()
-        {
-            return complemento;
-        }
+		public String GetComplemento()
+		{
+			return complemento;
+		}
 
-        public void SetComplemento(String value)
-        {
-            this.complemento = value;
-        }
-    }
+		public void SetComplemento(String value)
+		{
+			this.complemento = value;
+		}
+	}
 }

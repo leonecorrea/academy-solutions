@@ -8,8 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using AcademySolution.Classes;
 
-namespace AcademySolution
+namespace AcademySolution.Forms
 {
     public partial class CreateConta : MetroFramework.Forms.MetroForm
     {
@@ -39,7 +40,7 @@ namespace AcademySolution
                 aluno.Cpf = txbCpf.Text;
                 aluno.Email = txbEmail.Text;
                 aluno.Nascimento = txbNascimento.Text;
-                aluno.Categoria = "1";
+                aluno.Categoria.SetId(1);
                 aluno.Numero = txbNumero.Text;
                 aluno.Rua = txbRua.Text;
                 aluno.Complemento = txbComplemento.Text;

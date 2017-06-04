@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcademySolution.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,10 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcademySolution
-{
-    public partial class frmExcluirTrainer : MetroFramework.Forms.MetroForm
-    {
+namespace AcademySolution.Forms{
+    public partial class frmExcluirTrainer : MetroFramework.Forms.MetroForm{
         public frmExcluirTrainer()
         {
             InitializeComponent();

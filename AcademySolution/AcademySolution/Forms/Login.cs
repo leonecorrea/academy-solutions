@@ -10,8 +10,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
+using AcademySolution.Classes;
 
-namespace AcademySolution
+namespace AcademySolution.Forms
 {
     public partial class frmLogin : MetroFramework.Forms.MetroForm
     {

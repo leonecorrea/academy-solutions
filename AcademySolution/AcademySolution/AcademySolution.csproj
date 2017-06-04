@@ -84,7 +84,6 @@
     <Compile Include="Classes\Fixa.cs" />
     <Compile Include="Classes\Login.cs" />
     <Compile Include="Classes\Pessoa.cs" />
-    <Compile Include="Classes\Programa.cs" />
     <Compile Include="Classes\Treinner.cs" />
     <Compile Include="Forms\BuscarAluno.cs">
       <SubType>Form</SubType>

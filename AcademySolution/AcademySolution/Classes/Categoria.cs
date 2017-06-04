@@ -6,44 +6,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AcademySolution
+namespace AcademySolution.Classes
 {
-    public class Categoria
-    {
-        private int id;
+	public class Categoria
+	{
+		private int id;
 
-        public int GetId()
-        {
-            return id;
-        }
+		public int GetId()
+		{
+			return id;
+		}
 
-        public void SetId(int value)
-        {
-            this.id = value;
-        }
+		public void SetId(int value)
+		{
+			this.id = value;
+		}
 
-        private string nome;
+		private string nome;
 
-        public string GetNome()
-        {
-            return nome;
-        }
+		public string GetNome()
+		{
+			return nome;
+		}
 
-        public void SetNome(String value)
-        {
-            this.nome = value;
-        }
+		public void SetNome(String value)
+		{
+			this.nome = value;
+		}
 
-        private String descricao;
-        
-        public String GetDescricao()
-        {
-                return descricao;
-        }
+		private String descricao;
+		
+		public String GetDescricao()
+		{
+				return descricao;
+		}
 
-        public void SetDescricao(String value)
-        {
-            this.descricao = value;
-        }
-    }
+		public void SetDescricao(String value)
+		{
+			this.descricao = value;
+		}
+	}
 }

@@ -1,4 +1,4 @@
-﻿namespace AcademySolution
+﻿namespace AcademySolution.Forms
 {
     partial class frmPerfil
     {
@@ -53,7 +53,7 @@
             this.infoUserLastName.AutoSize = true;
             this.infoUserLastName.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoUserLastName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.infoUserLastName.Location = new System.Drawing.Point(441, 270);
+            this.infoUserLastName.Location = new System.Drawing.Point(371, 270);
             this.infoUserLastName.Name = "infoUserLastName";
             this.infoUserLastName.Size = new System.Drawing.Size(74, 25);
             this.infoUserLastName.TabIndex = 45;
@@ -64,7 +64,7 @@
             this.infoUserDateBirth.AutoSize = true;
             this.infoUserDateBirth.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoUserDateBirth.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.infoUserDateBirth.Location = new System.Drawing.Point(414, 304);
+            this.infoUserDateBirth.Location = new System.Drawing.Point(371, 304);
             this.infoUserDateBirth.Name = "infoUserDateBirth";
             this.infoUserDateBirth.Size = new System.Drawing.Size(128, 25);
             this.infoUserDateBirth.TabIndex = 46;
@@ -75,7 +75,7 @@
             this.infoUserStreet.AutoSize = true;
             this.infoUserStreet.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoUserStreet.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.infoUserStreet.Location = new System.Drawing.Point(429, 346);
+            this.infoUserStreet.Location = new System.Drawing.Point(371, 346);
             this.infoUserStreet.Name = "infoUserStreet";
             this.infoUserStreet.Size = new System.Drawing.Size(98, 25);
             this.infoUserStreet.TabIndex = 47;
@@ -86,7 +86,7 @@
             this.infoUserCpf.AutoSize = true;
             this.infoUserCpf.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoUserCpf.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.infoUserCpf.Location = new System.Drawing.Point(388, 390);
+            this.infoUserCpf.Location = new System.Drawing.Point(371, 390);
             this.infoUserCpf.Name = "infoUserCpf";
             this.infoUserCpf.Size = new System.Drawing.Size(181, 25);
             this.infoUserCpf.TabIndex = 50;
@@ -97,13 +97,13 @@
             this.infoUserTelefone.AutoSize = true;
             this.infoUserTelefone.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoUserTelefone.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.infoUserTelefone.Location = new System.Drawing.Point(409, 435);
+            this.infoUserTelefone.Location = new System.Drawing.Point(371, 435);
             this.infoUserTelefone.Name = "infoUserTelefone";
             this.infoUserTelefone.Size = new System.Drawing.Size(139, 25);
             this.infoUserTelefone.TabIndex = 52;
             this.infoUserTelefone.Text = "00000-0000";
             // 
-            // infoUser
+            // frmPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,7 +118,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Movable = false;
-            this.Name = "infoUser";
+            this.Name = "frmPerfil";
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.SystemShadow;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AcademySolution.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,10 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcademySolution
-{
-    public partial class frmExcluirAluno : MetroFramework.Forms.MetroForm
-    {
+namespace AcademySolution.Forms{
+    public partial class frmExcluirAluno : MetroFramework.Forms.MetroForm{
         //private object instance;
 
         public frmExcluirAluno()

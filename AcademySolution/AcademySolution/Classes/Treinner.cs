@@ -6,10 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AcademySolution
-{
-    public class Treinner:Pessoa
-    {
-        
-    }
+namespace AcademySolution.Classes{
+	public class Treinner:Pessoa{
+			
+	}
 }

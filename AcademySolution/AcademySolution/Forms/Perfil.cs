@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using AcademySolution.Classes;
 
-namespace AcademySolution
+namespace AcademySolution.Forms
 {
     public partial class frmPerfil : MetroFramework.Forms.MetroForm
     {
