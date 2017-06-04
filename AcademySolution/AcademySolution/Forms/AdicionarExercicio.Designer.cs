@@ -123,6 +123,7 @@
             this.BtnAddExercicio.TabIndex = 4;
             this.BtnAddExercicio.Text = "Cadastrar Exercicio";
             this.BtnAddExercicio.UseSelectable = true;
+            this.BtnAddExercicio.Click += new System.EventHandler(this.BtnAddExercicio_Click);
             // 
             // BtnAddExercicioLimpaCampos
             // 

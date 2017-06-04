@@ -168,7 +168,8 @@ namespace AcademySolution.Forms
 
         private void adicionarNovoExercícioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            AdicionarExercicio frm = new AdicionarExercicio();
+            frm.ShowDialog();
         }
 
         private void mniNovoTreinner_Click(object sender, EventArgs e)

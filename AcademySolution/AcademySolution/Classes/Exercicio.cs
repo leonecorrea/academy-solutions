@@ -44,5 +44,18 @@ namespace AcademySolution.Classes
             this.descricaoExercicio = value;
         }
 
+        private string erro;
+
+        public string getErro()
+        {
+            return erro;
+        }
+
+        public void setErro(string value)
+        {
+            this.erro = value;
+        }
+
+        public string Erro { get; set; }
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AcademySolution.Classes;
+using AcademySolution.Interfaces;
 
 namespace AcademySolution.Forms
 {
@@ -36,6 +38,60 @@ namespace AcademySolution.Forms
         private void BtnAddExercicioLimpaCampos_Click(object sender, EventArgs e)
         {
             LimparCampos();
+        }
+
+        private void BtnAddExercicio_Click(object sender, EventArgs e)
+        {
+            using (IConnection conexao = new Connection())
+            {
+                conexao.Abrir();
+
+                IDAO<Exercicio> ExercicioDAO = new ExercicioDAO(conexao);
+
+                Exercicio ex = new Exercicio();
+
+                ex.setNomeExercicio(TxbAddExercicioNome.Text);
+                ex.setDescricaoExercicio(TxbAddExercicioDescricao.Text);
+
+                ExercicioDAO.inserir(ex);
+
+                if(ex.Erro == null || ex.Erro == "")
+                {
+                    var q = MetroFramework.MetroMessageBox.Show(this, "Exercicio cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    if(q == DialogResult.Abort)
+                    {
+                        LimparCampos();
+                    }else if(q == DialogResult.Cancel)
+                    {
+                        LimparCampos();
+                    }
+                    else
+                    {
+                        LimparCampos();
+                    }
+                }else
+                {
+                    var q = MetroFramework.MetroMessageBox.Show(this, "Exercicio não cadastrado!", "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+
+                    if (q == DialogResult.Abort)
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, ex.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                        //this.Close();
+                    }
+                    else if (q == DialogResult.Cancel)
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, ex.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                        //this.Close();
+                    }
+                    else
+                    {
+                        MetroFramework.MetroMessageBox.Show(this, ex.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                        //this.Close();
+                    }
+                }
+
+            }
         }
     }
 }
