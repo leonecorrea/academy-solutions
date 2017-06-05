@@ -67,7 +67,7 @@ namespace AcademySolution.Forms
                 infoAluno = infoAluno + " = " + campo;
 
                 //Pega o nome do professor
-                String infoProf = "select tb_contas.Nome as NomeProf from tb_contas inner join tb_records on tb_records.IdTrainer = tb_contas.id where tb_records.IdRecord";
+                String infoProf = "select tb_contas.Nome as NomeProf from tb_contas inner join tb_records on tb_records.IdTrainner = tb_contas.id where tb_records.IdRecord";
                 infoProf = infoProf + " = " + campo;
 
                 //Verificar se a ficha está cadastrada

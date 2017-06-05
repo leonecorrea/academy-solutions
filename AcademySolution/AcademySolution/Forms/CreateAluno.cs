@@ -34,8 +34,7 @@ namespace AcademySolution.Forms
 
             //tratamento para inserção de alunos
             
-            if (ValidaDados()==true)
-            {
+            if (ValidaDados()==true){
                 aluno.Nome = txbFullName.Text;
                 aluno.Cpf = txbCpf.Text;
                 aluno.Email = txbEmail.Text;
