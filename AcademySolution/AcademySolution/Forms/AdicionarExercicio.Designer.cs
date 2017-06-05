@@ -159,6 +159,7 @@
             this.Controls.Add(this.AddExercicioNome);
             this.MaximizeBox = false;
             this.Name = "AdicionarExercicio";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Load += new System.EventHandler(this.AdicionarExercicio_Load);
             this.ResumeLayout(false);

@@ -231,6 +231,9 @@
     <EmbeddedResource Include="Forms\ExcluirTrainer.resx">
       <DependentUpon>ExcluirTrainer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListarCategorias.resx">
+      <DependentUpon>ListarCategorias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ListarExercicios.resx">
       <DependentUpon>ListarExercicios.cs</DependentUpon>
     </EmbeddedResource>

@@ -537,7 +537,7 @@
             this.grdPrincipal.Size = new System.Drawing.Size(738, 522);
             this.grdPrincipal.TabIndex = 68;
             // 
-            // frmCreateTreiner
+            // frmCreateTreinner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -574,8 +574,10 @@
             this.Controls.Add(this.btnCadastrarNovo);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.grdPrincipal);
-            this.Name = "frmCreateTreiner";
-            this.Text = "frmCreateTreiner";
+            this.Name = "frmCreateTreinner";
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
+            this.Style = MetroFramework.MetroColorStyle.Orange;
+            this.Text = "Registrar Treinner";
             ((System.ComponentModel.ISupportInitialize)(this.grdPrincipal)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -103,6 +103,9 @@
             this.Controls.Add(this.btnExcluirExercicio);
             this.Controls.Add(this.metroLabel1);
             this.Name = "ExcluirExercicio";
+            this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Excluir  Exercicio";
             this.ResumeLayout(false);
             this.PerformLayout();

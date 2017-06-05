@@ -372,7 +372,7 @@
             this.Name = "frmRegisterRecord";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;
-            this.Text = "Registrar Nova Ficha";
+            this.Text = "Registrar Ficha";
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid2)).EndInit();
             this.ResumeLayout(false);

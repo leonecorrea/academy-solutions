@@ -8,26 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AcademySolution.Forms
-{
-    public partial class frmRegisterRecord : MetroFramework.Forms.MetroForm
-    {
-        public frmRegisterRecord()
-        {
+namespace AcademySolution.Forms{
+    public partial class frmRegisterRecord : MetroFramework.Forms.MetroForm{
+        public frmRegisterRecord(){
             InitializeComponent();
         }
 
         //tratamento de validacao de campos
 
-        private void btnRegisterFicha_Click(object sender, EventArgs e)
-        {
-            if(tbxNameStudent.Text == "" || tbxNameTeacher.Text == "")
-            {
+        private void btnRegisterFicha_Click(object sender, EventArgs e){
+            if(tbxNameStudent.Text == "" || tbxNameTeacher.Text == "" || cbbNome.Text == "" || cbbRepeticao.Text == "" || cbbSeries.Text == ""){
                 MetroFramework.MetroMessageBox.Show(this,"Por favor, Preencha os campos corretamente!","Mensagem",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
-
-
-            //MetroFramework.MetroMessageBox.Show(this, "Ficha registrada com Sucesso");
+            else{
+                MetroFramework.MetroMessageBox.Show(this, "Fixa Criada Com Sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void btnCleanFicha_Click(object sender, EventArgs e)

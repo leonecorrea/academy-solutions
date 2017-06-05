@@ -108,6 +108,8 @@
             this.Movable = false;
             this.Name = "frmExcluirTrainer";
             this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
+            this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Excluir Trainer";
             this.Load += new System.EventHandler(this.frmExcluirTrainer_Load);
             this.ResumeLayout(false);
