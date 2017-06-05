@@ -58,6 +58,10 @@ values(@Nome, @DateBirth, @DateRegister, @Categoria, @Email, @Rua, @Numero, @Com
 
 SELECT * FROM TB_CONTAS
 
+------------------------------
+INSERT INTO tb_contas (Nome, DataNasc,DataRegistro,Categoria,Email, Rua, Numero, Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone, DataUpdate )
+ VALUES ('Cristovão Colombo','1768/05/08',SYSDATETIME(),2,'colombo@gmail.com','R. Sergipe', '811',null,'Funcionários', 'Belo Horizonte', 'MG','Brasil','12046694567', 31989885070, null);
 
-
+ SELECT * FROM tb_contas WHERE Id = @@IDENTITY;
+ ------------------------------
 

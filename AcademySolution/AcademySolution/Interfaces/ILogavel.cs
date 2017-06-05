@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AcademySolution.Interfaces
-{
-	public interface ILogavel
-	{
+namespace AcademySolution.Interfaces{
+	public interface ILogavel	{
 		string codLogin {get;set;}
 
 		string username {get;set;}

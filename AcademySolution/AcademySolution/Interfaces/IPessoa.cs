@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace AcademySolution.Interfaces{
     // interface IPessoa que contem os metodos de Criação, leitura, Alteração e Exclusão.
-    public interface IPessoa
-    {
+    public interface IPessoa{
         //Criação
         String Create();
 
