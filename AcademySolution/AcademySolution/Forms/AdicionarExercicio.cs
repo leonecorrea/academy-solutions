@@ -56,58 +56,64 @@ namespace AcademySolution.Forms
 
         private void BtnAddExercicio_Click(object sender, EventArgs e)
         {
-            using (IConnection conexao = new Connection())
+            if(TxbAddExercicioNome.Text == "" || TxbAddExercicioDescricao.Text == "") {
+                MetroFramework.MetroMessageBox.Show(this, "Preencha os campos Corretamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }else
             {
-                conexao.Abrir();
-
-                IDAO<Exercicio> ExercicioDAO = new ExercicioDAO(conexao);
-
-                Exercicio ex = new Exercicio();
-
-                ex.setNomeExercicio(TxbAddExercicioNome.Text);
-                ex.setDescricaoExercicio(TxbAddExercicioDescricao.Text);
-
-                ExercicioDAO.inserir(ex);
-
-                if(ex.Erro == null || ex.Erro == "")
+                using (IConnection conexao = new Connection())
                 {
-                    var q = MetroFramework.MetroMessageBox.Show(this, "Exercicio cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    conexao.Abrir();
 
-                    if(q == DialogResult.Abort)
+                    IDAO<Exercicio> ExercicioDAO = new ExercicioDAO(conexao);
+
+                    Exercicio ex = new Exercicio();
+
+                    ex.setNomeExercicio(TxbAddExercicioNome.Text);
+                    ex.setDescricaoExercicio(TxbAddExercicioDescricao.Text);
+
+                    ExercicioDAO.inserir(ex);
+
+                    if (ex.Erro == null || ex.Erro == "")
                     {
-                        AdicionarOutroExercicio();
-                    }else if(q == DialogResult.Cancel)
-                    {
-                        AdicionarOutroExercicio();
+                        var q = MetroFramework.MetroMessageBox.Show(this, "Exercicio cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        if (q == DialogResult.Abort)
+                        {
+                            AdicionarOutroExercicio();
+                        }
+                        else if (q == DialogResult.Cancel)
+                        {
+                            AdicionarOutroExercicio();
+                        }
+                        else
+                        {
+                            AdicionarOutroExercicio();
+                        }
                     }
                     else
                     {
-                        AdicionarOutroExercicio();
-                    }
-                }else
-                {
-                    var q = MetroFramework.MetroMessageBox.Show(this, "Exercicio não cadastrado!", "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                        var q = MetroFramework.MetroMessageBox.Show(this, "Exercicio não cadastrado!", "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
 
-                    if (q == DialogResult.Abort)
-                    {
-                        MetroFramework.MetroMessageBox.Show(this, ex.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
-                        LimparCampos();
-                        //this.Close();
-                    }
-                    else if (q == DialogResult.Cancel)
-                    {
-                        MetroFramework.MetroMessageBox.Show(this, ex.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
-                        LimparCampos();
-                        //this.Close();
-                    }
-                    else
-                    {
-                        MetroFramework.MetroMessageBox.Show(this, ex.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
-                        LimparCampos();
-                        //this.Close();
+                        if (q == DialogResult.Abort)
+                        {
+                            MetroFramework.MetroMessageBox.Show(this, ex.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                            LimparCampos();
+                            //this.Close();
+                        }
+                        else if (q == DialogResult.Cancel)
+                        {
+                            MetroFramework.MetroMessageBox.Show(this, ex.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                            LimparCampos();
+                            //this.Close();
+                        }
+                        else
+                        {
+                            MetroFramework.MetroMessageBox.Show(this, ex.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                            LimparCampos();
+                            //this.Close();
+                        }
                     }
                 }
-
             }
         }
     }
