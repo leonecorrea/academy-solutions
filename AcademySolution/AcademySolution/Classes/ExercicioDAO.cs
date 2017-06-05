@@ -52,7 +52,31 @@ namespace AcademySolution.Classes
 
         public ICollection<Exercicio> ListarTudo()
         {
-            throw new NotImplementedException();
+            ICollection<Exercicio> ListaExercicios = new List<Exercicio>();
+            
+            using (SqlCommand comando = _connection.Buscar().CreateCommand())
+            {
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "select * from tb_exercises";
+                
+                using(SqlDataReader ler = comando.ExecuteReader())
+                {
+                    if (ler.HasRows)
+                    {
+                        while (ler.Read())
+                        {
+                            Exercicio ex = new Exercicio();
+                            ex.setId(Convert.ToInt32(ler["Id"]));
+                            ex.setNomeExercicio(Convert.ToString(ler["Name"]));
+                            ex.setDescricaoExercicio(Convert.ToString(ler["Description"]));
+
+                            ListaExercicios.Add(ex);
+                        }
+                    }
+                }
+            }
+            
+            return ListaExercicios;
         }
 
         public Exercicio localizarPorCodigo(params object [] keys)

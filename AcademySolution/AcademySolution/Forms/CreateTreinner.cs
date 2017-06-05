@@ -41,6 +41,7 @@ namespace AcademySolution.Forms
                 t.Endereco.SetNumero(txbNumero.Text);
                 t.Endereco.SetComplemento(txbComplemento.Text);
                 t.Endereco.SetBairro(txbBairro.Text);
+                t.Endereco.SetCidade(cbbCidade.Text);
                 t.Endereco.SetEstado(cbbEstado.Text);
                 t.Endereco.SetPais(cbbPais.Text);
                 t.SetTelefone(txbTelefone.Text);

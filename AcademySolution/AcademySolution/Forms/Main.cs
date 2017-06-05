@@ -183,5 +183,11 @@ namespace AcademySolution.Forms
             ExcluirExercicio frm = new ExcluirExercicio();
             frm.ShowDialog();
         }
+
+        private void exerciciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListarExercicios frm = new ListarExercicios();
+            frm.ShowDialog();
+        }
     }
 }

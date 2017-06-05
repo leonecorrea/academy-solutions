@@ -44,19 +44,18 @@ namespace AcademySolution.Classes{
 			}
 						 */
 			try{
-                String query = "insert into tb_contas (Nome, DataNasc, DataRegistro, Categoria, Email, Rua, Numero, " +
-							"Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone) " +
-							"values(@Nome, @DataDeNascimento, SYSDATETIME(), @Categoria, @Email, @Rua, @Numero, @Complemento, @Bairro, " +
-							"@Cidade, @Estado, @Pais, @Cpf, @Telefone);";
+                String query = "INSERT INTO tb_contas (Nome, DataNasc,DataRegistro,Categoria,Email, Rua, Numero, " +
+                    "Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone, DataUpdate )" +
+                    "VALUES(@Nome, @Nascimento, SYSDATETIME(), @Categoria, @Email, @Rua, @Numero, @Complemento,@Bairro, " +
+                    "@Cidade, @Estado, @Pais, @Cpf, @Telefone, SYSDATETIME());SELECT @@IDENTITY";
 
                 SqlCommand comando = _connection.Buscar().CreateCommand();
 
-                comando.CommandText = "INSERT INTO tb_contas (Nome, DataNasc,DataRegistro,Categoria,Email, Rua, Numero, " +
-                    "Complemento, Bairro, Cidade, Estado, Pais, Cpf, Telefone, DataUpdate )"+
-                    "VALUES(@Nome, @Nascimento, SYSDATETIME(), 2, @Email, @Rua, @Numero, @Complemento,@Bairro, " +
-                    "@Cidade, @Estado, @Pais, @Cpf, @Telefone, SYSDATETIME());SELECT @@IDENTITY";
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = query;
 
-			    comando.Parameters.Add("@Nome", SqlDbType.Text).Value = model.GetNome();
+
+                comando.Parameters.Add("@Nome", SqlDbType.Text).Value = model.GetNome();
 			    comando.Parameters.Add("@Nascimento", SqlDbType.Date).Value = model.GetNascimento();
 			    comando.Parameters.Add("@Email", SqlDbType.Text).Value = model.GetEmail().ToString();
 			    comando.Parameters.Add("@Rua", SqlDbType.Text).Value = model.Endereco.GetRua().ToString();
@@ -68,10 +67,9 @@ namespace AcademySolution.Classes{
 			    comando.Parameters.Add("@Pais", SqlDbType.Text).Value = model.Endereco.GetPais().ToString();
 			    comando.Parameters.Add("@Cpf", SqlDbType.Text).Value = model.GetCpf();
                 comando.Parameters.Add("@Telefone", SqlDbType.Text).Value = model.GetTelefone();//.Replace("-", "").Replace("(", "").Replace(")", "");
+                comando.Parameters.Add("@Categoria", SqlDbType.Int).Value = model.GetId();
 
                 model.SetId(Convert.ToInt32(comando.ExecuteScalar()));
-
-			    comando.ExecuteNonQuery();
 
 			    return model;
 			}catch (Exception ex){

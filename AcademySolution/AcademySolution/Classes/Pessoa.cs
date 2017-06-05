@@ -56,7 +56,7 @@ namespace AcademySolution.Classes{
 		private String email;
 
 		public String GetEmail(){
-			return dataRegistro;
+			return email;
 		}
 
 		public void SetEmail(String value){
