@@ -45,14 +45,14 @@ namespace AcademySolution.Forms
                 t.Endereco.SetEstado(cbbEstado.Text);
                 t.Endereco.SetPais(cbbPais.Text);
                 t.SetTelefone(txbTelefone.Text);
-                t.Categoria.SetId(2);
+                //t.Categoria.SetId(2);
 
                 TreinnerDAO.inserir(t);
 
                 if (t.Erro == null || t.Erro == ""){
                     var q = MetroFramework.MetroMessageBox.Show(this,"Usuário cadastrado com sucesso!","Sucesso",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
-                    if (q == DialogResult.Abort) {
+                    if (q == DialogResult.Abort){
                         
                     } else if (q == DialogResult.Cancel){
 

@@ -67,7 +67,7 @@ namespace AcademySolution.Classes{
 			    comando.Parameters.Add("@Pais", SqlDbType.Text).Value = model.Endereco.GetPais().ToString();
 			    comando.Parameters.Add("@Cpf", SqlDbType.Text).Value = model.GetCpf();
                 comando.Parameters.Add("@Telefone", SqlDbType.Text).Value = model.GetTelefone();//.Replace("-", "").Replace("(", "").Replace(")", "");
-                comando.Parameters.Add("@Categoria", SqlDbType.Int).Value = model.GetId();
+                comando.Parameters.Add("@Categoria", SqlDbType.Int).Value = 2;//model.GetId();
 
                 model.SetId(Convert.ToInt32(comando.ExecuteScalar()));
 

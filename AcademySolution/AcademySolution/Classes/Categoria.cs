@@ -19,6 +19,7 @@ namespace AcademySolution.Classes
 
 		public void SetId(int value)
 		{
+            Convert.ToInt32(value);
 			this.id = value;
 		}
 
@@ -41,8 +42,7 @@ namespace AcademySolution.Classes
 				return descricao;
 		}
 
-		public void SetDescricao(String value)
-		{
+		public void SetDescricao(String value){
 			this.descricao = value;
 		}
 
