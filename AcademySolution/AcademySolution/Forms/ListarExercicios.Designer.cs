@@ -33,21 +33,24 @@
             this.listaDescricaoExercicio = new System.Windows.Forms.ListBox();
             this.labelListaNomeExercicio = new MetroFramework.Controls.MetroLabel();
             this.labelListaDescricaoExercicio = new MetroFramework.Controls.MetroLabel();
+            this.labelListaIdExercicio = new MetroFramework.Controls.MetroLabel();
+            this.listaIdExercicio = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnListarExercicios
             // 
-            this.btnListarExercicios.Location = new System.Drawing.Point(23, 305);
+            this.btnListarExercicios.Location = new System.Drawing.Point(23, 302);
             this.btnListarExercicios.Name = "btnListarExercicios";
-            this.btnListarExercicios.Size = new System.Drawing.Size(683, 48);
+            this.btnListarExercicios.Size = new System.Drawing.Size(737, 48);
             this.btnListarExercicios.TabIndex = 0;
             this.btnListarExercicios.Text = "Listar Exercicios";
             this.btnListarExercicios.UseSelectable = true;
+            this.btnListarExercicios.Click += new System.EventHandler(this.btnListarExercicios_Click);
             // 
             // listaNomeExercicio
             // 
             this.listaNomeExercicio.FormattingEnabled = true;
-            this.listaNomeExercicio.Location = new System.Drawing.Point(23, 111);
+            this.listaNomeExercicio.Location = new System.Drawing.Point(77, 104);
             this.listaNomeExercicio.Name = "listaNomeExercicio";
             this.listaNomeExercicio.Size = new System.Drawing.Size(330, 173);
             this.listaNomeExercicio.TabIndex = 1;
@@ -55,7 +58,7 @@
             // listaDescricaoExercicio
             // 
             this.listaDescricaoExercicio.FormattingEnabled = true;
-            this.listaDescricaoExercicio.Location = new System.Drawing.Point(376, 111);
+            this.listaDescricaoExercicio.Location = new System.Drawing.Point(430, 104);
             this.listaDescricaoExercicio.Name = "listaDescricaoExercicio";
             this.listaDescricaoExercicio.Size = new System.Drawing.Size(330, 173);
             this.listaDescricaoExercicio.TabIndex = 2;
@@ -63,7 +66,7 @@
             // labelListaNomeExercicio
             // 
             this.labelListaNomeExercicio.AutoSize = true;
-            this.labelListaNomeExercicio.Location = new System.Drawing.Point(23, 79);
+            this.labelListaNomeExercicio.Location = new System.Drawing.Point(77, 72);
             this.labelListaNomeExercicio.Name = "labelListaNomeExercicio";
             this.labelListaNomeExercicio.Size = new System.Drawing.Size(46, 19);
             this.labelListaNomeExercicio.TabIndex = 3;
@@ -72,17 +75,36 @@
             // labelListaDescricaoExercicio
             // 
             this.labelListaDescricaoExercicio.AutoSize = true;
-            this.labelListaDescricaoExercicio.Location = new System.Drawing.Point(376, 79);
+            this.labelListaDescricaoExercicio.Location = new System.Drawing.Point(430, 72);
             this.labelListaDescricaoExercicio.Name = "labelListaDescricaoExercicio";
             this.labelListaDescricaoExercicio.Size = new System.Drawing.Size(65, 19);
             this.labelListaDescricaoExercicio.TabIndex = 4;
             this.labelListaDescricaoExercicio.Text = "Descrição";
             // 
+            // labelListaIdExercicio
+            // 
+            this.labelListaIdExercicio.AutoSize = true;
+            this.labelListaIdExercicio.Location = new System.Drawing.Point(23, 72);
+            this.labelListaIdExercicio.Name = "labelListaIdExercicio";
+            this.labelListaIdExercicio.Size = new System.Drawing.Size(20, 19);
+            this.labelListaIdExercicio.TabIndex = 5;
+            this.labelListaIdExercicio.Text = "Id";
+            // 
+            // listaIdExercicio
+            // 
+            this.listaIdExercicio.FormattingEnabled = true;
+            this.listaIdExercicio.Location = new System.Drawing.Point(23, 104);
+            this.listaIdExercicio.Name = "listaIdExercicio";
+            this.listaIdExercicio.Size = new System.Drawing.Size(36, 173);
+            this.listaIdExercicio.TabIndex = 6;
+            // 
             // ListarExercicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 376);
+            this.ClientSize = new System.Drawing.Size(783, 373);
+            this.Controls.Add(this.listaIdExercicio);
+            this.Controls.Add(this.labelListaIdExercicio);
             this.Controls.Add(this.labelListaDescricaoExercicio);
             this.Controls.Add(this.labelListaNomeExercicio);
             this.Controls.Add(this.listaDescricaoExercicio);
@@ -102,5 +124,7 @@
         private System.Windows.Forms.ListBox listaDescricaoExercicio;
         private MetroFramework.Controls.MetroLabel labelListaNomeExercicio;
         private MetroFramework.Controls.MetroLabel labelListaDescricaoExercicio;
+        private MetroFramework.Controls.MetroLabel labelListaIdExercicio;
+        private System.Windows.Forms.ListBox listaIdExercicio;
     }
 }
