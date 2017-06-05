@@ -45,5 +45,10 @@ namespace AcademySolution.Classes
 		{
 			this.descricao = value;
 		}
+
+        public Categoria(){
+            this.nome = null;
+            this.descricao = null;
+        }
 	}
 }
