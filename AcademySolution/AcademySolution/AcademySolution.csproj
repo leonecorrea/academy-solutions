@@ -117,6 +117,12 @@
     <Compile Include="Forms\ExcluirAluno.Designer.cs">
       <DependentUpon>ExcluirAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ExcluirExercicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExcluirExercicio.Designer.cs">
+      <DependentUpon>ExcluirExercicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ExcluirFicha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,12 @@
     </Compile>
     <Compile Include="Forms\ListarCategorias.Designer.cs">
       <DependentUpon>ListarCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ListarExercicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ListarExercicios.Designer.cs">
+      <DependentUpon>ListarExercicios.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
@@ -210,11 +222,17 @@
     <EmbeddedResource Include="Forms\ExcluirAluno.resx">
       <DependentUpon>ExcluirAluno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExcluirExercicio.resx">
+      <DependentUpon>ExcluirExercicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExcluirFicha.resx">
       <DependentUpon>ExcluirFicha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExcluirTrainer.resx">
       <DependentUpon>ExcluirTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ListarExercicios.resx">
+      <DependentUpon>ListarExercicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

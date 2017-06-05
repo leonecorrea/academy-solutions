@@ -177,5 +177,11 @@ namespace AcademySolution.Forms
             frmCreateTreinner frm = new frmCreateTreinner();
             frm.ShowDialog();
         }
+
+        private void excluirExercicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExcluirExercicio frm = new ExcluirExercicio();
+            frm.ShowDialog();
+        }
     }
 }

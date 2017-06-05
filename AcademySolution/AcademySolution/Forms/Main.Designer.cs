@@ -37,6 +37,7 @@
             this.smiAddNew = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewFichaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarNovoExercícioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniNovoTreinner = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fichasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mniProcurarAlunos = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +54,7 @@
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
             this.pcbImagem = new System.Windows.Forms.PictureBox();
-            this.mniNovoTreinner = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirExercicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
@@ -109,6 +110,13 @@
             this.adicionarNovoExercícioToolStripMenuItem.Text = "Adicionar Novo Exercício";
             this.adicionarNovoExercícioToolStripMenuItem.Click += new System.EventHandler(this.adicionarNovoExercícioToolStripMenuItem_Click);
             // 
+            // mniNovoTreinner
+            // 
+            this.mniNovoTreinner.Name = "mniNovoTreinner";
+            this.mniNovoTreinner.Size = new System.Drawing.Size(206, 22);
+            this.mniNovoTreinner.Text = "Adicionar Novo Treinner";
+            this.mniNovoTreinner.Click += new System.EventHandler(this.mniNovoTreinner_Click);
+            // 
             // consultaToolStripMenuItem
             // 
             this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -160,7 +168,8 @@
             this.excluirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.excluirFichaToolStripMenuItem,
             this.excluirAlunoToolStripMenuItem,
-            this.excluirTrainerToolStripMenuItem});
+            this.excluirTrainerToolStripMenuItem,
+            this.excluirExercicioToolStripMenuItem});
             this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
             this.excluirToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.excluirToolStripMenuItem.Text = "Excluir";
@@ -168,21 +177,21 @@
             // excluirFichaToolStripMenuItem
             // 
             this.excluirFichaToolStripMenuItem.Name = "excluirFichaToolStripMenuItem";
-            this.excluirFichaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.excluirFichaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.excluirFichaToolStripMenuItem.Text = "Excluir Ficha";
             this.excluirFichaToolStripMenuItem.Click += new System.EventHandler(this.excluirFichaToolStripMenuItem_Click);
             // 
             // excluirAlunoToolStripMenuItem
             // 
             this.excluirAlunoToolStripMenuItem.Name = "excluirAlunoToolStripMenuItem";
-            this.excluirAlunoToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.excluirAlunoToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.excluirAlunoToolStripMenuItem.Text = "Excluir Aluno";
             this.excluirAlunoToolStripMenuItem.Click += new System.EventHandler(this.excluirAlunoToolStripMenuItem_Click);
             // 
             // excluirTrainerToolStripMenuItem
             // 
             this.excluirTrainerToolStripMenuItem.Name = "excluirTrainerToolStripMenuItem";
-            this.excluirTrainerToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.excluirTrainerToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.excluirTrainerToolStripMenuItem.Text = "Excluir Trainer";
             this.excluirTrainerToolStripMenuItem.Click += new System.EventHandler(this.excluirTrainerToolStripMenuItem_Click);
             // 
@@ -262,8 +271,8 @@
             // 
             // pcbImagem
             // 
-            this.pcbImagem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.pcbImagem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pcbImagem.Image = ((System.Drawing.Image)(resources.GetObject("pcbImagem.Image")));
             this.pcbImagem.Location = new System.Drawing.Point(-1, 57);
@@ -273,12 +282,12 @@
             this.pcbImagem.TabIndex = 8;
             this.pcbImagem.TabStop = false;
             // 
-            // mniNovoTreinner
+            // excluirExercicioToolStripMenuItem
             // 
-            this.mniNovoTreinner.Name = "mniNovoTreinner";
-            this.mniNovoTreinner.Size = new System.Drawing.Size(206, 22);
-            this.mniNovoTreinner.Text = "Adicionar Novo Treinner";
-            this.mniNovoTreinner.Click += new System.EventHandler(this.mniNovoTreinner_Click);
+            this.excluirExercicioToolStripMenuItem.Name = "excluirExercicioToolStripMenuItem";
+            this.excluirExercicioToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.excluirExercicioToolStripMenuItem.Text = "Excluir Exercicio";
+            this.excluirExercicioToolStripMenuItem.Click += new System.EventHandler(this.excluirExercicioToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -340,5 +349,6 @@
         private System.Windows.Forms.ToolStripMenuItem trainersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarNovoExercícioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mniNovoTreinner;
+        private System.Windows.Forms.ToolStripMenuItem excluirExercicioToolStripMenuItem;
     }
 }

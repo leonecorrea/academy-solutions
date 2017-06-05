@@ -47,6 +47,12 @@ namespace AcademySolution.Classes
 			}
 		}
 
+        public SqlDataReader LerDados(string query)
+        {
+            SqlDataReader leitor = NovoComando(query).ExecuteReader();
+            return leitor;
+        }
+
 		public void Dispose()
 		{
 			this.Fechar();

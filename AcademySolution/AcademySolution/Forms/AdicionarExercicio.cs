@@ -40,6 +40,20 @@ namespace AcademySolution.Forms
             LimparCampos();
         }
 
+        private void AdicionarOutroExercicio()
+        {
+            var repetir = MetroFramework.MetroMessageBox.Show(this, "Deseja Adicionar outro Exercicio?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (repetir == DialogResult.Yes)
+            {
+                LimparCampos();
+                TxbAddExercicioNome.Focus();
+            }
+            else if (repetir == DialogResult.No)
+            {
+                this.Close();
+            }
+        }
+
         private void BtnAddExercicio_Click(object sender, EventArgs e)
         {
             using (IConnection conexao = new Connection())
@@ -61,14 +75,14 @@ namespace AcademySolution.Forms
 
                     if(q == DialogResult.Abort)
                     {
-                        LimparCampos();
+                        AdicionarOutroExercicio();
                     }else if(q == DialogResult.Cancel)
                     {
-                        LimparCampos();
+                        AdicionarOutroExercicio();
                     }
                     else
                     {
-                        LimparCampos();
+                        AdicionarOutroExercicio();
                     }
                 }else
                 {
@@ -77,16 +91,19 @@ namespace AcademySolution.Forms
                     if (q == DialogResult.Abort)
                     {
                         MetroFramework.MetroMessageBox.Show(this, ex.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                        LimparCampos();
                         //this.Close();
                     }
                     else if (q == DialogResult.Cancel)
                     {
                         MetroFramework.MetroMessageBox.Show(this, ex.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                        LimparCampos();
                         //this.Close();
                     }
                     else
                     {
                         MetroFramework.MetroMessageBox.Show(this, ex.Erro, "Falha", MessageBoxButtons.AbortRetryIgnore, MessageBoxIcon.Error);
+                        LimparCampos();
                         //this.Close();
                     }
                 }

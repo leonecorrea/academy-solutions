@@ -62,7 +62,19 @@ namespace AcademySolution.Classes
 
         public bool remover (Exercicio model)
         {
-            throw new NotImplementedException();
+            bool retorno = false;
+            using (SqlCommand comando = _connection.Buscar().CreateCommand())
+            {
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = "delete from tb_exercises where id = @id";
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = model.getId();
+
+                if (comando.ExecuteNonQuery() > 0)
+                {
+                    retorno = true;
+                }
+                return retorno;
+            }
         }
     }
 }
