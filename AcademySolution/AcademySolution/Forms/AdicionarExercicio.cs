@@ -57,7 +57,7 @@ namespace AcademySolution.Forms
         private void BtnAddExercicio_Click(object sender, EventArgs e)
         {
             if(TxbAddExercicioNome.Text == "" || TxbAddExercicioDescricao.Text == "") {
-                MetroFramework.MetroMessageBox.Show(this, "Preencha os campos Corretamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MetroFramework.MetroMessageBox.Show(this, "Preencha os campos Corretamente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }else
             {
                 using (IConnection conexao = new Connection())
